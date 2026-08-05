@@ -51,13 +51,24 @@ list.
 ```
 https://api.crossref.org/journals/{ISSN}/works
   ?filter=from-pub-date:{START},until-pub-date:{END}
-  &rows=60
+  &rows=1000
   &select=DOI,title,published,container-title,author,abstract,type
   &mailto=bdpl250101@gmail.com
 ```
 
 `{START}`/`{END}` are the window bounds in `YYYY-MM-DD`. Always include `mailto` — it puts
 you in Crossref's polite pool and avoids the rate limiting that hits anonymous callers.
+
+> ⚠️ **Never let `rows` truncate silently.** `rows=60` looks sufficient and is not: in the
+> 2026-08-05 run it silently cut Energy Storage Materials from 144 in-window records to 60,
+> Small from 197, and Electrochimica Acta from 133 — a third of the candidate pool vanished
+> with no error. `rows=1000` is Crossref's maximum.
+>
+> **Required check:** for every journal, read `message.total-results` from the response and
+> compare it with the number of items you actually received. If `total-results >= 1000`, the
+> cap has been hit and results *are* truncated — log a WARNING naming the journal and its
+> total, and narrow the window (or paginate with `offset`/cursor) before continuing. Report
+> any such warning in `calloutR`; never present a truncated sweep as complete.
 
 **Journal ISSNs.** Before the first use each run, sanity-check each ISSN with
 `https://api.crossref.org/journals/{ISSN}` and confirm the returned `title` matches the
@@ -94,7 +105,24 @@ http://export.arxiv.org/api/query?search_query=all:battery+OR+all:lithium-ion
 ```
 
 Check ChemRxiv via Crossref instead of its blocked website: ISSN-less, so query
-`https://api.crossref.org/prefixes/10.26434/works?filter=from-posted-date:{START}&rows=60`.
+`https://api.crossref.org/prefixes/10.26434/works?filter=from-posted-date:{START}&rows=1000`
+— the same `total-results` truncation check applies.
+
+**Affiliations via OpenAlex.** Crossref's single-work endpoint does not return authors when
+`select` is used, so take affiliations from OpenAlex instead. For each *selected* DOI:
+
+```
+https://api.openalex.org/works/doi:{DOI}
+  ?select=authorships,publication_date
+  &mailto=bdpl250101@gmail.com
+```
+
+Put the first author's institution into `org` / `org_en` — e.g. `org:"Yoo 외 (한양대)"`,
+`org_en:"Yoo et al. (Hanyang Univ.)"`. Verified: `10.1016/j.ensm.2026.105331` returns
+Hyundong Yoo, Hanyang University. If OpenAlex has no record or no institution, fall back to
+`"Surname 외"` / `"Surname et al."` without a parenthetical — never guess an affiliation.
+OpenAlex has no abstracts for Elsevier either, so this does not remove the title-derived
+caveat below.
 
 **Writing descriptions.** Crossref abstracts (when present) carry enough to write both
 `desc` and `desc_en` accurately. When an abstract is missing, try one WebFetch of the DOI
@@ -102,10 +130,24 @@ resolver `https://doi.org/{DOI}`; if that is blocked too, write the description 
 title and author affiliations only, and set `ver:true` anyway — the Crossref publication
 date is authoritative regardless of whether you could read the page.
 
+Elsevier titles (Energy Storage Materials, Joule, Nano Energy, J. Power Sources, J. Energy
+Chemistry) deposit **no** abstracts to Crossref and are blocked at `linkinghub.elsevier.com`,
+so their descriptions will routinely be title-derived. State that **once** in `calloutR` —
+do not repeat a provenance parenthetical on each card, which is visual noise when it lands
+on two-thirds of them.
+
 **Aim for coverage, not volume.** Target roughly 3–8 items per `cat` bucket. If a bucket
 truly has nothing after querying every journal, say so in `calloutR` and leave it empty —
 but an empty bucket should now be rare, and three empty buckets means something went wrong
 with the queries, not with the field.
+
+**Cap each journal at 4 items per run.** No single journal may supply more than four
+research items. This is not cosmetic: journals batch-stamp an entire issue to one date, so
+raw counts measure publishing cadence, not research activity. In the 2026-08-05 run Energy
+Storage Materials stamped 144 records to 2026-08-01 and would have supplied 17 of 30 items.
+When a journal exceeds the cap, keep its strongest items and backfill from the next-best
+candidates **in the affected buckets**, preferring journals not yet represented. Aim for at
+least 10 distinct journals across the set.
 
 ### Industry — two regions
 
@@ -240,6 +282,12 @@ window. Reserve `ver:false` for items where the date itself is uncertain — typ
 arXiv preprint with no journal DOI, or a news-sourced item you could only place to a month.
 Never carry a `ver:true` forward from a previous run without re-confirming the date this
 run; with Crossref that is a single cheap lookup per DOI.
+
+**Say what the dates mean.** A Crossref publication date is the **issue-assignment** date,
+which can post-date online-first availability by weeks or months — OpenAlex records
+`10.1016/j.ensm.2026.105331` as 2026-06-24 where Crossref gives 2026-08-01. That is why the
+window is honest but not equivalent to "first appeared this week". State this explicitly in
+`calloutR`, in both languages, every run.
 
 **Both descriptions, every item.** `desc` (Korean) and `desc_en` (English) are both
 mandatory on every research and industry entry. A missing one renders as `undefined` in
