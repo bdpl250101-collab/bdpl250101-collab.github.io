@@ -33,6 +33,27 @@ if [ ! -f "$PROMPT_FILE" ]; then
   exit 1
 fi
 
+# Dirty-tree guard. If a previous run died mid-edit (session limit, the task's
+# ExecutionTimeLimit, a crash), index.html is left half-written and uncommitted.
+# git pull --rebase then refuses outright, and without this guard every later run
+# would fail identically while the dashboard quietly went stale.
+#
+# Safe here: index.html is fully regenerated each run, .weekly-update.log is
+# gitignored, and reset --hard does not touch untracked files. Local commits that
+# were made but not pushed are also preserved — reset --hard only rewinds the
+# working tree and index to HEAD.
+echo "--- dirty-tree check ---"
+if ! git diff --quiet HEAD 2>/dev/null; then
+  echo "WARNING: dirty working tree — a previous run likely died mid-edit."
+  echo "         discarding partial changes and starting clean:"
+  git status --short
+  git reset --hard HEAD
+  echo "WARNING: partial changes discarded. If this repeats week after week,"
+  echo "         the run is dying before it can commit — investigate rather than ignore."
+else
+  echo "working tree clean"
+fi
+
 echo "--- git pull --rebase ---"
 if ! git pull --rebase; then
   echo "FATAL: git pull --rebase failed (rebase conflict or no network); aborting"
