@@ -232,6 +232,8 @@ silently**: the English view simply shows Korean text. Nothing errors, nothing w
 
 1. The `research` array — **full replacement**.
 2. The `industry` array — **full replacement**.
+   > ⚠️ The `archive` array is **not** in this list and is **never** replaced. It is
+   > append-only — see section 4. Rewriting it destroys a year of accumulated history.
 3. New entries in `COMPANY_EN` and `SUBLBL` for any new Korean company name or `sub` tag.
 4. The date range: `I18N.ko.sub` and `I18N.en.sub`.
 5. The three KPI tiles, both languages:
@@ -256,6 +258,7 @@ silently**: the English view simply shows Korean text. Nothing errors, nothing w
 
 ### Do NOT touch
 
+- **Any existing entry in the `archive` array.** You may only prepend new ones. See section 4.
 - Any CSS, or anything in the `<style>` block.
 - The page layout or HTML structure (beyond the two KPI value texts named above).
 - The embedded base64 logo.
@@ -265,7 +268,101 @@ silently**: the English view simply shows Korean text. Nothing errors, nothing w
 
 ---
 
-## 4. Quality rules
+## 4. The archive array is append-only — never replace it
+
+`research` and `industry` are replaced wholesale every run. **`archive` is not.** It holds the
+year's accumulated top-tier papers, and a run that rewrites it destroys months of history that
+cannot be recovered from the current window.
+
+### Scope — 11 journals only
+
+Narrower than the weekly sweep on purpose: a paper being here should mean something.
+
+| Journal | ISSN | Journal | ISSN |
+|---|---|---|---|
+| Nature | 1476-4687 | Nature Catalysis | 2520-1158 |
+| Science | 1095-9203 | Nature Sustainability | 2398-9629 |
+| Nature Energy | 2058-7546 | Nature Reviews Materials | 2058-8437 |
+| Nature Materials | 1476-4660 | Science Advances | 2375-2548 |
+| Nature Nanotechnology | 1748-3395 | Joule | 2542-4351 |
+| Nature Chemistry | 1755-4349 | | |
+
+All eleven were verified against `api.crossref.org/journals/{ISSN}` on 2026-08-06 and all
+returned the expected title. Re-check them anyway, as section 1 requires.
+
+**Nature Communications (2041-1723) is deliberately excluded** — its battery output alone would
+outnumber every other journal here combined. If you ever want it, add it as a visually separate
+tier rather than mixing it in.
+
+### The schema — `const archive = [ … ]` (index.html, just after `industry`)
+
+```js
+{doi:"10.1038/s41586-026-10862-4",
+ title:"Avalanche-like intercalation and intraparticle correlations in graphite",
+ journal:"Nature", date:"2026-07-29", cat:"셀",
+ org:"Han 외", org_en:"Han et al.", nv:false,
+ link:"https://doi.org/10.1038/s41586-026-10862-4",
+ desc:"한국어 한 문장.",
+ desc_en:"One English sentence."},
+```
+
+| Field | Rules |
+|---|---|
+| `doi` | **the dedup key** — never add a DOI already present |
+| `cat` | the same five Korean literals as `research`; reuses `CATCLR` for the row colour |
+| `date` | `YYYY-MM-DD`, or `YYYY-MM` when the publisher deposits no day (all of Joule). The renderer prints a dash in the day column for month-only dates. |
+| `org` / `org_en` | first author's surname. `"Kim 외"` / `"Kim et al."` for multi-author work, but a **bare surname with no 외 / et al.** for a single-author piece — most News & Views are single-author, and "Bianchini et al." is simply wrong. `"—"` when Crossref lists no author. |
+| `nv` | boolean, never omitted — see the detection rules below |
+| `desc` / `desc_en` | **one sentence each**, tighter than the weekly cards — this list runs to hundreds of rows over a year and long summaries make it unscannable |
+
+### Each run
+
+1. Read the existing `const archive = [...]` out of `index.html` and **keep every entry**.
+2. Try `https://www.nature.com/subjects/batteries` and read the **Featured** section. Every item
+   there is editor-curated — take it, mark `nv:true`, and if the piece names the paper it
+   comments on, record that paper too. **If the fetch fails, log the failure explicitly in
+   `.weekly-update.log` and continue with step 3** rather than silently skipping curation.
+   > As of the 2026-08-06 seed this fetch **does not work**: nature.com returns HTTP 303 to
+   > `idp.nature.com/authorize`, confirmed with both WebFetch and curl with a browser
+   > User-Agent. Try it anyway each run — but expect to fall back.
+3. Query Crossref for the window across the 11 archive journals only, with the same `rows=1000`
+   and `total-results` truncation check section 1 requires.
+4. Keep the battery-relevant results, applying the same filtering rules as the research array.
+   Two extra scope calls the seed settled, worth keeping consistent:
+   - **In scope:** recycling and second-life of spent cells; battery system, safety, lifetime
+     and diagnostics work; metal-CO2, metal-O2, flow, structural and aqueous batteries.
+   - **Out of scope:** upstream mineral extraction and refining (brine, hardrock, primary
+     mining separation); fuel cells, electrolysers, CO2 capture, supercapacitors, dielectric
+     capacitors, thermal "batteries"; primary (non-rechargeable) cells; "battery-free" devices;
+     and — the single biggest source of false positives — **neuroscience papers about neuronal
+     dendrites**, which any keyword sweep on "dendrite" will drag in.
+5. Set `nv:true` on front matter, using every signal available:
+   - a `page` field spanning **≤ 3 pages** in a Nature-family journal;
+   - the `10.1038/d41586-` DOI prefix (Nature-brand news and comment);
+   - Nature-family **and** no `page` **and** no abstract **and** ≤ 2 authors — this catches
+     online-first News & Views, which Crossref deposits with no page range at all. In the seed
+     this rule recovered exactly the two Nature Nanotechnology News & Views pieces that the
+     Featured-section scrape had independently found, which is why it is trusted here.
+   - Do **not** reach for OpenAlex to settle this: it reports plain `type: "article"` for known
+     News & Views pieces, indistinguishable from research papers. It was tested and is useless
+     for this purpose.
+   - Note Elsevier article numbers (Joule's `page: "102585"`) are **not** page ranges. Never
+     apply the page-span rule to them.
+6. **Drop any whose `doi` already appears in the archive** — the DOI is the dedup key. Note it
+   will not catch a publisher depositing one paper under two DOIs; the seed found one such pair
+   in Joule and kept the earlier.
+7. Prepend what remains, newest first.
+8. **Never delete, never reorder existing entries, never rewrite their text.**
+
+There is no per-journal cap here and no per-run cap. A quiet week adds nothing; a heavy week
+adds a dozen. Both are correct.
+
+Keep `calloutA` honest in both languages: if the nature.com curation fetch failed, the callout
+must say the ★ marks were inferred from Crossref alone and are under-inclusive.
+
+---
+
+## 5. Quality rules
 
 **Never invent anything.** Every item must come from a page you actually opened and read
 this run. Every `link` must be a real URL that resolves to the item it claims to be. If you
@@ -306,9 +403,9 @@ backtick.
 
 ---
 
-## 5. Verify before committing
+## 6. Verify before committing
 
-Run all four checks. If any fails, fix it and re-run — do not commit a failing file.
+Run all five checks. If any fails, fix it and re-run — do not commit a failing file.
 
 ```bash
 # 1. Syntax — extract the <script> block and parse it with node.
@@ -348,13 +445,51 @@ console.log("ALL ITEMS COMPLETE");
 '
 ```
 
-4. **Read the diff** — `git diff --stat` then `git diff`. Confirm the only changed regions
+```bash
+# 4. THE ARCHIVE GATE. The archive must never shrink and must never gain a duplicate DOI.
+#    This is the check that does the real work — it fails loudly if a run dropped entries.
+node -e '
+const fs=require("fs"),cp=require("child_process");
+const grab=(h,n)=>{const s=h.indexOf("const "+n+" = [");if(s<0)return[];
+  const e=h.indexOf("\n];",s);if(e<0)return[];
+  return eval(h.slice(s+("const "+n+" = ").length,e+2));};
+const now=grab(fs.readFileSync("index.html","utf8"),"archive");
+let old=[];
+try{ old=grab(cp.execSync("git show HEAD:index.html",{encoding:"utf8",maxBuffer:1e9}),"archive"); }
+catch(e){ console.log("no committed archive yet — first run"); }
+if(now.length < old.length)
+  throw new Error("ARCHIVE SHRANK: "+old.length+" -> "+now.length+" — entries were deleted");
+const nowDois=new Set(now.map(x=>x.doi));
+const lost=old.map(x=>x.doi).filter(d=>!nowDois.has(d));
+if(lost.length) throw new Error("ARCHIVE LOST ENTRIES: "+lost.join(", "));
+const seen=new Set(),dup=[];
+now.forEach(x=>seen.has(x.doi)?dup.push(x.doi):seen.add(x.doi));
+if(dup.length) throw new Error("DUPLICATE DOIs: "+dup.join(", "));
+const bad=[];
+now.forEach((x,i)=>{
+  for(const f of ["doi","title","journal","date","cat","org","org_en","link","desc","desc_en"])
+    if(!x[f]||!String(x[f]).trim()) bad.push("archive["+i+"] missing "+f);
+  if(typeof x.nv!=="boolean") bad.push("archive["+i+"] nv is not a boolean");
+  if(!["소재","전극","셀","공정","저널"].includes(x.cat)) bad.push("archive["+i+"] bad cat: "+x.cat);
+  if(!/^\d{4}-\d{2}(-\d{2})?$/.test(x.date)) bad.push("archive["+i+"] bad date: "+x.date);
+  if(x.link!=="https://doi.org/"+x.doi) bad.push("archive["+i+"] link does not match doi");
+});
+if(bad.length) throw new Error(bad.join("\n"));
+const sorted=now.every((x,i)=>i===0||now[i-1].date>=x.date);
+if(!sorted) throw new Error("ARCHIVE NOT SORTED newest-first");
+console.log("archive OK: "+old.length+" -> "+now.length+" (+"+(now.length-old.length)+"), no dups, no losses");
+'
+```
+
+5. **Read the diff** — `git diff --stat` then `git diff`. Confirm the only changed regions
    are the ones section 3 permits. If CSS, the base64 logo, or a render function shows up
    in the diff, you changed something you should not have. Revert it.
+   For the archive specifically, `git diff index.html | grep '^-.*doi:'` must print **nothing** —
+   any removed `doi:` line means an existing entry was deleted or rewritten.
 
 ---
 
-## 6. Finish
+## 7. Finish
 
 ```bash
 git add index.html weekly-prompt.md
