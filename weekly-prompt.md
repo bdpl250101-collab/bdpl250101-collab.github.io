@@ -454,9 +454,17 @@ const grab=(h,n)=>{const s=h.indexOf("const "+n+" = [");if(s<0)return[];
   const e=h.indexOf("\n];",s);if(e<0)return[];
   return eval(h.slice(s+("const "+n+" = ").length,e+2));};
 const now=grab(fs.readFileSync("index.html","utf8"),"archive");
-let old=[];
-try{ old=grab(cp.execSync("git show HEAD:index.html",{encoding:"utf8",maxBuffer:1e9}),"archive"); }
-catch(e){ console.log("no committed archive yet — first run"); }
+// Read HEAD strictly. A failed or corrupt read must ABORT, never fall through to an
+// empty `old`, which would make every check below pass trivially and silently disable
+// the gate. Distinguish "HEAD genuinely has no archive" from "could not read HEAD".
+let old;
+try {
+  const head = cp.execSync("git show HEAD:index.html", {encoding:"utf8", maxBuffer:1e8});
+  if (!head.startsWith("<!DOCTYPE html>")) throw new Error("git show returned corrupt content");
+  old = head.includes("const archive = [") ? grab(head, "archive") : [];
+} catch (e) {
+  throw new Error("ARCHIVE GATE FAILED TO READ HEAD: " + e.message + " — refusing to proceed");
+}
 if(now.length < old.length)
   throw new Error("ARCHIVE SHRANK: "+old.length+" -> "+now.length+" — entries were deleted");
 const nowDois=new Set(now.map(x=>x.doi));
