@@ -3,7 +3,8 @@
 # Weekly auto-update for the BDPL battery-research dashboard.
 # Pulls the repo, hands weekly-prompt.md to Claude Code, and logs everything.
 #
-# Scheduled for Mondays 08:00 KST. Run it by hand any time to test:
+# Scheduled for Mondays 06:00 KST (= Sundays 21:00 UTC), via the Windows Task
+# Scheduler task BDPL-WeeklyDashboard. Run it by hand any time to test:
 #   ./run-weekly.sh
 #
 set -uo pipefail
