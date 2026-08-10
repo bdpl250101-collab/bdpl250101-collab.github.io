@@ -445,6 +445,8 @@ console.log("ALL ITEMS COMPLETE");
 '
 ```
 
+이 블록은 절대 fail-open으로 되돌리지 말 것 — 읽기 실패는 통과가 아니라 중단이다.
+
 ```bash
 # 4. THE ARCHIVE GATE. The archive must never shrink and must never gain a duplicate DOI.
 #    This is the check that does the real work — it fails loudly if a run dropped entries.
