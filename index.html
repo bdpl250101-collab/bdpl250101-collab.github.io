@@ -235,6 +235,9 @@
     <button class="tab" data-tab="industry" id="tabI"></button>
     <button class="tab" data-tab="charts" id="tabC"></button>
     <button class="tab" data-tab="archive" id="tabA"></button>
+    <button class="tab" data-tab="jobs" id="tabJ"></button>
+    <button class="tab" data-tab="postdoc" id="tabP"></button>
+    <button class="tab" data-tab="grants" id="tabG"></button>
   </div>
 
   <div class="panel active" id="panel-research">
@@ -282,6 +285,27 @@
     <div class="callout" id="calloutA"></div>
   </div>
 
+  <div class="panel" id="panel-jobs">
+    <div class="callout" id="noticeJ"></div>
+    <div class="filters" id="jobsFilters"></div>
+    <div class="cards" id="jobsCards"></div>
+    <div class="callout" id="portalsJ"></div>
+  </div>
+
+  <div class="panel" id="panel-postdoc">
+    <div class="callout" id="noticeP"></div>
+    <div class="filters" id="postdocFilters"></div>
+    <div class="cards" id="postdocCards"></div>
+    <div class="callout" id="portalsP"></div>
+  </div>
+
+  <div class="panel" id="panel-grants">
+    <div class="callout" id="noticeG"></div>
+    <div class="filters" id="grantsFilters"></div>
+    <div class="cards" id="grantsCards"></div>
+    <div class="callout" id="portalsG"></div>
+  </div>
+
   <footer>
     <div id="footSrc"></div>
     <div style="margin-top:8px" id="footNote"></div>
@@ -304,6 +328,12 @@ const I18N = {
     k3l:"이번 주 선별 연구 항목", k3n:"12개 저널 · Nature 계열 5건 · Joule·Adv. Funct. Mater. 각 3건",
     k4l:"이번 주 수집 항목", k4n:(r,i)=>`연구 ${r}건 · 업계 ${i}건`,
     tabR:"연구 동향 (Research)", tabI:"업계 동향 (Industry)", tabC:"차트 (Overview)", tabA:"연간 아카이브",
+    tabJ:"채용 (Jobs)", tabP:"포닥 (Postdoc)", tabG:"과제 (Grants)",
+    stOk:"✓ 확인됨", stCheck:"△ 재확인 필요",
+    linkPost:"공고 ↗", linkPortal:"포털 ↗",
+    lastChecked:d=>`마지막 확인 ${d}`,
+    loadFail:"데이터 파일을 불러오지 못했습니다. 이 섹션은 data/*.json 을 가져와 렌더링하므로, 로컬에서 file:// 로 열면 브라우저가 요청을 차단합니다. 배포된 주소에서 확인해 주세요.",
+    loading:"불러오는 중…",
     searchR:"연구 검색 (키워드)…", searchI:"업계 검색 (기업/키워드)…",
     empty:"해당 조건의 항목이 없습니다.",
     linkR:"원문 ↗", linkI:"기사 ↗",
@@ -337,6 +367,12 @@ const I18N = {
     k3l:"Research items selected this week", k3n:"12 journals · 5 from the Nature family · Joule and Adv. Funct. Mater. lead with 3 each",
     k4l:"Items collected this week", k4n:(r,i)=>`${r} research · ${i} industry`,
     tabR:"Research", tabI:"Industry", tabC:"Charts", tabA:"Archive",
+    tabJ:"Jobs", tabP:"Postdoc", tabG:"Grants",
+    stOk:"✓ confirmed", stCheck:"△ needs re-check",
+    linkPost:"Posting ↗", linkPortal:"Portal ↗",
+    lastChecked:d=>`Last checked ${d}`,
+    loadFail:"Could not load the data file. This section renders from data/*.json, so a browser opening the page over file:// will block the request. Please view it on the deployed site.",
+    loading:"Loading…",
     searchR:"Search research…", searchI:"Search industry…",
     empty:"No items match.",
     linkR:"Paper ↗", linkI:"Article ↗",
@@ -1784,9 +1820,18 @@ const archive = [
 
 /* ================= STATE & HELPERS ================= */
 let lang="en", rCat="전체", iReg="전체", rQ="", iQ="", aJ="전체";
+/* Student sections: filter state, and the data fetched from data/*.json.
+   null = still loading, {error:...} = the fetch failed. */
+let jF="전체", pF="전체", gF="전체";
+const STUDENT={jobs:null,postdoc:null,grants:null};
 const T=()=>I18N[lang];
 const CATCLR={"소재":"var(--s1)","전극":"var(--s2)","셀":"var(--s3)","공정":"var(--s4)","저널":"var(--s5)"};
 const REGCLR={"국내":"var(--s1)","해외":"var(--s2)"};
+/* Badge colours for the student sections. Keys are the `group` literals used in
+   data/jobs.json, data/postdoc.json and data/grants.json; anything else falls back. */
+const GRPCLR={"LG에너지솔루션":"var(--s1)","삼성SDI":"var(--s2)","SK온":"var(--s3)",
+  "미국":"var(--s1)","영국":"var(--s2)","독일":"var(--s3)",
+  "접수중":"var(--s1)","재확인 필요":"var(--s4)"};
 const badge=(t,c,bg)=>`<span class="badge" style="color:${c};background:${bg}">${t}</span>`;
 const tint=v=>`color-mix(in srgb, ${v} 14%, transparent)`;
 const verBadge=v=>v?`<span class="verified">${T().ver}</span>`:`<span class="unverified">${T().unver}</span>`;
@@ -1794,6 +1839,9 @@ const catLbl=c=>CATLBL[c][lang], regLbl=r=>REGLBL[r][lang];
 const subLbl=s=>lang==="en"?(SUBLBL[s]||s):s;
 const typeLbl=t=>TYPELBL[t]?TYPELBL[t][lang]:t;
 const compLbl=c=>lang==="en"?(COMPANY_EN[c]||c):c;
+/* {ko,en} blob -> current language; and item field -> its _en variant in English. */
+const pick=o=>o?(o[lang]||o.ko||""):"";
+const sLbl=(o,f)=>lang==="en"?(o[f+"_en"]||o[f]||""):(o[f]||"");
 
 /* ================= RENDER ================= */
 function applyStatic(){
@@ -1804,6 +1852,7 @@ function applyStatic(){
   set('k1l',t.k1l); set('k1v',t.k1v); set('k1n',t.k1n);
   set('k2l',t.k2l); set('k2n',t.k2n); set('k3l',t.k3l); set('k3n',t.k3n); set('k4l',t.k4l);
   set('tabR',t.tabR); set('tabI',t.tabI); set('tabC',t.tabC); set('tabA',t.tabA);
+  set('tabJ',t.tabJ); set('tabP',t.tabP); set('tabG',t.tabG);
   set('cc1t',t.cc1t); set('cc1c',t.cc1c); set('cc2t',t.cc2t); set('cc2c',t.cc2c);
   set('cc3t',t.cc3t); set('cc3c',t.cc3c); set('cc4t',t.cc4t); set('cc4c',t.cc4c);
   set('calloutR',t.calloutR); set('calloutI',t.calloutI); set('calloutA',t.calloutA);
@@ -1911,7 +1960,69 @@ function renderCharts(){
   document.getElementById('themeList').innerHTML=t.themes
     .map(([k,v])=>`<div><span style="color:var(--amber);font-weight:800">▸</span> <b style="color:var(--ink)">${k}</b> — ${v}</div>`).join('');
 }
-function renderAll(){applyStatic();renderFilters();renderResearch();renderIndustry();renderArchive();renderCharts();}
+/* ---- Student sections: 채용 / 포닥 / 과제 ----------------------------------
+   These three panels render from data/*.json rather than from inline arrays, so a
+   weekly pipeline only has to rewrite the JSON. They share one card template; the
+   per-file differences live in the data, not here. */
+function studentNotice(id,d){
+  const box=document.getElementById(id);
+  if(!d){box.innerHTML=T().loading;return;}
+  if(d.error){box.innerHTML=T().loadFail;return;}
+  box.innerHTML=`<b>${pick(d.notice)}</b> <span style="color:var(--muted)">· ${T().lastChecked(d.updated)}</span><br>${pick(d.context)}`;
+}
+function studentPortals(id,d){
+  const box=document.getElementById(id);
+  if(!d||d.error||!d.portals){box.innerHTML="";return;}
+  const links=d.portals.map(p=>
+    `<a href="${p.url}" target="_blank" rel="noopener" style="color:var(--brand-ink);text-decoration:none;font-weight:600">${lang==="en"?(p.name_en||p.name):p.name} ↗</a>`
+  ).join(' <span style="color:var(--muted)">·</span> ');
+  box.innerHTML=`<b>${pick(d.portals_title)}</b><br>${links}`;
+}
+const grpLbl=(d,k)=>{if(lang!=="en")return k;const it=d.items.find(x=>x.group===k);return it&&it.group_en?it.group_en:k;};
+function studentFilters(id,d,attr,cur){
+  const box=document.getElementById(id);
+  if(!d||d.error||!d.items){box.innerHTML="";return;}
+  const keys=["전체"].concat([...new Set(d.items.map(x=>x.group))]);
+  box.innerHTML=keys.map(k=>{
+    const label=k==="전체"?(lang==="en"?"All":"전체"):grpLbl(d,k);
+    return `<button class="chip${k===cur?' active':''}" data-${attr}="${k}">${label}</button>`;
+  }).join('');
+}
+function studentCards(id,d,cur){
+  const box=document.getElementById(id);
+  if(!d){box.innerHTML=`<div class="empty">${T().loading}</div>`;return;}
+  if(d.error){box.innerHTML=`<div class="empty">${T().loadFail}</div>`;return;}
+  const items=(d.items||[]).filter(x=>cur==="전체"||x.group===cur);
+  if(!items.length){box.innerHTML=`<div class="empty">${T().empty}</div>`;return;}
+  box.innerHTML=items.map(x=>{
+    const c=GRPCLR[x.group]||'var(--ink-2)';
+    const st=x.ok?`<span class="verified">${T().stOk}</span>`:`<span class="unverified">${T().stCheck}</span>`;
+    /* Some entries genuinely have no posting URL (an expired listing with no
+       replacement). Render the card without a link rather than inventing one. */
+    const link=x.link?`<a class="link" href="${x.link}" target="_blank" rel="noopener">${T().linkPost}</a>`:'';
+    return `<div class="card">
+      <div class="badges">${badge(sLbl(x,'group'),c,tint(c))}${badge(sLbl(x,'tag'),'var(--ink-2)','var(--surface-2)')}</div>
+      <h4>${sLbl(x,'title')}</h4>
+      <div class="meta"><b>${sLbl(x,'meta')}</b></div>
+      <p>${sLbl(x,'desc')}</p>
+      <div class="foot"><span class="date">${sLbl(x,'deadline')} · ${st}</span>${link}</div></div>`;
+  }).join('');
+}
+function renderJobs(){const d=STUDENT.jobs;studentNotice('noticeJ',d);studentFilters('jobsFilters',d,'jf',jF);studentCards('jobsCards',d,jF);studentPortals('portalsJ',d);}
+function renderPostdoc(){const d=STUDENT.postdoc;studentNotice('noticeP',d);studentFilters('postdocFilters',d,'pf',pF);studentCards('postdocCards',d,pF);studentPortals('portalsP',d);}
+function renderGrants(){const d=STUDENT.grants;studentNotice('noticeG',d);studentFilters('grantsFilters',d,'gf',gF);studentCards('grantsCards',d,gF);studentPortals('portalsG',d);}
+function loadStudentData(){
+  const files={jobs:"data/jobs.json",postdoc:"data/postdoc.json",grants:"data/grants.json"};
+  const redraw={jobs:renderJobs,postdoc:renderPostdoc,grants:renderGrants};
+  Object.keys(files).forEach(k=>{
+    fetch(files[k],{cache:"no-cache"})
+      .then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.json();})
+      .then(j=>{STUDENT[k]=j;})
+      .catch(e=>{STUDENT[k]={error:String((e&&e.message)||e)};})
+      .then(()=>redraw[k]());
+  });
+}
+function renderAll(){applyStatic();renderFilters();renderResearch();renderIndustry();renderArchive();renderCharts();renderJobs();renderPostdoc();renderGrants();}
 
 /* ================= EVENTS ================= */
 document.getElementById('researchFilters').addEventListener('click',e=>{
@@ -1932,6 +2043,18 @@ document.getElementById('archiveFilters').addEventListener('click',e=>{
   document.querySelectorAll('[data-aj]').forEach(x=>x.classList.toggle('active',x.dataset.aj===aJ));
   renderArchive();
 });
+document.getElementById('jobsFilters').addEventListener('click',e=>{
+  const b=e.target.closest('[data-jf]');if(!b)return;
+  jF=b.dataset.jf;renderJobs();
+});
+document.getElementById('postdocFilters').addEventListener('click',e=>{
+  const b=e.target.closest('[data-pf]');if(!b)return;
+  pF=b.dataset.pf;renderPostdoc();
+});
+document.getElementById('grantsFilters').addEventListener('click',e=>{
+  const b=e.target.closest('[data-gf]');if(!b)return;
+  gF=b.dataset.gf;renderGrants();
+});
 document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
   document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
   document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));
@@ -1948,6 +2071,7 @@ document.getElementById('langSeg').addEventListener('click',e=>{
 
 /* ================= INIT (dark + Korean by default) ================= */
 renderAll();
+loadStudentData();
 </script>
 </body>
 </html>

@@ -1,0 +1,212 @@
+{
+  "updated": "2026-08-16",
+  "purpose": {
+    "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
+    "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
+  },
+  "threshold": 2,
+  "counting_rule": {
+    "ko": "key = 소문자화한 이름과 소속을 하이픈으로 이어 붙인 값. 같은 key가 다시 등장하면 count를 1 올리고 papers에 추가합니다. 한 논문에서 같은 PI가 여러 번 나와도 count는 1만 올립니다.",
+    "en": "key is the lowercased name and organisation joined by hyphens. When the same key reappears, increment count by one and append to papers. A PI appearing more than once within a single paper still increments count only once."
+  },
+  "provenance_caveat": {
+    "ko": "이번 회차 이름은 주간 리포트 요약에서 가져온 것으로, 논문 저자 목록에서 교신저자임을 직접 확인한 값이 아닙니다. 그래서 corresponding_confirmed는 모두 false입니다. 다음 자동 회차부터 Crossref/OpenAlex로 교신저자를 확인해 채우는 것이 목표입니다.",
+    "en": "The names in this edition come from the weekly report summary, not from a direct reading of each paper's author list, so corresponding_confirmed is false throughout. From the next automated run the intent is to resolve corresponding authors through Crossref and OpenAlex."
+  },
+  "entries": [
+    {
+      "key": "fengqi-you|cornell-university",
+      "pi": "Fengqi You",
+      "org": "Cornell University",
+      "org_ko": "코넬대",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "papers": [
+        {
+          "date": "2026-08-07",
+          "journal": "Science Advances",
+          "title": "IonNet: composition-only deep-learning discovery of fast lithium-ion solid electrolytes",
+          "link": "https://www.science.org/doi/10.1126/sciadv.aee4959"
+        }
+      ]
+    },
+    {
+      "key": "zhilong-wang|cornell-university",
+      "pi": "Zhilong Wang",
+      "org": "Cornell University",
+      "org_ko": "코넬대",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "papers": [
+        {
+          "date": "2026-08-07",
+          "journal": "Science Advances",
+          "title": "IonNet: composition-only deep-learning discovery of fast lithium-ion solid electrolytes",
+          "link": "https://www.science.org/doi/10.1126/sciadv.aee4959"
+        }
+      ]
+    },
+    {
+      "key": "j-w-choi|seoul-national-university",
+      "pi": "J. W. Choi",
+      "org": "Seoul National University",
+      "org_ko": "서울대",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "papers": [
+        {
+          "date": "2026-07-23",
+          "journal": "Nature Communications",
+          "title": "Spandex-polyacrylic acid hybrid binder for slurry-cast ultra-thick electrodes",
+          "link": "https://www.nature.com/articles/s41467-026-76014-4"
+        }
+      ]
+    },
+    {
+      "key": "k-j-kim|sungkyunkwan-university",
+      "pi": "K. J. Kim",
+      "org": "Sungkyunkwan University",
+      "org_ko": "성균관대",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "papers": [
+        {
+          "date": "2026-07-23",
+          "journal": "Nature Communications",
+          "title": "Spandex-polyacrylic acid hybrid binder for slurry-cast ultra-thick electrodes",
+          "link": "https://www.nature.com/articles/s41467-026-76014-4"
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "orgs": ["Stanford University", "Massachusetts Institute of Technology", "Seoul National University"],
+      "date": "2026-07-31",
+      "journal": "Nature Energy",
+      "title": "Diffusion-like overpotentials can arise from non-diffusive mechanisms",
+      "link": "https://www.nature.com/articles/s41560-026-02118-2",
+      "reason": "institutions known, no author name in the source summary"
+    },
+    {
+      "orgs": ["Nanjing University"],
+      "date": "2026-07-08",
+      "journal": "Nature",
+      "title": "Single-phase gradient-solvation electrolyte for stable lithium-metal batteries",
+      "link": "https://www.nature.com/articles/s41586-026-10732-z",
+      "reason": "institution known, no author name in the source summary"
+    },
+    {
+      "orgs": ["Zhejiang University"],
+      "date": "2026-07-07",
+      "journal": "Nature Nanotechnology",
+      "title": "Electrostatic regulation of solvation for ampere-hour-level high-energy lithium-metal batteries",
+      "link": "https://www.nature.com/articles/s41565-026-02212-2",
+      "reason": "institution known, no author name in the source summary"
+    },
+    {
+      "orgs": ["University of California, Los Angeles"],
+      "date": "2026-08-06",
+      "journal": "Joule",
+      "title": "Dynamic interphases suppress calendar aging of metal anodes",
+      "link": "https://www.cell.com/joule/abstract/S2542-4351(26)00164-9",
+      "reason": "institution known, no author name in the source summary"
+    },
+    {
+      "orgs": ["University of Münster"],
+      "date": "2026-07-17",
+      "journal": "Nature Energy",
+      "title": "Challenges and trends in automotive battery recycling",
+      "link": "https://www.nature.com/articles/s41560-026-02092-9",
+      "reason": "institution known, no author name in the source summary"
+    },
+    {
+      "orgs": [],
+      "date": "2026",
+      "journal": "Angewandte Chemie Int. Ed.",
+      "title": "Interfacial stability and reaction kinetics of sulfide solid electrolytes for all-solid-state batteries",
+      "link": "https://onlinelibrary.wiley.com/doi/10.1002/anie.202519663",
+      "reason": "no author or institution in the source summary"
+    },
+    {
+      "orgs": [],
+      "date": "2026",
+      "journal": "Advanced Functional Materials",
+      "title": "Si- and Sn-based anodes for sulfide-electrolyte all-solid-state batteries",
+      "link": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.202520090",
+      "reason": "no author or institution in the source summary"
+    },
+    {
+      "orgs": [],
+      "date": "2026",
+      "journal": "Advanced Functional Materials",
+      "title": "In situ Li-conducting polymer additive for thick dry-film cathodes",
+      "link": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.75489",
+      "reason": "no author or institution in the source summary"
+    },
+    {
+      "orgs": [],
+      "date": "2026",
+      "journal": "Advanced Functional Materials",
+      "title": "Solvent-free binding mechanisms and microstructure engineering in dry electrodes",
+      "link": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.202518619",
+      "reason": "no author or institution in the source summary"
+    },
+    {
+      "orgs": [],
+      "date": "2026",
+      "journal": "Advanced Materials",
+      "title": "Chemo-mechanical failure and reinforcement of solid-electrolyte membranes in all-solid-state lithium-metal pouch cells",
+      "link": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202518655",
+      "reason": "no author or institution in the source summary"
+    },
+    {
+      "orgs": [],
+      "date": "2026",
+      "journal": "Advanced Materials",
+      "title": "Sulfide versus halide solid electrolytes for commercializing all-solid-state batteries",
+      "link": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202513255",
+      "reason": "no author or institution in the source summary"
+    },
+    {
+      "orgs": [],
+      "date": "2026",
+      "journal": "Cell Reports Physical Science",
+      "title": "A multiscale roadmap for dry electrode processing, from microstructure to mass production",
+      "link": "https://www.cell.com/cell-reports-physical-science/fulltext/S2666-3864(26)00165-7",
+      "reason": "no author or institution in the source summary"
+    },
+    {
+      "orgs": [],
+      "date": "2026",
+      "journal": "Materials Horizons",
+      "title": "Materials- and process-based microstructure engineering for scalable dry electrode manufacturing",
+      "link": "https://pubs.rsc.org/en/content/articlelanding/2026/mh/d5mh02484f",
+      "reason": "no author or institution in the source summary"
+    },
+    {
+      "orgs": [],
+      "date": "2026",
+      "journal": "Materials Futures",
+      "title": "2026 Roadmap on Next-Generation Solid Electrolytes",
+      "link": "https://iopscience.iop.org/article/10.1088/2752-5724/ae5120",
+      "reason": "roadmap with many contributing authors; no single PI in the source summary"
+    },
+    {
+      "orgs": [],
+      "date": "2026",
+      "journal": "Joule",
+      "title": "Structural batteries from concept to deployment",
+      "link": "https://www.cell.com/joule/abstract/S2542-4351(26)00256-4",
+      "reason": "no author or institution in the source summary"
+    },
+    {
+      "orgs": [],
+      "date": "2026",
+      "journal": "Joule",
+      "title": "Academic battery passports for the regulatory era",
+      "link": "https://www.cell.com/joule/fulltext/S2542-4351(26)00255-2",
+      "reason": "no author or institution in the source summary"
+    }
+  ]
+}

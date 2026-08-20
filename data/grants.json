@@ -1,0 +1,56 @@
+{
+  "updated": "2026-08-16",
+  "notice": {
+    "ko": "공고 자동수집은 best-effort이며 누락 가능 — 아래 공식 포털에서 직접 확인 권장.",
+    "en": "Automated collection of announcements is best-effort and may miss items — please confirm directly on the official portals below."
+  },
+  "context": {
+    "ko": "2026년 부처개편으로 에너지 R&D는 기후에너지환경부(MCEE)와 KETEP, 산업 R&D는 KEIT, 기초·원천은 NRF가 맡고, 통합 공고는 IRIS에 게시됩니다. 마감일이 원문에서 확정되지 않은 항목은 ‘재확인 필요’로 표기했습니다.",
+    "en": "After the 2026 ministry reorganisation, energy R&D sits with the Ministry of Climate, Energy and Environment (MCEE) and KETEP, industrial R&D with KEIT, and basic and source technology with the NRF, while consolidated announcements are posted on IRIS. Items whose deadline could not be confirmed against the original announcement are marked as needing a re-check."
+  },
+  "portals_title": { "ko": "모니터링 공식 포털", "en": "Official portals monitored" },
+  "portals": [
+    { "name": "IRIS — 접수중 공고", "name_en": "IRIS — open calls", "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituListView.do?ancmPrg=ancmIng" },
+    { "name": "한국연구재단 (NRF)", "name_en": "National Research Foundation (NRF)", "url": "https://www.nrf.re.kr/biz/notice/list" },
+    { "name": "한국산업기술기획평가원 (KEIT)", "name_en": "KEIT", "url": "https://srome.keit.re.kr/srome/biz/perform/opnnPrpsl/retrieveTaskAnncmListView.do?prgmId=XPG201040000" },
+    { "name": "한국에너지기술평가원 (KETEP)", "name_en": "KETEP", "url": "https://www.ketep.re.kr/businessAcment?menuId=MENU002080200000000" }
+  ],
+  "items": [
+    {
+      "group": "접수중", "group_en": "Open",
+      "tag": "KETEP / MCEE", "tag_en": "KETEP / MCEE",
+      "title": "2026년 2차 에너지수요관리핵심기술개발사업 신규과제",
+      "title_en": "2026 second-round Energy Demand Management Core Technology Development Program — new projects",
+      "meta": "기후에너지환경부 · 한국에너지기술평가원", "meta_en": "MCEE · KETEP",
+      "deadline": "접수 마감 2026-08-24", "deadline_en": "Applications close 24 Aug 2026",
+      "ok": true,
+      "link": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituListView.do?ancmPrg=ancmIng",
+      "desc": "IRIS 접수중 목록에 올라와 있는 신규과제 공고로, 접수 마감은 8월 24일입니다. 세부 과제 구성은 IRIS 공고문에서 확인하세요.",
+      "desc_en": "A new-project call listed among IRIS open announcements, closing on 24 August. The detailed project breakdown is in the IRIS announcement itself."
+    },
+    {
+      "group": "재확인 필요", "group_en": "Needs re-check",
+      "tag": "KETEP / MCEE", "tag_en": "KETEP / MCEE",
+      "title": "2026년 2차 신재생에너지 R&D (수소 · 연료전지) 신규과제 재공고",
+      "title_en": "2026 second-round renewable energy R&D (hydrogen and fuel cells) — re-announced new projects",
+      "meta": "기후에너지환경부 · 한국에너지기술평가원", "meta_en": "MCEE · KETEP",
+      "deadline": "2026-09 중순 추정 — 원문 확인 필요", "deadline_en": "Estimated mid-September 2026 — verify against the original notice",
+      "ok": false,
+      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000122148",
+      "desc": "수소·연료전지 분야 재공고 건입니다. 마감이 9월 중순으로 알려져 있으나 확정 일자를 원문에서 확인하지 못해 재확인이 필요합니다.",
+      "desc_en": "A re-announced call in the hydrogen and fuel cell area. The deadline is reported as mid-September, but the exact date could not be confirmed against the original notice, so it needs re-checking."
+    },
+    {
+      "group": "재확인 필요", "group_en": "Needs re-check",
+      "tag": "NRF / 과기정통부", "tag_en": "NRF / MSIT",
+      "title": "미래혁신 선도형 이차전지 원천기술개발 (리튬황) 재공모",
+      "title_en": "Future-innovation leading secondary battery source technology development (lithium-sulfur) — re-solicitation",
+      "meta": "한국연구재단 · 과학기술정보통신부", "meta_en": "NRF · Ministry of Science and ICT",
+      "deadline": "5월 공고분 — 마감 가능성 높음, 재확인 필요", "deadline_en": "Announced in May — likely closed, needs re-checking",
+      "ok": false,
+      "link": "https://svakorea.org/news/530",
+      "desc": "리튬황 전지 원천기술 과제로 연 10억 원 · 4.5년 규모입니다. 5월 공고분이라 이미 마감됐을 가능성이 높아, NRF 공고 목록에서 현재 상태를 확인해야 합니다.",
+      "desc_en": "A lithium-sulfur source-technology project funded at KRW 1B per year over 4.5 years. It was announced in May and has likely closed, so its current status should be checked against the NRF announcement list."
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "updated": "2026-08-16",
+  "notice": {
+    "ko": "공고 자동수집은 best-effort이며 누락 가능 — 아래 공식 잡보드에서 직접 확인 권장.",
+    "en": "Automated collection of postings is best-effort and may miss items — please confirm directly on the official job boards below."
+  },
+  "context": {
+    "ko": "시드 워치리스트(data/postdoc_watchlist.json)의 그룹 페이지와 잡보드를 매주 확인해 채웁니다. 2026-08-16 기준으로 미국 쪽에는 오픈 공고가 확인됐고, 영국·독일 시드 랩에서는 확인된 오픈이 없었습니다.",
+    "en": "This list is filled each week by checking the group pages and job boards in the seed watchlist (data/postdoc_watchlist.json). As of 16 August 2026 there were confirmed openings in the US, and none among the UK and German seed labs."
+  },
+  "portals_title": { "ko": "모니터링 잡보드", "en": "Job boards monitored" },
+  "portals": [
+    { "name": "ECS — Batteries & Energy Storage", "name_en": "ECS — Batteries & Energy Storage", "url": "https://jobs.electrochem.org/jobs/function/batteries-and-energy-storage/" },
+    { "name": "Faraday Institution", "name_en": "Faraday Institution", "url": "https://www.faraday.ac.uk/opportunities/job-opportunities/" },
+    { "name": "jobs.ac.uk — 검색어 \"battery\"", "name_en": "jobs.ac.uk — search \"battery\"", "url": "https://www.jobs.ac.uk" },
+    { "name": "Cambridge Chemistry", "name_en": "Cambridge Chemistry", "url": "https://www.ch.cam.ac.uk/jobs" },
+    { "name": "MEET Münster", "name_en": "MEET Münster", "url": "https://www.uni-muenster.de/MEET/en/institute/jobs.shtml" },
+    { "name": "Helmholtz Institute Ulm (HIU)", "name_en": "Helmholtz Institute Ulm (HIU)", "url": "https://hiu-batteries.de/karriere/" },
+    { "name": "AcademicPositions — electrochemistry", "name_en": "AcademicPositions — electrochemistry", "url": "https://academicpositions.com" }
+  ],
+  "items": [
+    {
+      "group": "미국", "group_en": "USA",
+      "tag": "오픈", "tag_en": "Open",
+      "title": "실험 포닥 3자리 — 전고체전지 · Na-ion 양극 · 자율실험실",
+      "title_en": "Three experimental postdoc openings — solid-state cells, Na-ion cathodes, autonomous labs",
+      "meta": "Gerbrand Ceder · UC Berkeley / LBNL", "meta_en": "Gerbrand Ceder · UC Berkeley / LBNL",
+      "deadline": "상시", "deadline_en": "Rolling",
+      "ok": true,
+      "link": "https://ceder.berkeley.edu/contact-us/openings/",
+      "desc": "그룹 채용 페이지에 실험 포닥 3자리가 상시로 열려 있습니다. 전고체전지, Na-ion 양극, 자율실험실(autonomous lab) 세 방향입니다.",
+      "desc_en": "The group's openings page lists three experimental postdoc positions on a rolling basis, covering solid-state batteries, Na-ion cathodes and autonomous laboratories."
+    },
+    {
+      "group": "미국", "group_en": "USA",
+      "tag": "오픈", "tag_en": "Open",
+      "title": "Postdoc: Battery Materials & Electrochemical Energy Storage",
+      "title_en": "Postdoc: Battery Materials & Electrochemical Energy Storage",
+      "meta": "Brett Helms · Lawrence Berkeley National Laboratory", "meta_en": "Brett Helms · Lawrence Berkeley National Laboratory",
+      "deadline": "우선마감 2026-08-19 · 충원 시까지", "deadline_en": "Priority deadline 19 Aug 2026 · open until filled",
+      "ok": true,
+      "link": "https://lbl.referrals.selectminds.com/jobs/postdoctoral-researcher-%E2%80%93-battery-materials-electrochemical-energy-storage-7559",
+      "desc": "LBNL 공식 채용 시스템에 게시된 포닥 공고입니다. 우선 검토 마감은 8월 19일이며 이후에도 충원 시까지 접수합니다.",
+      "desc_en": "A postdoc posting on LBNL's official recruiting system. Priority review closes on 19 August, with applications accepted until the position is filled."
+    },
+    {
+      "group": "미국", "group_en": "USA",
+      "tag": "오픈", "tag_en": "Open",
+      "title": "Postdoc: Modeling Batteries and Battery Systems",
+      "title_en": "Postdoc: Modeling Batteries and Battery Systems",
+      "meta": "Sandia National Laboratories", "meta_en": "Sandia National Laboratories",
+      "deadline": "마감일 미표기 · 2026-07 말 게시", "deadline_en": "No stated deadline · posted late July 2026",
+      "ok": true,
+      "link": "https://jobs.electrochem.org/jobs/function/batteries-and-energy-storage/",
+      "desc": "7월 말 게시가 확인된 모델링 포닥 공고입니다. 링크는 해당 공고가 올라온 ECS 잡보드이며, 명시된 마감일은 없습니다.",
+      "desc_en": "A modelling postdoc posting confirmed as listed in late July. The link points to the ECS job board where it appears; no explicit deadline is stated."
+    },
+    {
+      "group": "미국", "group_en": "USA",
+      "tag": "재확인", "tag_en": "Re-check",
+      "title": "Postdoc: Battery Materials — 양극 합성 · 재활용 · 열화",
+      "title_en": "Postdoc: Battery Materials — cathode synthesis, recycling, degradation",
+      "meta": "Argonne National Laboratory", "meta_en": "Argonne National Laboratory",
+      "deadline": "게시 시점이 오래됨 — 상태 재확인 필요", "deadline_en": "Posting is not recent — status needs re-checking",
+      "ok": false,
+      "link": "https://www.postdocjobs.com/posting/7308882",
+      "desc": "양극 합성, 재활용, 열화를 다루는 포닥 공고이나 게시 시점이 다소 오래됐습니다. 아직 유효한지 확인되지 않아 지원 전 상태 재확인이 필요합니다.",
+      "desc_en": "A postdoc posting covering cathode synthesis, recycling and degradation, but the listing is not recent. It has not been confirmed as still active, so the status should be re-checked before applying."
+    },
+    {
+      "group": "영국", "group_en": "UK",
+      "tag": "마감", "tag_en": "Closed",
+      "title": "포닥 공고 마감 (2026-08-11)",
+      "title_en": "Postdoc posting closed (11 Aug 2026)",
+      "meta": "Clare Grey · University of Cambridge", "meta_en": "Clare Grey · University of Cambridge",
+      "deadline": "2026-08-11 마감", "deadline_en": "Closed 11 August 2026",
+      "ok": true,
+      "link": "https://www.ch.cam.ac.uk/jobs",
+      "desc": "8월 11일자로 마감됐습니다. 같은 학과 잡보드에서 후속 공고를 계속 확인합니다.",
+      "desc_en": "Closed on 11 August. The department's job board is being monitored for a follow-up posting."
+    },
+    {
+      "group": "영국", "group_en": "UK",
+      "tag": "만료", "tag_en": "Expired",
+      "title": "포닥 공고 만료",
+      "title_en": "Postdoc posting expired",
+      "meta": "Peter Bruce · University of Oxford", "meta_en": "Peter Bruce · University of Oxford",
+      "deadline": "만료 — 신규 공고 없음", "deadline_en": "Expired — no new posting",
+      "ok": true,
+      "link": null,
+      "desc": "기존 공고가 만료됐고 신규 공고는 확인되지 않았습니다. 직접 연결되는 공고 URL이 없어 링크는 비워 둡니다.",
+      "desc_en": "The previous posting has expired and no new one was found. No direct posting URL is available, so the link is left empty."
+    },
+    {
+      "group": "독일", "group_en": "Germany",
+      "tag": "공석 없음", "tag_en": "No vacancy",
+      "title": "현재 공석 없음",
+      "title_en": "No current vacancies",
+      "meta": "MEET Battery Research Center · Univ. Münster", "meta_en": "MEET Battery Research Center · Univ. of Münster",
+      "deadline": "해당 없음", "deadline_en": "Not applicable",
+      "ok": true,
+      "link": "https://www.uni-muenster.de/MEET/en/institute/jobs.shtml",
+      "desc": "기관 채용 페이지에 현재 공석이 없다고 표시돼 있습니다. 매주 재확인합니다.",
+      "desc_en": "The institute's jobs page currently states that there are no vacancies. It is re-checked weekly."
+    },
+    {
+      "group": "독일", "group_en": "Germany",
+      "tag": "공석 없음", "tag_en": "No vacancy",
+      "title": "포닥 공고 없음",
+      "title_en": "No postdoc postings",
+      "meta": "KIT / Helmholtz Institute Ulm", "meta_en": "KIT / Helmholtz Institute Ulm",
+      "deadline": "해당 없음", "deadline_en": "Not applicable",
+      "ok": true,
+      "link": "https://hiu-batteries.de/karriere/",
+      "desc": "채용 페이지에 포닥 공고가 확인되지 않았습니다. 박사과정·기술직 공고는 별도로 열려 있을 수 있습니다.",
+      "desc_en": "No postdoc posting was found on the careers page. Doctoral and technical positions may be open separately."
+    }
+  ]
+}

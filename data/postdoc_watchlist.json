@@ -1,0 +1,53 @@
+{
+  "updated": "2026-08-16",
+  "purpose": {
+    "ko": "매주 이 목록의 그룹 페이지와 잡보드를 확인해 data/postdoc.json 을 갱신하기 위한 시드 워치리스트입니다.",
+    "en": "A seed watchlist: check each of these group pages and job boards weekly, then refresh data/postdoc.json from what is found."
+  },
+  "note": "type is \"pi\" for an individual principal investigator and \"lab\" for an institution or centre. Entries carry no URL unless one was verified; the postdoc job boards live in data/postdoc.json under \"portals\".",
+  "regions": [
+    {
+      "region": "미국", "region_en": "USA",
+      "entries": [
+        { "type": "pi", "name": "Yi Cui", "org": "Stanford University", "org_ko": "스탠퍼드대" },
+        { "type": "pi", "name": "Gerbrand Ceder", "org": "UC Berkeley / LBNL", "org_ko": "UC 버클리 / LBNL", "url": "https://ceder.berkeley.edu/contact-us/openings/" },
+        { "type": "pi", "name": "Kristin Persson", "org": "UC Berkeley / LBNL", "org_ko": "UC 버클리 / LBNL" },
+        { "type": "pi", "name": "Yang Shao-Horn", "org": "Massachusetts Institute of Technology", "org_ko": "MIT" },
+        { "type": "pi", "name": "Martin Bazant", "org": "Massachusetts Institute of Technology", "org_ko": "MIT" },
+        { "type": "pi", "name": "Yet-Ming Chiang", "org": "Massachusetts Institute of Technology", "org_ko": "MIT" },
+        { "type": "pi", "name": "Ju Li", "org": "Massachusetts Institute of Technology", "org_ko": "MIT" },
+        { "type": "pi", "name": "Arumugam Manthiram", "org": "University of Texas at Austin", "org_ko": "텍사스대 오스틴" },
+        { "type": "pi", "name": "Y. Shirley Meng", "org": "UC San Diego", "org_ko": "UC 샌디에이고" },
+        { "type": "pi", "name": "Ping Liu", "org": "UC San Diego", "org_ko": "UC 샌디에이고" },
+        { "type": "pi", "name": "Zheng Chen", "org": "UC San Diego", "org_ko": "UC 샌디에이고" },
+        { "type": "pi", "name": "Matthew McDowell", "org": "Georgia Institute of Technology", "org_ko": "조지아공대" },
+        { "type": "lab", "name": "Argonne National Laboratory", "org": "Argonne National Laboratory", "org_ko": "아르곤 국립연구소" },
+        { "type": "lab", "name": "Pacific Northwest National Laboratory", "org": "PNNL", "org_ko": "PNNL" },
+        { "type": "lab", "name": "Sandia National Laboratories", "org": "Sandia National Laboratories", "org_ko": "샌디아 국립연구소" },
+        { "type": "lab", "name": "Lawrence Berkeley National Laboratory", "org": "LBNL", "org_ko": "LBNL", "url": "https://lbl.referrals.selectminds.com/" }
+      ]
+    },
+    {
+      "region": "영국", "region_en": "UK",
+      "entries": [
+        { "type": "pi", "name": "Peter Bruce", "org": "University of Oxford", "org_ko": "옥스퍼드대" },
+        { "type": "pi", "name": "Clare Grey", "org": "University of Cambridge", "org_ko": "케임브리지대", "url": "https://www.ch.cam.ac.uk/jobs" },
+        { "type": "pi", "name": "Magda Titirici", "org": "Imperial College London", "org_ko": "임페리얼 칼리지 런던" },
+        { "type": "pi", "name": "Billy Wu", "org": "Imperial College London", "org_ko": "임페리얼 칼리지 런던" },
+        { "type": "lab", "name": "University of Birmingham", "org": "University of Birmingham", "org_ko": "버밍엄대" },
+        { "type": "lab", "name": "Faraday Institution", "org": "Faraday Institution", "org_ko": "패러데이 연구소", "url": "https://www.faraday.ac.uk/opportunities/job-opportunities/" },
+        { "type": "lab", "name": "University of St Andrews", "org": "University of St Andrews", "org_ko": "세인트앤드루스대" }
+      ]
+    },
+    {
+      "region": "독일", "region_en": "Germany",
+      "entries": [
+        { "type": "pi", "name": "Martin Winter", "org": "MEET, Univ. of Münster / RWTH Aachen", "org_ko": "MEET 뮌스터대 / RWTH 아헨", "url": "https://www.uni-muenster.de/MEET/en/institute/jobs.shtml" },
+        { "type": "lab", "name": "KIT / Helmholtz Institute Ulm", "org": "KIT / Helmholtz Institute Ulm", "org_ko": "KIT / 헬름홀츠 울름", "url": "https://hiu-batteries.de/karriere/" },
+        { "type": "pi", "name": "Jürgen Janek", "org": "Justus Liebig University Giessen", "org_ko": "기센대" },
+        { "type": "lab", "name": "Technical University of Munich", "org": "Technical University of Munich", "org_ko": "뮌헨공대" },
+        { "type": "lab", "name": "Fraunhofer", "org": "Fraunhofer", "org_ko": "프라운호퍼" }
+      ]
+    }
+  ]
+}
