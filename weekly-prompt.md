@@ -385,6 +385,10 @@ Concretely, a normal weekly run must leave all of this byte-identical:
 - The render layer: `renderJobs`, `renderPostdoc`, `renderGrants`, `loadStudentData`,
   `studentNotice`, `studentFilters`, `studentCards`, `studentPortals`, the `STUDENT` state
   object, `jF` / `pF` / `gF`, `GRPCLR`, `sLbl`, and the three renderer calls in `renderAll()`.
+- The inline seed arrays `const jobs = [ … ]`, `const postdoc = [ … ]`, `const grants = [ … ]`
+  and `const SECMETA = { … }`, which sit between the `archive` array and the
+  `STATE & HELPERS` block. They follow the same shape as `research` and `industry`, and
+  they are what the three tabs paint before any fetch resolves.
 - The `tabJ` / `tabP` / `tabG` labels in **both** `I18N.ko` and `I18N.en`.
 - All five data files: `data/jobs.json`, `data/postdoc.json`, `data/grants.json`,
   `data/postdoc_watchlist.json`, `data/pi_archive.json`.
@@ -398,6 +402,20 @@ shell all live in the same file and all predate this run. Rewriting the file fro
 would silently delete three tabs and five data files, and the loss would not show up in any
 of the research/industry checks.
 
+### Two copies of one feed — keep them in step
+
+Each section exists twice on purpose:
+
+- the **inline seed array** in index.html (`jobs`, `postdoc`, `grants`, plus `SECMETA` for
+  the notice, context and portal list). This renders on first paint, works when the page is
+  opened over `file://`, and survives a failed or blocked fetch.
+- **`data/*.json`**, the pipeline-facing copy. `loadStudentData()` replaces the seed with it
+  when the fetch returns a usable payload, and marks the section `stale` when it does not.
+
+They must describe the same items in the same order. `./check-student-sections.sh` compares
+them field by field and fails if they diverge, so **never edit one alone** — edit
+`data/*.json`, then regenerate the seeds from it and re-run the guard.
+
 ### If you are asked to update them
 
 Only when the instruction for a run explicitly says so — not as part of the routine sweep.
@@ -407,7 +425,17 @@ item complete in both languages (`group`/`group_en`, `tag`/`tag_en`, `title`/`ti
 `updated` field to the date you actually re-checked, and hold to section 5's rule — only what
 you opened and read, `ok: false` and a "재확인 필요" tag for anything uncertain. `link` may be
 `null` when a posting has genuinely expired with no replacement URL; it may never be a guess.
-Then re-run `./check-student-sections.sh`.
+
+Then regenerate the inline seeds so index.html matches the JSON you just edited, and re-run
+the guard:
+
+```bash
+./check-student-sections.sh     # must print "seeds in sync with data/*.json"
+```
+
+If the guard reports `OUT OF SYNC`, the seed arrays in index.html still hold the previous
+week's items — update them to match `data/*.json` exactly (same items, same order, same
+field values) rather than deleting either copy.
 
 ### `data/pi_archive.json` is append-only, like the archive
 

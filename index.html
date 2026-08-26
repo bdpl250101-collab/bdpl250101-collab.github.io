@@ -332,8 +332,7 @@ const I18N = {
     stOk:"✓ 확인됨", stCheck:"△ 재확인 필요",
     linkPost:"공고 ↗", linkPortal:"포털 ↗",
     lastChecked:d=>`마지막 확인 ${d}`,
-    loadFail:"데이터 파일을 불러오지 못했습니다. 이 섹션은 data/*.json 을 가져와 렌더링하므로, 로컬에서 file:// 로 열면 브라우저가 요청을 차단합니다. 배포된 주소에서 확인해 주세요.",
-    loading:"불러오는 중…",
+    seedStale:"⚠ data/*.json 을 불러오지 못해 페이지에 내장된 사본을 표시하고 있습니다.",
     searchR:"연구 검색 (키워드)…", searchI:"업계 검색 (기업/키워드)…",
     empty:"해당 조건의 항목이 없습니다.",
     linkR:"원문 ↗", linkI:"기사 ↗",
@@ -371,8 +370,7 @@ const I18N = {
     stOk:"✓ confirmed", stCheck:"△ needs re-check",
     linkPost:"Posting ↗", linkPortal:"Portal ↗",
     lastChecked:d=>`Last checked ${d}`,
-    loadFail:"Could not load the data file. This section renders from data/*.json, so a browser opening the page over file:// will block the request. Please view it on the deployed site.",
-    loading:"Loading…",
+    seedStale:"⚠ Could not load data/*.json — showing the copy embedded in the page.",
     searchR:"Search research…", searchI:"Search industry…",
     empty:"No items match.",
     linkR:"Paper ↗", linkI:"Article ↗",
@@ -1818,12 +1816,202 @@ const archive = [
    desc_en:"Ultrathin polymer layers tune interfacial Li solvation for anode-free lithium metal batteries."},
 ];
 
+/* ================= STUDENT SECTION SEEDS =================
+   jobs / postdoc / grants follow the same convention as research and industry:
+   plain arrays of items, every one complete in both languages. They are the
+   authoritative fallback and are rendered immediately, so the three tabs work
+   even when the page is opened over file:// or data/*.json cannot be fetched.
+
+   data/*.json carries the same content and is the pipeline-facing copy: when a
+   fetch succeeds it replaces the seed wholesale (see loadStudentData). Keep the
+   two in step — ./check-student-sections.sh compares them on every run, and
+   weekly-prompt.md section 4b states the rule.
+
+   Generated from data/*.json — do not hand-edit; edit the JSON and regenerate. */
+const jobs = [
+  {group:"LG에너지솔루션",group_en:"LG Energy Solution",tag:"상시",tag_en:"Rolling",
+   title:"상시 인재풀 등록 (신입 · 경력)",
+   title_en:"Always-open talent pool (new graduates and experienced hires)",
+   meta:"LG에너지솔루션 채용포털",meta_en:"LG Energy Solution careers portal",
+   deadline:"상시",deadline_en:"Rolling",ok:true,link:"https://careers.lg.com",
+   desc:"신입·경력 모두 상시 인재풀 등록이 열려 있습니다. 개별 R&D 직무 공고는 포털 로그인 후에만 노출되는 경우가 많아, 인재풀 등록을 먼저 해두는 편이 유리합니다.",
+   desc_en:"The talent pool is open on a rolling basis to both new graduates and experienced hires. Individual R&D postings are often visible only after logging into the portal, so registering in the pool first is the practical route."},
+  {group:"LG에너지솔루션",group_en:"LG Energy Solution",tag:"경력",tag_en:"Experienced",
+   title:"국내법무 경력 (변호사) 외 경력 공고",
+   title_en:"Domestic legal counsel (attorney) and other experienced-hire postings",
+   meta:"LG에너지솔루션 채용포털",meta_en:"LG Energy Solution careers portal",
+   deadline:"포털 확인",deadline_en:"See portal",ok:true,link:"https://careers.lg.com/apply?c=LGES",
+   desc:"2026-08-16 확인 시점에 진행 중이던 경력 공고입니다. R&D 직무가 아니며, 이 외 공고는 포털에서 직접 확인해야 합니다.",
+   desc_en:"An experienced-hire posting that was live as of the 16 August 2026 check. It is not an R&D role, and any other openings need to be checked on the portal directly."},
+  {group:"LG에너지솔루션",group_en:"LG Energy Solution",tag:"뉴스",tag_en:"News",
+   title:"글로벌 R&D 인재 채용 — 차세대전지 · AI · ESS",
+   title_en:"Global R&D hiring drive — next-generation cells, AI and ESS",
+   meta:"헤럴드경제 보도 (2026-06)",meta_en:"Herald Economy report (June 2026)",
+   deadline:"2026-06 보도 · 현재 공고 여부 재확인 필요",deadline_en:"Reported June 2026 · current status needs re-checking",ok:false,link:"https://biz.heraldcorp.com/article/10771931",
+   desc:"차세대전지·AI·ESS 분야 글로벌 R&D 인재를 채용한다는 6월 보도입니다. 지원 가능한 공고가 현재도 열려 있는지는 확인되지 않아 포털에서 재확인이 필요합니다.",
+   desc_en:"A June report on hiring global R&D talent for next-generation cells, AI and ESS. Whether a matching posting is still open has not been confirmed, so it needs re-checking on the portal."},
+  {group:"삼성SDI",group_en:"Samsung SDI",tag:"미확인",tag_en:"Unconfirmed",
+   title:"경력 R&D 공고는 포털 내부에만 노출 · 하반기 3급 신입 9월 예상",
+   title_en:"Experienced R&D postings are portal-only · graduate intake expected in September",
+   meta:"삼성SDI 채용포털",meta_en:"Samsung SDI careers portal",
+   deadline:"2026-09 예상 (신입)",deadline_en:"September 2026, expected (graduate track)",ok:false,link:"https://www.samsungcareers.com/subsid/detail/C31",
+   desc:"외부 채용 애그리게이터에서는 오픈 공고가 확인되지 않았습니다. 경력 R&D 공고는 포털 내부에만 노출되며, 하반기 3급 신입 공채는 9월경으로 예상되나 확정 공고는 아닙니다.",
+   desc_en:"No open posting was visible on external job aggregators. Experienced R&D roles appear only inside the portal, and the graduate intake is expected around September, though that is an expectation rather than an announced date."},
+  {group:"SK온",group_en:"SK On",tag:"수시",tag_en:"Continuous",
+   title:"R&D 트랙 수시 채용 — 선행Cell공정개발 · Cell개발 · System개발",
+   title_en:"Continuous R&D hiring — advanced cell process, cell development, system development",
+   meta:"대전 배터리연구원",meta_en:"Battery Research Institute, Daejeon",
+   deadline:"수시",deadline_en:"Continuous",ok:true,link:"https://www.sk-on.com/recruit/recruiting.asp",
+   desc:"선행Cell공정개발·Cell개발·System개발 직무가 대전 배터리연구원 기준으로 수시 게시됩니다. 게시 시점이 일정하지 않아 주기적으로 포털을 확인하는 편이 좋습니다. 2026-08-26 확인 시 sk-on.com이 *.skenergy.com 인증서를 제시해 브라우저 보안 경고가 뜹니다 — 접속 가능 여부 재확인 필요하며, SK커리어스 포털을 함께 확인하세요.",
+   desc_en:"Roles in advanced cell process development, cell development and system development are posted on a continuous basis at the Daejeon Battery Research Institute. Posting timing is irregular, so the portal is worth checking periodically. As of 26 August 2026 sk-on.com presents a certificate issued for *.skenergy.com, so the browser shows a security warning — this needs re-checking, and the SK Careers portal is worth checking alongside it."},
+  {group:"SK온",group_en:"SK On",tag:"마감",tag_en:"Closed",
+   title:"ESS연구원 (대전) — 마감",
+   title_en:"ESS researcher (Daejeon) — closed",
+   meta:"대전 배터리연구원",meta_en:"Battery Research Institute, Daejeon",
+   deadline:"2026-08-09 마감",deadline_en:"Closed 9 August 2026",ok:true,link:"https://www.sk-on.com/recruit/recruiting.asp",
+   desc:"최근 게시됐던 ESS연구원(대전) 공고는 8월 9일경 마감됐습니다. 같은 트랙이 다시 열릴 수 있으므로 참고용으로 남겨 둡니다. 2026-08-26 확인 시 sk-on.com이 *.skenergy.com 인증서를 제시해 브라우저 보안 경고가 뜹니다 — 접속 가능 여부 재확인 필요하며, SK커리어스 포털을 함께 확인하세요.",
+   desc_en:"A recent ESS researcher posting in Daejeon closed around 9 August. It is kept here for reference because the same track may reopen. As of 26 August 2026 sk-on.com presents a certificate issued for *.skenergy.com, so the browser shows a security warning — this needs re-checking, and the SK Careers portal is worth checking alongside it."},
+];
+
+const postdoc = [
+  {group:"미국",group_en:"USA",tag:"오픈",tag_en:"Open",
+   title:"실험 포닥 3자리 — 전고체전지 · Na-ion 양극 · 자율실험실",
+   title_en:"Three experimental postdoc openings — solid-state cells, Na-ion cathodes, autonomous labs",
+   meta:"Gerbrand Ceder · UC Berkeley / LBNL",meta_en:"Gerbrand Ceder · UC Berkeley / LBNL",
+   deadline:"상시",deadline_en:"Rolling",ok:true,link:"https://ceder.berkeley.edu/contact-us/openings/",
+   desc:"그룹 채용 페이지에 실험 포닥 3자리가 상시로 열려 있습니다. 전고체전지, Na-ion 양극, 자율실험실(autonomous lab) 세 방향입니다.",
+   desc_en:"The group's openings page lists three experimental postdoc positions on a rolling basis, covering solid-state batteries, Na-ion cathodes and autonomous laboratories."},
+  {group:"미국",group_en:"USA",tag:"오픈",tag_en:"Open",
+   title:"Postdoc: Battery Materials & Electrochemical Energy Storage",
+   title_en:"Postdoc: Battery Materials & Electrochemical Energy Storage",
+   meta:"Brett Helms · Lawrence Berkeley National Laboratory",meta_en:"Brett Helms · Lawrence Berkeley National Laboratory",
+   deadline:"우선마감 2026-08-19 · 충원 시까지",deadline_en:"Priority deadline 19 Aug 2026 · open until filled",ok:true,link:"https://lbl.referrals.selectminds.com/jobs/postdoctoral-researcher-%E2%80%93-battery-materials-electrochemical-energy-storage-7559",
+   desc:"LBNL 공식 채용 시스템에 게시된 포닥 공고입니다. 우선 검토 마감은 8월 19일이며 이후에도 충원 시까지 접수합니다.",
+   desc_en:"A postdoc posting on LBNL's official recruiting system. Priority review closes on 19 August, with applications accepted until the position is filled."},
+  {group:"미국",group_en:"USA",tag:"오픈",tag_en:"Open",
+   title:"Postdoc: Modeling Batteries and Battery Systems",
+   title_en:"Postdoc: Modeling Batteries and Battery Systems",
+   meta:"Sandia National Laboratories",meta_en:"Sandia National Laboratories",
+   deadline:"마감일 미표기 · 2026-07 말 게시",deadline_en:"No stated deadline · posted late July 2026",ok:true,link:"https://jobs.electrochem.org/jobs/function/batteries-and-energy-storage/",
+   desc:"7월 말 게시가 확인된 모델링 포닥 공고입니다. 링크는 해당 공고가 올라온 ECS 잡보드이며, 명시된 마감일은 없습니다.",
+   desc_en:"A modelling postdoc posting confirmed as listed in late July. The link points to the ECS job board where it appears; no explicit deadline is stated."},
+  {group:"미국",group_en:"USA",tag:"재확인",tag_en:"Re-check",
+   title:"Postdoc: Battery Materials — 양극 합성 · 재활용 · 열화",
+   title_en:"Postdoc: Battery Materials — cathode synthesis, recycling, degradation",
+   meta:"Argonne National Laboratory",meta_en:"Argonne National Laboratory",
+   deadline:"게시 시점이 오래됨 — 상태 재확인 필요",deadline_en:"Posting is not recent — status needs re-checking",ok:false,link:"https://www.postdocjobs.com/posting/7308882",
+   desc:"양극 합성, 재활용, 열화를 다루는 포닥 공고이나 게시 시점이 다소 오래됐습니다. 아직 유효한지 확인되지 않아 지원 전 상태 재확인이 필요합니다.",
+   desc_en:"A postdoc posting covering cathode synthesis, recycling and degradation, but the listing is not recent. It has not been confirmed as still active, so the status should be re-checked before applying."},
+  {group:"영국",group_en:"UK",tag:"마감",tag_en:"Closed",
+   title:"포닥 공고 마감 (2026-08-11)",
+   title_en:"Postdoc posting closed (11 Aug 2026)",
+   meta:"Clare Grey · University of Cambridge",meta_en:"Clare Grey · University of Cambridge",
+   deadline:"2026-08-11 마감",deadline_en:"Closed 11 August 2026",ok:true,link:"https://www.ch.cam.ac.uk/jobs",
+   desc:"8월 11일자로 마감됐습니다. 같은 학과 잡보드에서 후속 공고를 계속 확인합니다.",
+   desc_en:"Closed on 11 August. The department's job board is being monitored for a follow-up posting."},
+  {group:"영국",group_en:"UK",tag:"만료",tag_en:"Expired",
+   title:"포닥 공고 만료",
+   title_en:"Postdoc posting expired",
+   meta:"Peter Bruce · University of Oxford",meta_en:"Peter Bruce · University of Oxford",
+   deadline:"만료 — 신규 공고 없음",deadline_en:"Expired — no new posting",ok:true,link:null,
+   desc:"기존 공고가 만료됐고 신규 공고는 확인되지 않았습니다. 직접 연결되는 공고 URL이 없어 링크는 비워 둡니다.",
+   desc_en:"The previous posting has expired and no new one was found. No direct posting URL is available, so the link is left empty."},
+  {group:"독일",group_en:"Germany",tag:"공석 없음",tag_en:"No vacancy",
+   title:"현재 공석 없음",
+   title_en:"No current vacancies",
+   meta:"MEET Battery Research Center · Univ. Münster",meta_en:"MEET Battery Research Center · Univ. of Münster",
+   deadline:"해당 없음",deadline_en:"Not applicable",ok:true,link:"https://www.uni-muenster.de/MEET/en/institute/jobs.shtml",
+   desc:"기관 채용 페이지에 현재 공석이 없다고 표시돼 있습니다. 매주 재확인합니다.",
+   desc_en:"The institute's jobs page currently states that there are no vacancies. It is re-checked weekly."},
+  {group:"독일",group_en:"Germany",tag:"공석 없음",tag_en:"No vacancy",
+   title:"포닥 공고 없음",
+   title_en:"No postdoc postings",
+   meta:"KIT / Helmholtz Institute Ulm",meta_en:"KIT / Helmholtz Institute Ulm",
+   deadline:"해당 없음",deadline_en:"Not applicable",ok:true,link:"https://hiu-batteries.de/karriere/",
+   desc:"채용 페이지에 포닥 공고가 확인되지 않았습니다. 박사과정·기술직 공고는 별도로 열려 있을 수 있습니다.",
+   desc_en:"No postdoc posting was found on the careers page. Doctoral and technical positions may be open separately."},
+];
+
+const grants = [
+  {group:"접수중",group_en:"Open",tag:"KETEP / MCEE",tag_en:"KETEP / MCEE",
+   title:"2026년 2차 에너지수요관리핵심기술개발사업 신규과제",
+   title_en:"2026 second-round Energy Demand Management Core Technology Development Program — new projects",
+   meta:"기후에너지환경부 · 한국에너지기술평가원",meta_en:"MCEE · KETEP",
+   deadline:"접수 마감 2026-08-24",deadline_en:"Applications close 24 Aug 2026",ok:true,link:"https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituListView.do?ancmPrg=ancmIng",
+   desc:"IRIS 접수중 목록에 올라와 있는 신규과제 공고로, 접수 마감은 8월 24일입니다. 세부 과제 구성은 IRIS 공고문에서 확인하세요.",
+   desc_en:"A new-project call listed among IRIS open announcements, closing on 24 August. The detailed project breakdown is in the IRIS announcement itself."},
+  {group:"재확인 필요",group_en:"Needs re-check",tag:"KETEP / MCEE",tag_en:"KETEP / MCEE",
+   title:"2026년 2차 신재생에너지 R&D (수소 · 연료전지) 신규과제 재공고",
+   title_en:"2026 second-round renewable energy R&D (hydrogen and fuel cells) — re-announced new projects",
+   meta:"기후에너지환경부 · 한국에너지기술평가원",meta_en:"MCEE · KETEP",
+   deadline:"2026-09 중순 추정 — 원문 확인 필요",deadline_en:"Estimated mid-September 2026 — verify against the original notice",ok:false,link:"https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000122148",
+   desc:"수소·연료전지 분야 재공고 건입니다. 마감이 9월 중순으로 알려져 있으나 확정 일자를 원문에서 확인하지 못해 재확인이 필요합니다.",
+   desc_en:"A re-announced call in the hydrogen and fuel cell area. The deadline is reported as mid-September, but the exact date could not be confirmed against the original notice, so it needs re-checking."},
+  {group:"재확인 필요",group_en:"Needs re-check",tag:"NRF / 과기정통부",tag_en:"NRF / MSIT",
+   title:"미래혁신 선도형 이차전지 원천기술개발 (리튬황) 재공모",
+   title_en:"Future-innovation leading secondary battery source technology development (lithium-sulfur) — re-solicitation",
+   meta:"한국연구재단 · 과학기술정보통신부",meta_en:"NRF · Ministry of Science and ICT",
+   deadline:"5월 공고분 — 마감 가능성 높음, 재확인 필요",deadline_en:"Announced in May — likely closed, needs re-checking",ok:false,link:"https://svakorea.org/news/530",
+   desc:"리튬황 전지 원천기술 과제로 연 10억 원 · 4.5년 규모입니다. 5월 공고분이라 이미 마감됐을 가능성이 높아, NRF 공고 목록에서 현재 상태를 확인해야 합니다.",
+   desc_en:"A lithium-sulfur source-technology project funded at KRW 1B per year over 4.5 years. It was announced in May and has likely closed, so its current status should be checked against the NRF announcement list."},
+];
+
+/* Notice, context and portal list per section — the same shape as the head of
+   each data/*.json, so a fetched file can replace the whole object. */
+const SECMETA = {
+  jobs:{updated:"2026-08-16",
+    notice:{ko:"공고 자동수집은 best-effort이며 누락 가능 — 아래 공식 포털에서 직접 확인 권장.",
+            en:"Automated collection of postings is best-effort and may miss items — please confirm directly on the official portals below."},
+    context:{ko:"8월은 신입 공채 비수기라 개별 R&D 직무 공고는 대부분 각 사 채용포털 로그인 뒤에만 노출됩니다. 아래에는 상시 접근 가능한 공식 포털과, 2026-08-16 기준으로 확인된 항목만 실었습니다. 다음 대졸 신입 라운드는 통상 2026년 9월(하반기)입니다.",
+             en:"August is a quiet period for graduate recruiting, and most individual R&D postings sit behind a login on each company's own portal. Listed below are the always-accessible official portals plus only those items confirmed as of 16 August 2026. The next graduate intake normally opens in September 2026."},
+    portals_title:{ko:"공식 채용포털 (상시)",en:"Official career portals (always open)"},
+    portals:[
+      {name:"LG에너지솔루션",name_en:"LG Energy Solution",url:"https://careers.lg.com/apply?c=LGES"},
+      {name:"삼성SDI",name_en:"Samsung SDI",url:"https://www.samsungcareers.com/subsid/detail/C31"},
+      {name:"SK온 (채용 — 인증서 경고 주의)",name_en:"SK On (careers — expect a certificate warning)",url:"https://www.sk-on.com/recruit/recruiting.asp"},
+      {name:"SK커리어스 (SK그룹 통합)",name_en:"SK Careers (SK group-wide)",url:"https://www.skcareers.com/"},
+    ]},
+  postdoc:{updated:"2026-08-16",
+    notice:{ko:"공고 자동수집은 best-effort이며 누락 가능 — 아래 공식 잡보드에서 직접 확인 권장.",
+            en:"Automated collection of postings is best-effort and may miss items — please confirm directly on the official job boards below."},
+    context:{ko:"시드 워치리스트(data/postdoc_watchlist.json)의 그룹 페이지와 잡보드를 매주 확인해 채웁니다. 2026-08-16 기준으로 미국 쪽에는 오픈 공고가 확인됐고, 영국·독일 시드 랩에서는 확인된 오픈이 없었습니다.",
+             en:"This list is filled each week by checking the group pages and job boards in the seed watchlist (data/postdoc_watchlist.json). As of 16 August 2026 there were confirmed openings in the US, and none among the UK and German seed labs."},
+    portals_title:{ko:"모니터링 잡보드",en:"Job boards monitored"},
+    portals:[
+      {name:"ECS — Batteries & Energy Storage",name_en:"ECS — Batteries & Energy Storage",url:"https://jobs.electrochem.org/jobs/function/batteries-and-energy-storage/"},
+      {name:"Faraday Institution",name_en:"Faraday Institution",url:"https://www.faraday.ac.uk/opportunities/job-opportunities/"},
+      {name:"jobs.ac.uk — 검색어 \"battery\"",name_en:"jobs.ac.uk — search \"battery\"",url:"https://www.jobs.ac.uk"},
+      {name:"Cambridge Chemistry",name_en:"Cambridge Chemistry",url:"https://www.ch.cam.ac.uk/jobs"},
+      {name:"MEET Münster",name_en:"MEET Münster",url:"https://www.uni-muenster.de/MEET/en/institute/jobs.shtml"},
+      {name:"Helmholtz Institute Ulm (HIU)",name_en:"Helmholtz Institute Ulm (HIU)",url:"https://hiu-batteries.de/karriere/"},
+      {name:"AcademicPositions — electrochemistry",name_en:"AcademicPositions — electrochemistry",url:"https://academicpositions.com"},
+    ]},
+  grants:{updated:"2026-08-16",
+    notice:{ko:"공고 자동수집은 best-effort이며 누락 가능 — 아래 공식 포털에서 직접 확인 권장.",
+            en:"Automated collection of announcements is best-effort and may miss items — please confirm directly on the official portals below."},
+    context:{ko:"2026년 부처개편으로 에너지 R&D는 기후에너지환경부(MCEE)와 KETEP, 산업 R&D는 KEIT, 기초·원천은 NRF가 맡고, 통합 공고는 IRIS에 게시됩니다. 마감일이 원문에서 확정되지 않은 항목은 ‘재확인 필요’로 표기했습니다.",
+             en:"After the 2026 ministry reorganisation, energy R&D sits with the Ministry of Climate, Energy and Environment (MCEE) and KETEP, industrial R&D with KEIT, and basic and source technology with the NRF, while consolidated announcements are posted on IRIS. Items whose deadline could not be confirmed against the original announcement are marked as needing a re-check."},
+    portals_title:{ko:"모니터링 공식 포털",en:"Official portals monitored"},
+    portals:[
+      {name:"IRIS — 접수중 공고",name_en:"IRIS — open calls",url:"https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituListView.do?ancmPrg=ancmIng"},
+      {name:"한국연구재단 (NRF)",name_en:"National Research Foundation (NRF)",url:"https://www.nrf.re.kr/biz/notice/list"},
+      {name:"한국산업기술기획평가원 (KEIT)",name_en:"KEIT",url:"https://srome.keit.re.kr/srome/biz/perform/opnnPrpsl/retrieveTaskAnncmListView.do?prgmId=XPG201040000"},
+      {name:"한국에너지기술평가원 (KETEP)",name_en:"KETEP",url:"https://www.ketep.re.kr/businessAcment?menuId=MENU002080200000000"},
+    ]},
+};
+
 /* ================= STATE & HELPERS ================= */
 let lang="en", rCat="전체", iReg="전체", rQ="", iQ="", aJ="전체";
-/* Student sections: filter state, and the data fetched from data/*.json.
-   null = still loading, {error:...} = the fetch failed. */
+/* Student sections: filter state, plus the live copy of each feed. Seeded from
+   the inline arrays above so the three tabs render on first paint — including
+   over file://, where fetch is blocked. loadStudentData swaps in data/*.json
+   when that fetch succeeds, and sets .stale when it does not. */
 let jF="전체", pF="전체", gF="전체";
-const STUDENT={jobs:null,postdoc:null,grants:null};
+const STUDENT={
+  jobs:{...SECMETA.jobs,items:jobs},
+  postdoc:{...SECMETA.postdoc,items:postdoc},
+  grants:{...SECMETA.grants,items:grants}
+};
 const T=()=>I18N[lang];
 const CATCLR={"소재":"var(--s1)","전극":"var(--s2)","셀":"var(--s3)","공정":"var(--s4)","저널":"var(--s5)"};
 const REGCLR={"국내":"var(--s1)","해외":"var(--s2)"};
@@ -1966,13 +2154,12 @@ function renderCharts(){
    per-file differences live in the data, not here. */
 function studentNotice(id,d){
   const box=document.getElementById(id);
-  if(!d){box.innerHTML=T().loading;return;}
-  if(d.error){box.innerHTML=T().loadFail;return;}
-  box.innerHTML=`<b>${pick(d.notice)}</b> <span style="color:var(--muted)">· ${T().lastChecked(d.updated)}</span><br>${pick(d.context)}`;
+  const stale=d.stale?` <span style="color:var(--serious)">${T().seedStale}</span>`:'';
+  box.innerHTML=`<b>${pick(d.notice)}</b> <span style="color:var(--muted)">· ${T().lastChecked(d.updated)}</span>${stale}<br>${pick(d.context)}`;
 }
 function studentPortals(id,d){
   const box=document.getElementById(id);
-  if(!d||d.error||!d.portals){box.innerHTML="";return;}
+  if(!d||!d.portals){box.innerHTML="";return;}
   const links=d.portals.map(p=>
     `<a href="${p.url}" target="_blank" rel="noopener" style="color:var(--brand-ink);text-decoration:none;font-weight:600">${lang==="en"?(p.name_en||p.name):p.name} ↗</a>`
   ).join(' <span style="color:var(--muted)">·</span> ');
@@ -1981,7 +2168,7 @@ function studentPortals(id,d){
 const grpLbl=(d,k)=>{if(lang!=="en")return k;const it=d.items.find(x=>x.group===k);return it&&it.group_en?it.group_en:k;};
 function studentFilters(id,d,attr,cur){
   const box=document.getElementById(id);
-  if(!d||d.error||!d.items){box.innerHTML="";return;}
+  if(!d||!d.items){box.innerHTML="";return;}
   const keys=["전체"].concat([...new Set(d.items.map(x=>x.group))]);
   box.innerHTML=keys.map(k=>{
     const label=k==="전체"?(lang==="en"?"All":"전체"):grpLbl(d,k);
@@ -1990,8 +2177,6 @@ function studentFilters(id,d,attr,cur){
 }
 function studentCards(id,d,cur){
   const box=document.getElementById(id);
-  if(!d){box.innerHTML=`<div class="empty">${T().loading}</div>`;return;}
-  if(d.error){box.innerHTML=`<div class="empty">${T().loadFail}</div>`;return;}
   const items=(d.items||[]).filter(x=>cur==="전체"||x.group===cur);
   if(!items.length){box.innerHTML=`<div class="empty">${T().empty}</div>`;return;}
   box.innerHTML=items.map(x=>{
@@ -2017,8 +2202,8 @@ function loadStudentData(){
   Object.keys(files).forEach(k=>{
     fetch(files[k],{cache:"no-cache"})
       .then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.json();})
-      .then(j=>{STUDENT[k]=j;})
-      .catch(e=>{STUDENT[k]={error:String((e&&e.message)||e)};})
+      .then(j=>{if(j&&Array.isArray(j.items)&&j.items.length)STUDENT[k]=j;})
+      .catch(()=>{STUDENT[k].stale=true;})
       .then(()=>redraw[k]());
   });
 }

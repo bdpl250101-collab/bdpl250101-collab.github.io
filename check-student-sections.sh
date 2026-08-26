@@ -38,6 +38,13 @@ for fn in renderJobs renderPostdoc renderGrants loadStudentData \
   grep -q "function $fn(" <<< "$HTML" || miss "render function $fn()"
 done
 grep -q "const STUDENT=" <<< "$HTML" || miss "const STUDENT state object"
+# The inline seed arrays. These are what make the three tabs render on first paint
+# and over file://; without them a failed fetch leaves the tabs empty.
+for a in jobs postdoc grants; do
+  grep -q "^const $a = \[" <<< "$HTML" || miss "inline seed array const $a = ["
+  grep -q "items:$a}" <<< "$HTML" || miss "STUDENT no longer seeds items from const $a"
+done
+grep -q "^const SECMETA = {" <<< "$HTML" || miss "const SECMETA (notice/context/portals per section)"
 # renderAll must actually call the three renderers, or the tabs stay blank forever.
 for fn in renderJobs renderPostdoc renderGrants; do
   grep -q "function renderAll().*$fn()" <<< "$HTML" || miss "renderAll() no longer calls $fn()"
@@ -94,6 +101,48 @@ for(const f of ["jobs","postdoc","grants"]){
 if(bad.length){ bad.forEach(b=>console.log("  INCOMPLETE: "+b)); process.exit(1); }
 ' || fail=$((fail + 1))
 
+# 5. The inline seeds and data/*.json must still describe the same thing. They are
+#    two copies of one feed: the seed renders instantly and works offline, the JSON
+#    is what a pipeline edits. Editing one and not the other is the failure this
+#    catches -- visitors would see the seed while the JSON said something else.
+node -e '
+const fs=require("fs");
+const h=fs.readFileSync("index.html","utf8").replace(/\r\n/g,"\n");
+const grab=n=>{const s=h.indexOf("const "+n+" = [");if(s<0)return null;
+  const e=h.indexOf("\n];",s);if(e<0)return null;
+  return eval(h.slice(s+("const "+n+" = ").length,e+2));};
+const secmeta=(()=>{const s=h.indexOf("const SECMETA = {");if(s<0)return null;
+  const e=h.indexOf("\n};",s);if(e<0)return null;
+  return eval("("+h.slice(s+("const SECMETA = ").length,e+2)+")");})();
+const F=["group","group_en","tag","tag_en","title","title_en","meta","meta_en",
+         "deadline","deadline_en","ok","link","desc","desc_en"];
+let bad=[];
+if(!secmeta) bad.push("SECMETA could not be parsed out of index.html");
+for(const k of ["jobs","postdoc","grants"]){
+  const seed=grab(k);
+  const json=JSON.parse(fs.readFileSync("data/"+k+".json","utf8"));
+  if(!seed){ bad.push("inline seed array '"+k+"' could not be parsed out of index.html"); continue; }
+  if(seed.length!==json.items.length){
+    bad.push(k+": seed has "+seed.length+" items, data/"+k+".json has "+json.items.length);
+    continue;
+  }
+  seed.forEach((a,i)=>{
+    const b=json.items[i];
+    F.forEach(f=>{
+      const av=a[f]===undefined?null:a[f], bv=b[f]===undefined?null:b[f];
+      if(av!==bv) bad.push(k+"["+i+"]."+f+" differs between the seed and the JSON");
+    });
+  });
+  if(secmeta&&secmeta[k]){
+    if(secmeta[k].updated!==json.updated)
+      bad.push(k+": SECMETA.updated="+secmeta[k].updated+" but data/"+k+".json updated="+json.updated);
+    if((secmeta[k].portals||[]).length!==(json.portals||[]).length)
+      bad.push(k+": SECMETA portal count differs from data/"+k+".json");
+  } else if(secmeta) bad.push("SECMETA has no entry for "+k);
+}
+if(bad.length){ bad.forEach(b=>console.log("  OUT OF SYNC: "+b)); process.exit(1); }
+' || { fail=$((fail + 1)); echo "  (regenerate the seeds from the JSON, then re-run this guard)"; }
+
 if [ "$fail" -ne 0 ]; then
   cat <<'MSG'
 
@@ -107,5 +156,6 @@ MSG
   exit 1
 fi
 
-echo "student sections intact: 3 tabs, 3 panels, 5 data files, all items complete in ko+en"
+echo "student sections intact: 3 tabs, 3 panels, 3 inline seed arrays, 5 data files,"
+echo "                         all items complete in ko+en, seeds in sync with data/*.json"
 exit 0
