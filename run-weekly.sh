@@ -39,7 +39,10 @@ fi
 # git pull --rebase then refuses outright, and without this guard every later run
 # would fail identically while the dashboard quietly went stale.
 #
-# Safe here: index.html is fully regenerated each run, .weekly-update.log is
+# Safe here: the sweep only ever rewrites the `research` and `industry` arrays in
+# place -- it does NOT regenerate index.html, and must never do so, because the
+# jobs/postdoc/grants tabs and the archive live in the same file and are not part
+# of the sweep (weekly-prompt.md section 4b). .weekly-update.log is
 # gitignored, and reset --hard does not touch untracked files. Local commits that
 # were made but not pushed are also preserved — reset --hard only rewinds the
 # working tree and index to HEAD.
@@ -62,6 +65,17 @@ if ! git pull --rebase; then
   exit 1
 fi
 
+# Pre-flight: record that the student sections were intact going in, so that if the
+# post-run check fails we know this run broke them rather than inheriting the damage.
+echo "--- student-section guard (before) ---"
+if ./check-student-sections.sh; then
+  PRE_OK=1
+else
+  PRE_OK=0
+  echo "WARNING: student sections were ALREADY damaged before this run started."
+  echo "         fix them by hand -- this run will not repair them."
+fi
+
 echo "--- claude ---"
 claude -p "$(cat "$PROMPT_FILE")" \
   --permission-mode dontAsk \
@@ -69,8 +83,26 @@ claude -p "$(cat "$PROMPT_FILE")" \
   --max-turns 60
 CLAUDE_STATUS=$?
 
+# Post-flight: the sweep must not have touched the three student tabs or their data
+# files. If it did, say so loudly -- the run may already have pushed the damage, so
+# this is an alarm, not a rollback.
+echo "--- student-section guard (after) ---"
+if ./check-student-sections.sh; then
+  GUARD_STATUS=0
+else
+  GUARD_STATUS=1
+  if [ "$PRE_OK" -eq 1 ]; then
+    echo "ERROR: this run DESTROYED part of the jobs/postdoc/grants sections."
+    echo "       they were intact before claude ran and are broken now."
+    echo "       if the run already pushed, revert that commit:"
+    echo "           git revert HEAD && git push"
+    echo "       then re-read weekly-prompt.md section 4b before the next run."
+  fi
+fi
+
 echo "--- done ---"
 echo "claude exit status: $CLAUDE_STATUS"
+echo "student-section guard: $([ $GUARD_STATUS -eq 0 ] && echo intact || echo DAMAGED)"
 if [ $CLAUDE_STATUS -ne 0 ]; then
   echo "WARNING: claude exited non-zero — check the transcript above."
   echo "         the dashboard may not have been updated or pushed."
@@ -78,4 +110,6 @@ fi
 echo "weekly dashboard update finished"
 echo
 
-exit $CLAUDE_STATUS
+# Fail the task if either the run or the guard failed, so the scheduler surfaces it.
+if [ $CLAUDE_STATUS -ne 0 ]; then exit $CLAUDE_STATUS; fi
+exit $GUARD_STATUS

@@ -17,9 +17,13 @@ Work through this document top to bottom. Do not skip the verification section.
 quick-succession run still has material. State the actual window in `calloutR` and in the
 `sub` date-range strings.
 
-This removes carry-forward ambiguity entirely: nothing is inherited from the old file,
-every item is re-fetched and re-verified each run, and no publication can slip through a
-gap between runs.
+This removes carry-forward ambiguity entirely **for `research` and `industry`**: neither
+array inherits anything from the old file, every item in them is re-fetched and re-verified
+each run, and no publication can slip through a gap between runs.
+
+> This full-replacement rule is scoped to those two arrays and nothing else. The `archive`
+> array (section 4) and the three student sections — jobs / postdoc / grants (section 4b) —
+> are **not** rebuilt from the web each run and must survive this run untouched.
 
 Search the web — do not rely on memory or on what is already in the file. Anything you
 cannot reach and read is not evidence.
@@ -259,6 +263,8 @@ silently**: the English view simply shows Korean text. Nothing errors, nothing w
 ### Do NOT touch
 
 - **Any existing entry in the `archive` array.** You may only prepend new ones. See section 4.
+- **The jobs / postdoc / grants tabs, panels, render functions, and `data/*.json`.**
+  They are not part of this sweep. See section 4b.
 - Any CSS, or anything in the `<style>` block.
 - The page layout or HTML structure (beyond the two KPI value texts named above).
 - The embedded base64 logo.
@@ -362,6 +368,55 @@ must say the ★ marks were inferred from Crossref alone and are under-inclusive
 
 ---
 
+## 4b. The student sections are outside this sweep — jobs / postdoc / grants
+
+The dashboard carries three student-facing tabs that the weekly Crossref sweep knows nothing
+about: **채용 / Jobs**, **포닥 / Postdoc**, and **과제 / Grants**. They are maintained on a
+**best-effort manual or weekly cadence**, from official portals and job boards — not from
+Crossref, and not from the literature search this prompt describes.
+
+**The rule: an automatic run preserves them exactly as it found them.**
+
+Concretely, a normal weekly run must leave all of this byte-identical:
+
+- The three tab buttons `#tabJ` / `#tabP` / `#tabG` and their `data-tab` triggers.
+- The three panels `#panel-jobs` / `#panel-postdoc` / `#panel-grants` and every element
+  inside them (`noticeJ`, `jobsFilters`, `jobsCards`, `portalsJ`, and the P / G equivalents).
+- The render layer: `renderJobs`, `renderPostdoc`, `renderGrants`, `loadStudentData`,
+  `studentNotice`, `studentFilters`, `studentCards`, `studentPortals`, the `STUDENT` state
+  object, `jF` / `pF` / `gF`, `GRPCLR`, `sLbl`, and the three renderer calls in `renderAll()`.
+- The `tabJ` / `tabP` / `tabG` labels in **both** `I18N.ko` and `I18N.en`.
+- All five data files: `data/jobs.json`, `data/postdoc.json`, `data/grants.json`,
+  `data/postdoc_watchlist.json`, `data/pi_archive.json`.
+
+### Why this needs saying
+
+`research` and `industry` are replaced wholesale (section 3), and it is tempting to treat
+index.html as a file that gets regenerated each week. **It is not, and must never be.** The
+sweep edits two arrays in place. The archive, the three student tabs, the CSS, and the page
+shell all live in the same file and all predate this run. Rewriting the file from a template
+would silently delete three tabs and five data files, and the loss would not show up in any
+of the research/industry checks.
+
+### If you are asked to update them
+
+Only when the instruction for a run explicitly says so — not as part of the routine sweep.
+Then: edit the `data/*.json` files, **never** the markup or the render functions, keep every
+item complete in both languages (`group`/`group_en`, `tag`/`tag_en`, `title`/`title_en`,
+`meta`/`meta_en`, `deadline`/`deadline_en`, `desc`/`desc_en`, plus `ok` and `link`), bump the
+`updated` field to the date you actually re-checked, and hold to section 5's rule — only what
+you opened and read, `ok: false` and a "재확인 필요" tag for anything uncertain. `link` may be
+`null` when a posting has genuinely expired with no replacement URL; it may never be a guess.
+Then re-run `./check-student-sections.sh`.
+
+### `data/pi_archive.json` is append-only, like the archive
+
+It accumulates corresponding-author / PI counts across runs so that professors appearing in
+two or more weeks can be surfaced. A run that rewrites it from scratch resets every count to
+1 and destroys the signal. Increment existing entries and add new ones; never rebuild it.
+
+---
+
 ## 5. Quality rules
 
 **Never invent anything.** Every item must come from a page you actually opened and read
@@ -405,7 +460,7 @@ backtick.
 
 ## 6. Verify before committing
 
-Run all five checks. If any fails, fix it and re-run — do not commit a failing file.
+Run all six checks. If any fails, fix it and re-run — do not commit a failing file.
 
 ```bash
 # 1. Syntax — extract the <script> block and parse it with node.
@@ -491,11 +546,21 @@ console.log("archive OK: "+old.length+" -> "+now.length+" (+"+(now.length-old.le
 '
 ```
 
-5. **Read the diff** — `git diff --stat` then `git diff`. Confirm the only changed regions
+```bash
+# 5. THE STUDENT-SECTION GATE. The jobs / postdoc / grants tabs are not part of this
+#    sweep (section 4b) and must come out of it untouched. This script checks the tab
+#    buttons, the panels, the render functions, the ko+en labels, and all five data
+#    files, and fails if any of them went missing or lost a translation.
+./check-student-sections.sh
+```
+
+6. **Read the diff** — `git diff --stat` then `git diff`. Confirm the only changed regions
    are the ones section 3 permits. If CSS, the base64 logo, or a render function shows up
    in the diff, you changed something you should not have. Revert it.
    For the archive specifically, `git diff index.html | grep '^-.*doi:'` must print **nothing** —
    any removed `doi:` line means an existing entry was deleted or rewritten.
+   In a routine run, `data/` and the three student panels must not appear in the diff at
+   all — `git diff --stat -- data/ ` must print nothing.
 
 ---
 
@@ -503,9 +568,14 @@ console.log("archive OK: "+old.length+" -> "+now.length+" (+"+(now.length-old.le
 
 ```bash
 git add index.html weekly-prompt.md
+git add data/                       # only if a run was explicitly asked to refresh them
 git commit -m "chore: weekly dashboard update (YYYY-MM-DD)"
 git push
 ```
+
+A routine sweep leaves `data/` unchanged, so the second line stages nothing — that is the
+expected outcome, not a problem. Never use `git add -A`: it would sweep up `.weekly-update.log`
+and any half-written scratch file.
 
 Substitute today's real date for `YYYY-MM-DD`. If `SUBLBL` / `COMPANY_EN` / the KPI values
 changed, they are inside `index.html` and are already staged.
@@ -513,5 +583,7 @@ changed, they are inside `index.html` and are already staged.
 Then print, as the final output:
 
 - The item counts, in the form `N research / M industry`.
+- One line confirming the student sections survived, in the form
+  `student sections: intact (3 tabs, 5 data files)` — or a loud warning if they did not.
 - A **3-line headline summary** — one line each for the biggest research story, the biggest
   industry story, and the week's overall through-line.
