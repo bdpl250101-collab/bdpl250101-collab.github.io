@@ -76,6 +76,14 @@ if ! git pull --rebase; then
   exit 1
 fi
 
+# The commit the run starts from. gen-seeds compares against this, NOT against HEAD:
+# claude commits its own work before the deterministic pass runs, so by then HEAD is
+# already the new state and every comparative check -- portal removed, count fell,
+# lastChecked moved backwards, section shrank -- would be comparing it with itself and
+# passing trivially. Capturing the ref here is what keeps those checks meaningful.
+BASE_REF="$(git rev-parse HEAD)"
+echo "baseline for the data-layer gate: $BASE_REF"
+
 # Pre-flight: record that the student sections were intact going in, so that if the
 # post-run check fails we know this run broke them rather than inheriting the damage.
 echo "--- student-section guard (before) ---"
@@ -134,7 +142,7 @@ if ! node scripts/pi-aggregate.js; then
 fi
 
 echo "--- regenerate seeds + data-layer gate (scripts/gen-seeds.js) ---"
-if ! node scripts/gen-seeds.js; then
+if ! node scripts/gen-seeds.js --base "$BASE_REF"; then
   echo "FATAL: the data-layer gate failed; nothing was written, not committing, not pushing"
   echo "       fix data/*.json by hand, re-run the gate, then push"
   echo "weekly dashboard update finished"
