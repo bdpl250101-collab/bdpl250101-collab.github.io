@@ -97,10 +97,17 @@ echo "--- claude ---"
 # ExecutionTimeLimit (PT4H) kills only the action process and orphans its children, so
 # the deadline has to be here, where the script is still alive to log it. 124 is
 # timeout's exit code for "deadline hit".
-timeout 3h claude -p "$(cat "$PROMPT_FILE")" \
+# The prompt goes in on STDIN, not as an argument. Windows caps a command line at
+# 32767 characters, and "$(cat "$PROMPT_FILE")" puts the whole prompt on it: once
+# weekly-prompt.md passed that size the exec failed outright and claude exited 126
+# without running, which reads in the log exactly like a crash. Measured on this
+# machine: a 31KB prompt runs, a 36KB prompt exits 126. The file is past that now and
+# only grows, so the argument form is not usable at any prompt size worth keeping.
+timeout 3h claude -p \
   --permission-mode dontAsk \
   --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(git *),Bash(node *)" \
-  --max-turns 90
+  --max-turns 90 \
+  < "$PROMPT_FILE"
 CLAUDE_STATUS=$?
 if [ $CLAUDE_STATUS -eq 124 ]; then
   echo "FATAL: claude hit the 3h timeout"
