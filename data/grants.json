@@ -1,12 +1,12 @@
 {
-  "updated": "2026-08-16",
+  "updated": "2026-08-27",
   "notice": {
     "ko": "공고 자동수집은 best-effort이며 누락 가능 — 아래 공식 포털에서 직접 확인 권장.",
     "en": "Automated collection of announcements is best-effort and may miss items — please confirm directly on the official portals below."
   },
   "context": {
-    "ko": "2026년 부처개편으로 에너지 R&D는 기후에너지환경부(MCEE)와 KETEP, 산업 R&D는 KEIT, 기초·원천은 NRF가 맡고, 통합 공고는 IRIS에 게시됩니다. 마감일이 원문에서 확정되지 않은 항목은 ‘재확인 필요’로 표기했습니다.",
-    "en": "After the 2026 ministry reorganisation, energy R&D sits with the Ministry of Climate, Energy and Environment (MCEE) and KETEP, industrial R&D with KEIT, and basic and source technology with the NRF, while consolidated announcements are posted on IRIS. Items whose deadline could not be confirmed against the original announcement are marked as needing a re-check."
+    "ko": "2026년 부처개편으로 에너지 R&D는 기후에너지환경부(MCEE)와 KETEP, 산업 R&D는 KEIT, 기초·원천은 NRF가 맡고, 통합 공고는 IRIS에 게시됩니다. <b>2026-08-27 확인 결과 IRIS 접수중 목록에는 이차전지·에너지저장 전용 공고가 한 건도 없었습니다</b> — 로봇, 기계장비, AI 상용화, 가속기 등이 올라와 있습니다. 직전 회차에 실었던 ‘2026년 2차 에너지수요관리핵심기술개발사업’은 8월 24일로 접수가 마감돼 목록에서 내렸습니다. 마감일이 원문에서 확정되지 않은 항목은 ‘재확인 필요’로 표기했습니다.",
+    "en": "After the 2026 ministry reorganisation, energy R&D sits with the Ministry of Climate, Energy and Environment (MCEE) and KETEP, industrial R&D with KEIT, and basic and source technology with the NRF, while consolidated announcements are posted on IRIS. <b>As of 27 August 2026 the IRIS open-call list contained no announcement dedicated to secondary batteries or energy storage</b> — the live calls cover robotics, machinery, AI commercialisation and accelerators. The Energy Demand Management call carried in the previous edition closed on 24 August and has been removed. Items whose deadline could not be confirmed against the original announcement are marked as needing a re-check."
   },
   "portals_title": { "ko": "모니터링 공식 포털", "en": "Official portals monitored" },
   "portals": [
@@ -18,27 +18,27 @@
   "items": [
     {
       "group": "접수중", "group_en": "Open",
-      "tag": "KETEP / MCEE", "tag_en": "KETEP / MCEE",
-      "title": "2026년 2차 에너지수요관리핵심기술개발사업 신규과제",
-      "title_en": "2026 second-round Energy Demand Management Core Technology Development Program — new projects",
-      "meta": "기후에너지환경부 · 한국에너지기술평가원", "meta_en": "MCEE · KETEP",
-      "deadline": "접수 마감 2026-08-24", "deadline_en": "Applications close 24 Aug 2026",
+      "tag": "NRF / 과기정통부", "tag_en": "NRF / MSIT",
+      "title": "2026년도 NRF 인터내셔널 모빌리티 신규과제 공모",
+      "title_en": "2026 NRF International Mobility Program — new project call",
+      "meta": "한국연구재단 · 과학기술정보통신부", "meta_en": "NRF · Ministry of Science and ICT",
+      "deadline": "2026-09-15", "deadline_en": "15 Sep 2026",
       "ok": true,
-      "link": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituListView.do?ancmPrg=ancmIng",
-      "desc": "IRIS 접수중 목록에 올라와 있는 신규과제 공고로, 접수 마감은 8월 24일입니다. 세부 과제 구성은 IRIS 공고문에서 확인하세요.",
-      "desc_en": "A new-project call listed among IRIS open announcements, closing on 24 August. The detailed project breakdown is in the IRIS announcement itself."
+      "link": "https://www.nrf.re.kr/biz/notice/list",
+      "desc": "2026-08-27 확인 시 접수중이며 마감은 9월 15일입니다. 이차전지 전용 공고는 아니지만 이번 회차에 확인된 개방형 공모 가운데 에너지·모빌리티 분야에 가장 가깝습니다.",
+      "desc_en": "Confirmed open as of 27 August 2026 with a 15 September deadline. It is not battery-specific, but it is the closest open call in the energy and mobility area found this run."
     },
     {
-      "group": "재확인 필요", "group_en": "Needs re-check",
+      "group": "접수중", "group_en": "Open",
       "tag": "KETEP / MCEE", "tag_en": "KETEP / MCEE",
-      "title": "2026년 2차 신재생에너지 R&D (수소 · 연료전지) 신규과제 재공고",
-      "title_en": "2026 second-round renewable energy R&D (hydrogen and fuel cells) — re-announced new projects",
+      "title": "2026년도 2차 신재생에너지 R&D (수소) 신규지원대상 연구개발과제 재공고",
+      "title_en": "2026 second-round renewable energy R&D (hydrogen) — re-announced new projects",
       "meta": "기후에너지환경부 · 한국에너지기술평가원", "meta_en": "MCEE · KETEP",
-      "deadline": "2026-09 중순 추정 — 원문 확인 필요", "deadline_en": "Estimated mid-September 2026 — verify against the original notice",
+      "deadline": "재확인 필요 — 원문에서 마감일 미확인", "deadline_en": "Needs re-checking — deadline not stated in the notice",
       "ok": false,
-      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000122148",
-      "desc": "수소·연료전지 분야 재공고 건입니다. 마감이 9월 중순으로 알려져 있으나 확정 일자를 원문에서 확인하지 못해 재확인이 필요합니다.",
-      "desc_en": "A re-announced call in the hydrogen and fuel cell area. The deadline is reported as mid-September, but the exact date could not be confirmed against the original notice, so it needs re-checking."
+      "link": "https://www.ketep.re.kr/businessAcment?menuId=MENU002080200000000",
+      "desc": "8월 19일 등록된 재공고로, 2026-08-27 확인 시 KETEP 목록에서 상태가 ‘진행’으로 표시돼 접수중임은 확인했습니다. 다만 접수 마감일이 목록에 표시되지 않아 원문 공고문에서 직접 확인해야 합니다.",
+      "desc_en": "A re-announced call registered on 19 August. Its status showed as in progress on the KETEP list as of 27 August 2026, confirming it is open, but the list does not display an application deadline, so that must be checked against the announcement itself."
     },
     {
       "group": "재확인 필요", "group_en": "Needs re-check",
@@ -49,8 +49,8 @@
       "deadline": "5월 공고분 — 마감 가능성 높음, 재확인 필요", "deadline_en": "Announced in May — likely closed, needs re-checking",
       "ok": false,
       "link": "https://svakorea.org/news/530",
-      "desc": "리튬황 전지 원천기술 과제로 연 10억 원 · 4.5년 규모입니다. 5월 공고분이라 이미 마감됐을 가능성이 높아, NRF 공고 목록에서 현재 상태를 확인해야 합니다.",
-      "desc_en": "A lithium-sulfur source-technology project funded at KRW 1B per year over 4.5 years. It was announced in May and has likely closed, so its current status should be checked against the NRF announcement list."
+      "desc": "리튬황 전지 원천기술 과제로 연 10억 원 · 4.5년 규모입니다. 2026-08-27 확인 시 NRF 공고 목록에서 이차전지 관련 항목이 보이지 않아 이미 마감된 것으로 보이나, 확정하지 못해 재확인 표기를 유지합니다.",
+      "desc_en": "A lithium-sulfur source-technology project funded at KRW 1B per year over 4.5 years. No battery-related item was visible on the NRF announcement list as of 27 August 2026, suggesting it has closed, but this could not be confirmed so the re-check flag is kept."
     }
   ]
 }
