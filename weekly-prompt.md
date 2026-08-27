@@ -259,18 +259,31 @@ silently**: the English view simply shows Korean text. Nothing errors, nothing w
    inside that `hbar('chartEarnings', …)` call, and update the `cc2c` caption in both
    languages to name the right quarter. Do not restructure the call. In a normal week
    there are no new results and this stays untouched.
+10. `data/jobs.json`, `data/postdoc.json` and `data/grants.json` — replace `items`,
+    move `updated` to the run date, leave `portals` alone. **Section 8 is the
+    procedure; read it before touching these.** Do not edit the matching seed arrays
+    in index.html — `scripts/gen-seeds.js` regenerates them from this JSON.
+11. `data/postdoc_watchlist.json` — add a group only when you actually found a real
+    opening under a PI that section 8 flagged. Never remove an entry.
 
 ### Do NOT touch
 
 - **Any existing entry in the `archive` array.** You may only prepend new ones. See section 4.
-- **The jobs / postdoc / grants tabs, panels, render functions, and `data/*.json`.**
-  They are not part of this sweep. See section 4b.
+- **The jobs / postdoc / grants tabs, panels, render functions, and their inline seed
+  arrays.** The markup and the render layer are never part of this sweep — section 4b
+  lists what must stay byte-identical. Their `data/*.json` files, however, *are* now
+  refreshed every run: section 8 is the procedure. The seed arrays are regenerated
+  from that JSON by `scripts/gen-seeds.js` and are never hand-edited.
 - Any CSS, or anything in the `<style>` block.
 - The page layout or HTML structure (beyond the two KPI value texts named above).
 - The embedded base64 logo.
 - The script logic — the render functions, event handlers, filters, `CATCLR`, `REGCLR`,
   `CATLBL`, `REGLBL`, `TYPELBL`.
 - The brand colors: amber `#ffc000` on black `#0e0e0e`.
+- **`data/pi_archive.json` — any part of it.** `scripts/pi-aggregate.js` owns that file
+  and runs after you, outside your session. `count`, `flag`, `flagged_since` and
+  `threshold` are all derived. If you think an entry is wrong, say so in your summary
+  rather than editing it — a hand-edited count is indistinguishable from a real one.
 
 ---
 
@@ -368,14 +381,17 @@ must say the ★ marks were inferred from Crossref alone and are under-inclusive
 
 ---
 
-## 4b. The student sections are outside this sweep — jobs / postdoc / grants
+## 4b. What must never change in the student sections — jobs / postdoc / grants
 
 The dashboard carries three student-facing tabs that the weekly Crossref sweep knows nothing
 about: **채용 / Jobs**, **포닥 / Postdoc**, and **과제 / Grants**. They are maintained on a
 **best-effort manual or weekly cadence**, from official portals and job boards — not from
 Crossref, and not from the literature search this prompt describes.
 
-**The rule: an automatic run preserves them exactly as it found them.**
+**The rule: an automatic run never touches their markup or their render layer, and
+never lets a section end up empty.** Their *content* is refreshed each week from the
+official portals — section 8 is the procedure and its limits. Everything listed below
+stays byte-identical regardless of what that refresh finds.
 
 Concretely, a normal weekly run must leave all of this byte-identical:
 
@@ -388,10 +404,15 @@ Concretely, a normal weekly run must leave all of this byte-identical:
 - The inline seed arrays `const jobs = [ … ]`, `const postdoc = [ … ]`, `const grants = [ … ]`
   and `const SECMETA = { … }`, which sit between the `archive` array and the
   `STATE & HELPERS` block. They follow the same shape as `research` and `industry`, and
-  they are what the three tabs paint before any fetch resolves.
+  they are what the three tabs paint before any fetch resolves. **They are generated:**
+  `scripts/gen-seeds.js` writes them from `data/*.json`. Edit the JSON and re-run it;
+  never edit a seed array by hand.
 - The `tabJ` / `tabP` / `tabG` labels in **both** `I18N.ko` and `I18N.en`.
-- All five data files: `data/jobs.json`, `data/postdoc.json`, `data/grants.json`,
-  `data/postdoc_watchlist.json`, `data/pi_archive.json`.
+- `data/pi_archive.json`, which only `scripts/pi-aggregate.js` writes.
+  The other four data files are updated by the run itself (section 8). What survives
+  every run is their *shape and their floor*: `scripts/gen-seeds.js` fails the run if a
+  section is emptied, loses an official portal link, drops a `desc`/`desc_en`, or lets
+  `updated` move backwards.
 
 ### Why this needs saying
 
@@ -412,36 +433,43 @@ Each section exists twice on purpose:
 - **`data/*.json`**, the pipeline-facing copy. `loadStudentData()` replaces the seed with it
   when the fetch returns a usable payload, and marks the section `stale` when it does not.
 
-They must describe the same items in the same order. `./check-student-sections.sh` compares
-them field by field and fails if they diverge, so **never edit one alone** — edit
-`data/*.json`, then regenerate the seeds from it and re-run the guard.
+They must describe the same items in the same order. You do not keep them in step by
+hand — `data/*.json` is the source of truth and `scripts/gen-seeds.js` writes the seeds
+from it, so the two agree by construction. `./check-student-sections.sh` still compares
+them field by field afterwards, which is what catches a seed block edited directly.
 
-### If you are asked to update them
+### Updating them
 
-Only when the instruction for a run explicitly says so — not as part of the routine sweep.
-Then: edit the `data/*.json` files, **never** the markup or the render functions, keep every
+Every run, per section 8 — this used to be an occasional, explicitly-requested job and is
+now part of the weekly round.
+Edit the `data/*.json` files, **never** the markup or the render functions, keep every
 item complete in both languages (`group`/`group_en`, `tag`/`tag_en`, `title`/`title_en`,
 `meta`/`meta_en`, `deadline`/`deadline_en`, `desc`/`desc_en`, plus `ok` and `link`), bump the
 `updated` field to the date you actually re-checked, and hold to section 5's rule — only what
 you opened and read, `ok: false` and a "재확인 필요" tag for anything uncertain. `link` may be
 `null` when a posting has genuinely expired with no replacement URL; it may never be a guess.
 
-Then regenerate the inline seeds so index.html matches the JSON you just edited, and re-run
-the guard:
+`run-weekly.sh` regenerates the seeds and runs both guards after your session ends, so you
+do not have to. To check your own work before finishing:
 
 ```bash
+node scripts/gen-seeds.js       # rewrites the seeds from data/*.json, then validates
 ./check-student-sections.sh     # must print "seeds in sync with data/*.json"
 ```
 
-If the guard reports `OUT OF SYNC`, the seed arrays in index.html still hold the previous
-week's items — update them to match `data/*.json` exactly (same items, same order, same
-field values) rather than deleting either copy.
+If `check-student-sections.sh` reports `OUT OF SYNC` right after `gen-seeds.js` ran
+cleanly, do not edit a seed array to fix it — that means the two disagree about the
+data, which is a bug in the tooling and worth reporting rather than papering over.
 
 ### `data/pi_archive.json` is append-only, like the archive
 
 It accumulates corresponding-author / PI counts across runs so that professors appearing in
 two or more weeks can be surfaced. A run that rewrites it from scratch resets every count to
-1 and destroys the signal. Increment existing entries and add new ones; never rebuild it.
+1 and destroys the signal.
+
+You do not maintain it. `scripts/pi-aggregate.js` does, from the `research` array you just
+wrote, and it is monotonic and idempotent by construction. Section 8 step 1 explains what
+it produces and how to use it; section 3's "Do NOT touch" says the rest.
 
 ---
 
@@ -488,7 +516,7 @@ backtick.
 
 ## 6. Verify before committing
 
-Run all six checks. If any fails, fix it and re-run — do not commit a failing file.
+Run all seven checks. If any fails, fix it and re-run — do not commit a failing file.
 
 ```bash
 # 1. Syntax — extract the <script> block and parse it with node.
@@ -582,7 +610,21 @@ console.log("archive OK: "+old.length+" -> "+now.length+" (+"+(now.length-old.le
 ./check-student-sections.sh
 ```
 
-6. **Read the diff** — `git diff --stat` then `git diff`. Confirm the only changed regions
+```bash
+# 6. THE DATA-LAYER GATE. Regenerates the inline seeds from data/*.json, then checks
+#    that no section was emptied, no official portal link was dropped, every item
+#    still carries desc and desc_en, lastChecked did not move backwards, and the PI
+#    ledger only grew. Fail-closed like check 4: an unreadable HEAD aborts, and a
+#    failure writes nothing.
+node scripts/gen-seeds.js
+```
+
+Read the per-section counts it prints. A section that passed the gate but dropped to a
+suspiciously small number usually means a search half-failed — the gate cannot tell those
+apart, and you can. Warnings are not failures, but an unexplained one belongs in your
+summary.
+
+7. **Read the diff** — `git diff --stat` then `git diff`. Confirm the only changed regions
    are the ones section 3 permits. If CSS, the base64 logo, or a render function shows up
    in the diff, you changed something you should not have. Revert it.
    For the archive specifically, `git diff index.html | grep '^-.*doi:'` must print **nothing** —
@@ -598,8 +640,15 @@ console.log("archive OK: "+old.length+" -> "+now.length+" (+"+(now.length-old.le
 git add index.html weekly-prompt.md
 git add data/                       # only if a run was explicitly asked to refresh them
 git commit -m "chore: weekly dashboard update (YYYY-MM-DD)"
-git push
 ```
+
+**Commit, but do not push.** `run-weekly.sh` pushes, and only after
+`scripts/pi-aggregate.js` has written the ledger, `scripts/gen-seeds.js` has regenerated
+the seeds and passed, and `./check-student-sections.sh` has confirmed the finished state.
+That ordering is the whole point: a gate that runs after the push is not a gate.
+
+(Running this prompt by hand, outside `run-weekly.sh`? Then run those three yourself
+before pushing.)
 
 A routine sweep leaves `data/` unchanged, so the second line stages nothing — that is the
 expected outcome, not a problem. Never use `git add -A`: it would sweep up `.weekly-update.log`
@@ -615,3 +664,128 @@ Then print, as the final output:
   `student sections: intact (3 tabs, 5 data files)` — or a loud warning if they did not.
 - A **3-line headline summary** — one line each for the biggest research story, the biggest
   industry story, and the week's overall through-line.
+
+---
+
+## 8. Refreshing the student sections — jobs, postdoc, grants, and the PI ledger
+
+Section 4b says what about these three panels must never change. This section is the
+other half: what you actually do with them each week. Their content is a best-effort
+sweep of fixed official sources — not Crossref, and not the literature search in
+sections 1–4.
+
+Three rules outrank everything else here:
+
+- **Never empty a section.** If a week's search finds nothing, keep last week's items
+  and move `updated` forward. An empty panel reads as *there are no openings*, which is
+  a claim you did not verify. Keeping stale items and dating them honestly is not a
+  workaround — it is the correct output for a week when the source was unreachable.
+  `scripts/gen-seeds.js` fails the run on an emptied section, so this is enforced, not
+  merely asked for.
+- **Never invent an item.** No verified posting URL means no card. Put it in `notice` or
+  `context` instead; prose can be honest about a gap in a way a card cannot. `link` may
+  be omitted — the card renders without one — but it may never be a guess.
+- **A deadline you could not confirm is `"재확인 필요"` with `ok:false`.** The page renders
+  that as `△ 재확인 필요`, which is true. `ok:true` is a promise someone will act on.
+
+### Step 1 — the PI ledger (automatic — do not do this by hand)
+
+`scripts/pi-aggregate.js` reads the `research` array you just wrote, resolves each paper's
+PI through Crossref, and accumulates the counts in `data/pi_archive.json`. `run-weekly.sh`
+runs it after your session ends. Counting is arithmetic and must not vary with judgement,
+which is why it is a script and not an instruction here.
+
+It resolves the PI as *the last listed author carrying an affiliation*. That is a
+convention in this field, not a fact — Crossref almost never marks the corresponding
+author — so every entry it writes carries `corresponding_confirmed: false`. Treat those
+names as leads to check, never as settled attribution. A paper it cannot resolve goes to
+`unresolved` with the reason, rather than being dropped or guessed at.
+
+A PI whose `count` reaches `threshold` (currently 2) gets `flag: true`. That is the
+"appeared twice or more" rule.
+
+### Step 2 — postdoc openings, starting from the flagged PIs
+
+**Read** `data/pi_archive.json` — read, never write — and take the entries with
+`flag: true`. For each, look for a currently-open postdoc position in that group: the
+group's own site first, then the boards below. If you find one, add it to
+`data/postdoc.json` with `tag: "아카이브 2회+"` (`tag_en: "2+ in archive"`) so a reader
+can see why that card is there.
+
+If you find nothing, add nothing. The flag stays in the ledger either way. A flagged PI
+with no opening is a normal state, not a hole to fill.
+
+Note the ordering: the ledger is written *after* your session, so the flags you read are
+last week's. A PI whose second paper landed in this week's `research` is flagged for next
+week's run, not this one. That is intended — it costs a week and buys a ledger that no
+run can contradict.
+
+Then refresh the rest of the section from the groups in `data/postdoc_watchlist.json` and
+the boards in `data/postdoc.json`'s `portals`: ECS (jobs.electrochem.org), Faraday,
+jobs.ac.uk, Cambridge Chemistry, MEET Münster, HIU Ulm. US, UK and Germany only.
+**Currently open positions only** — a closed posting comes out of `items`.
+
+### Step 3 — jobs, the three Korean makers only
+
+| `group` | Source |
+|---|---|
+| `LG에너지솔루션` | https://careers.lg.com/apply?c=LGES |
+| `삼성SDI` | https://www.samsungcareers.com/subsid/detail/C31 |
+| `SK온` | https://www.sk-on.com/recruit/recruiting.asp |
+
+Take R&D and battery-related postings. Individual postings often sit behind a portal
+login and are invisible to an automated fetch; that is the normal case, not a failure,
+and it is why the three official portal links in `portals` stay in the file permanently
+whether or not anything was found. `scripts/gen-seeds.js` fails the run if one of them
+disappears.
+
+### Step 4 — grants, energy storage broadly
+
+| Source | URL |
+|---|---|
+| IRIS — 접수중 | https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituListView.do?ancmPrg=ancmIng |
+| NRF | https://www.nrf.re.kr/biz/notice/list |
+| KEIT SROME | https://srome.keit.re.kr/srome/biz/perform/opnnPrpsl/retrieveTaskAnncmListView.do?prgmId=XPG201040000 |
+| KETEP | https://www.ketep.re.kr/businessAcment?menuId=MENU002080200000000 |
+
+Only announcements currently open for application go in as `group: "접수중"`. One whose
+status you could not confirm goes in as `group: "재확인 필요"` with `ok:false` — not
+dropped, and not promoted to 접수중 on a guess. An announcement whose deadline has passed
+comes out.
+
+### Step 5 — the item schema, identical in all three files
+
+```json
+{"group":"SK온","group_en":"SK On","tag":"R&D","tag_en":"R&D",
+ "title":"…","title_en":"…","meta":"…","meta_en":"…",
+ "deadline":"2026-09-12","deadline_en":"12 Sep 2026","ok":true,
+ "link":"https://…","desc":"한국어 한두 문장.","desc_en":"One or two English sentences."}
+```
+
+| Field | Required | Rules |
+|---|---|---|
+| `group` | **yes** | the filter chip and the badge colour key off it — reuse an existing literal unless the source genuinely is new |
+| `tag` | **yes** | short label, e.g. `"R&D"`, `"상시"`, `"아카이브 2회+"` |
+| `title` | **yes** | the posting or announcement title |
+| `meta` | **yes** | who it is at — company org, PI and institution, or ministry and agency |
+| `deadline` | **yes** | a real date, `"상시"`, or `"재확인 필요"` |
+| `ok` | **yes** | boolean; `true` only when you opened the posting and saw it open this run |
+| `link` | optional | omit rather than invent; the card renders without one |
+| `desc` / `desc_en` | **yes** | both, always — the gate fails the run on an empty one |
+
+Every `_en` twin is required except `link`. A new `group` literal also needs a colour in
+`GRPCLR` in index.html, or its badge renders grey; the gate warns when that happens.
+
+Edit only the JSON. The seed arrays in index.html are regenerated from it — see 4b.
+
+### Step 6 — lastChecked, every week, without exception
+
+Set `updated` to the run date in **every section you checked**, including one where you
+found nothing new and changed no items. That field is the only thing on the page that
+distinguishes *this week's silence* from *a pipeline that stopped running a month ago*.
+Without it the two look identical, and the second is the failure that goes unnoticed for
+a month.
+
+If a source was unreachable, name it in `notice` or `context`, keep the items, and still
+move `updated`. Then name it again in your final summary — the callout tells the reader,
+the summary tells whoever maintains this.

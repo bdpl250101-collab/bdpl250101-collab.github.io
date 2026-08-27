@@ -7,7 +7,18 @@
 # Scheduler task BDPL-WeeklyDashboard. Run it by hand any time to test:
 #   ./run-weekly.sh
 #
+#   ./run-weekly.sh --no-push   collect, verify, commit locally — but do not push.
+#                               Use it to exercise the whole path without publishing.
+#                               (--dry-run is accepted as a synonym.)
 set -uo pipefail
+
+NO_PUSH=0
+for arg in "$@"; do
+  case "$arg" in
+    --no-push|--dry-run) NO_PUSH=1 ;;
+    *) echo "unknown argument: $arg" >&2; exit 2 ;;
+  esac
+done
 
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 LOG_FILE="$REPO_DIR/.weekly-update.log"
@@ -77,15 +88,52 @@ else
 fi
 
 echo "--- claude ---"
-claude -p "$(cat "$PROMPT_FILE")" \
+# --max-turns 90: the 2026-08-26 run died on "Reached max turns (60)" having written
+# only the two sweep arrays. Section 8 adds three more sections to the run; the
+# deterministic half of that work moved to scripts/ to buy the turns back, but the
+# searching itself still costs some.
+#
+# timeout 3h: that same run went on writing to this log for 24 hours. The scheduler's
+# ExecutionTimeLimit (PT4H) kills only the action process and orphans its children, so
+# the deadline has to be here, where the script is still alive to log it. 124 is
+# timeout's exit code for "deadline hit".
+timeout 3h claude -p "$(cat "$PROMPT_FILE")" \
   --permission-mode dontAsk \
   --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(git *),Bash(node *)" \
-  --max-turns 60
+  --max-turns 90
 CLAUDE_STATUS=$?
+if [ $CLAUDE_STATUS -eq 124 ]; then
+  echo "FATAL: claude hit the 3h timeout"
+fi
 
-# Post-flight: the sweep must not have touched the three student tabs or their data
-# files. If it did, say so loudly -- the run may already have pushed the damage, so
-# this is an alarm, not a rollback.
+# ---------------------------------------------------------------------------
+# Deterministic pass. Everything below is arithmetic and assertions -- no model
+# judgement -- so it runs here rather than as an instruction in the prompt.
+#
+# Order matters, and it is the reason the post-flight guard moved down here:
+#   pi-aggregate reads the research array claude just wrote, so it runs after claude.
+#   gen-seeds rewrites index.html's inline seeds from data/*.json, so it runs after
+#     any edit claude made to those files -- section 8 now has the run update them,
+#     which means the seeds are legitimately out of step until this point. Running
+#     check-student-sections.sh before this would report that as damage.
+#   the guard then judges the finished state, which is the state that gets pushed.
+#   nothing is published unless all three pass.
+# ---------------------------------------------------------------------------
+echo "--- pi ledger (scripts/pi-aggregate.js) ---"
+if ! node scripts/pi-aggregate.js; then
+  echo "FATAL: PI aggregation failed; not committing, not pushing"
+  echo "weekly dashboard update finished"
+  exit 1
+fi
+
+echo "--- regenerate seeds + data-layer gate (scripts/gen-seeds.js) ---"
+if ! node scripts/gen-seeds.js; then
+  echo "FATAL: the data-layer gate failed; nothing was written, not committing, not pushing"
+  echo "       fix data/*.json by hand, re-run the gate, then push"
+  echo "weekly dashboard update finished"
+  exit 1
+fi
+
 echo "--- student-section guard (after) ---"
 if ./check-student-sections.sh; then
   GUARD_STATUS=0
@@ -94,22 +142,53 @@ else
   if [ "$PRE_OK" -eq 1 ]; then
     echo "ERROR: this run DESTROYED part of the jobs/postdoc/grants sections."
     echo "       they were intact before claude ran and are broken now."
-    echo "       if the run already pushed, revert that commit:"
-    echo "           git revert HEAD && git push"
-    echo "       then re-read weekly-prompt.md section 4b before the next run."
+    echo "       nothing has been pushed. inspect the working tree, then either fix it"
+    echo "       or discard it with: git checkout -- index.html data/"
+    echo "       re-read weekly-prompt.md sections 4b and 8 before the next run."
   fi
 fi
 
-echo "--- done ---"
 echo "claude exit status: $CLAUDE_STATUS"
 echo "student-section guard: $([ $GUARD_STATUS -eq 0 ] && echo intact || echo DAMAGED)"
 if [ $CLAUDE_STATUS -ne 0 ]; then
   echo "WARNING: claude exited non-zero — check the transcript above."
-  echo "         the dashboard may not have been updated or pushed."
 fi
+
+# The guard is a publish gate, not just an alarm: a damaged state is never pushed.
+if [ $GUARD_STATUS -ne 0 ]; then
+  echo "FATAL: refusing to commit or push with the student sections damaged"
+  echo "weekly dashboard update finished"
+  exit 1
+fi
+
+# gen-seeds rewrites index.html's seed blocks and pi-aggregate rewrites the ledger, so
+# both are usually dirty here even when claude committed its own work.
+if ! git diff --quiet -- data/ index.html; then
+  echo "--- committing the generated layer ---"
+  git add data/ index.html
+  git commit -m "chore: PI ledger and regenerated seeds ($(date '+%Y-%m-%d'))" || {
+    echo "FATAL: could not commit the generated layer"; exit 1; }
+fi
+
+echo "--- push ---"
+if [ "$NO_PUSH" -eq 1 ]; then
+  echo "--no-push: skipping git push. Local state, for inspection:"
+  git --no-pager log --oneline "@{upstream}..HEAD" 2>/dev/null || git --no-pager log --oneline -3
+  git --no-pager diff --stat "@{upstream}..HEAD" 2>/dev/null
+  echo "         publish it with: git push"
+elif git diff --quiet "@{upstream}..HEAD" 2>/dev/null; then
+  echo "nothing to push — HEAD already matches the remote"
+else
+  if ! git push; then
+    echo "FATAL: git push failed; the work is committed locally but not published"
+    echo "weekly dashboard update finished"
+    exit 1
+  fi
+  echo "pushed: $(git rev-parse --short HEAD)"
+fi
+
+echo "--- done ---"
 echo "weekly dashboard update finished"
 echo
 
-# Fail the task if either the run or the guard failed, so the scheduler surfaces it.
-if [ $CLAUDE_STATUS -ne 0 ]; then exit $CLAUDE_STATUS; fi
-exit $GUARD_STATUS
+exit $CLAUDE_STATUS
