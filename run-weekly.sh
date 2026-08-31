@@ -113,7 +113,7 @@ echo "--- claude ---"
 # only grows, so the argument form is not usable at any prompt size worth keeping.
 timeout 3h claude -p \
   --permission-mode dontAsk \
-  --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(git *),Bash(node *)" \
+  --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(git *),Bash(node *),Bash(./check-student-sections.sh)" \
   --max-turns 90 \
   < "$PROMPT_FILE"
 CLAUDE_STATUS=$?
@@ -176,9 +176,23 @@ if [ $GUARD_STATUS -ne 0 ]; then
   exit 1
 fi
 
-# gen-seeds rewrites index.html's seed blocks and pi-aggregate rewrites the ledger, so
-# both are usually dirty here even when claude committed its own work.
-if ! git diff --quiet -- data/ index.html; then
+# research and industry are replaced wholesale every run, so the moment this finishes
+# the previous week exists nowhere but git history. Snapshot the finished state per ISO
+# week -- after the guards, so what gets recorded is what gets published, and before the
+# commit, so the file is actually staged rather than left untracked for the next run's
+# dirty-tree check to trip over.
+echo "--- week snapshot (scripts/week-archive.js) ---"
+if ! node scripts/week-archive.js; then
+  echo "FATAL: week snapshot failed; not committing, not pushing"
+  echo "weekly dashboard update finished"
+  exit 1
+fi
+
+# gen-seeds rewrites index.html's seed blocks, pi-aggregate rewrites the ledger and
+# week-archive adds a file, so this is usually dirty even when claude committed its own
+# work. --porcelain rather than "git diff --quiet": the week snapshot is a NEW file on
+# the first run of each week, and git diff does not see untracked files at all.
+if [ -n "$(git status --porcelain -- data/ index.html)" ]; then
   echo "--- committing the generated layer ---"
   git add data/ index.html
   git commit -m "chore: PI ledger and regenerated seeds ($(date '+%Y-%m-%d'))" || {

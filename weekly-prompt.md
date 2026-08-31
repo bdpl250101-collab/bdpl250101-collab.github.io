@@ -280,6 +280,10 @@ silently**: the English view simply shows Korean text. Nothing errors, nothing w
 - The script logic — the render functions, event handlers, filters, `CATCLR`, `REGCLR`,
   `CATLBL`, `REGLBL`, `TYPELBL`.
 - The brand colors: amber `#ffc000` on black `#0e0e0e`.
+- **`data/archive/` — any file in it.** `scripts/week-archive.js` writes one snapshot
+  per ISO week after the guards pass. It is the only record of a past week: `research`
+  and `industry` are replaced wholesale, so last week vanishes from the page the moment
+  you finish. Never edit or delete one.
 - **`data/pi_archive.json` — any part of it.** `scripts/pi-aggregate.js` owns that file
   and runs after you, outside your session. `count`, `flag`, `flagged_since` and
   `threshold` are all derived. If you think an entry is wrong, say so in your summary
