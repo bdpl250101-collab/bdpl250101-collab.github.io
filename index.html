@@ -135,6 +135,8 @@
   .card .date{font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums}
   .card a.link{font-size:12px;font-weight:700;color:var(--brand-ink);text-decoration:none;display:inline-flex;align-items:center;gap:4px}
   .card a.link:hover{text-decoration:underline}
+  .card a.link.soft{color:var(--muted);font-weight:600}
+  .card a.link.soft:hover{color:var(--ink-2)}
   .verified{font-size:10.5px;color:var(--good-ink);font-weight:600}
   .unverified{font-size:10.5px;color:var(--serious);font-weight:600}
   .empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:40px;font-size:13px}
@@ -330,7 +332,8 @@ const I18N = {
     tabR:"연구 동향 (Research)", tabI:"업계 동향 (Industry)", tabC:"차트 (Overview)", tabA:"연간 아카이브",
     tabJ:"채용 (Jobs)", tabP:"포닥 (Postdoc)", tabG:"과제 (Grants)",
     stOk:"✓ 확인됨", stCheck:"△ 재확인 필요",
-    linkPost:"공고 ↗", linkPortal:"포털 ↗",
+    linkDeep:"공고 바로가기 ↗",
+    linkSearch:q=>`포털에서 '${q}' 검색 ↗`, linkPortal:"포털 ↗",
     lastChecked:d=>`마지막 확인 ${d}`,
     seedStale:"⚠ data/*.json 을 불러오지 못해 페이지에 내장된 사본을 표시하고 있습니다.",
     searchR:"연구 검색 (키워드)…", searchI:"업계 검색 (기업/키워드)…",
@@ -368,7 +371,8 @@ const I18N = {
     tabR:"Research", tabI:"Industry", tabC:"Charts", tabA:"Archive",
     tabJ:"Jobs", tabP:"Postdoc", tabG:"Grants",
     stOk:"✓ confirmed", stCheck:"△ needs re-check",
-    linkPost:"Posting ↗", linkPortal:"Portal ↗",
+    linkDeep:"Open posting ↗",
+    linkSearch:q=>`Search '${q}' on the portal ↗`, linkPortal:"Portal ↗",
     lastChecked:d=>`Last checked ${d}`,
     seedStale:"⚠ Could not load data/*.json — showing the copy embedded in the page.",
     searchR:"Search research…", searchI:"Search industry…",
@@ -2279,9 +2283,15 @@ function studentCards(id,d,cur){
   box.innerHTML=items.map(x=>{
     const c=GRPCLR[x.group]||'var(--ink-2)';
     const st=x.ok?`<span class="verified">${T().stOk}</span>`:`<span class="unverified">${T().stCheck}</span>`;
-    /* Some entries genuinely have no posting URL (an expired listing with no
-       replacement). Render the card without a link rather than inventing one. */
-    const link=x.link?`<a class="link" href="${x.link}" target="_blank" rel="noopener">${T().linkPost}</a>`:'';
+    /* What the link promises has to match where it goes. link_type="deep" means the
+       URL opens the posting itself; "search" and "portal" mean it does not, so the
+       label names the search term instead of implying a posting is one click away.
+       Some entries genuinely have no URL at all (an expired listing with no
+       replacement) — render the card without a link rather than inventing one. */
+    const deep=x.link_type==="deep";
+    const q=sLbl(x,'query')||sLbl(x,'title');
+    const label=deep?T().linkDeep:T().linkSearch(q);
+    const link=x.link?`<a class="link${deep?'':' soft'}" href="${x.link}" target="_blank" rel="noopener">${label}</a>`:'';
     return `<div class="card">
       <div class="badges">${badge(sLbl(x,'group'),c,tint(c))}${badge(sLbl(x,'tag'),'var(--ink-2)','var(--surface-2)')}</div>
       <h4>${sLbl(x,'title')}</h4>
