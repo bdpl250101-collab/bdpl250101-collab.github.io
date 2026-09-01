@@ -2,7 +2,7 @@
   "week": "2026-W36",
   "iso_year": 2026,
   "iso_week": 36,
-  "generated": "2026-08-31",
+  "generated": "2026-09-01",
   "note": {
     "ko": "주차별 스냅샷입니다. research/industry 는 매 실행 전체 교체되므로 이 파일이 해당 주의 유일한 기록입니다.",
     "en": "A per-week snapshot. research and industry are replaced wholesale each run, so this file is the only record of that week."
@@ -369,7 +369,9 @@
           "meta": "삼성SDI 채용포털",
           "deadline": "2026-09-02",
           "ok": true,
-          "link": "https://www.samsungcareers.com/subsid/detail/C31"
+          "link": "https://www.samsungcareers.com/subsid/detail/C31",
+          "link_type": "portal",
+          "query": "R&D 외국인 경력사원"
         },
         {
           "group": "삼성SDI",
@@ -378,7 +380,9 @@
           "meta": "삼성SDI 채용포털",
           "deadline": "재확인 필요",
           "ok": false,
-          "link": "https://www.samsungcareers.com/subsid/detail/C31"
+          "link": "https://www.samsungcareers.com/subsid/detail/C31",
+          "link_type": "portal",
+          "query": "삼성SDI 3급 신입 공채"
         },
         {
           "group": "LG에너지솔루션",
@@ -387,7 +391,9 @@
           "meta": "LG에너지솔루션 채용포털",
           "deadline": "재확인 필요",
           "ok": false,
-          "link": "https://careers.lg.com/apply?c=LGES"
+          "link": "https://careers.lg.com/apply?c=LGES",
+          "link_type": "portal",
+          "query": "LG에너지솔루션 인재풀"
         },
         {
           "group": "SK온",
@@ -396,7 +402,9 @@
           "meta": "대전 배터리연구원",
           "deadline": "재확인 필요",
           "ok": false,
-          "link": "https://www.sk-on.com/recruit/recruiting.asp"
+          "link": "https://www.sk-on.com/recruit/recruiting.asp",
+          "link_type": "portal",
+          "query": "선행Cell공정개발"
         },
         {
           "group": "SK온",
@@ -405,7 +413,9 @@
           "meta": "대전 배터리연구원",
           "deadline": "2026-08-09 마감",
           "ok": false,
-          "link": "https://www.sk-on.com/recruit/recruiting.asp"
+          "link": "https://www.sk-on.com/recruit/recruiting.asp",
+          "link_type": "portal",
+          "query": "ESS연구원"
         }
       ]
     },
@@ -419,7 +429,9 @@
           "meta": "Gerbrand Ceder · UC Berkeley / LBNL",
           "deadline": "상시",
           "ok": true,
-          "link": "https://ceder.berkeley.edu/contact-us/openings/"
+          "link": "https://ceder.berkeley.edu/contact-us/openings/",
+          "link_type": "deep",
+          "query": null
         },
         {
           "group": "미국",
@@ -428,7 +440,9 @@
           "meta": "Brett Helms · Lawrence Berkeley National Laboratory",
           "deadline": "상시 (우선마감 2026-08-19 경과)",
           "ok": true,
-          "link": "https://lbl.referrals.selectminds.com/jobs/postdoctoral-researcher-%E2%80%93-battery-materials-electrochemical-energy-storage-7559"
+          "link": "https://lbl.referrals.selectminds.com/jobs/postdoctoral-researcher-%E2%80%93-battery-materials-electrochemical-energy-storage-7559",
+          "link_type": "deep",
+          "query": null
         },
         {
           "group": "미국",
@@ -437,7 +451,9 @@
           "meta": "Sandia National Laboratories",
           "deadline": "재확인 필요 — ECS 잡보드 접근 차단",
           "ok": false,
-          "link": "https://jobs.electrochem.org/jobs/function/batteries-and-energy-storage/"
+          "link": "https://jobs.electrochem.org/jobs/function/batteries-and-energy-storage/",
+          "link_type": "search",
+          "query": "batteries and energy storage"
         },
         {
           "group": "미국",
@@ -446,7 +462,9 @@
           "meta": "Argonne National Laboratory",
           "deadline": "마감일 미표기 · 게시 6개월 경과 — 재확인 필요",
           "ok": false,
-          "link": "https://www.postdocjobs.com/posting/7308882"
+          "link": "https://www.postdocjobs.com/posting/7308882",
+          "link_type": "deep",
+          "query": null
         },
         {
           "group": "영국",
@@ -455,7 +473,9 @@
           "meta": "Gelion (Faraday Institution 잡보드 경유)",
           "deadline": "2026-09-14",
           "ok": true,
-          "link": "https://www.faraday.ac.uk/opportunities/job-opportunities/"
+          "link": "https://www.faraday.ac.uk/opportunities/job-opportunities/",
+          "link_type": "portal",
+          "query": "전고체 · 리튬황"
         },
         {
           "group": "영국",
@@ -464,7 +484,9 @@
           "meta": "University College London (Faraday Institution 잡보드 경유)",
           "deadline": "2026-09-07",
           "ok": true,
-          "link": "https://www.faraday.ac.uk/opportunities/job-opportunities/"
+          "link": "https://www.faraday.ac.uk/opportunities/job-opportunities/",
+          "link_type": "portal",
+          "query": "electrochemistry lecturer"
         },
         {
           "group": "영국",
@@ -473,7 +495,9 @@
           "meta": "Clare Grey · University of Cambridge",
           "deadline": "해당 없음",
           "ok": true,
-          "link": "https://www.ch.cam.ac.uk/jobs"
+          "link": "https://www.ch.cam.ac.uk/jobs",
+          "link_type": "portal",
+          "query": "battery electrochemistry"
         },
         {
           "group": "영국",
@@ -482,7 +506,9 @@
           "meta": "Peter Bruce · University of Oxford",
           "deadline": "만료 — 신규 공고 없음",
           "ok": true,
-          "link": null
+          "link": "https://www.jobs.ac.uk/search/?keywords=battery+postdoc",
+          "link_type": "search",
+          "query": "battery postdoc"
         },
         {
           "group": "독일",
@@ -491,7 +517,9 @@
           "meta": "MEET Battery Research Center · Univ. Münster",
           "deadline": "해당 없음",
           "ok": true,
-          "link": "https://www.uni-muenster.de/MEET/en/institute/jobs.shtml"
+          "link": "https://www.uni-muenster.de/MEET/en/institute/jobs.shtml",
+          "link_type": "portal",
+          "query": "battery postdoc"
         },
         {
           "group": "독일",
@@ -500,7 +528,9 @@
           "meta": "KIT / Helmholtz Institute Ulm",
           "deadline": "해당 없음",
           "ok": true,
-          "link": "https://hiu-batteries.de/karriere/"
+          "link": "https://hiu-batteries.de/karriere/",
+          "link_type": "portal",
+          "query": "battery postdoc"
         }
       ]
     },
@@ -514,7 +544,9 @@
           "meta": "한국연구재단 · 과학기술정보통신부",
           "deadline": "2026-09-23",
           "ok": true,
-          "link": "https://www.nrf.re.kr/biz/notice/list"
+          "link": "https://www.nrf.re.kr/biz/notice/list",
+          "link_type": "portal",
+          "query": "한-EU 공동연구지원사업"
         },
         {
           "group": "접수중",
@@ -523,7 +555,9 @@
           "meta": "한국연구재단 · 과학기술정보통신부",
           "deadline": "2026-09-15",
           "ok": true,
-          "link": "https://www.nrf.re.kr/biz/notice/list"
+          "link": "https://www.nrf.re.kr/biz/notice/list",
+          "link_type": "portal",
+          "query": "인터내셔널 모빌리티"
         },
         {
           "group": "접수중",
@@ -532,7 +566,9 @@
           "meta": "기후에너지환경부 · 한국에너지기술평가원",
           "deadline": "재확인 필요 — 목록에 마감일 미표기",
           "ok": false,
-          "link": "https://www.ketep.re.kr/businessAcment?menuId=MENU002080200000000"
+          "link": "https://www.ketep.re.kr/businessAcment?menuId=MENU002080200000000",
+          "link_type": "portal",
+          "query": "에너지국제공동연구 기술수요조사"
         },
         {
           "group": "접수중",
@@ -541,7 +577,9 @@
           "meta": "기후에너지환경부 · 한국에너지기술평가원",
           "deadline": "재확인 필요 — 원문에서 마감일 미확인",
           "ok": false,
-          "link": "https://www.ketep.re.kr/businessAcment?menuId=MENU002080200000000"
+          "link": "https://www.ketep.re.kr/businessAcment?menuId=MENU002080200000000",
+          "link_type": "portal",
+          "query": "신재생에너지 R&D 수소"
         },
         {
           "group": "재확인 필요",
@@ -550,7 +588,9 @@
           "meta": "한국연구재단 · 과학기술정보통신부",
           "deadline": "5월 공고분 — 마감 가능성 높음, 재확인 필요",
           "ok": false,
-          "link": "https://svakorea.org/news/530"
+          "link": "https://svakorea.org/news/530",
+          "link_type": "deep",
+          "query": null
         }
       ]
     }

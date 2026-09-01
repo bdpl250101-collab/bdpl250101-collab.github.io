@@ -134,6 +134,14 @@ fi
 #   the guard then judges the finished state, which is the state that gets pushed.
 #   nothing is published unless all three pass.
 # ---------------------------------------------------------------------------
+# Link quality, before the gates. Every student-section URL is fetched and anything
+# that 404s, bounces to a home page or hits a login wall is demoted out of "deep" so the
+# card stops promising a posting it cannot deliver. Deliberately advisory: it exits 0 even
+# when every request fails, because being offline is not evidence a link is dead, and a
+# flaky network must not be able to block a good week from publishing.
+echo "--- link check (scripts/check-links.js) ---"
+node scripts/check-links.js || echo "WARNING: link check errored; continuing with link_type as it was"
+
 echo "--- pi ledger (scripts/pi-aggregate.js) ---"
 if ! node scripts/pi-aggregate.js; then
   echo "FATAL: PI aggregation failed; not committing, not pushing"

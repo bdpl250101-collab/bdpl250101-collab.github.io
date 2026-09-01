@@ -134,6 +134,16 @@ for (const name of SECTIONS) {
     for (const f of ["group", "tag", "title", "meta", "deadline", "desc", "desc_en"])
       if (!nonEmpty(x[f])) fail(at + ": `" + f + "` is missing or empty");
     if (typeof x.ok !== "boolean") fail(at + ": `ok` must be a boolean");
+    /* link_type is what the card promises the reader. "deep" claims the URL opens the
+       posting itself; the other two admit it does not, and lean on `query` to say what
+       to search for — so a non-deep card with no query renders an empty pair of quotes. */
+    if (!["deep", "search", "portal"].includes(x.link_type))
+      fail(at + ": `link_type` must be deep, search or portal (got " + JSON.stringify(x.link_type) + ")");
+    if (x.link_type !== "deep" && !nonEmpty(x.query))
+      fail(at + ": `query` is required when link_type is " + JSON.stringify(x.link_type) +
+           " — the card has to name what the reader should search for");
+    if (x.link_type === "deep" && !nonEmpty(x.link))
+      fail(at + ": link_type is deep but the item has no link");
     // No link is allowed and renders link-free; a broken-looking one is not.
     if (x.link != null && !/^https?:\/\/\S+$/.test(String(x.link)))
       fail(at + ": `link` is present but not an http(s) URL: " + x.link);
@@ -259,7 +269,8 @@ if (!CHECK_ONLY) {
     const items = data[name].items.map((x) => {
       const o = {};
       for (const k of ["group", "group_en", "tag", "tag_en", "title", "title_en", "meta", "meta_en",
-                       "deadline", "deadline_en", "ok", "link", "desc", "desc_en"])
+                       "deadline", "deadline_en", "ok", "link", "link_type", "query", "query_en",
+                       "desc", "desc_en"])
         if (x[k] !== undefined) o[k] = x[k];
       return o;
     });
@@ -307,7 +318,8 @@ for (const name of SECTIONS) {
     continue;
   }
   for (let i = 0; i < want.length; i++)
-    for (const f of ["group", "tag", "title", "meta", "deadline", "ok", "link", "desc", "desc_en"])
+    for (const f of ["group", "tag", "title", "meta", "deadline", "ok", "link", "link_type",
+                     "query", "desc", "desc_en"])
       if (JSON.stringify(seed[i][f]) !== JSON.stringify(want[i][f] === undefined ? undefined : want[i][f]))
         fail("index.html: `" + name + "` seed item " + i + " field `" + f + "` differs from data/" + name + ".json" +
              (CHECK_ONLY ? " — run `node scripts/gen-seeds.js` to regenerate" : ""));

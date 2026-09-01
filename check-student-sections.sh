@@ -115,7 +115,8 @@ const secmeta=(()=>{const s=h.indexOf("const SECMETA = {");if(s<0)return null;
   const e=h.indexOf("\n};",s);if(e<0)return null;
   return eval("("+h.slice(s+("const SECMETA = ").length,e+2)+")");})();
 const F=["group","group_en","tag","tag_en","title","title_en","meta","meta_en",
-         "deadline","deadline_en","ok","link","desc","desc_en"];
+         "deadline","deadline_en","ok","link","link_type","query","query_en",
+         "desc","desc_en"];
 let bad=[];
 if(!secmeta) bad.push("SECMETA could not be parsed out of index.html");
 for(const k of ["jobs","postdoc","grants"]){

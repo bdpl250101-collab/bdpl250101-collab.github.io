@@ -757,7 +757,39 @@ status you could not confirm goes in as `group: "재확인 필요"` with `ok:fal
 dropped, and not promoted to 접수중 on a guess. An announcement whose deadline has passed
 comes out.
 
-### Step 5 — the item schema, identical in all three files
+### Step 5 — the link rule: deep first, honest search second
+
+A card's link is a promise. `link_type` is where you keep that promise honest, and the
+card's label changes with it: `deep` renders **공고 바로가기 / Open posting**, the other two
+render **포털에서 '〈query〉' 검색 / Search '〈query〉' on the portal** in a quieter style.
+
+Work down this list and stop at the first one you can actually verify:
+
+1. **`deep`** — the URL opens the posting or announcement itself. Try for this every
+   time. NRF, KEIT and IRIS all have per-announcement detail pages; the academic job
+   boards (jobs.ac.uk, academicpositions, postdocjobs, ECS) all have per-listing URLs.
+   A PI's own openings page counts as deep — it is where that group posts.
+2. **`search`** — no deep URL, but the portal takes a query parameter, so you can build
+   a search-results URL that lands the reader on the matching listings. Put that URL in
+   `link`. **Only if you fetched it and saw results** — a portal that answers 200 to any
+   parameter it does not understand has not filtered anything, and a search URL that
+   silently ignores its query is a portal link wearing a disguise.
+3. **`portal`** — neither is possible. Link the portal home and let `query` carry the
+   posting name so the reader knows what to look for once they are there.
+
+Never link a portal home while calling it `deep`. That is the specific failure this
+field exists to prevent: the reader clicks expecting the posting, lands on a front page,
+and concludes the posting is gone.
+
+Items that are rolling, a talent pool, or "no opening this week" skip step 1 entirely —
+there is no posting to deep-link, so they start at step 2.
+
+`scripts/check-links.js` fetches every link after your session and demotes anything that
+404s, bounces to a home page, or hits a login wall. It cannot promote, so a link you
+filed as `portal` out of laziness stays `portal` forever — the checker is a safety net,
+not a substitute for looking.
+
+### Step 6 — the item schema, identical in all three files
 
 ```json
 {"group":"SK온","group_en":"SK On","tag":"R&D","tag_en":"R&D",
@@ -775,6 +807,9 @@ comes out.
 | `deadline` | **yes** | a real date, `"상시"`, or `"재확인 필요"` |
 | `ok` | **yes** | boolean; `true` only when you opened the posting and saw it open this run |
 | `link` | optional | omit rather than invent; the card renders without one |
+| `link_type` | **yes** | `deep` · `search` · `portal` — see the link rule below |
+| `query` | **yes** unless `deep` | what the reader should search for; the card prints it in the label |
+| `query_en` | optional | English form; falls back to `query` |
 | `desc` / `desc_en` | **yes** | both, always — the gate fails the run on an empty one |
 
 Every `_en` twin is required except `link`. A new `group` literal also needs a colour in
@@ -782,7 +817,7 @@ Every `_en` twin is required except `link`. A new `group` literal also needs a c
 
 Edit only the JSON. The seed arrays in index.html are regenerated from it — see 4b.
 
-### Step 6 — lastChecked, every week, without exception
+### Step 7 — lastChecked, every week, without exception
 
 Set `updated` to the run date in **every section you checked**, including one where you
 found nothing new and changed no items. That field is the only thing on the page that

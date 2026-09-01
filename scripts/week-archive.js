@@ -66,6 +66,7 @@ for (const s of ["jobs", "postdoc", "grants"]) {
     items: d.items.map((x) => ({
       group: x.group, tag: x.tag, title: x.title, meta: x.meta,
       deadline: x.deadline, ok: x.ok, link: x.link || null,
+      link_type: x.link_type || null, query: x.query || null,
     })),
   };
 }
