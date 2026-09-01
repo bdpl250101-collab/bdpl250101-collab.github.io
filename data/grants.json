@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-31",
+  "updated": "2026-09-01",
   "notice": {
     "ko": "공고 자동수집은 best-effort이며 누락 가능 — 아래 공식 포털에서 직접 확인 권장.",
     "en": "Automated collection of announcements is best-effort and may miss items — please confirm directly on the official portals below."
@@ -47,10 +47,8 @@
       "deadline": "2026-09-23",
       "deadline_en": "23 Sep 2026",
       "ok": true,
-      "link": "https://www.nrf.re.kr/biz/notice/list",
-      "link_type": "portal",
-      "query": "한-EU 공동연구지원사업",
-      "query_en": "Korea-EU joint research programme",
+      "link": "https://www.nrf.re.kr/biz/notice/view?menuNo=362&postNo=280133&bizNotGubn=guide",
+      "link_type": "deep",
       "desc": "8월 31일 게시된 국제협력 공모로, 같은 날 확인 시 접수중이며 마감은 9월 23일입니다. 분야가 이차전지로 한정되지는 않지만 EU 파트너와의 공동연구를 찾는 배터리 그룹에 열려 있는 창구입니다.",
       "desc_en": "An international-cooperation call posted on 31 August and confirmed open the same day, closing on 23 September. It is not restricted to secondary batteries, but it is an available route for battery groups seeking a joint project with an EU partner."
     },
@@ -85,10 +83,8 @@
       "deadline": "재확인 필요 — 목록에 마감일 미표기",
       "deadline_en": "Needs re-checking — no deadline shown on the list",
       "ok": false,
-      "link": "https://www.ketep.re.kr/businessAcment?menuId=MENU002080200000000",
-      "link_type": "portal",
-      "query": "에너지국제공동연구 기술수요조사",
-      "query_en": "energy international joint research survey",
+      "link": "https://www.ketep.re.kr/businessAcment/view?menuId=MENU002080200000000&uni_ancm_id=10262",
+      "link_type": "deep",
       "desc": "8월 27일 등록된 기술수요조사로, 2026-08-31 확인 시 KETEP 목록에서 상태가 ‘진행’이었습니다. 과제 공모가 아니라 2027년 사업 기획에 반영할 기술수요를 받는 단계이므로, 배터리·에너지저장 주제를 미리 올려 둘 수 있는 통로입니다. 목록에 마감일이 표시되지 않아 원문에서 확인이 필요합니다.",
       "desc_en": "A technology-needs survey registered on 27 August and showing as in progress on the KETEP list as of 31 August 2026. It is not a project call but the stage at which technology needs are collected to shape the 2027 programme, so it is a route for putting battery and storage topics on the agenda early. No deadline is displayed on the list, so it must be checked against the announcement itself."
     },
@@ -104,10 +100,8 @@
       "deadline": "재확인 필요 — 원문에서 마감일 미확인",
       "deadline_en": "Needs re-checking — deadline not stated in the notice",
       "ok": false,
-      "link": "https://www.ketep.re.kr/businessAcment?menuId=MENU002080200000000",
-      "link_type": "portal",
-      "query": "신재생에너지 R&D 수소",
-      "query_en": "renewable energy R&D hydrogen",
+      "link": "https://www.ketep.re.kr/businessAcment/view?menuId=MENU002080200000000&uni_ancm_id=D202610538",
+      "link_type": "deep",
       "desc": "8월 19일 등록된 재공고로, 2026-08-31 확인 시에도 KETEP 목록에서 상태가 ‘진행’으로 표시돼 접수중임은 확인했습니다. 다만 접수 마감일이 목록에 표시되지 않아 원문 공고문에서 직접 확인해야 합니다.",
       "desc_en": "A re-announced call registered on 19 August. Its status still showed as in progress on the KETEP list as of 31 August 2026, confirming it is open, but the list does not display an application deadline, so that must be checked against the announcement itself."
     },
