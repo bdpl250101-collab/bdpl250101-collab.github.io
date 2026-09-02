@@ -2,7 +2,7 @@
   "week": "2026-W36",
   "iso_year": 2026,
   "iso_week": 36,
-  "generated": "2026-09-01",
+  "generated": "2026-09-02",
   "note": {
     "ko": "주차별 스냅샷입니다. research/industry 는 매 실행 전체 교체되므로 이 파일이 해당 주의 유일한 기록입니다.",
     "en": "A per-week snapshot. research and industry are replaced wholesale each run, so this file is the only record of that week."
@@ -420,7 +420,7 @@
       ]
     },
     "postdoc": {
-      "updated": "2026-08-31",
+      "updated": "2026-09-01",
       "items": [
         {
           "group": "미국",
@@ -473,9 +473,9 @@
           "meta": "Gelion (Faraday Institution 잡보드 경유)",
           "deadline": "2026-09-14",
           "ok": true,
-          "link": "https://www.faraday.ac.uk/opportunities/job-opportunities/",
-          "link_type": "portal",
-          "query": "전고체 · 리튬황"
+          "link": "https://gelion.com/about-us/join-our-team/research-scientist/",
+          "link_type": "deep",
+          "query": null
         },
         {
           "group": "영국",
@@ -484,9 +484,9 @@
           "meta": "University College London (Faraday Institution 잡보드 경유)",
           "deadline": "2026-09-07",
           "ok": true,
-          "link": "https://www.faraday.ac.uk/opportunities/job-opportunities/",
-          "link_type": "portal",
-          "query": "electrochemistry lecturer"
+          "link": "https://www.ucl.ac.uk/work-at-ucl/search-ucl-jobs/details?nPostingId=19029&nPostingTargetId=46757&id=Q1KFK026203F3VBQBLO8M8M07&LG=UK&languageSelect=UK&mask=ext",
+          "link_type": "deep",
+          "query": null
         },
         {
           "group": "영국",
@@ -512,14 +512,14 @@
         },
         {
           "group": "독일",
-          "tag": "공석 없음",
-          "title": "현재 공석 없음",
+          "tag": "오픈",
+          "title": "Wissenschaftliche*r Mitarbeiter*in (E 13 TV-L)",
           "meta": "MEET Battery Research Center · Univ. Münster",
-          "deadline": "해당 없음",
+          "deadline": "재확인 필요 — 공고에 마감일 미표기",
           "ok": true,
-          "link": "https://www.uni-muenster.de/MEET/en/institute/jobs.shtml",
-          "link_type": "portal",
-          "query": "battery postdoc"
+          "link": "https://stellen.uni-muenster.de/jobposting/1c4fc66ee17e627c7f2cbe0268e8cf1168f0f5930?ref=homepage",
+          "link_type": "deep",
+          "query": null
         },
         {
           "group": "독일",
@@ -528,14 +528,14 @@
           "meta": "KIT / Helmholtz Institute Ulm",
           "deadline": "해당 없음",
           "ok": true,
-          "link": "https://hiu-batteries.de/karriere/",
-          "link_type": "portal",
-          "query": "battery postdoc"
+          "link": "https://hiu-batteries.de/?s=Postdoc",
+          "link_type": "search",
+          "query": "Postdoc"
         }
       ]
     },
     "grants": {
-      "updated": "2026-08-31",
+      "updated": "2026-09-01",
       "items": [
         {
           "group": "접수중",
@@ -544,9 +544,9 @@
           "meta": "한국연구재단 · 과학기술정보통신부",
           "deadline": "2026-09-23",
           "ok": true,
-          "link": "https://www.nrf.re.kr/biz/notice/list",
-          "link_type": "portal",
-          "query": "한-EU 공동연구지원사업"
+          "link": "https://www.nrf.re.kr/biz/notice/view?menuNo=362&postNo=280133&bizNotGubn=guide",
+          "link_type": "deep",
+          "query": null
         },
         {
           "group": "접수중",
@@ -566,9 +566,9 @@
           "meta": "기후에너지환경부 · 한국에너지기술평가원",
           "deadline": "재확인 필요 — 목록에 마감일 미표기",
           "ok": false,
-          "link": "https://www.ketep.re.kr/businessAcment?menuId=MENU002080200000000",
-          "link_type": "portal",
-          "query": "에너지국제공동연구 기술수요조사"
+          "link": "https://www.ketep.re.kr/businessAcment/view?menuId=MENU002080200000000&uni_ancm_id=10262",
+          "link_type": "deep",
+          "query": null
         },
         {
           "group": "접수중",
@@ -577,9 +577,9 @@
           "meta": "기후에너지환경부 · 한국에너지기술평가원",
           "deadline": "재확인 필요 — 원문에서 마감일 미확인",
           "ok": false,
-          "link": "https://www.ketep.re.kr/businessAcment?menuId=MENU002080200000000",
-          "link_type": "portal",
-          "query": "신재생에너지 R&D 수소"
+          "link": "https://www.ketep.re.kr/businessAcment/view?menuId=MENU002080200000000&uni_ancm_id=D202610538",
+          "link_type": "deep",
+          "query": null
         },
         {
           "group": "재확인 필요",
