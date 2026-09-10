@@ -10,6 +10,12 @@
 #   ./run-weekly.sh --no-push   collect, verify, commit locally — but do not push.
 #                               Use it to exercise the whole path without publishing.
 #                               (--dry-run is accepted as a synonym.)
+#
+# EDITING THIS FILE: commit the change before you run it. The dirty-tree guard below
+# does `git reset --hard`, which reverts an uncommitted edit to this very script while
+# bash is still reading it -- bash tracks its position by byte offset, so it then
+# resumes at that offset in a different file. The 2026-09-10 rehearsal did exactly
+# that and had to be killed.
 set -uo pipefail
 
 NO_PUSH=0
@@ -33,6 +39,43 @@ stamp() {
 
 # Everything from here on — stdout and stderr — goes to the log, timestamped.
 exec > >(stamp) 2>&1
+STAMP_PID=$!
+
+# --- completion accounting -------------------------------------------------
+# The 2026-09-08 run exposed the worst failure this script can have: it died in
+# or after `claude`, wrote nothing past "--- claude ---", yet the Windows
+# scheduler recorded LastTaskResult 0. A gate that is never reached cannot
+# block, and an exit code that is never wrong cannot alarm.
+#
+# Two independent backstops close that hole:
+#   1. RUN_COMPLETED is set to 1 only on the last line of the happy path. The
+#      EXIT trap reports the run INCOMPLETE whenever it is still 0 and — the
+#      part that matters — forces a NON-zero exit so the scheduler stops lying.
+#   2. Every verdict line is written with a plain >> to the log and to
+#      $STATUS_FILE, NOT through the `stamp` process substitution. If `stamp`
+#      was severed (which loses buffered output and is the prime suspect for the
+#      truncated 09-08 log), the direct write still lands.
+RUN_COMPLETED=0
+STATUS_FILE="$REPO_DIR/.weekly-last-status"
+
+on_exit() {
+  local ec=$?
+  # Stop feeding the log pipe and let `stamp` drain whatever it still holds, so the
+  # verdict appended below is genuinely the last line. These writes open the file
+  # directly, so they still land even when `stamp` is already dead.
+  exec >/dev/null 2>&1
+  wait "${STAMP_PID:-}" 2>/dev/null
+  local ts; ts="$(date '+%Y-%m-%d %H:%M:%S %z')"
+  local head; head="$(git -C "$REPO_DIR" rev-parse --short HEAD 2>/dev/null || echo unknown)"
+  local verdict; [ "${RUN_COMPLETED:-0}" -eq 1 ] && verdict=COMPLETE || verdict=INCOMPLETE
+  printf '%s RUN-VERDICT: %s (exit=%s, head=%s)\n' "$ts" "$verdict" "$ec" "$head" >> "$LOG_FILE"
+  printf '%s\t%s\texit=%s\thead=%s\n' "$ts" "$verdict" "$ec" "$head" > "$STATUS_FILE"
+  # Report failure to the scheduler when a run that claimed success never reached the end.
+  if [ "${RUN_COMPLETED:-0}" -ne 1 ] && [ "$ec" -eq 0 ]; then
+    exit 90   # incomplete run that would otherwise have exited 0
+  fi
+}
+trap on_exit EXIT
 
 echo "=============================================================="
 echo "weekly dashboard update starting"
@@ -57,11 +100,19 @@ fi
 # gitignored, and reset --hard does not touch untracked files. Local commits that
 # were made but not pushed are also preserved — reset --hard only rewinds the
 # working tree and index to HEAD.
+#
+# NOT safe for an uncommitted edit to this script -- see the note at the top.
 echo "--- dirty-tree check ---"
 if ! git diff --quiet HEAD 2>/dev/null; then
   echo "WARNING: dirty working tree — a previous run likely died mid-edit."
   echo "         discarding partial changes and starting clean:"
   git status --short
+  if ! git diff --quiet HEAD -- run-weekly.sh 2>/dev/null; then
+    echo "FATAL: the dirty file is run-weekly.sh itself, which is the script now running."
+    echo "       Resetting it would swap this file out from under bash mid-execution."
+    echo "       Commit or stash the change, then re-run."
+    exit 1
+  fi
   git reset --hard HEAD
   echo "WARNING: partial changes discarded. If this repeats week after week,"
   echo "         the run is dying before it can commit — investigate rather than ignore."
@@ -119,6 +170,24 @@ timeout 3h claude -p \
 CLAUDE_STATUS=$?
 if [ $CLAUDE_STATUS -eq 124 ]; then
   echo "FATAL: claude hit the 3h timeout"
+fi
+
+# Breadcrumb written straight to the log. On 2026-09-08 nothing past
+# "--- claude ---" survived, so we could not even tell whether claude returned.
+# This line bypasses `stamp`, so it lands even if the log pipe is already gone —
+# next time it will pin down "claude returned 0 then downstream vanished" versus
+# "claude never returned at all".
+printf '%s claude returned: status=%s\n' "$(date '+%Y-%m-%d %H:%M:%S %z')" "$CLAUDE_STATUS" >> "$LOG_FILE"
+
+# Silent-stall guard. Every real sweep moves at least the date-range and
+# generation-date strings, so index.html is never byte-identical to the pre-run
+# commit afterward. If it is, claude returned without doing the work — the exact
+# 09-08 signature — and we fail loudly here instead of sailing through the gates
+# into a deceptive "nothing to push".
+if git diff --quiet "$BASE_REF" -- index.html 2>/dev/null; then
+  echo "FATAL: claude returned (status=$CLAUDE_STATUS) but index.html is unchanged from the"
+  echo "       pre-run commit ($BASE_REF). The sweep produced nothing; not committing, not pushing."
+  exit 1
 fi
 
 # ---------------------------------------------------------------------------
@@ -228,4 +297,5 @@ echo "--- done ---"
 echo "weekly dashboard update finished"
 echo
 
+RUN_COMPLETED=1
 exit $CLAUDE_STATUS
