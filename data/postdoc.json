@@ -149,9 +149,10 @@
       "deadline_en": "7 Sep 2026",
       "ok": true,
       "link": "https://www.ucl.ac.uk/work-at-ucl/search-ucl-jobs/details?nPostingId=19029&nPostingTargetId=46757&id=Q1KFK026203F3VBQBLO8M8M07&LG=UK&languageSelect=UK&mask=ext",
-      "link_type": "deep",
+      "link_type": "portal",
       "desc": "2026-08-31 확인 시 Faraday 잡보드에 새로 올라와 있던 UCL 교원 공고로, 전기화학 에너지 시스템 분야이며 마감은 9월 7일입니다. 포닥이 아니라 독립 연구자 트랙이라 박사 후 진로를 넓게 보는 경우에 해당합니다.",
-      "desc_en": "A UCL faculty post in electrochemical energy systems, newly visible on the Faraday board as of 31 August 2026 and closing on 7 September. It is an independent-investigator track rather than a postdoc, relevant to those weighing a broader set of post-PhD routes."
+      "desc_en": "A UCL faculty post in electrochemical energy systems, newly visible on the Faraday board as of 31 August 2026 and closing on 7 September. It is an independent-investigator track rather than a postdoc, relevant to those weighing a broader set of post-PhD routes.",
+      "query": "Lecturer / Associate Professor — Electrochemical Energy Systems"
     },
     {
       "group": "영국",
