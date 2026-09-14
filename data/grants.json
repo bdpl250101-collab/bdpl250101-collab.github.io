@@ -1,12 +1,12 @@
 {
-  "updated": "2026-09-01",
+  "updated": "2026-09-14",
   "notice": {
     "ko": "공고 자동수집은 best-effort이며 누락 가능 — 아래 공식 포털에서 직접 확인 권장.",
     "en": "Automated collection of announcements is best-effort and may miss items — please confirm directly on the official portals below."
   },
   "context": {
-    "ko": "2026년 부처개편으로 에너지 R&D는 기후에너지환경부(MCEE)와 KETEP, 산업 R&D는 KEIT, 기초·원천은 NRF가 맡고, 통합 공고는 IRIS에 게시됩니다. <b>2026-08-31 확인 결과에도 IRIS·KEIT 접수중 목록에는 이차전지·에너지저장 전용 공고가 한 건도 없었습니다</b> — 로봇, 기계장비, AI 상용화, 반도체, 가속기 등이 올라와 있습니다. 두 회차 연속으로 배터리 전용 공고가 없는 상태이며, 이는 검색 실패가 아니라 실제로 공고가 비어 있는 구간입니다. 이번 회차에는 8월 31일 게시된 NRF 한-EU 공동연구지원사업과 KETEP의 2027년 에너지국제공동연구사업 기술수요조사를 새로 추가했습니다. 마감일이 원문에서 확정되지 않은 항목은 ‘재확인 필요’로 표기했습니다.",
-    "en": "After the 2026 ministry reorganisation, energy R&D sits with the Ministry of Climate, Energy and Environment (MCEE) and KETEP, industrial R&D with KEIT, and basic and source technology with the NRF, while consolidated announcements are posted on IRIS. <b>As of 31 August 2026 the IRIS and KEIT open-call lists again contained no announcement dedicated to secondary batteries or energy storage</b> — the live calls cover robotics, machinery, AI commercialisation, semiconductors and accelerators. That is now two runs in a row with no battery-specific call: a genuinely empty stretch rather than a failed search. Newly added this edition are the NRF Korea–EU joint research call posted on 31 August and KETEP's technology-needs survey for the 2027 international energy research programme. Items whose deadline could not be confirmed against the original announcement are marked as needing a re-check."
+    "ko": "2026년 부처개편으로 에너지 R&D는 기후에너지환경부(MCEE)와 KETEP, 산업 R&D는 KEIT, 기초·원천은 NRF가 맡고, 통합 공고는 IRIS에 게시됩니다. <b>2026-09-14 확인 결과에도 IRIS 접수중 10건과 KEIT 목록에는 이차전지·에너지저장 전용 공고가 한 건도 없었습니다</b> — 지역 과학기술혁신, 우주기술인재, 디지털혁신기술 국제공동연구, 가속기핵심기술 등이 올라와 있습니다. 세 회차 연속으로 배터리 전용 공고가 없는 상태이며, 이는 검색 실패가 아니라 실제로 공고가 비어 있는 구간입니다. 이번 회차에는 9월 7일 공고된 KETEP 산업기술R&D연구기획사업을 새로 추가했습니다 — 이차전지 전용은 아니지만 전력망·에너지안전·에너지AI 등 6개 기획 주제를 5개월 단위로 지원하는 창구입니다. 한-EU 공동연구지원사업은 원문을 직접 열어 D-9(9월 23일 18시 마감)로 접수중임을 확인했습니다. 반면 <b>인터내셔널 모빌리티 공모는 NRF 공고 목록 첫 페이지에서 밀려나 이번 회차에 상태를 확인하지 못해 ‘재확인 필요’로 내렸습니다</b> — 마감 예정일(9월 15일)이 지나지 않았으므로 삭제하지는 않았습니다.",
+    "en": "After the 2026 ministry reorganisation, energy R&D sits with the Ministry of Climate, Energy and Environment (MCEE) and KETEP, industrial R&D with KEIT, and basic and source technology with the NRF, while consolidated announcements are posted on IRIS. <b>As of 14 September 2026 the ten open IRIS calls and the KEIT list again contained no announcement dedicated to secondary batteries or energy storage</b> — the live calls cover regional science and technology innovation, space technology training, international digital-innovation research and accelerator core technology. That is now three runs in a row with no battery-specific call: a genuinely empty stretch rather than a failed search. Newly added this edition is KETEP's Industrial Technology R&D Research Planning call, announced on 7 September — not battery-specific, but a route that funds five-month planning studies across six themes including power grids, energy safety and energy AI. The Korea–EU joint research call was opened directly and confirmed open at D-9, closing 23 September at 18:00. The <b>International Mobility call, by contrast, has dropped off the first page of the NRF announcement list and its status could not be confirmed this run, so it has been moved to needs-re-check</b> — it was not deleted, since its 15 September deadline has not passed."
   },
   "portals_title": {
     "ko": "모니터링 공식 포털",
@@ -49,27 +49,27 @@
       "ok": true,
       "link": "https://www.nrf.re.kr/biz/notice/view?menuNo=362&postNo=280133&bizNotGubn=guide",
       "link_type": "deep",
-      "desc": "8월 31일 게시된 국제협력 공모로, 같은 날 확인 시 접수중이며 마감은 9월 23일입니다. 분야가 이차전지로 한정되지는 않지만 EU 파트너와의 공동연구를 찾는 배터리 그룹에 열려 있는 창구입니다.",
-      "desc_en": "An international-cooperation call posted on 31 August and confirmed open the same day, closing on 23 September. It is not restricted to secondary batteries, but it is an available route for battery groups seeking a joint project with an EU partner."
+      "desc": "8월 24일 게시된 국제협력 공모로, 2026-09-14에 원문을 직접 열어 D-9로 접수중임을 확인했습니다. 마감은 9월 23일 18시이며 접수는 IRIS를 통합니다. 분야가 이차전지로 한정되지는 않지만 Horizon Europe 파트너로 확정된 연구자에게 열려 있어, EU 파트너와의 공동연구를 찾는 배터리 그룹에 해당하는 창구입니다.",
+      "desc_en": "An international-cooperation call posted on 24 August. The announcement itself was opened on 14 September 2026 and confirmed open at D-9, closing 23 September at 18:00 with applications routed through IRIS. It is not restricted to secondary batteries, but it is open to researchers confirmed as Horizon Europe partners, making it a live route for battery groups seeking an EU collaboration."
     },
     {
       "group": "접수중",
       "group_en": "Open",
-      "tag": "NRF / 과기정통부",
-      "tag_en": "NRF / MSIT",
-      "title": "2026년도 NRF 인터내셔널 모빌리티 신규과제 공모",
-      "title_en": "2026 NRF International Mobility Program — new project call",
-      "meta": "한국연구재단 · 과학기술정보통신부",
-      "meta_en": "NRF · Ministry of Science and ICT",
-      "deadline": "2026-09-15",
-      "deadline_en": "15 Sep 2026",
+      "tag": "KETEP / MCEE",
+      "tag_en": "KETEP / MCEE",
+      "title": "2026년도 산업기술R&D연구기획사업 신규지원대상 연구개발과제 공고",
+      "title_en": "2026 industrial technology R&D research planning programme — new project call",
+      "meta": "기후에너지환경부 · 한국에너지기술평가원",
+      "meta_en": "MCEE · KETEP",
+      "deadline": "2026-10-07",
+      "deadline_en": "7 Oct 2026",
       "ok": true,
-      "link": "https://www.nrf.re.kr/biz/notice/list",
+      "link": "https://www.ketep.re.kr/businessAcment?menuId=MENU002080200000000",
       "link_type": "portal",
-      "query": "인터내셔널 모빌리티",
-      "query_en": "International Mobility programme",
-      "desc": "2026-08-31 확인 시에도 접수중이며 마감은 9월 15일로 유지돼 있었습니다. 이차전지 전용 공고는 아니지만 이번 회차에 확인된 개방형 공모 가운데 에너지·모빌리티 분야에 가장 가깝습니다.",
-      "desc_en": "Still confirmed open as of 31 August 2026, with the 15 September deadline unchanged. It is not battery-specific, but it remains the closest open call in the energy and mobility area found this run."
+      "query": "산업기술R&D연구기획사업",
+      "query_en": "industrial technology R&D research planning",
+      "desc": "9월 7일 공고돼 2026-09-14 확인 시 KETEP 목록과 IRIS 접수중 목록 양쪽에서 ‘진행’으로 확인됐습니다. 접수는 10월 7일 18시까지이며 총 4.93억 원 규모, 과제당 6,500만~1.2억 원에 지원기간은 5개월입니다. 이차전지 전용은 아니지만 전력망, 에너지안전, 에너지 실증, 원자력·방사선 활용, 에너지 AI 두 갈래까지 6개 기획 주제를 다루므로 저장·계통 쪽 주제를 올릴 수 있습니다.",
+      "desc_en": "Announced on 7 September and confirmed in progress on 14 September 2026 on both the KETEP list and the IRIS open-call list. Applications close on 7 October at 18:00; the total budget is about KRW 493 million, with KRW 65–120 million per project over a five-month period. It is not battery-specific, but it spans six planning themes — power grids, energy safety, energy demonstration, nuclear and radiation applications, and two strands of energy AI — so storage and grid topics can be proposed into it."
     },
     {
       "group": "접수중",
@@ -85,8 +85,8 @@
       "ok": false,
       "link": "https://www.ketep.re.kr/businessAcment/view?menuId=MENU002080200000000&uni_ancm_id=10262",
       "link_type": "deep",
-      "desc": "8월 27일 등록된 기술수요조사로, 2026-08-31 확인 시 KETEP 목록에서 상태가 ‘진행’이었습니다. 과제 공모가 아니라 2027년 사업 기획에 반영할 기술수요를 받는 단계이므로, 배터리·에너지저장 주제를 미리 올려 둘 수 있는 통로입니다. 목록에 마감일이 표시되지 않아 원문에서 확인이 필요합니다.",
-      "desc_en": "A technology-needs survey registered on 27 August and showing as in progress on the KETEP list as of 31 August 2026. It is not a project call but the stage at which technology needs are collected to shape the 2027 programme, so it is a route for putting battery and storage topics on the agenda early. No deadline is displayed on the list, so it must be checked against the announcement itself."
+      "desc": "8월 27일 등록된 기술수요조사로, 2026-09-14 확인 시에도 KETEP 목록에서 상태가 ‘진행’이었습니다. 과제 공모가 아니라 2027년 사업 기획에 반영할 기술수요를 받는 단계이므로, 배터리·에너지저장 주제를 미리 올려 둘 수 있는 통로입니다. 목록에 마감일이 표시되지 않아 원문에서 확인이 필요합니다.",
+      "desc_en": "A technology-needs survey registered on 27 August and still showing as in progress on the KETEP list as of 14 September 2026. It is not a project call but the stage at which technology needs are collected to shape the 2027 programme, so it is a route for putting battery and storage topics on the agenda early. No deadline is displayed on the list, so it must be checked against the announcement itself."
     },
     {
       "group": "접수중",
@@ -102,8 +102,27 @@
       "ok": false,
       "link": "https://www.ketep.re.kr/businessAcment/view?menuId=MENU002080200000000&uni_ancm_id=D202610538",
       "link_type": "deep",
-      "desc": "8월 19일 등록된 재공고로, 2026-08-31 확인 시에도 KETEP 목록에서 상태가 ‘진행’으로 표시돼 접수중임은 확인했습니다. 다만 접수 마감일이 목록에 표시되지 않아 원문 공고문에서 직접 확인해야 합니다.",
-      "desc_en": "A re-announced call registered on 19 August. Its status still showed as in progress on the KETEP list as of 31 August 2026, confirming it is open, but the list does not display an application deadline, so that must be checked against the announcement itself."
+      "desc": "8월 19일 등록된 재공고로, 2026-09-14 확인 시에도 KETEP 목록에서 상태가 ‘진행’으로 표시돼 접수중임은 확인했습니다. 다만 접수 마감일이 목록에 표시되지 않아 원문 공고문에서 직접 확인해야 합니다. 수소 분야이므로 이차전지와는 직접 겹치지 않지만 같은 창구를 쓰는 참고 항목으로 남깁니다.",
+      "desc_en": "A re-announced call registered on 19 August. Its status still showed as in progress on the KETEP list as of 14 September 2026, confirming it is open, but the list does not display an application deadline, so that must be checked against the announcement itself. It is a hydrogen call rather than a battery one, kept here as a reference point that runs through the same channel."
+    },
+    {
+      "group": "재확인 필요",
+      "group_en": "Needs re-check",
+      "tag": "NRF / 과기정통부",
+      "tag_en": "NRF / MSIT",
+      "title": "2026년도 NRF 인터내셔널 모빌리티 신규과제 공모",
+      "title_en": "2026 NRF International Mobility Program — new project call",
+      "meta": "한국연구재단 · 과학기술정보통신부",
+      "meta_en": "NRF · Ministry of Science and ICT",
+      "deadline": "2026-09-15 (예정) — 재확인 필요",
+      "deadline_en": "15 Sep 2026 (expected) — needs re-checking",
+      "ok": false,
+      "link": "https://www.nrf.re.kr/biz/notice/list",
+      "link_type": "portal",
+      "query": "인터내셔널 모빌리티",
+      "query_en": "International Mobility programme",
+      "desc": "직전 회차에는 접수중으로 확인됐으나, 2026-09-14 확인 시 NRF 공고 목록 첫 페이지에서 밀려나 게시 여부를 확인하지 못했습니다. 기록된 마감일(9월 15일)이 아직 지나지 않았으므로 삭제하지 않고 재확인 항목으로 내립니다 — 지원을 고려한다면 포털에서 직접 확인이 필요합니다.",
+      "desc_en": "Confirmed open last run, but as of 14 September 2026 it had dropped off the first page of the NRF announcement list and its status could not be verified. Its recorded deadline of 15 September has not yet passed, so rather than delete it the item is moved to needs-re-check — anyone considering applying should confirm on the portal directly."
     },
     {
       "group": "재확인 필요",
@@ -119,8 +138,8 @@
       "ok": false,
       "link": "https://svakorea.org/news/530",
       "link_type": "deep",
-      "desc": "리튬황 전지 원천기술 과제로 연 10억 원 · 4.5년 규모입니다. 2026-08-31 확인 시에도 NRF 공고 목록에서 이차전지 관련 항목이 보이지 않아 이미 마감된 것으로 보이나, 확정하지 못해 재확인 표기를 유지합니다.",
-      "desc_en": "A lithium-sulfur source-technology project funded at KRW 1B per year over 4.5 years. No battery-related item was visible on the NRF announcement list as of 31 August 2026 either, suggesting it has closed, but this could not be confirmed so the re-check flag is kept."
+      "desc": "리튬황 전지 원천기술 과제로 연 10억 원 · 4.5년 규모입니다. 2026-09-14 확인 시에도 NRF 공고 목록에서 이차전지 관련 항목이 보이지 않아 이미 마감된 것으로 보이나, 확정하지 못해 재확인 표기를 유지합니다. 이 대시보드가 추적하는 범위에서 이차전지를 명시한 국내 공모는 여전히 이 한 건뿐입니다.",
+      "desc_en": "A lithium-sulfur source-technology project funded at KRW 1B per year over 4.5 years. No battery-related item was visible on the NRF announcement list as of 14 September 2026 either, suggesting it has closed, but this could not be confirmed so the re-check flag is kept. It remains the only Korean call within this dashboard's scope that names secondary batteries explicitly."
     }
   ]
 }
