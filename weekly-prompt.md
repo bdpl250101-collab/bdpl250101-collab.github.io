@@ -170,6 +170,42 @@ The `type` field must be **exactly one of**:
 > ⚠️ Note the **forward slash** in `공장/공정`. `TYPELBL` (index.html:338) maps that exact
 > string; `공장·공정` with a middle dot will render untranslated in English mode.
 
+### Science — general science news (the `science` tab)
+
+A light general-science feed beside the battery work — notable science *beyond* batteries,
+not peer-reviewed analysis. **Full replacement every run**, like `research` and `industry`.
+
+- **6–10 items**, spread across fields, from this week's reputable science press. Defaults:
+  Nature News (nature.com/news), Science (science.org/news), ScienceDaily, Sci.News. Widen as
+  needed; never invent an item.
+- Every item needs a publication **date confirmed at the source** — `ver:true` only when the
+  day is confirmed, `ver:false` (and a `"2026-09"` date) when only the month is.
+- `field` must be **exactly one of**: `물리` · `우주` · `생명` · `지구` · `기술`.
+  `FIELDLBL` / `FIELDCLR` (index.html) key off these literals. If you truly need a new field,
+  add it to **both** maps; otherwise leave them alone.
+- Keep it battery-agnostic: real battery / energy news belongs in `industry` or `research`.
+- Refresh `calloutS` in **both** languages to describe this week's picks honestly, the same
+  way `calloutR` / `calloutI` do.
+
+Schema — `const science = [ … ]` (index.html, just before `const archive`):
+
+```js
+{field:"물리",title:"…",title_en:"…",source:"CERN",
+ desc:"한국어 설명.",desc_en:"English description.",
+ date:"2026-09-16",ver:true,link:"https://…"},
+```
+
+| Field | Required | Rules |
+|---|---|---|
+| `field` | **yes** | one of the five literals above |
+| `title` | **yes** | headline, normally left in English |
+| `title_en` | optional | only when `title` is Korean; falls back to `title` |
+| `source` | **yes** | short origin/outlet, e.g. `"CERN"`, `"ESO"`, `"Sci.News"` |
+| `desc` / `desc_en` | **yes** | 1–2 sentences each, Korean + English |
+| `date` | **yes** | `"2026-09-16"` confirmed, else `"2026-09"` |
+| `ver` | **yes** | boolean — day confirmed or not |
+| `link` | **yes** | real, resolving URL |
+
 ---
 
 ## 2. The data schema — write against this exactly
@@ -238,6 +274,8 @@ silently**: the English view simply shows Korean text. Nothing errors, nothing w
 2. The `industry` array — **full replacement**.
    > ⚠️ The `archive` array is **not** in this list and is **never** replaced. It is
    > append-only — see section 4. Rewriting it destroys a year of accumulated history.
+2a. The `science` array — **full replacement** (6–10 items). See the *Science — general
+    science news* subsection above for sourcing, the `field` literals, and the schema.
 3. New entries in `COMPANY_EN` and `SUBLBL` for any new Korean company name or `sub` tag.
 4. The date range: `I18N.ko.sub` and `I18N.en.sub`.
 5. The three KPI tiles, both languages:
@@ -252,8 +290,8 @@ silently**: the English view simply shows Korean text. Nothing errors, nothing w
 6. The five key themes: `I18N.ko.themes` and `I18N.en.themes`. Keep exactly five
    `[title, subtitle]` pairs — the layout is built for five.
 7. The footer generation date: `I18N.ko.footNote` and `I18N.en.footNote`.
-8. The honesty callouts `calloutR` / `calloutI` and the source list `footSrc`, both
-   languages — these describe *this week's* data, so they must match what you actually found.
+8. The honesty callouts `calloutR` / `calloutI` / `calloutS` and the source list `footSrc`,
+   both languages — these describe *this week's* data, so they must match what you found.
 9. Chart 2's earnings figures at **index.html:562-564**, but **only when Korean makers have
    reported new quarterly results**. Edit only the company keys and the numeric `v:` values
    inside that `hbar('chartEarnings', …)` call, and update the `cc2c` caption in both
