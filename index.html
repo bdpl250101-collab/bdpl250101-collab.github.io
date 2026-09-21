@@ -135,6 +135,7 @@
   .card .date{font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums}
   .card a.link{font-size:12px;font-weight:700;color:var(--brand-ink);text-decoration:none;display:inline-flex;align-items:center;gap:4px}
   .card a.link:hover{text-decoration:underline}
+  .briefH{font-size:14px;font-weight:800;margin:18px 0 10px;color:var(--brand-ink);letter-spacing:-.01em}
   .card a.link.soft{color:var(--muted);font-weight:600}
   .card a.link.soft:hover{color:var(--ink-2)}
   .verified{font-size:10.5px;color:var(--good-ink);font-weight:600}
@@ -236,6 +237,7 @@
     <button class="tab active" data-tab="research" id="tabR"></button>
     <button class="tab" data-tab="industry" id="tabI"></button>
     <button class="tab" data-tab="science" id="tabS"></button>
+    <button class="tab" data-tab="briefing" id="tabB"></button>
     <button class="tab" data-tab="charts" id="tabC"></button>
     <button class="tab" data-tab="archive" id="tabA"></button>
     <button class="tab" data-tab="jobs" id="tabJ"></button>
@@ -259,6 +261,12 @@
     <div class="filters" id="scienceFilters"></div>
     <div class="cards" id="scienceCards"></div>
     <div class="callout" id="calloutS"></div>
+  </div>
+
+  <div class="panel" id="panel-briefing">
+    <div class="callout" id="calloutB"></div>
+    <div id="briefingBody"></div>
+    <div class="callout" id="summaryB"></div>
   </div>
 
   <div class="panel" id="panel-charts">
@@ -336,7 +344,7 @@ const I18N = {
     k2l:"무음극 파우치셀 에너지밀도 (고분자 전해질)", k2n:"펜타플루오로페닐 아크릴레이트로 음이온 풍부 용매화 구조 유도 · Cu||NCM90 파우치 · 대칭셀 2,000시간 · Li||NCM90 1C 1,000사이클 (Science Advances)",
     k3l:"전고체 실리콘 음극 고율 구동 전류밀도", k3n:"β-Li3N 반응성 애놀라이트로 리튬 나이트리도실리케이트 중간층 형성 · 19C 구동 · 면적용량 10 mAh/cm² 이상 · 5,000사이클 초과 (Advanced Materials)",
     k4l:"이번 주 수집 항목", k4n:(r,i)=>`연구 ${r}건 · 업계 ${i}건`,
-    tabR:"연구 동향 (Research)", tabI:"업계 동향 (Industry)", tabC:"차트 (Overview)", tabA:"연간 아카이브", tabS:"과학 (Science)",
+    tabR:"연구 동향 (Research)", tabI:"업계 동향 (Industry)", tabC:"차트 (Overview)", tabA:"연간 아카이브", tabS:"과학 (Science)", tabB:"주간 브리핑",
     tabJ:"채용 (Jobs)", tabP:"포닥 (Postdoc)", tabG:"과제 (Grants)",
     stOk:"✓ 확인됨", stCheck:"△ 재확인 필요",
     linkDeep:"공고 바로가기 ↗",
@@ -345,7 +353,8 @@ const I18N = {
     seedStale:"⚠ data/*.json 을 불러오지 못해 페이지에 내장된 사본을 표시하고 있습니다.",
     searchR:"연구 검색 (키워드)…", searchI:"업계 검색 (기업/키워드)…", searchS:"과학 뉴스 검색…",
     empty:"해당 조건의 항목이 없습니다.",
-    linkR:"원문 ↗", linkI:"기사 ↗", linkS:"기사 ↗",
+    linkR:"원문 ↗", linkI:"기사 ↗", linkS:"기사 ↗", linkB:"원문 ↗",
+    briefTitle:d=>`이차전지 주간 브리핑 (${d})`, briefSummary:"이번 주 한눈에",
     ver:"✓ 날짜확인", unver:"△ 2026 공개",
     cc1t:"연구 항목 분포 (단위별)", cc1c:"이번 주 수집된 연구 논문·프리프린트를 5개 단위로 분류",
     cc2t:"국내 기업 2분기 영업이익", cc2c:"단위: 억 원 · 2026년 2분기 (잠정 포함)",
@@ -376,7 +385,7 @@ const I18N = {
     k2l:"Li-metal symmetric cell lifetime, LiF-rich SEI", k2n:"18,000 cycles at 10 mA/cm² · LFP full cell retains 80.3% after 1,000 cycles at 2C (Small)",
     k3l:"Na-ion pouch cell retention, 500 days at 40 °C", k3n:"with a 3.8 V upper cut-off · beats LFP/graphite on retention at high temperature, though LFP still delivers more absolute energy (JES)",
     k4l:"Items collected this week", k4n:(r,i)=>`${r} research · ${i} industry`,
-    tabR:"Research", tabI:"Industry", tabC:"Charts", tabA:"Archive", tabS:"Science",
+    tabR:"Research", tabI:"Industry", tabC:"Charts", tabA:"Archive", tabS:"Science", tabB:"Weekly Briefing",
     tabJ:"Jobs", tabP:"Postdoc", tabG:"Grants",
     stOk:"✓ confirmed", stCheck:"△ needs re-check",
     linkDeep:"Open posting ↗",
@@ -385,7 +394,8 @@ const I18N = {
     seedStale:"⚠ Could not load data/*.json — showing the copy embedded in the page.",
     searchR:"Search research…", searchI:"Search industry…", searchS:"Search science…",
     empty:"No items match.",
-    linkR:"Paper ↗", linkI:"Article ↗", linkS:"Article ↗",
+    linkR:"Paper ↗", linkI:"Article ↗", linkS:"Article ↗", linkB:"Source ↗",
+    briefTitle:d=>`Battery Weekly Briefing (${d})`, briefSummary:"The week at a glance",
     ver:"✓ dated", unver:"△ 2026 online",
     cc1t:"Research items by level", cc1c:"This week's papers & preprints across five levels",
     cc2t:"Korean makers' Q2 operating profit", cc2c:"Unit: KRW 100 million · Q2 2026 (incl. preliminary)",
@@ -593,6 +603,308 @@ const science = [
   {field:"생명",title:"New mosasaur species uncovered in Egypt's Western Desert",title_en:"New mosasaur species uncovered in Egypt's Western Desert",source:"Sci.News",desc:"이집트 서부 사막에서 백악기 후기 해양 파충류인 모사사우루스의 신종(Halisaurus auriculatus)이 발굴됐다.",desc_en:"Paleontologists have unearthed a new species of mosasaur — a Late Cretaceous marine reptile — named Halisaurus auriculatus, in Egypt's Western Desert.",date:"2026-09-16",ver:true,link:"https://www.sci.news/paleontology/halisaurus-auriculatus-15071.html"},
   {field:"지구",title:"Famous \u2018space weather\u2019 train delay actually happened seven years later",title_en:"Famous \u2018space weather\u2019 train delay actually happened seven years later",source:"Univ. of Exeter",desc:"엑서터대 연구진이 우주기상(태양활동)이 원인으로 지목돼 온 유명한 열차 지연 사건이 실제로는 기록보다 7년 뒤에 일어났음을 밝혀냈다.",desc_en:"University of Exeter researchers find that a famous train delay long attributed to space weather actually happened seven years later than commonly cited.",date:"2026-09-16",ver:true,link:"https://www.sci.news/space/exeter-space-weather-train-delay-15072.html"},
 ];
+
+/* The weekly briefing. A narrative round-up, not a swept feed: it is written once a week
+   and replaced as a whole, and weekly-prompt.md section 9 governs when. Items keep the
+   source link exactly as published. */
+const briefing = {
+  "date": "2026-09-21",
+  "window": {
+    "ko": "2026년 9월 셋째 주 · 9월 20일 기준",
+    "en": "Third week of September 2026 · as of 20 September"
+  },
+  "note": {
+    "ko": "이번 주(최근 7일) 새로 확인된 항목과, 9월 초·중순에 나왔지만 이번 주 흐름을 이루는 항목을 함께 정리했습니다. 각 항목에 확인된 날짜를 병기했고, 확인되지 않은 내용은 넣지 않았습니다. 주요 저널(Nature 계열 등)은 이번 주 신규 게재가 뚜렷이 잡히지 않아 확인 가능한 최신 게재분을 함께 담았습니다.",
+    "en": "This covers what was newly confirmed in the past seven days together with items from earlier in September that shape the same week's picture. Each carries the date it was confirmed on, and nothing unconfirmed is included. The major journals showed no clear new battery papers this week, so the most recent confirmed publications are carried instead."
+  },
+  "summary": {
+    "ko": "연구는 전고체(황화물 vs 할라이드) 상용화 비교, 고로딩 셀 급속충전 안전 한계 매핑, 건식 전극 스케일업, 블랙매스 재활용 신공정이 두드러졌습니다. 업계는 에코프로비엠의 CATL 양극재 공급 협상(국내 첫 진입, 9/18)이 최대 이슈이며, ESS·나트륨이온·미국 공급망(관세·보조금)이 흐름을 주도했습니다.",
+    "en": "On the research side: sulfide against halide for solid-state commercialisation, fast-charge safe limits mapped in high-loading cells, dry-electrode scale-up, and new routes through black mass. On the industry side EcoPro BM's cathode talks with CATL (18 Sep, the first Korean maker inside CATL) dominated, with storage, sodium-ion and the US supply chain — tariffs and subsidies both — setting the rest of the direction."
+  },
+  "sections": [
+    {
+      "key": "소재",
+      "ko": "소재 (Materials)",
+      "en": "Materials",
+      "items": [
+        {
+          "title": "Comparative Advances in Sulfide and Halide Electrolytes for Commercialization of All-Solid-State Lithium Batteries",
+          "meta": "Bouguern 외 · Advanced Materials (2026)",
+          "meta_en": "Bouguern et al. · Advanced Materials (2026)",
+          "desc": "전고체 상용화의 두 핵심 후보인 황화물계·할라이드계 고체전해질을 이온전도도·계면 안정성·대량생산성 관점에서 비교하고 병목을 정리한 리뷰.",
+          "desc_en": "A review setting sulfide against halide solid electrolytes — the two leading candidates for all-solid-state commercialisation — on ionic conductivity, interfacial stability and manufacturability, and naming where each is held up.",
+          "link": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202513255"
+        },
+        {
+          "title": "Solvent-bridged electrolytes for high-energy Li-ion batteries under extreme conditions",
+          "meta": "Nature Chemistry (2026)",
+          "meta_en": "Nature Chemistry (2026)",
+          "desc": "용매를 가교시킨 새로운 용매화 구조로 저온·고온 극한 환경에서 고에너지밀도 셀 구동을 가능케 한 전해질 설계.",
+          "desc_en": "An electrolyte whose bridged solvation structure keeps high-energy-density cells running at both temperature extremes.",
+          "link": "https://www.nature.com/articles/s41557-026-02221-7"
+        },
+        {
+          "title": "Electrostatic regulation of solvation chemistry enables ampere-hour-scale high-energy lithium metal batteries",
+          "meta": "Nature Nanotechnology (2026)",
+          "meta_en": "Nature Nanotechnology (2026)",
+          "desc": "코인셀을 넘어 Ah급 실전 규모에서 고에너지 리튬금속전지 수명을 확보한 솔베이션 제어 전략.",
+          "desc_en": "A solvation-control strategy that holds high-energy lithium-metal cycle life at ampere-hour scale rather than only in coin cells.",
+          "link": "https://www.nature.com/articles/s41565-026-02212-2"
+        },
+        {
+          "title": "Dual-precursor coating strategy for one-step upgrade of LiFePO4 to LiMn0.6Fe0.4PO4 cathodes",
+          "meta": "Journal of Materials Chemistry A (2026)",
+          "meta_en": "Journal of Materials Chemistry A (2026)",
+          "desc": "기존 LFP를 원자 수준으로 균일한 Mn/Fe 분포의 LMFP로 전환해 성능을 끌어올리는 개질 전략.",
+          "desc_en": "Turns existing LFP into LMFP with an atomically uniform Mn/Fe distribution in a single step.",
+          "link": "https://pubs.rsc.org/ga/content/articlelanding/2026/ta/d5ta08684a/unauth"
+        },
+        {
+          "title": "Avalanche-like intercalation and intraparticle correlations in graphite",
+          "meta": "Nature (2026-07-29)",
+          "meta_en": "Nature (29 Jul 2026)",
+          "desc": "오퍼란도 현미경으로 그래파이트 음극 내 국부적 무질서가 리튬 이동에 미치는 영향을 관찰 — 급속충전 시 리튬 플레이팅 이해에 시사점.",
+          "desc_en": "Operando microscopy of how local disorder inside graphite governs lithium transport — bearing directly on plating during fast charge.",
+          "link": "https://www.nature.com/subjects/batteries/nature"
+        }
+      ]
+    },
+    {
+      "key": "전극",
+      "ko": "전극 설계 (Electrode Design)",
+      "en": "Electrode Design",
+      "items": [
+        {
+          "title": "Materials- and process-driven microstructural engineering for scalable dry-processed electrode manufacturing",
+          "meta": "Materials Horizons, RSC (2026)",
+          "meta_en": "Materials Horizons, RSC (2026)",
+          "desc": "건식 전극 스케일업을 위해 소재 선정과 공정 변수를 미세구조 관점에서 통합 설계.",
+          "desc_en": "Treats material choice and process parameters as one microstructural design problem for scaling dry electrodes.",
+          "link": "https://pubs.rsc.org/en/content/articlelanding/2026/mh/d5mh02484f"
+        },
+        {
+          "title": "A Comparative Review of Wet and Dry Electrode Manufacturing Processes",
+          "meta": "Mojtahedi 외 · Batteries & Supercaps (2026)",
+          "meta_en": "Mojtahedi et al. · Batteries & Supercaps (2026)",
+          "desc": "건식·습식 공정의 기회·한계·과제를 생산성·성능 측면에서 총정리.",
+          "desc_en": "A full accounting of where wet and dry electrode processing each win and lose, on throughput and on cell performance.",
+          "link": "https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/batt.202500929"
+        },
+        {
+          "title": "성균관대(SKKU) 고밀도 건식 전극 기술 — 파운드리형 상용화 겨냥",
+          "meta": "EurekAlert 보도자료",
+          "meta_en": "EurekAlert press release",
+          "desc": "성균관대 연구팀이 고밀도 건식 전극 기술을 발표하고 파운드리(위탁생산)형 상용화를 목표로 제시했습니다.",
+          "desc_en": "A Sungkyunkwan University group announced a high-density dry-electrode process, aimed at a foundry-style contract-manufacturing route to market.",
+          "link": "https://www.eurekalert.org/news-releases/1126175"
+        }
+      ]
+    },
+    {
+      "key": "셀",
+      "ko": "셀 (Cell)",
+      "en": "Cell",
+      "items": [
+        {
+          "title": "Mapping Out Fast Charging Safe Limits for High-Loading Lithium-Ion Cells by High-Fidelity Operando Microscopy",
+          "meta": "Gopal 외 · Small (2026)",
+          "meta_en": "Gopal et al. · Small (2026)",
+          "desc": "고로딩(고에너지밀도) 셀에서 어느 충전율까지 리튬 플레이팅 없이 안전한지를 실시간 이미징으로 매핑.",
+          "desc_en": "Uses live imaging to map how hard a high-loading cell can be charged before lithium starts plating.",
+          "link": "https://doi.org/10.1002/smll.202514619"
+        },
+        {
+          "title": "Thermal runaway-induced short-circuit arc in highly integrated lithium-ion battery systems",
+          "meta": "Communications Engineering, Nature (2026)",
+          "meta_en": "Communications Engineering, Nature (2026)",
+          "desc": "고집적 팩/모듈에서 열폭주가 유발하는 단락 아크의 메커니즘·임계값·완화 전략 정리 — ESS·EV 팩 안전 설계에 직결.",
+          "desc_en": "Mechanism, thresholds and mitigation for the short-circuit arc thermal runaway sets off in densely packed systems — directly a pack-safety question for ESS and EVs.",
+          "link": "https://www.nature.com/articles/s44172-026-00657-w"
+        }
+      ]
+    },
+    {
+      "key": "공정",
+      "ko": "공정 (Process / Manufacturing)",
+      "en": "Process / Manufacturing",
+      "items": [
+        {
+          "title": "Ionic liquid-enhanced recycling of lithium-ion battery black mass via heavy liquid centrifugal separation",
+          "meta": "RSC Advances (2026)",
+          "meta_en": "RSC Advances (2026)",
+          "desc": "이온성 액체와 중액 원심분리를 결합해 폐배터리 블랙매스에서 활물질을 효율적으로 분리·회수하는 공정.",
+          "desc_en": "Pairs an ionic liquid with heavy-liquid centrifugal separation to pull active material back out of black mass.",
+          "link": "https://pubs.rsc.org/en/content/articlehtml/2026/ra/d5ra07158e"
+        },
+        {
+          "title": "Early-Stage Recovery of Lithium from Li-Ion Battery Black Mass in Pilot Scale Using Supercritical CO2",
+          "meta": "ACS Sustainable Resource Management (2026)",
+          "meta_en": "ACS Sustainable Resource Management (2026)",
+          "desc": "파일럿 규모에서 초임계 CO2로 재활용 전단계에 리튬을 선회수하는 공정 실증.",
+          "desc_en": "Demonstrates, at pilot scale, taking the lithium out with supercritical CO2 before the rest of the recycling train.",
+          "link": "https://doi.org/10.1021/acssusresmgt.5c00663"
+        }
+      ]
+    },
+    {
+      "key": "저널",
+      "ko": "저널 출판 소식 (Journal News)",
+      "en": "Journal News",
+      "items": [
+        {
+          "title": "An open access solid-state battery cell database to advance visualization, search, analysis, and AI data extraction",
+          "meta": "Joule (2026-07)",
+          "meta_en": "Joule (Jul 2026)",
+          "desc": "전고체 셀 성능 데이터를 표준화·공개해 AI 기반 설계·데이터 추출을 촉진하는 오픈액세스 데이터베이스.",
+          "desc_en": "An open database of solid-state cell performance, standardised so it can be searched, visualised and mined by models.",
+          "link": "https://www.cell.com/joule/fulltext/S2542-4351(26)00279-5"
+        },
+        {
+          "title": "Advances and Challenges in Li-Excess Cathode Additives for Next-Generation Li Rechargeable Batteries",
+          "meta": "ACS Energy Letters 리뷰",
+          "meta_en": "ACS Energy Letters review",
+          "desc": "차세대 리튬 이차전지용 리튬 과잉 양극 첨가제의 진전과 남은 과제를 정리한 리뷰.",
+          "desc_en": "Where lithium-excess cathode additives have got to, and what still stands in the way.",
+          "link": "https://pubs.acs.org/doi/10.1021/acsenergylett.5c01240"
+        },
+        {
+          "title": "Recent Advances in Solid-State Batteries",
+          "meta": "ACS Energy Letters 리뷰",
+          "meta_en": "ACS Energy Letters review",
+          "desc": "전고체 전지 분야의 최근 진전을 폭넓게 정리한 리뷰.",
+          "desc_en": "A broad review of recent progress across solid-state batteries.",
+          "link": "https://pubs.acs.org/doi/10.1021/acsenergylett.5c01015"
+        }
+      ]
+    },
+    {
+      "key": "국내",
+      "ko": "업계 — 국내",
+      "en": "Industry — Korea",
+      "items": [
+        {
+          "title": "에코프로비엠, CATL에 양극재 공급 협상 — 국내 첫 진입",
+          "meta": "2026-09-18 보도 · 더일렉",
+          "meta_en": "Reported 18 Sep 2026 · TheElec",
+          "desc": "에코프로비엠이 세계 1위 CATL과 하이니켈 삼원계 양극재 장기 공급을 협상 중입니다. 초기 규모 연 2만톤(약 13GWh, 전기차 약 20만 대분), 계약가치 약 2조원대(3년 이상), 공급 개시는 2028년 예상. 국내 양극재사의 CATL 첫 진입 사례로, 이번 주 최대 이슈입니다.",
+          "desc_en": "EcoPro BM is negotiating long-term supply of high-nickel NCM cathode to CATL: about 20,000 t/year to start (~13 GWh, roughly 200,000 EVs), a contract worth on the order of ₩2tn over three years or more, deliveries expected from 2028. It would be the first time a Korean cathode maker has got inside CATL — the week's biggest story.",
+          "link": "https://www.thelec.kr/news/articleView.html?idxno=62506"
+        },
+        {
+          "title": "LG에너지솔루션, Smackover Lithium과 리튬 장기 공급 계약",
+          "meta": "2026-09-06",
+          "meta_en": "6 Sep 2026",
+          "desc": "미국 아칸소산 배터리급 탄산리튬 연 8,000톤을 10년간 공급받는 계약 — 미국 내 공급망 요건 대응.",
+          "desc_en": "A ten-year deal for 8,000 t/year of battery-grade lithium carbonate from Arkansas, answering US supply-chain requirements.",
+          "link": "https://battery-tech.net/batterytech-news-updates-2026-36/"
+        },
+        {
+          "title": "SK온, NeoVolta Power와 18GWh LFP 상호공급 계약",
+          "meta": "에너지스토리지뉴스",
+          "meta_en": "Energy-Storage.News",
+          "desc": "미국산 ESS용 LFP를 18GWh 규모로 상호 공급하기로 했습니다 — 미국 ESS 시장 공략.",
+          "desc_en": "An 18 GWh reciprocal supply arrangement for US-made LFP storage cells, aimed at the American ESS market.",
+          "link": "https://www.energy-storage.news/sk-on-signs-18gwh-reciprocal-lfp-supply-deal-with-neovolta-power-for-us-made-battery-storage/"
+        },
+        {
+          "title": "배터리 3사, ESS 중심 실적 반등 국면",
+          "meta": "한국무역협회",
+          "meta_en": "KITA",
+          "desc": "전기차 캐즘 속에서도 미국 ESS·AI 데이터센터 수요를 발판으로 하반기 실적 반등에 시동을 걸었고, 3차 ESS 입찰 수주 경쟁이 재점화됐습니다.",
+          "desc_en": "Through the EV lull, the three Korean makers are leaning on US storage and AI-datacentre demand for a second-half recovery, with the third ESS tender round reopening competition.",
+          "link": "https://www.kita.net/board/totalTradeNews/totalTradeNewsDetail.do?no=99080&siteId=1"
+        },
+        {
+          "title": "에코프로비엠, 헝가리 공장 라인 개조 → 유럽 프리미엄 EV 공략",
+          "meta": "8월 하순 보도 · 흐름 지속",
+          "meta_en": "Reported late Aug 2026 · still running",
+          "desc": "헝가리 공장 라인을 개조해 삼성SDI를 경유한 유럽 프리미엄 EV 시장을 겨냥합니다.",
+          "desc_en": "Retooling the Hungarian lines to reach premium European EV programmes by way of Samsung SDI.",
+          "link": "https://www.thelec.kr/news/articleView.html?idxno=61284"
+        }
+      ]
+    },
+    {
+      "key": "해외",
+      "ko": "업계 — 해외",
+      "en": "Industry — International",
+      "items": [
+        {
+          "title": "ProLogium(대만), Gen 3.5 리튬 세라믹 배터리 양산 발표",
+          "meta": "2026-09-06",
+          "meta_en": "6 Sep 2026",
+          "desc": "독립 시험에서 381 Wh/kg, 903 Wh/L이 확인됐고 대만에서 양산을 개시했습니다.",
+          "desc_en": "Independently measured at 381 Wh/kg and 903 Wh/L, now in production in Taiwan.",
+          "link": "https://battery-tech.net/batterytech-news-updates-2026-36/"
+        },
+        {
+          "title": "Coreshell, 美 DOE 5,000만 달러 수주 — 실리콘 음극 기가팩토리",
+          "meta": "2026-09-06",
+          "meta_en": "6 Sep 2026",
+          "desc": "흑연 의존도 축소를 목표로 한 실리콘 음극 기가팩토리에 미국 에너지부가 5,000만 달러를 배정했습니다.",
+          "desc_en": "A US$50m DOE award for a silicon-anode gigafactory, the point of which is cutting graphite dependence.",
+          "link": "https://battery-tech.net/batterytech-news-updates-2026-36/"
+        },
+        {
+          "title": "중국, 리튬배터리 2% 세금 도입 (2027년 4%로)",
+          "meta": "2026년 9월 시행",
+          "meta_en": "Effective Sep 2026",
+          "desc": "약 10년간 이어진 면세가 끝나고 9월부터 2% 과세가 시작되며, 2027년 4%로 오릅니다.",
+          "desc_en": "Roughly a decade of exemption ends: 2% from September, rising to 4% in 2027.",
+          "link": "https://battery-tech.net/batterytech-news-updates-2026-36/"
+        },
+        {
+          "title": "BYD, 해외 매출이 처음으로 내수 초과",
+          "meta": "2026-09-06",
+          "meta_en": "6 Sep 2026",
+          "desc": "상반기 수출이 70.6% 늘며 해외 비중이 53%로, 처음으로 내수를 넘어섰습니다.",
+          "desc_en": "First-half exports up 70.6%, taking overseas to 53% of sales — past the domestic market for the first time.",
+          "link": "https://battery-tech.net/batterytech-news-updates-2026-36/"
+        },
+        {
+          "title": "CATL, 헝가리 공장 3개 라인 일시 중단",
+          "meta": "2026-09-06",
+          "meta_en": "6 Sep 2026",
+          "desc": "직원 니켈 노출 수치가 올라 안전을 이유로 3개 라인을 일시 중단했습니다.",
+          "desc_en": "Three lines paused on safety grounds after worker nickel-exposure readings rose.",
+          "link": "https://battery-tech.net/batterytech-news-updates-2026-36/"
+        },
+        {
+          "title": "CATL 나트륨이온 확대",
+          "meta": "CarNewsChina",
+          "meta_en": "CarNewsChina",
+          "desc": "9월 첫 나트륨이온 ESS 시스템을 인도했고, 승용 EV 적용을 추진 중입니다.",
+          "desc_en": "First sodium-ion storage systems delivered in September, with passenger-EV applications being pushed.",
+          "link": "https://carnewschina.com/2026/06/05/catl-to-deliver-first-sodium-ion-storage-systems-in-september-as-material-costs-halve/"
+        },
+        {
+          "title": "시장 점유율 — CATL 39.9%, BYD 14.4%",
+          "meta": "SNE Research · 2026 상반기",
+          "meta_en": "SNE Research · H1 2026",
+          "desc": "상반기 글로벌 EV 배터리 점유율에서 중국 2강이 선두를 유지했습니다.",
+          "desc_en": "The two Chinese leaders held the top of the global EV battery table through the first half.",
+          "link": "https://cnevpost.com/2026/08/07/global-ev-battery-market-share-h1-2026/"
+        },
+        {
+          "title": "QuantumScape, QSE-5 셀 B1 샘플 출하",
+          "meta": "QuantumScape",
+          "meta_en": "QuantumScape",
+          "desc": "B1 샘플 출하로 연간 목표를 달성했고 Eagle Line 파일럿이 가동에 들어갔습니다.",
+          "desc_en": "B1 samples shipped, hitting the year's stated goal, with the Eagle pilot line running.",
+          "link": "https://www.quantumscape.com/quantumscape-announces-shipment-of-b1-samples-achieving-a-key-annual-goal/"
+        },
+        {
+          "title": "정책·통상 — 흑연 공급망 재편",
+          "meta": "CSIS 분석",
+          "meta_en": "CSIS analysis",
+          "desc": "미국의 중국산 흑연 고율 관세와 중국의 흑연 수출통제 일시 완화가 맞물리며 음극재 공급망 재편이 진행 중입니다.",
+          "desc_en": "High US tariffs on Chinese graphite meeting a temporary loosening of Chinese export controls, with the anode supply chain rearranging around both.",
+          "link": "https://www.csis.org/analysis/new-phase-us-battery-industry"
+        }
+      ]
+    }
+  ]
+};
 
 const archive = [
   {doi:"10.1038/s41560-026-02120-8",
@@ -2281,6 +2593,23 @@ function renderScience(){
       <a class="link" href="${r.link}" target="_blank" rel="noopener">${T().linkS}</a></div></div>`;
   }).join('');
 }
+function renderBriefing(){
+  const box=document.getElementById('briefingBody');
+  const L=(o)=>o?(lang==="en"?(o.en||o.ko):o.ko):"";
+  document.getElementById('calloutB').innerHTML=
+    `<b>${T().briefTitle(briefing.date)}</b> · ${L(briefing.window)}<br>${L(briefing.note)}`;
+  document.getElementById('summaryB').innerHTML=`<b>${T().briefSummary}</b><br>${L(briefing.summary)}`;
+  box.innerHTML=briefing.sections.map(s=>{
+    const c=CATCLR[s.key]||REGCLR[s.key]||'var(--ink-2)';
+    const cards=s.items.map(x=>`<div class="card">
+      <div class="badges">${badge(lang==="en"?s.en:s.ko,c,tint(c))}${badge(lang==="en"?x.meta_en:x.meta,'var(--ink-2)','var(--surface-2)')}</div>
+      <h4>${x.title}</h4>
+      <p>${lang==="en"?x.desc_en:x.desc}</p>
+      <div class="foot"><span class="date"></span>
+      <a class="link" href="${x.link}" target="_blank" rel="noopener">${T().linkB}</a></div></div>`).join('');
+    return `<h3 class="briefH">${lang==="en"?s.en:s.ko}</h3><div class="cards">${cards}</div>`;
+  }).join('');
+}
 function renderArchive(){
   const box=document.getElementById('archiveList');
   const items=archive.filter(x=>aJ==="전체"||x.journal===aJ);
@@ -2413,7 +2742,7 @@ function loadStudentData(){
       .then(()=>redraw[k]());
   });
 }
-function renderAll(){applyStatic();renderFilters();renderResearch();renderIndustry();renderScience();renderArchive();renderCharts();renderJobs();renderPostdoc();renderGrants();}
+function renderAll(){applyStatic();renderFilters();renderResearch();renderIndustry();renderScience();renderBriefing();renderArchive();renderCharts();renderJobs();renderPostdoc();renderGrants();}
 
 /* ================= EVENTS ================= */
 document.getElementById('researchFilters').addEventListener('click',e=>{

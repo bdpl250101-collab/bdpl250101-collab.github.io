@@ -318,6 +318,9 @@ silently**: the English view simply shows Korean text. Nothing errors, nothing w
 - The script logic — the render functions, event handlers, filters, `CATCLR`, `REGCLR`,
   `CATLBL`, `REGLBL`, `TYPELBL`.
 - The brand colors: amber `#ffc000` on black `#0e0e0e`.
+- **The `briefing` object and its tab.** `const briefing = { … }`, the `#tabB` button, the
+  `#panel-briefing` markup, `renderBriefing()` and the `tabB` / `linkB` / `briefTitle` /
+  `briefSummary` I18N keys. It is a written round-up, not a swept feed — section 9.
 - **`data/archive/` — any file in it.** `scripts/week-archive.js` writes one snapshot
   per ISO week after the guards pass. It is the only record of a past week: `research`
   and `industry` are replaced wholesale, so last week vanishes from the page the moment
@@ -866,3 +869,42 @@ a month.
 If a source was unreachable, name it in `notice` or `context`, keep the items, and still
 move `updated`. Then name it again in your final summary — the callout tells the reader,
 the summary tells whoever maintains this.
+
+---
+
+## 9. The weekly briefing tab — written, not swept
+
+The `briefing` tab carries a prose round-up of the week: a framing note, sections of items
+with their sources, and a closing summary. It is the one section on the page that is
+*written* rather than collected, and a routine run does not touch it.
+
+**Leave it exactly as you found it** unless the instruction for a run explicitly says to
+publish a new briefing. It is not part of the sweep, it has no gate of its own, and a run
+that rewrites it from the `research` and `industry` arrays would replace a considered piece
+of writing with a restatement of two tabs the reader can already see.
+
+### When you are asked to publish one
+
+Replace the whole `briefing` object — it is a document, not an accumulating feed, so there
+is no append rule here and no history to preserve in the file. Keep the shape:
+
+```js
+const briefing = {
+  date: "YYYY-MM-DD",
+  window:  {ko:"…", en:"…"},   // what period the briefing covers
+  note:    {ko:"…", en:"…"},   // scope and what was and was not confirmed
+  summary: {ko:"…", en:"…"},   // the week at a glance
+  sections: [ {key, ko, en, items:[ {title, meta, meta_en, desc, desc_en, link} ]} ]
+};
+```
+
+- `key` should reuse an existing literal where one fits — the five research categories
+  (`소재` `전극` `셀` `공정` `저널`) and the two industry regions (`국내` `해외`) already have
+  colours in `CATCLR` / `REGCLR`, and the badge falls back to grey for anything else.
+- **Every item needs `desc` and `desc_en`.** The whole page is bilingual; a Korean-only
+  briefing renders as Korean in English mode, which is worse than not shipping it.
+- **`link` is the source as published.** Never rewrite, shorten or substitute it. Many
+  publishers answer an automated fetch with 403 or a bot wall — that is not a dead link and
+  is not a reason to swap it for something that fetches more cleanly.
+- Say in `note` what you could not confirm. A briefing that quietly omits its gaps is the
+  failure mode this section exists to prevent.
