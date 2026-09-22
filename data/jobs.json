@@ -1,12 +1,12 @@
 {
-  "updated": "2026-09-14",
+  "updated": "2026-09-22",
   "notice": {
     "ko": "공고 자동수집은 best-effort이며 누락 가능 — 아래 공식 포털에서 직접 확인 권장.",
     "en": "Automated collection of postings is best-effort and may miss items — please confirm directly on the official portals below."
   },
   "context": {
-    "ko": "2026-09-14 확인. <b>지난 회차에 ‘9월 예상’으로만 적어 두었던 삼성SDI 하반기 3급 신입 공채가 이번에 실제 공고로 확인됐습니다</b> — 접수 9월 8일~15일, 확인 시점에 D-1이었습니다. 반대로 9월 2일 마감이던 R&D 외국인 경력 공고는 마감돼 목록에서 내렸습니다. LG에너지솔루션 포털은 이번 회차에도 로그인 없이는 개별 공고가 보이지 않았고, SK온(sk-on.com)은 여전히 *.skenergy.com 인증서를 제시해 접속 자체가 실패했습니다 — 두 곳 항목은 상태를 확인하지 못해 ‘재확인 필요’로 유지했습니다. SK커리어스 통합 포털은 열렸으나 첫 화면에 SK온 개별 공고가 노출되지 않았습니다.",
-    "en": "Checked on 14 September 2026. <b>The Samsung SDI second-half graduate intake, which last run could only be recorded as “expected in September”, is now confirmed as a live posting</b> — applications run 8 to 15 September and it showed as D-1 when checked. Conversely the experienced-R&D posting for foreign nationals closed on 2 September and has been taken off the list. The LG Energy Solution portal again showed no individual postings without a login, and sk-on.com still presented a certificate issued for *.skenergy.com and could not be opened at all — items for both remain marked 'needs re-check' because their status could not be confirmed. The SK Careers group portal did open, but no individual SK On posting was surfaced on its landing page."
+    "ko": "2026-09-22 확인. <b>직전 회차에 실었던 삼성SDI 하반기 3급 신입 공채는 9월 15일로 마감돼 목록에서 내렸습니다.</b> 대신 9월 16일 새로 올라온 단기계약직 공고 2건(소형사업부 기흥/천안, 중대형사업부 기흥/천안/수원)이 접수중이며 마감은 두 건 모두 9월 28일입니다 — <b>다만 두 건 모두 ‘제조 및 생산(교대)’ 직군으로 R&amp;D 공고가 아닙니다.</b> 이번 회차에 삼성SDI 포털에서 확인된 유일한 실공고이므로 그대로 싣되 직군을 명시해 둡니다. LG에너지솔루션 포털은 이번에도 로그인 없이는 개별 공고가 보이지 않았고, SK온(sk-on.com)은 <b>네 회차 연속</b>으로 *.skenergy.com 인증서를 제시해 접속 자체가 실패했습니다 — 두 곳 항목은 상태를 확인하지 못해 ‘재확인 필요’로 유지했습니다.",
+    "en": "Checked on 22 September 2026. <b>The Samsung SDI second-half graduate intake carried last run closed on 15 September and has been taken off the list.</b> In its place, two short-term contract postings that went up on 16 September are open — the small-format division (Giheung/Cheonan) and the mid-to-large format division (Giheung/Cheonan/Suwon) — both closing on 28 September. <b>Both, however, are filed under manufacturing and production (shift work) rather than R&amp;D.</b> They are the only live postings visible on the Samsung SDI portal this run, so they are carried with the job family stated explicitly. The LG Energy Solution portal again showed no individual postings without a login, and sk-on.com presented a certificate issued for *.skenergy.com for the <b>fourth run running</b> and could not be opened at all — items for both remain marked 'needs re-check' because their status could not be confirmed."
   },
   "portals_title": {
     "ko": "공식 채용포털 (상시)",
@@ -38,21 +38,40 @@
     {
       "group": "삼성SDI",
       "group_en": "Samsung SDI",
-      "tag": "신입 공채",
-      "tag_en": "Graduate intake",
-      "title": "2026년 하반기 3급 신입사원 채용 — 기술직군",
-      "title_en": "2026 second-half graduate intake (level 3) — technical track",
-      "meta": "삼성SDI 채용포털",
-      "meta_en": "Samsung SDI careers portal",
-      "deadline": "2026-09-15",
-      "deadline_en": "15 Sep 2026",
+      "tag": "단기계약직",
+      "tag_en": "Short-term contract",
+      "title": "'26.9월 중대형사업부(기흥/천안/수원) 단기계약직 채용",
+      "title_en": "Sep 2026 mid-to-large format division (Giheung/Cheonan/Suwon) — short-term contract intake",
+      "meta": "삼성SDI 채용포털 · 제조 및 생산(교대)",
+      "meta_en": "Samsung SDI careers portal · manufacturing and production (shift work)",
+      "deadline": "2026-09-28",
+      "deadline_en": "28 Sep 2026",
       "ok": true,
       "link": "https://www.samsungcareers.com/subsid/detail/C31",
       "link_type": "portal",
-      "query": "하반기 3급 신입사원",
-      "query_en": "second-half graduate intake",
-      "desc": "9월 8일부터 15일까지 접수하는 하반기 신입 공채로, 2026-09-14 확인 시 포털에 D-1로 표시돼 있었습니다. 기술직군으로 분류돼 있으며 세부 직무 요건은 로그인 후에 보입니다. 직전 회차에 ‘9월 예상’으로만 적었던 항목이 이번에 실제 공고로 확인된 것입니다.",
-      "desc_en": "The second-half graduate intake, open from 8 to 15 September and showing as D-1 on the portal when checked on 14 September 2026. It is filed under the technical track; the detailed job requirements appear only after logging in. This is the posting that last run could only be recorded as expected in September."
+      "query": "중대형사업부 단기계약직",
+      "query_en": "mid-to-large format division short-term contract",
+      "desc": "9월 16일 게시돼 2026-09-22 확인 시 접수중이었고 마감은 9월 28일입니다. 전기차·ESS용 각형 셀을 다루는 중대형사업부 소속이지만 직군은 ‘제조 및 생산(교대)’으로 연구개발 공고가 아닙니다. 세부 요건은 로그인 후에 보입니다.",
+      "desc_en": "Posted on 16 September and confirmed open on 22 September 2026, closing on 28 September. It sits in the mid-to-large format division, which makes prismatic cells for EVs and ESS, but the job family is manufacturing and production on shift work rather than R&D. Detailed requirements appear only after logging in."
+    },
+    {
+      "group": "삼성SDI",
+      "group_en": "Samsung SDI",
+      "tag": "단기계약직",
+      "tag_en": "Short-term contract",
+      "title": "'26.9월 소형사업부(기흥/천안) 단기계약직 채용",
+      "title_en": "Sep 2026 small-format division (Giheung/Cheonan) — short-term contract intake",
+      "meta": "삼성SDI 채용포털 · 제조 및 생산(교대)",
+      "meta_en": "Samsung SDI careers portal · manufacturing and production (shift work)",
+      "deadline": "2026-09-28",
+      "deadline_en": "28 Sep 2026",
+      "ok": true,
+      "link": "https://www.samsungcareers.com/subsid/detail/C31",
+      "link_type": "portal",
+      "query": "소형사업부 단기계약직",
+      "query_en": "small-format division short-term contract",
+      "desc": "같은 날 함께 올라온 소형사업부 단기계약직 공고로, 2026-09-22 확인 시 접수중이었고 마감은 9월 28일입니다. 원통형 셀을 다루는 사업부이나 역시 ‘제조 및 생산(교대)’ 직군이며 R&D 공고가 아닙니다.",
+      "desc_en": "A short-term contract posting for the small-format division that went up the same day, confirmed open on 22 September 2026 and closing on 28 September. The division makes cylindrical cells, but this too is a manufacturing and production shift role, not an R&D posting."
     },
     {
       "group": "삼성SDI",
@@ -70,8 +89,8 @@
       "link_type": "portal",
       "query": "인재 등록",
       "query_en": "talent registration",
-      "desc": "2026-09-14 확인 시 채용포털에 ‘인재 등록을 통해 상시지원이 가능합니다’라는 안내가 게시돼 있었습니다. 공고 주기와 무관하게 지원 이력을 남겨 둘 수 있는 창구로, 신입 공채 마감 이후를 대비한 경로입니다.",
-      "desc_en": "As of 14 September 2026 the careers portal states that applications can be submitted at any time through talent registration. It is a way to register interest independently of the posting cycle, and the natural route once the graduate intake closes."
+      "desc": "2026-09-22 확인 시에도 채용포털에 인재 등록을 통해 상시지원이 가능하다는 안내가 그대로 게시돼 있었습니다. 공고 주기와 무관하게 지원 이력을 남겨 둘 수 있는 창구로, 이번처럼 열린 공고가 생산직에 치우쳐 있을 때 R&D 지망자가 쓸 수 있는 경로입니다.",
+      "desc_en": "As of 22 September 2026 the careers portal still states that applications can be submitted at any time through talent registration. It is a way to register interest independently of the posting cycle, and the route available to R&D candidates in a week like this one where the live postings are all production roles."
     },
     {
       "group": "LG에너지솔루션",
@@ -89,8 +108,8 @@
       "link_type": "portal",
       "query": "LG에너지솔루션 인재풀",
       "query_en": "LG Energy Solution talent pool",
-      "desc": "2026-09-14 확인 시에도 페이지는 열렸으나 로그인 없이는 개별 공고가 전혀 표시되지 않아 현재 열린 공고를 확인하지 못했습니다. 인재풀 등록은 상시로 알려져 있으나 이번 회차에도 직접 확인하지 못해 재확인이 필요합니다.",
-      "desc_en": "As of 14 September 2026 the page loaded but showed no individual postings at all without a login, so no open role could be confirmed. The talent pool is understood to be rolling, but that could not be verified this run either and needs re-checking."
+      "desc": "2026-09-22 확인 시에도 페이지는 열렸으나 로그인 없이는 개별 공고가 전혀 표시되지 않아 현재 열린 공고를 확인하지 못했습니다. 인재풀 등록은 상시로 알려져 있으나 이번 회차에도 직접 확인하지 못해 재확인이 필요합니다.",
+      "desc_en": "As of 22 September 2026 the page loaded but again showed no individual postings without a login, so no open role could be confirmed. The talent pool is understood to be rolling, but that could not be verified this run either and needs re-checking."
     },
     {
       "group": "SK온",
@@ -108,8 +127,8 @@
       "link_type": "portal",
       "query": "선행Cell공정개발",
       "query_en": "advanced cell process development",
-      "desc": "선행Cell공정개발·Cell개발·System개발 직무가 대전 배터리연구원 기준으로 수시 게시됩니다. 다만 2026-09-14 확인 시에도 sk-on.com이 *.skenergy.com 인증서를 제시해 접속에 실패했고, 현재 게시 여부를 확인하지 못했습니다. SK커리어스 통합 포털은 열렸으나 SK온 개별 공고는 노출되지 않았습니다.",
-      "desc_en": "Roles in advanced cell process development, cell development and system development are posted on a continuous basis at the Daejeon Battery Research Institute. As of 14 September 2026, however, sk-on.com still presented a certificate issued for *.skenergy.com and could not be opened, so no current posting could be confirmed. The SK Careers group portal did open, but surfaced no individual SK On posting."
+      "desc": "선행Cell공정개발·Cell개발·System개발 직무가 대전 배터리연구원 기준으로 수시 게시됩니다. 다만 2026-09-22 확인 시에도 sk-on.com이 *.skenergy.com 인증서를 제시해 접속에 실패했고(네 회차 연속), 현재 게시 여부를 확인하지 못했습니다. SK커리어스 통합 포털을 대안 창구로 함께 올려 둡니다.",
+      "desc_en": "Roles in advanced cell process development, cell development and system development are posted on a continuous basis at the Daejeon Battery Research Institute. As of 22 September 2026, however, sk-on.com again presented a certificate issued for *.skenergy.com and could not be opened — the fourth run running — so no current posting could be confirmed. The SK Careers group portal is listed alongside it as an alternative route."
     }
   ]
 }
