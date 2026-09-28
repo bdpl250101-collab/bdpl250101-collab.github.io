@@ -111,6 +111,8 @@
   }
   .chip:hover{border-color:var(--amber);color:var(--ink)}
   .chip.active{background:var(--amber);color:#0e0e0e;border-color:var(--amber)}
+  .chipLbl{color:var(--ink-2);font-size:12px;font-weight:600;margin-right:2px}
+  .bsrc{margin-top:10px;padding-top:10px;border-top:1px solid var(--border);line-height:2}
   .search{
     margin-left:auto;border:1px solid var(--border);background:var(--surface);color:var(--ink);
     border-radius:999px;padding:8px 15px;font-size:13px;font-family:inherit;min-width:210px;
@@ -264,6 +266,7 @@
   </div>
 
   <div class="panel" id="panel-briefing">
+    <div class="filters" id="briefEditions"></div>
     <div class="callout" id="calloutB"></div>
     <div id="briefingBody"></div>
     <div class="callout" id="summaryB"></div>
@@ -355,6 +358,7 @@ const I18N = {
     empty:"해당 조건의 항목이 없습니다.",
     linkR:"원문 ↗", linkI:"기사 ↗", linkS:"기사 ↗", linkB:"원문 ↗",
     briefTitle:d=>`이차전지 주간 브리핑 (${d})`, briefSummary:"이번 주 한눈에",
+    briefEditions:"발행호", briefSources:"출처",
     ver:"✓ 날짜확인", unver:"△ 2026 공개",
     cc1t:"연구 항목 분포 (단위별)", cc1c:"이번 주 수집된 연구 논문·프리프린트를 5개 단위로 분류",
     cc2t:"국내 기업 2분기 영업이익", cc2c:"단위: 억 원 · 2026년 2분기 (잠정 포함)",
@@ -396,6 +400,7 @@ const I18N = {
     empty:"No items match.",
     linkR:"Paper ↗", linkI:"Article ↗", linkS:"Article ↗", linkB:"Source ↗",
     briefTitle:d=>`Battery Weekly Briefing (${d})`, briefSummary:"The week at a glance",
+    briefEditions:"Editions", briefSources:"Sources",
     ver:"✓ dated", unver:"△ 2026 online",
     cc1t:"Research items by level", cc1c:"This week's papers & preprints across five levels",
     cc2t:"Korean makers' Q2 operating profit", cc2c:"Unit: KRW 100 million · Q2 2026 (incl. preliminary)",
@@ -649,7 +654,80 @@ const science = [
 /* The weekly briefing. A narrative round-up, not a swept feed: it is written once a week
    and replaced as a whole, and weekly-prompt.md section 9 governs when. Items keep the
    source link exactly as published. */
-const briefing = {
+const briefings = [
+/* ---- 2026-09-28 ---- */
+  {
+    date: "2026-09-28",
+    window: {"ko":"조사 대상 기간 2026-09-21 ~ 2026-09-28 (최근 약 1주일)","en":"Covering 21-28 September 2026 (roughly the past week)"},
+    note: {"ko":"실제로 확인된 논문·기사만 정리했고, 확인되지 않은 내용은 넣지 않았습니다. 이번 주는 주요 저널의 온라인 선공개(early view)와 배터리 업계 주간 다이제스트 #38(9/20)·#39(9/27)를 중심으로 했습니다. <b>확인하지 못한 것</b> — Nature Communications 두 편(나노로드 LiNiO₂, 고엔트로피 합금 촉매)과 Nature Materials 한 편은 개별 논문 URL을 확정하지 못해 저널의 배터리 주제 목록으로 연결했습니다. Joule의 전고체 셀 데이터베이스 논문은 정확한 게재일을 재확인해야 합니다. 업계 항목은 대부분 주간 다이제스트가 1차 출처이며, 개별 보도 링크가 아니라 해당 호로 연결했습니다.","en":"Only papers and reports actually confirmed are included; nothing unconfirmed is carried. This edition leans on journal early-view postings and the weekly industry digests #38 (20 Sep) and #39 (27 Sep). <b>What could not be pinned down</b> — two Nature Communications papers (the nanorod LiNiO₂ cathode and the high-entropy-alloy catalyst) and one Nature Materials paper have no confirmed article URL, so they link to the journal's battery subject listing instead. The Joule solid-state cell database paper still needs its publication date re-checked. Most industry items have a weekly digest as their primary source and link to that issue rather than to an individual report."},
+    summary: {"ko":"연구는 고전압 하이니켈 양극의 구조 가역성, 리튬-공기용 무귀금속 고엔트로피 합금 촉매, 약한 용매화를 이용한 고속 고분자 전해질이 소재 쪽을 이끌었고, 셀 쪽에서는 Mg–La 접종으로 리튬 결정립을 미세화해 전고체 덴드라이트를 억제한 Nature Materials 논문이 두드러졌습니다. 건식 전극이 리뷰·집전체·공정 투자 세 갈래에서 동시에 올라온 주간입니다. 업계는 전고체 상용화 시점에 대한 온도차(BYD 2027 실증, Li Auto 2027~2028 제한 적용·전면 양산은 5년 더)와 초급속 충전 경쟁(Sunwoda 15C 9분, Geely 12C, BYD 플래시 충전소 조기 완공)이 축이었고, 국내는 LG에너지솔루션의 BESS·2차 사용 확장과 8월 국산 EV의 중국산 셀 40.4% 의존이 함께 잡혔습니다.","en":"On the research side materials led: structural reversibility in high-voltage nickel-rich cathodes, a precious-metal-free high-entropy-alloy catalyst for lithium-air, and a weak-solvation polymer electrolyte built for fast collective transport. At cell level the standout was a Nature Materials paper suppressing solid-state dendrites by refining lithium grains with an Mg–La inoculant. Dry electrodes surfaced three ways at once this week — a review, a current-collector requirement, and manufacturing investment. Industry split over when solid state actually arrives (BYD trialling in 2027; Li Auto seeing limited use in 2027-2028 and full volume five years out) while ultra-fast charging accelerated (Sunwoda's 15C nine-minute system, Geely's 12C, BYD finishing its flash-charging network three months early). In Korea, LG Energy Solution expanded in storage and second-life use, against August figures showing 40.4% of Korean-built EVs shipping with Chinese cells."},
+    sections: [
+      {key:"소재", ko:"소재 (Materials)", en:"Materials", items:[
+        {"title":"고전압에서 구조 가역성을 확보한 나노로드 LiNiO₂ 양극","meta":"Nature Communications · 2026-09-26 · 저널 주제 목록으로 연결","meta_en":"Nature Communications · 26 Sep 2026 · linked to the subject listing","desc":"Ni-rich 양극인 LiNiO₂를 나노로드 형태로 설계해 격자 부정합(lattice mismatch)을 수용하고, 고전압 구동에서 일어나는 구조 붕괴를 가역적으로 회복시켜 사이클 안정성을 크게 개선했습니다. 하이니켈 무코발트 양극의 고전압 열화 문제를 소재 설계로 접근한 사례입니다.","desc_en":"LiNiO₂, a nickel-rich cathode, is shaped into nanorods so the lattice mismatch can be accommodated, letting the structural collapse that high-voltage cycling causes recover reversibly and markedly improving cycle stability. A materials-design route into the high-voltage degradation problem of cobalt-free nickel-rich cathodes.","link":"https://www.nature.com/subjects/batteries"},
+        {"title":"Li–O₂ 전지용 귀금속-프리 고엔트로피 합금(HEA) 전극촉매","meta":"Nature Communications · 2026-09-25 · 저널 주제 목록으로 연결","meta_en":"Nature Communications · 25 Sep 2026 · linked to the subject listing","desc":"결정립계 쌍정 결함(coherent twinning defect)과 격자 변형(lattice distortion strain)을 도입한 무귀금속 고엔트로피 합금 촉매로 리튬-공기(Li–O₂) 전지의 촉매 활성과 성능을 끌어올렸습니다. 계면 반응 제어와 저비용 촉매 소재라는 두 축에서 의미가 있습니다.","desc_en":"A precious-metal-free high-entropy alloy carrying coherent twinning defects and lattice distortion strain raises both catalytic activity and cell performance in lithium-air (Li–O₂) batteries. It matters on two counts: interfacial reaction control, and catalyst materials that do not depend on precious metals.","link":"https://www.nature.com/subjects/batteries"},
+        {"title":"“Li⁺ Shuttle bus” 개념의 고체 고분자 전해질","meta":"Nature Communications · 2026-09-24","meta_en":"Nature Communications · 24 Sep 2026","desc":"리튬이온의 용매화(solvation)를 의도적으로 약화시켜 이온이 개별적으로가 아니라 집단으로(collective) 빠르게 이동하게 하는 ‘셔틀버스’ 전략입니다. 고에너지밀도와 우수한 용량 유지율을 동시에 달성해, 안전한 고속 이온 수송의 가능성을 보였습니다.","desc_en":"A “shuttle bus” strategy that deliberately weakens lithium-ion solvation so ions move quickly as a collective rather than one at a time. It reaches high energy density and strong capacity retention together, pointing to fast ion transport that does not trade away safety.","link":"https://www.nature.com/articles/s41467-026-78041-7"}
+      ]},
+      {key:"전극", ko:"전극 설계 (Electrode Design)", en:"Electrode Design", items:[
+        {"title":"습식 vs 건식 전극 공정 비교 리뷰","meta":"Mojtahedi 외 · Batteries & Supercaps (Wiley, 2026)","meta_en":"Mojtahedi et al. · Batteries & Supercaps (Wiley, 2026)","desc":"리튬이온전지 전극 제조에서 습식·건식 공정의 기회와 한계, 남은 과제를 종합 비교한 리뷰입니다. 건식 전극 공정의 바인더·용매 이슈, 생산성, 에너지 효율을 정리해 차세대 전극 설계 방향을 제시합니다.","desc_en":"A review comparing wet and dry electrode manufacturing for lithium-ion cells across opportunities, limits and open problems. It sets out the binder and solvent questions in dry processing alongside throughput and energy efficiency, and reads them as directions for next-generation electrode design.","link":"https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/batt.202500929"},
+        {"title":"건식 전극용 집전체(current collector) 요구사항 부각","meta":"ARMOR Battery Films · 2026-09-27 · 업계 다이제스트 #39","meta_en":"ARMOR Battery Films · 27 Sep 2026 · industry digest #39","desc":"건식 전극 제조 공정에 필요한 탄소 코팅(carbon-coated) 집전체의 특성 요건을 짚은 발표입니다. 건식 공정 상용화에서 소재와 공정의 정합성이 왜 병목이 되는지 보여주는 업계·연구 접점 사례입니다.","desc_en":"A statement of what a carbon-coated current collector has to deliver for dry electrode manufacturing. It shows where materials and process have to be matched for dry processing to reach production, and sits at the boundary between industry and research.","link":"https://battery-tech.net/batterytech-news-updates-2026-39/"}
+      ]},
+      {key:"셀", ko:"셀 단위 (Cell)", en:"Cell", items:[
+        {"title":"결정립 미세화(inoculation)로 전고체 리튬금속 셀의 덴드라이트 억제","meta":"Nature Materials · 2026-09-24 · “Inoculating lithium against dendrites” · 저널 주제 목록으로 연결","meta_en":"Nature Materials · 24 Sep 2026 · “Inoculating lithium against dendrites” · linked to the subject listing","desc":"마그네슘-란타넘(Mg–La) 접종제로 리튬 금속의 결정립을 미세화해, 전고체 리튬금속 전지에서 보이드(void) 성장을 지연시키고 고율(high-rate) 구동을 가능하게 했습니다. 전고체 셀의 고질적 문제인 덴드라이트와 계면 보이드를 셀 레벨 전략으로 다룬 연구입니다.","desc_en":"A magnesium-lanthanum inoculant refines the grain structure of lithium metal, slowing void growth in all-solid-state lithium-metal cells and opening up high-rate operation. It treats dendrites and interfacial voids — the chronic failure mode of solid-state cells — as a cell-level design problem.","link":"https://www.nature.com/subjects/batteries"}
+      ]},
+      {key:"공정", ko:"공정 (Process / Manufacturing)", en:"Process / Manufacturing", items:[
+        {"title":"전기차 배터리 팩 전수 X-ray 검사 시스템 (비파괴 검사)","meta":"Fraunhofer IIS & Hochschule München · 2026-09-27 · 업계 다이제스트 #39","meta_en":"Fraunhofer IIS & Hochschule München · 27 Sep 2026 · industry digest #39","desc":"EV 배터리 팩을 분해하지 않고 내부 결함을 검출하는 AIR X-ray 검사 시스템입니다. 셀·팩 제조 품질관리(QC)와 안전성 검증 공정에 바로 적용할 수 있는 형태입니다.","desc_en":"An AIR X-ray inspection system that finds internal defects in EV battery packs without taking them apart. It is aimed directly at quality control in cell and pack manufacturing, and at safety verification.","link":"https://battery-tech.net/batterytech-news-updates-2026-39/"},
+        {"title":"100% 재활용 원료 기반 셀 생산","meta":"Porsche · 2026-09-20 · 업계 다이제스트 #38","meta_en":"Porsche · 20 Sep 2026 · industry digest #38","desc":"리튬·니켈·코발트·망간을 전량 재활용해 만든 양극활물질(CAM)로 배터리 셀을 실제로 생산했습니다. 폐배터리 자원순환에서 CAM, 셀 제조까지 이어지는 클로즈드루프 공정을 실증한 사례입니다.","desc_en":"Battery cells actually produced from cathode active material made entirely from recycled lithium, nickel, cobalt and manganese. It demonstrates the closed loop end to end: end-of-life batteries through CAM and into cell manufacturing.","link":"https://battery-tech.net/batterytech-news-updates-2026-38/"},
+        {"title":"초박막 리튬메탈 필름 대량 생산 투자","meta":"Elevated Materials · 2026-09-20~27 · 업계 다이제스트 #38","meta_en":"Elevated Materials · 20-27 Sep 2026 · industry digest #38","desc":"미국 DOE 매칭펀드 5,000만 달러를 확보해, 총 1억 달러 규모로 연 약 3.5 GW 분량의 초박막 리튬메탈 필름 생산 설비를 추진합니다. 리튬메탈·전고체 음극 상용화의 소재 공급 기반에 해당합니다.","desc_en":"With $50m in matching funds from the US DOE, a $100m programme to build ultra-thin lithium-metal film capacity of roughly 3.5 GW a year. This is the materials supply base that lithium-metal and solid-state anodes need before they can scale.","link":"https://battery-tech.net/batterytech-news-updates-2026-38/"}
+      ]},
+      {key:"저널", ko:"저널 출판 소식 (Journal News)", en:"Journal News", items:[
+        {"title":"리뷰: 습식·건식 전극 제조 공정 종합 비교","meta":"Batteries & Supercaps (Wiley) · Mojtahedi 외 · 2026","meta_en":"Batteries & Supercaps (Wiley) · Mojtahedi et al. · 2026","desc":"건식 전극이 이번 주 연구·업계 양쪽에서 동시에 화두가 된 흐름을 반영하는 리뷰 게재입니다. 위 전극 설계 항목과 같은 논문으로, 저널 소식 관점에서 다시 짚어 둡니다.","desc_en":"A review whose appearance reflects how dry electrodes turned up on both the research and industry sides this week. It is the same paper as the electrode-design item above, noted here from the publishing angle.","link":"https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/batt.202500929"},
+        {"title":"오픈액세스 전고체 셀(SSB) 데이터베이스","meta":"Joule · 게재일 재확인 필요","meta_en":"Joule · publication date needs re-checking","desc":"전고체 전지 셀 성능을 시각화·검색·분석하고 AI 기반 데이터 추출까지 지원하는 오픈액세스 데이터베이스 논문입니다. 전고체 셀 성능의 재현성 확인과 문헌 간 비교 연구에 쓸 수 있습니다. 정확한 게재일은 확인하지 못해 재확인이 필요합니다.","desc_en":"An open-access database paper for visualising, searching and analysing all-solid-state cell performance, with AI-assisted data extraction. Useful for checking reproducibility across the solid-state literature and comparing cells between papers. The exact publication date could not be confirmed and needs re-checking.","link":"https://www.cell.com/joule/fulltext/S2542-4351(26)00279-5"},
+        {"title":"참고(조사 기간 밖): 전고체 전지 자기방전율 정량화","meta":"Nature Energy · Alt & Janek (Justus Liebig Univ.) · 2026-04-22","meta_en":"Nature Energy · Alt & Janek (Justus Liebig Univ.) · 22 Apr 2026","desc":"이번 주 범위 밖(2026-04-22 게재)이지만, 전고체 셀의 전자 누설전류 이슈를 정량적으로 다룬 논문이라 참고로 함께 둡니다. 위 Joule 데이터베이스와 함께 읽으면 전고체 셀 성능 비교의 기준을 잡는 데 도움이 됩니다.","desc_en":"Outside this week's window (published 22 April 2026), but carried as background because it quantifies electronic leakage current in solid-state cells. Read alongside the Joule database above, it helps set a baseline for comparing solid-state cell performance.","link":"https://www.nature.com/articles/s41560-026-02038-1"}
+      ]},
+      {key:"국내", ko:"국내 (Korea)", en:"Korea", items:[
+        {"title":"LG에너지솔루션 — BESS의 NVIDIA DSX 인증, 북미 LFP 50 GWh 목표","meta":"2026-09-27 · 업계 다이제스트 #39","meta_en":"27 Sep 2026 · industry digest #39","desc":"BESS 인프라가 NVIDIA DSX 인증을 획득했고, 2026년 말까지 북미 LFP 생산능력을 50 GWh 이상으로 끌어올리는 것을 목표로 제시했습니다. 데이터센터 전력 수요와 LFP 현지 생산을 동시에 겨냥한 움직임입니다.","desc_en":"Its BESS infrastructure earned NVIDIA DSX certification, alongside a stated target of more than 50 GWh of North American LFP capacity by the end of 2026 — aimed at data-centre power demand and local LFP production at the same time.","link":"https://battery-tech.net/batterytech-news-updates-2026-39/"},
+        {"title":"LG에너지솔루션 × B2U Storage Solutions — 2차 사용 배터리 파트너십","meta":"2026-09-27 · 업계 다이제스트 #39","meta_en":"27 Sep 2026 · industry digest #39","desc":"그리드용 2차 사용(second-life) 배터리 재활용을 위한 미국 파트너십을 체결했습니다. 사용후 배터리를 그리드 저장자원으로 되돌리는 경로를 확보하는 계약입니다.","desc_en":"A US partnership for recycling second-life batteries into grid storage — securing a route that returns end-of-life packs to the grid as a storage asset.","link":"https://battery-tech.net/batterytech-news-updates-2026-39/"},
+        {"title":"배터리 3사 — EU “Made in EU” 규정과 미국의 탈중국 압박에 따른 반사이익 기대","meta":"LG엔솔 · 삼성SDI · SK온 · 2026-09-20 · 업계 다이제스트 #38","meta_en":"LGES · Samsung SDI · SK On · 20 Sep 2026 · industry digest #38","desc":"EU의 “Made in EU” 규정과, 포드(Ford)를 향한 미국의 중국산 배터리 의존도 축소 압박이 겹치면서 한국 3사가 수혜를 볼 것으로 전망됩니다. 기술 경쟁이 아니라 규제 지형 변화에서 오는 기회입니다.","desc_en":"The EU's “Made in EU” rules and US pressure on Ford to cut its dependence on Chinese batteries are together expected to benefit the three Korean makers — an opening created by the regulatory landscape rather than by technology.","link":"https://battery-tech.net/batterytech-news-updates-2026-38/"},
+        {"title":"국내 소재사 — 중국 밖 추적 가능 공급망 구축 가속","meta":"2026-09-20 · 업계 다이제스트 #38","meta_en":"20 Sep 2026 · industry digest #38","desc":"미국 인센티브 요건을 충족하기 위해 중국 밖에서 추적 가능한(traceable) 공급망을 세우는 작업에 속도를 내고 있습니다. 원료 원산지 증빙이 보조금 수령의 전제가 되면서 소재 단계의 과제로 내려온 사안입니다.","desc_en":"Korean materials suppliers are accelerating work on traceable supply chains outside China in order to qualify for US incentives. Once proof of raw-material origin becomes a condition of subsidy, the burden lands on the materials stage.","link":"https://battery-tech.net/batterytech-news-updates-2026-38/"},
+        {"title":"국내 판매 한국산 EV의 중국산 셀 비중 40.4% (8월)","meta":"2026-09-20 · 업계 다이제스트 #38","meta_en":"20 Sep 2026 · industry digest #38","desc":"8월 국내에서 판매된 한국산 EV의 40.4%가 중국산 셀을 탑재했고, 기아 모델에 CATL 셀이 다수 들어간 것으로 집계됐습니다. 위의 탈중국 규제 흐름과 정면으로 엇갈리는 수치입니다.","desc_en":"40.4% of Korean-built EVs sold domestically in August shipped with Chinese cells, with CATL cells in many Kia models. The figure runs directly against the de-risking regulation above.","link":"https://battery-tech.net/batterytech-news-updates-2026-38/"},
+        {"title":"현대차그룹 — 200 kWh 사용후 배터리 저장장치를 급속충전 인프라와 통합","meta":"2026-09-27 · 업계 다이제스트 #39","meta_en":"27 Sep 2026 · industry digest #39","desc":"200 kWh 규모 사용후 배터리 저장장치를 급속충전 인프라와 묶는 파일럿을 시작했습니다. 그리드 기여와 2차 사용 사업성을 함께 검증하려는 구성입니다.","desc_en":"A pilot tying a 200 kWh second-life storage unit into fast-charging infrastructure, set up to test grid contribution and the commercial case for second-life use at the same time.","link":"https://battery-tech.net/batterytech-news-updates-2026-39/"}
+      ]},
+      {key:"해외", ko:"해외 (Global)", en:"Global", items:[
+        {"title":"CATL — 헝가리 데브레첸 공장 시험 생산 개시, 물류·해외 확장 다발","meta":"2026-09-27 / 2026-09-20 · 업계 다이제스트 #39·#38","meta_en":"27 Sep / 20 Sep 2026 · industry digests #39 and #38","desc":"목표 100 GWh의 헝가리 데브레첸 공장에서 2개 라인 시험(cell trial) 생산을 시작했고, Kuehne+Nagel과 유럽·중국 배터리 물류 및 전동화 파트너십 MOU를 맺었습니다. 앞서 9월 20일 자로는 이집트 BME와 현지 팩 조립(초기 1 GWh) 협력, DHL과 유럽 그린 화물회랑 MoU가 확인됐습니다.","desc_en":"Trial cell production started on two lines at the Debrecen plant in Hungary, which targets 100 GWh, and an MOU with Kuehne+Nagel covers battery logistics and electrification across Europe and China. From 20 September: local pack assembly with BME in Egypt starting at 1 GWh, and a green freight corridor MoU with DHL in Europe.","link":"https://battery-tech.net/batterytech-news-updates-2026-39/"},
+        {"title":"CATL — 587 Ah LFP ESS 셀 435위안/kWh, 상용차 모듈 플랫폼 TECTRANS II","meta":"2026-09-20 · 업계 다이제스트 #38","meta_en":"20 Sep 2026 · industry digest #38","desc":"587 Ah급 LFP ESS 셀을 kWh당 435위안에 5년 보증 조건으로 공급하겠다고 밝히고, 상용차용 모듈 플랫폼 TECTRANS II를 공개했습니다. ESS 셀 대형화와 가격 공세가 같이 움직이고 있음을 보여주는 발표입니다.","desc_en":"A 587 Ah LFP storage cell offered at 435 yuan per kWh with a five-year warranty, plus the TECTRANS II module platform for commercial vehicles. Larger storage cells and price pressure are arriving together.","link":"https://battery-tech.net/batterytech-news-updates-2026-38/"},
+        {"title":"BYD — 고속도로 플래시 충전소 2,000곳 조기 완공, 국내망 11,586곳","meta":"2026-09-27 · 업계 다이제스트 #39","meta_en":"27 Sep 2026 · industry digest #39","desc":"고속도로 플래시 충전소 2,000곳을 계획보다 3개월 앞당겨 완공했고, 국내 충전망을 341개 도시 11,586곳까지 확대했습니다. 연말 20,000곳이 목표입니다.","desc_en":"Two thousand highway flash-charging stations finished three months ahead of plan, with the domestic network now at 11,586 sites across 341 cities and a year-end target of 20,000.","link":"https://battery-tech.net/batterytech-news-updates-2026-39/"},
+        {"title":"BYD — 내년 차량 탑재 전고체 배터리 실증 (양산 아닌 개념 검증)","meta":"2026-09-20 · 개별 보도 확인","meta_en":"20 Sep 2026 · individually sourced report","desc":"내년에 차량에 얹어 전고체 배터리를 실증하는 것이 목표이며, 양산이 아니라 개념 검증 단계라는 점을 명확히 했습니다. 아래 Li Auto의 전망과 나란히 두면 업계 내부의 시점 인식 차이가 드러납니다.","desc_en":"The goal is an in-vehicle solid-state demonstration next year, explicitly framed as concept validation rather than volume production. Set beside Li Auto's outlook below, it shows how far apart the industry's own timelines sit.","link":"https://carnewschina.com/2026/08/10/catl-joins-byd-in-targeting-2027-solid-state-battery-trial-production/"},
+        {"title":"Panasonic Energy — 오사카에 글로벌 배터리 R&D 허브 ‘Energy Innovation Square’ 개소","meta":"2026-09-20 · 업계 다이제스트 #38","meta_en":"20 Sep 2026 · industry digest #38","desc":"오사카에 글로벌 배터리 R&D 허브를 열었습니다. 셀 개발 역량을 한곳으로 모으는 조직 차원의 움직임입니다.","desc_en":"A global battery R&D hub opened in Osaka — an organisational move that concentrates cell development capability in one place.","link":"https://battery-tech.net/batterytech-news-updates-2026-38/"},
+        {"title":"Factorial × Mitsui Kinzoku — 황화물 전해질 기반 전고체 플랫폼 산업화","meta":"2026-09-27 · 업계 다이제스트 #39","meta_en":"27 Sep 2026 · industry digest #39","desc":"황화물(sulfide) 전해질 역량과 제조 개발을 결합해 전고체 플랫폼을 산업화하는 협력입니다. 소재 기업과 셀 기업이 공정 개발 단계에서 묶이는 형태입니다.","desc_en":"A collaboration pairing sulfide electrolyte capability with manufacturing development to industrialise a solid-state platform — a materials company and a cell company tied together at the process-development stage.","link":"https://battery-tech.net/batterytech-news-updates-2026-39/"},
+        {"title":"Mercedes-Benz × ProLogium — Gen4 리튬 세라믹 셀 우선 평가 접근권","meta":"2026-09-27 · 업계 다이제스트 #39","meta_en":"27 Sep 2026 · industry digest #39","desc":"ProLogium의 Gen4 리튬 세라믹 셀에 대해 전기·열·안전 항목의 우선 평가 접근권을 확보했습니다. 완성차가 차세대 셀을 양산 전에 선점 평가하는 통로입니다.","desc_en":"Priority access to evaluate ProLogium's Gen4 lithium-ceramic cells on electrical, thermal and safety criteria — the route by which a carmaker gets first assessment of a next-generation cell before it reaches production.","link":"https://battery-tech.net/batterytech-news-updates-2026-39/"},
+        {"title":"Li Auto — 전고체 2027~2028년 제한 적용, 전면 양산은 5년 더 필요","meta":"2026-09-27 · 업계 다이제스트 #39","meta_en":"27 Sep 2026 · industry digest #39","desc":"전고체 배터리는 2027~2028년에 제한적으로 적용되고, 전면 양산까지는 수명과 비용 과제를 해결하는 데 5년이 더 필요하다는 전망을 내놨습니다. 위 BYD 실증 일정과 함께 읽어야 하는 온도차입니다.","desc_en":"Solid-state batteries seen in limited use in 2027-2028, with full volume production needing five more years to resolve lifetime and cost. The gap against BYD's demonstration schedule above is the point.","link":"https://battery-tech.net/batterytech-news-updates-2026-39/"},
+        {"title":"Geely — 2,250 kW 스마트 충전소, 12C·6C 배터리 공개","meta":"2026-09-27 · 업계 다이제스트 #39","meta_en":"27 Sep 2026 · industry digest #39","desc":"2,250 kW급 스마트 충전소와 12C·6C 배터리 기술을 공개하고, 2027년 말까지 10만 개 이상의 충전 포트를 목표로 제시했습니다.","desc_en":"A 2,250 kW smart charging station and 12C/6C battery technology unveiled, with a target of more than 100,000 charging ports by the end of 2027.","link":"https://battery-tech.net/batterytech-news-updates-2026-39/"},
+        {"title":"Sunwoda EVB — 상온 10%→97% 9분 충전 15C 배터리 시스템","meta":"2026-09-27 · 업계 다이제스트 #39","meta_en":"27 Sep 2026 · industry digest #39","desc":"상온에서 10%에서 97%까지 9분에 충전하는 15C 배터리 시스템을 공개하고, 2027년 말까지 만 개 규모의 초급속 충전소 계획을 밝혔습니다. 셀 성능과 충전 인프라를 함께 내놓는 방식이 이번 주 중국 업체들의 공통 패턴입니다.","desc_en":"A 15C battery system charging from 10% to 97% in nine minutes at room temperature, with plans for ten thousand ultra-fast charging stations by the end of 2027. Announcing cell performance and charging infrastructure together was the shared pattern among Chinese players this week.","link":"https://battery-tech.net/batterytech-news-updates-2026-39/"},
+        {"title":"HiTHIUM — 20,000 사이클 나트륨이온 ESS ‘∞Power N4.0MWh’ 출시","meta":"2026-09-20 · 업계 다이제스트 #38","meta_en":"20 Sep 2026 · industry digest #38","desc":"20,000 사이클 수명을 내세운 나트륨이온 ESS 제품을 출시하고 2027년 유틸리티급 배치를 계획하고 있습니다. 나트륨이온이 전기차가 아니라 ESS 쪽에서 먼저 제품화되는 흐름을 보여줍니다.","desc_en":"A sodium-ion storage product claiming 20,000 cycles, with utility-scale deployment planned for 2027 — sodium-ion reaching product form in storage rather than in vehicles.","link":"https://battery-tech.net/batterytech-news-updates-2026-38/"},
+        {"title":"Gotion High-Tech — 사우디 3개 사이트 6 GWh ESS 수주","meta":"2026-09-20 · 업계 다이제스트 #38","meta_en":"20 Sep 2026 · industry digest #38","desc":"사우디아라비아 3개 사이트에 6 GWh 규모 ESS를 수주했습니다. 사막 환경과 태양광 연계를 전제로 설계된 프로젝트입니다.","desc_en":"Orders for 6 GWh of storage across three sites in Saudi Arabia, designed for desert conditions and paired with solar.","link":"https://battery-tech.net/batterytech-news-updates-2026-38/"}
+      ]},
+      {key:"정책", ko:"정책·자원·리사이클링 (Policy / Materials / Recycling)", en:"Policy / Materials / Recycling", items:[
+        {"title":"EU — “Made in EU” 규정 도입, 중국산 하이브리드 수입 제한·관세 검토","meta":"2026-09-20 · 업계 다이제스트 #38 (Transport & Environment 의견 포함)","meta_en":"20 Sep 2026 · industry digest #38 (including Transport & Environment)","desc":"“Made in EU” 규정을 도입하고, 중국산 하이브리드 수입에 대한 자발적 물량 제한과 관세 인상을 검토하고 있습니다. 동시에 Transport & Environment는 핵심원자재(CRM) 투자 강화를 요구했습니다.","desc_en":"“Made in EU” rules introduced, with voluntary volume limits and higher tariffs on Chinese hybrid imports under consideration. Transport & Environment separately called for stronger investment in critical raw materials.","link":"https://battery-tech.net/batterytech-news-updates-2026-38/"},
+        {"title":"미국 DOE — Elevated Materials 5,000만 달러 지원, TDK Ventures의 R3 Lithium 투자","meta":"2026-09-20~27 · 업계 다이제스트 #38","meta_en":"20-27 Sep 2026 · industry digest #38","desc":"DOE가 초박막 리튬메탈 필름 생산에 5,000만 달러를 지원했고, TDK Ventures는 미국 내 탄산리튬 생산을 앞당기기 위해 R3 Lithium에 투자했습니다. 음극 소재와 리튬 정제 양쪽에 자금이 들어가고 있습니다.","desc_en":"The DOE put $50m behind ultra-thin lithium-metal film production, while TDK Ventures invested in R3 Lithium to accelerate domestic lithium carbonate output. Money is going into both the anode material and lithium refining.","link":"https://battery-tech.net/batterytech-news-updates-2026-38/"},
+        {"title":"E3 Lithium × Epsilon CAM — 앨버타산 배터리급 탄산리튬 최대 5,000톤 5년 공급 MOU","meta":"2026-09-20 · 업계 다이제스트 #38","meta_en":"20 Sep 2026 · industry digest #38","desc":"앨버타에서 생산한 배터리급 탄산리튬을 최대 5,000톤 규모로 5년간 공급하는 MOU입니다. 북미 역내 리튬 조달을 CAM 단계와 직접 연결하는 계약입니다.","desc_en":"An MOU to supply up to 5,000 tonnes of battery-grade lithium carbonate from Alberta over five years, linking North American lithium sourcing directly to the CAM stage.","link":"https://battery-tech.net/batterytech-news-updates-2026-38/"},
+        {"title":"리사이클링 — Altilium 환경인가, Bridge Green 8년 공급계약, Samsar 1,000번째 재제조","meta":"2026-09-27 · 업계 다이제스트 #39 (Porsche 100% 재활용 셀은 공정 항목 참조)","meta_en":"27 Sep 2026 · industry digest #39 (Porsche's fully recycled cells are under Process)","desc":"Altilium이 영국 플리머스에서 흑질(black mass) 습식 회수 환경인가를 받았고, Bridge Green × Hartree Partners는 연 약 1만 톤 규모 재활용 탄산리튬 8년 공급계약을 체결했으며, Samsar Resources는 닛산 리프 배터리팩 1,000번째 재제조를 달성했습니다.","desc_en":"Altilium received environmental permitting for hydrometallurgical black-mass recovery in Plymouth, UK; Bridge Green and Hartree Partners signed an eight-year contract for roughly 10,000 tonnes a year of recycled lithium carbonate; and Samsar Resources completed its thousandth remanufactured Nissan Leaf pack.","link":"https://battery-tech.net/batterytech-news-updates-2026-39/"}
+      ]}
+    ],
+    sources: [
+      {"ko":"Nature 배터리 주제 목록","en":"Nature battery subject listing","url":"https://www.nature.com/subjects/batteries"},
+      {"ko":"Batteries & Supercaps 전극 공정 리뷰","en":"Batteries & Supercaps electrode review","url":"https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/batt.202500929"},
+      {"ko":"Joule 전고체 셀 데이터베이스","en":"Joule solid-state cell database","url":"https://www.cell.com/joule/fulltext/S2542-4351(26)00279-5"},
+      {"ko":"Nature Energy 자기방전율 정량화 (참고)","en":"Nature Energy self-discharge (background)","url":"https://www.nature.com/articles/s41560-026-02038-1"},
+      {"ko":"ScienceDaily 배터리 뉴스","en":"ScienceDaily battery news","url":"https://www.sciencedaily.com/news/matter_energy/batteries/"},
+      {"ko":"BatteryTech News & Updates 2026 #39","en":"BatteryTech News & Updates 2026 #39","url":"https://battery-tech.net/batterytech-news-updates-2026-39/"},
+      {"ko":"BatteryTech News & Updates 2026 #38","en":"BatteryTech News & Updates 2026 #38","url":"https://battery-tech.net/batterytech-news-updates-2026-38/"},
+      {"ko":"CATL·BYD 전고체 시험생산 (CarNewsChina)","en":"CATL and BYD solid-state trial production (CarNewsChina)","url":"https://carnewschina.com/2026/08/10/catl-joins-byd-in-targeting-2027-solid-state-battery-trial-production/"},
+      {"ko":"국내 ESS·배터리 3사 (더일렉)","en":"Korean storage and the three makers (TheElec)","url":"https://www.thelec.net/news/articleView.html?idxno=14123"},
+      {"ko":"국내 ESS·배터리 3사 (Korea JoongAng Daily)","en":"Korean storage and the three makers (Korea JoongAng Daily)","url":"https://www.koreajoongangdaily.com/business/korean-battery-makers-split-strategies-as-lg-expands-ess-operations-and-samsung-leads-supply/12772363"}
+    ]
+  },
+/* ---- 2026-09-21 ---- */
+{
   "date": "2026-09-21",
   "window": {
     "ko": "2026년 9월 셋째 주 · 9월 20일 기준",
@@ -946,7 +1024,11 @@ const briefing = {
       ]
     }
   ]
-};
+}
+];
+/* Which edition the briefing tab is showing. 0 is the newest; the chip row above the
+   tab switches between them, so publishing a new one does not retire the last. */
+let bSel = 0;
 
 const archive = [
   {doi:"10.1126/sciadv.aej0175",
@@ -2652,17 +2734,23 @@ function renderScience(){
 function renderBriefing(){
   const box=document.getElementById('briefingBody');
   const L=(o)=>o?(lang==="en"?(o.en||o.ko):o.ko):"";
+  const b=briefings[bSel]||briefings[0];
+  document.getElementById('briefEditions').innerHTML=
+    `<span class="chipLbl">${T().briefEditions}</span>`+briefings.map((e,i)=>
+      `<button class="chip${i===bSel?' active':''}" data-be="${i}">${e.date}</button>`).join('');
   document.getElementById('calloutB').innerHTML=
-    `<b>${T().briefTitle(briefing.date)}</b> · ${L(briefing.window)}<br>${L(briefing.note)}`;
-  document.getElementById('summaryB').innerHTML=`<b>${T().briefSummary}</b><br>${L(briefing.summary)}`;
-  box.innerHTML=briefing.sections.map(s=>{
+    `<b>${T().briefTitle(b.date)}</b> · ${L(b.window)}<br>${L(b.note)}`;
+  const src=(b.sources||[]).map(s=>`<a class="link" href="${s.url}" target="_blank" rel="noopener">${lang==="en"?(s.en||s.ko):s.ko}</a>`).join(' · ');
+  document.getElementById('summaryB').innerHTML=`<b>${T().briefSummary}</b><br>${L(b.summary)}`
+    +(src?`<div class="bsrc"><b>${T().briefSources}</b><br>${src}</div>`:'');
+  box.innerHTML=b.sections.map(s=>{
     const c=CATCLR[s.key]||REGCLR[s.key]||'var(--ink-2)';
     const cards=s.items.map(x=>`<div class="card">
       <div class="badges">${badge(lang==="en"?s.en:s.ko,c,tint(c))}${badge(lang==="en"?x.meta_en:x.meta,'var(--ink-2)','var(--surface-2)')}</div>
       <h4>${x.title}</h4>
       <p>${lang==="en"?x.desc_en:x.desc}</p>
       <div class="foot"><span class="date"></span>
-      <a class="link" href="${x.link}" target="_blank" rel="noopener">${T().linkB}</a></div></div>`).join('');
+      ${x.link?`<a class="link" href="${x.link}" target="_blank" rel="noopener">${T().linkB}</a>`:''}</div></div>`).join('');
     return `<h3 class="briefH">${lang==="en"?s.en:s.ko}</h3><div class="cards">${cards}</div>`;
   }).join('');
 }
@@ -2818,6 +2906,11 @@ document.getElementById('scienceFilters').addEventListener('click',e=>{
   sField=b.dataset.sf;
   document.querySelectorAll('[data-sf]').forEach(x=>x.classList.toggle('active',x.dataset.sf===sField));
   renderScience();
+});
+document.getElementById('briefEditions').addEventListener('click',e=>{
+  const b=e.target.closest('[data-be]');if(!b)return;
+  bSel=Number(b.dataset.be);
+  renderBriefing();
 });
 document.getElementById('archiveFilters').addEventListener('click',e=>{
   const b=e.target.closest('[data-aj]');if(!b)return;

@@ -318,9 +318,10 @@ silently**: the English view simply shows Korean text. Nothing errors, nothing w
 - The script logic — the render functions, event handlers, filters, `CATCLR`, `REGCLR`,
   `CATLBL`, `REGLBL`, `TYPELBL`.
 - The brand colors: amber `#ffc000` on black `#0e0e0e`.
-- **The `briefing` object and its tab.** `const briefing = { … }`, the `#tabB` button, the
-  `#panel-briefing` markup, `renderBriefing()` and the `tabB` / `linkB` / `briefTitle` /
-  `briefSummary` I18N keys. It is a written round-up, not a swept feed — section 9.
+- **The `briefings` list and its tab.** `const briefings = [ … ]` and `bSel`, the `#tabB`
+  button, the `#panel-briefing` markup including `#briefEditions`, `renderBriefing()` and the
+  `tabB` / `linkB` / `briefTitle` / `briefSummary` / `briefEditions` / `briefSources` I18N
+  keys. Written round-ups, not a swept feed, and every past edition stays — section 9.
 - **`data/archive/` — any file in it.** `scripts/week-archive.js` writes one snapshot
   per ISO week after the guards pass. It is the only record of a past week: `research`
   and `industry` are replaced wholesale, so last week vanishes from the page the moment
@@ -885,18 +886,33 @@ of writing with a restatement of two tabs the reader can already see.
 
 ### When you are asked to publish one
 
-Replace the whole `briefing` object — it is a document, not an accumulating feed, so there
-is no append rule here and no history to preserve in the file. Keep the shape:
+**Prepend a new edition to `briefings`. Never overwrite or delete one already there.** The
+tab holds a list of editions with a chip row to switch between them, newest first, and
+`bSel = 0` means the newest is what a reader sees on arrival. Each week is a separate
+document, so a published briefing stays published:
 
 ```js
-const briefing = {
-  date: "YYYY-MM-DD",
-  window:  {ko:"…", en:"…"},   // what period the briefing covers
-  note:    {ko:"…", en:"…"},   // scope and what was and was not confirmed
-  summary: {ko:"…", en:"…"},   // the week at a glance
-  sections: [ {key, ko, en, items:[ {title, meta, meta_en, desc, desc_en, link} ]} ]
-};
+const briefings = [
+/* ---- newest ---- */
+  {
+    date: "YYYY-MM-DD",
+    window:  {ko:"…", en:"…"},   // what period the briefing covers
+    note:    {ko:"…", en:"…"},   // scope and what was and was not confirmed
+    summary: {ko:"…", en:"…"},   // the week at a glance
+    sections: [ {key, ko, en, items:[ {title, meta, meta_en, desc, desc_en, link} ]} ],
+    sources:  [ {ko, en, url} ]  // optional: the aggregate sources, listed under the summary
+  },
+/* ---- the editions already published, untouched ---- */
+  { … }
+];
+let bSel = 0;
 ```
+
+The earlier version of this section said to replace the object outright, on the reasoning
+that a briefing is a document with no history to keep. That was wrong by the second week:
+the request each week is to *publish* a briefing, and a series in which only the newest
+survives is not a series. Git history is not a substitute — nobody reads a dashboard
+through `git show`.
 
 - `key` should reuse an existing literal where one fits — the five research categories
   (`소재` `전극` `셀` `공정` `저널`) and the two industry regions (`국내` `해외`) already have
