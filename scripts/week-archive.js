@@ -15,7 +15,15 @@
  * makes a second run of the day idempotent. It never touches another week's file, and it
  * asserts that no existing file disappeared before it writes.
  *
+ * Daily cadence (2026-10): the page is now a rolling 7-day window refreshed every day,
+ * so it also writes data/archive/daily/{YYYY-MM-DD}.json — one file per run date. The
+ * week file is still rewritten by every run inside its ISO week, which makes the last run
+ * of the week (Sunday, KST) its final writer: by then the rolling window is that week.
+ * The daily file is the precise record of what the page carried on each day.
+ *
  * Usage: node scripts/week-archive.js [--dry-run] [--date YYYY-MM-DD]
+ *        --date defaults to today's date in KST, not UTC: the scheduled 06:00 KST run is
+ *        21:00 UTC of the previous day, and the files must be named for the KST day.
  */
 "use strict";
 const fs = require("fs");
@@ -28,7 +36,10 @@ const DIR = path.join(ROOT, "data", "archive");
 const argv = process.argv.slice(2);
 const DRY = argv.includes("--dry-run");
 const dIdx = argv.indexOf("--date");
-const DATE = dIdx >= 0 ? argv[dIdx + 1] : new Date().toISOString().slice(0, 10);
+const kstToday = () => new Date(Date.now() + 9 * 3600e3).toISOString().slice(0, 10);
+const DATE = dIdx >= 0 ? argv[dIdx + 1] : kstToday();
+if (!/^\d{4}-\d{2}-\d{2}$/.test(DATE)) throw new Error("bad --date: " + DATE);
+const DAILY_DIR = path.join(DIR, "daily");
 
 /* ISO-8601 week: weeks start Monday and week 1 is the one holding the first Thursday,
    so the year label can differ from the calendar year at a year boundary. Getting this
@@ -57,6 +68,7 @@ const readJson = (p) => JSON.parse(fs.readFileSync(p, "utf8"));
 const html = fs.readFileSync(INDEX, "utf8");
 const research = grabArray(html, "research");
 const industry = grabArray(html, "industry");
+const science = grabArray(html, "science");
 
 const student = {};
 for (const s of ["jobs", "postdoc", "grants"]) {
@@ -87,37 +99,61 @@ const snapshot = {
   iso_week: week,
   generated: DATE,
   note: {
-    ko: "주차별 스냅샷입니다. research/industry 는 매 실행 전체 교체되므로 이 파일이 해당 주의 유일한 기록입니다.",
-    en: "A per-week snapshot. research and industry are replaced wholesale each run, so this file is the only record of that week.",
+    ko: "주차별 스냅샷입니다. 페이지는 최근 7일 롤링 창이라, 이 파일은 그 주의 마지막 실행 시점 상태를 담습니다. 일별 기록은 data/archive/daily/ 에 있습니다.",
+    en: "A per-week snapshot. The page is a rolling 7-day window, so this file holds the state at the week's last run. Per-day records live in data/archive/daily/.",
   },
   counts: {
     research: research.length,
     industry: industry.length,
+    science: science.length,
     jobs: student.jobs.items.length,
     postdoc: student.postdoc.items.length,
     grants: student.grants.items.length,
   },
   research: research.map((x) => ({
     cat: x.cat, sub: x.sub, title: x.title, org: x.org_en || x.org,
-    journal: x.journal, date: x.date, link: x.link,
+    journal: x.journal, date: x.date, added: x.added || null, link: x.link,
   })),
   industry: industry.map((x) => ({
-    region: x.region, type: x.type, company: x.company, date: x.date, link: x.link,
+    region: x.region, type: x.type, company: x.company, date: x.date, added: x.added || null, link: x.link,
+  })),
+  science: science.map((x) => ({
+    field: x.field, title: x.title, source: x.source, date: x.date, added: x.added || null, link: x.link,
   })),
   student: student,
 };
 
+const dailyRe = /^\d{4}-\d{2}-\d{2}\.json$/;
+fs.mkdirSync(DAILY_DIR, { recursive: true });
+const existingDaily = fs.readdirSync(DAILY_DIR).filter((f) => dailyRe.test(f));
+const dailyTarget = path.join(DAILY_DIR, DATE + ".json");
+const dailyIsNew = !fs.existsSync(dailyTarget);
+const dailySnap = Object.assign({}, snapshot, {
+  day: DATE,
+  note: {
+    ko: "일별 스냅샷입니다. 이 날 06:00 KST 실행 후 페이지에 실린 최근 7일 항목 전체이며, added 가 이 날짜인 항목이 그날 새로 추가된 것입니다.",
+    en: "A per-day snapshot: everything the page carried after this day's 06:00 KST run. Items whose `added` equals this date were new that day.",
+  },
+});
+const toFile = (o) => JSON.stringify(o, null, 2).replace(/\r?\n/g, "\r\n") + "\r\n";
+
 if (!DRY) {
-  fs.writeFileSync(target, JSON.stringify(snapshot, null, 2).replace(/\r?\n/g, "\r\n") + "\r\n");
+  fs.writeFileSync(target, toFile(snapshot));
+  fs.writeFileSync(dailyTarget, toFile(dailySnap));
   const after = fs.readdirSync(DIR).filter((f) => /^\d{4}-W\d{2}\.json$/.test(f));
   for (const f of existing)
     if (!after.includes(f)) throw new Error("REFUSING: an existing week file disappeared: " + f);
+  const afterDaily = fs.readdirSync(DAILY_DIR).filter((f) => dailyRe.test(f));
+  for (const f of existingDaily)
+    if (!afterDaily.includes(f)) throw new Error("REFUSING: an existing day file disappeared: " + f);
 }
 
 console.log(
   "week-archive " + (DRY ? "(dry-run) " : "") + (isNew ? "wrote new " : "refreshed ") +
   "data/archive/" + id + ".json — research " + snapshot.counts.research +
-  ", industry " + snapshot.counts.industry + ", jobs " + snapshot.counts.jobs +
+  ", industry " + snapshot.counts.industry + ", science " + snapshot.counts.science + ", jobs " + snapshot.counts.jobs +
   ", postdoc " + snapshot.counts.postdoc + ", grants " + snapshot.counts.grants
 );
-console.log("  weeks on file: " + (existing.length + (isNew && !DRY ? 1 : 0)));
+console.log("  weeks on file: " + (existing.length + (isNew && !DRY ? 1 : 0)) +
+  " · days on file: " + (existingDaily.length + (dailyIsNew && !DRY ? 1 : 0)) +
+  " (" + (dailyIsNew ? "wrote new " : "refreshed ") + "data/archive/daily/" + DATE + ".json)");

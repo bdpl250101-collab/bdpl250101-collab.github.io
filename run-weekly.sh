@@ -1,15 +1,23 @@
 #!/usr/bin/env bash
 #
-# Weekly auto-update for the BDPL battery-research dashboard.
-# Pulls the repo, hands weekly-prompt.md to Claude Code, and logs everything.
+# Daily auto-update for the BDPL battery-research dashboard.
+# (The file keeps its old name so the existing scheduled task keeps pointing at it.)
+# Rolls the 7-day window, hands daily-prompt.md to Claude Code, and logs everything.
 #
-# Scheduled for Mondays 06:00 KST (= Sundays 21:00 UTC), via the Windows Task
-# Scheduler task BDPL-WeeklyDashboard. Run it by hand any time to test:
+# Scheduled for EVERY DAY 06:00 KST (= 21:00 UTC the day before), via the Windows Task
+# Scheduler task BDPL-WeeklyDashboard — setup-daily-task.ps1 switches its trigger from
+# weekly to daily. Run it by hand any time to test:
 #   ./run-weekly.sh
 #
 #   ./run-weekly.sh --no-push   collect, verify, commit locally — but do not push.
 #                               Use it to exercise the whole path without publishing.
 #                               (--dry-run is accepted as a synonym.)
+#   ./run-weekly.sh --mode daily|weekly
+#                               Force a mode. Default: weekly on Mondays (KST), daily
+#                               otherwise. Both add the day's new items to the rolling
+#                               7-day window; weekly mode ALSO refreshes the student
+#                               sections (weekly-prompt.md section 8) and the KPI tiles
+#                               and themes, and gets the larger turn and time budget.
 #
 # EDITING THIS FILE: commit the change before you run it. The dirty-tree guard below
 # does `git reset --hard`, which reverts an uncommitted edit to this very script while
@@ -19,16 +27,22 @@
 set -uo pipefail
 
 NO_PUSH=0
-for arg in "$@"; do
-  case "$arg" in
+MODE=auto
+while [ $# -gt 0 ]; do
+  case "$1" in
     --no-push|--dry-run) NO_PUSH=1 ;;
-    *) echo "unknown argument: $arg" >&2; exit 2 ;;
+    --mode) shift; MODE="${1:-}" ;;
+    --mode=*) MODE="${1#--mode=}" ;;
+    *) echo "unknown argument: $1" >&2; exit 2 ;;
   esac
+  shift
 done
+case "$MODE" in auto|daily|weekly) ;; *) echo "bad --mode: $MODE (auto|daily|weekly)" >&2; exit 2 ;; esac
 
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 LOG_FILE="$REPO_DIR/.weekly-update.log"
-PROMPT_FILE="$REPO_DIR/weekly-prompt.md"
+PROMPT_FILE="$REPO_DIR/daily-prompt.md"
+RULEBOOK_FILE="$REPO_DIR/weekly-prompt.md"   # daily-prompt.md cites its sections
 
 # Prefix every line of output with a timestamp, and append to the log.
 stamp() {
@@ -78,15 +92,31 @@ on_exit() {
 trap on_exit EXIT
 
 echo "=============================================================="
-echo "weekly dashboard update starting"
+echo "dashboard update starting"
 echo "repo: $REPO_DIR"
 
 cd "$REPO_DIR" || { echo "FATAL: cannot cd to $REPO_DIR"; exit 1; }
 
-if [ ! -f "$PROMPT_FILE" ]; then
-  echo "FATAL: $PROMPT_FILE not found"
-  exit 1
+for f in "$PROMPT_FILE" "$RULEBOOK_FILE"; do
+  if [ ! -f "$f" ]; then
+    echo "FATAL: $f not found"
+    exit 1
+  fi
+done
+
+# The run date is the KST calendar day. Computed in node, not `date`: Git Bash on Windows
+# does not reliably honour TZ=Asia/Seoul, and at 06:00 KST the UTC date is still yesterday.
+# BDPL_TODAY=YYYY-MM-DD overrides it for rehearsals (with --no-push); never set it in the
+# scheduled task.
+TODAY="${BDPL_TODAY:-$(node -e 'console.log(new Date(Date.now()+9*36e5).toISOString().slice(0,10))')}"
+if ! printf '%s' "$TODAY" | grep -Eq '^[0-9]{4}-[0-9]{2}-[0-9]{2}$'; then
+  echo "FATAL: could not determine the run date (node missing, or bad BDPL_TODAY='$TODAY')"; exit 1
 fi
+DOW="$(node -e 'console.log(new Date(process.argv[1]+"T00:00:00Z").getUTCDay())' "$TODAY")"   # 1 = Monday
+if [ "$MODE" = "auto" ]; then
+  if [ "$DOW" = "1" ]; then MODE=weekly; else MODE=daily; fi
+fi
+echo "run date (KST): $TODAY   mode: $MODE"
 
 # Dirty-tree guard. If a previous run died mid-edit (session limit, the task's
 # ExecutionTimeLimit, a crash), index.html is left half-written and uncommitted.
@@ -146,6 +176,37 @@ else
   echo "         fix them by hand -- this run will not repair them."
 fi
 
+# Roll the window BEFORE claude: drop items added more than 7 days ago and move RUN_DATE
+# to today. The previous RUN_DATE is the start of today's search window -- read it first.
+PREV_RUN_DATE="$(grep -o 'const RUN_DATE = "[0-9-]*"' index.html | grep -o '[0-9]\{4\}-[0-9-]*')"
+if [ -z "$PREV_RUN_DATE" ]; then
+  echo "FATAL: index.html has no const RUN_DATE line"
+  exit 1
+fi
+# Search window start: the previous run date (one day of overlap, deduplicated by DOI and
+# link), but never more than 14 days back -- a long outage should not turn one run into a
+# month-long sweep the turn budget cannot finish.
+DELTA_START="$(node -e '
+  const t=new Date(process.argv[1]+"T00:00:00Z"), p=new Date(process.argv[2]+"T00:00:00Z");
+  const floor=new Date(t); floor.setUTCDate(floor.getUTCDate()-14);
+  console.log((p<floor?floor:p).toISOString().slice(0,10));' "$TODAY" "$PREV_RUN_DATE")"
+echo "previous run: $PREV_RUN_DATE   search window: $DELTA_START .. $TODAY"
+
+echo "--- roll the 7-day window (scripts/daily-roll.js) ---"
+if ! node scripts/daily-roll.js --date "$TODAY"; then
+  echo "FATAL: the window roll failed; nothing was written by it, not running claude"
+  exit 1
+fi
+# The roll itself changes index.html, so the stall guard below compares against the
+# rolled file rather than BASE_REF -- otherwise the roll alone would satisfy it.
+ROLLED_SHA="$(git hash-object index.html)"
+
+if [ "$MODE" = "weekly" ]; then
+  MAX_TURNS=90; TIME_LIMIT=3h
+else
+  MAX_TURNS=60; TIME_LIMIT=100m
+fi
+
 echo "--- claude ---"
 # --max-turns 90: the 2026-08-26 run died on "Reached max turns (60)" having written
 # only the two sweep arrays. Section 8 adds three more sections to the run; the
@@ -162,14 +223,26 @@ echo "--- claude ---"
 # without running, which reads in the log exactly like a crash. Measured on this
 # machine: a 31KB prompt runs, a 36KB prompt exits 126. The file is past that now and
 # only grows, so the argument form is not usable at any prompt size worth keeping.
-timeout 3h claude -p \
+#
+# Daily cadence: the run parameters go in as a short header ahead of daily-prompt.md, so
+# the prompt itself stays a static file and the values are visible in one place.
+# Daily runs get 60 turns / 100 min -- they only add one day of items. Weekly (Monday)
+# runs keep the old 90 turns / 3h because they also do section 8.
+{
+  printf '%s\n' "<!-- RUN PARAMETERS (written by run-weekly.sh) -->"
+  printf 'RUN_MODE: %s\n' "$MODE"
+  printf 'TODAY: %s\n' "$TODAY"
+  printf 'PREV_RUN_DATE: %s\n' "$PREV_RUN_DATE"
+  printf 'SEARCH_WINDOW: %s .. %s\n' "$DELTA_START" "$TODAY"
+  printf '%s\n\n' "<!-- end of run parameters -->"
+  cat "$PROMPT_FILE"
+} | timeout "$TIME_LIMIT" claude -p \
   --permission-mode dontAsk \
   --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(git *),Bash(node *),Bash(./check-student-sections.sh)" \
-  --max-turns 90 \
-  < "$PROMPT_FILE"
+  --max-turns "$MAX_TURNS"
 CLAUDE_STATUS=$?
 if [ $CLAUDE_STATUS -eq 124 ]; then
-  echo "FATAL: claude hit the 3h timeout"
+  echo "FATAL: claude hit the $TIME_LIMIT timeout"
 fi
 
 # Breadcrumb written straight to the log. On 2026-09-08 nothing past
@@ -179,15 +252,23 @@ fi
 # "claude never returned at all".
 printf '%s claude returned: status=%s\n' "$(date '+%Y-%m-%d %H:%M:%S %z')" "$CLAUDE_STATUS" >> "$LOG_FILE"
 
-# Silent-stall guard. Every real sweep moves at least the date-range and
-# generation-date strings, so index.html is never byte-identical to the pre-run
-# commit afterward. If it is, claude returned without doing the work — the exact
-# 09-08 signature — and we fail loudly here instead of sailing through the gates
-# into a deceptive "nothing to push".
-if git diff --quiet "$BASE_REF" -- index.html 2>/dev/null; then
-  echo "FATAL: claude returned (status=$CLAUDE_STATUS) but index.html is unchanged from the"
-  echo "       pre-run commit ($BASE_REF). The sweep produced nothing; not committing, not pushing."
+# Silent-stall guard. Every real run moves at least the date-range and
+# generation-date strings, so index.html is never byte-identical to the rolled file
+# afterward -- even on a day that found nothing new. If it is, claude returned without
+# doing the work (the 09-08 signature) and we fail loudly here instead of sailing
+# through the gates into a deceptive "nothing to push". Compared against the ROLLED file,
+# not BASE_REF: the roll already changed RUN_DATE, which would satisfy a BASE_REF check.
+if [ "$(git hash-object index.html)" = "$ROLLED_SHA" ]; then
+  echo "FATAL: claude returned (status=$CLAUDE_STATUS) but index.html is unchanged since the"
+  echo "       window roll. The run produced nothing; not committing, not pushing."
   exit 1
+fi
+
+# Daily runs leave the student data to Monday. Checked here, straight after claude, because
+# check-links.js below legitimately rewrites link_type in those same files every run.
+if [ "$MODE" = "daily" ] && ! git diff --quiet "$BASE_REF" -- data/jobs.json data/postdoc.json data/grants.json data/postdoc_watchlist.json 2>/dev/null; then
+  echo "WARNING: a DAILY claude session changed the student data files. Those are refreshed"
+  echo "         on Mondays (weekly mode). The gates below still judge the result; check the diff."
 fi
 
 # ---------------------------------------------------------------------------
@@ -211,10 +292,17 @@ fi
 echo "--- link check (scripts/check-links.js) ---"
 node scripts/check-links.js || echo "WARNING: link check errored; continuing with link_type as it was"
 
+echo "--- rolling-window gate (scripts/daily-roll.js --check) ---"
+if ! node scripts/daily-roll.js --check --date "$TODAY"; then
+  echo "FATAL: the rolling-window gate failed; not committing, not pushing"
+  echo "dashboard update finished"
+  exit 1
+fi
+
 echo "--- pi ledger (scripts/pi-aggregate.js) ---"
 if ! node scripts/pi-aggregate.js; then
   echo "FATAL: PI aggregation failed; not committing, not pushing"
-  echo "weekly dashboard update finished"
+  echo "dashboard update finished"
   exit 1
 fi
 
@@ -222,7 +310,7 @@ echo "--- regenerate seeds + data-layer gate (scripts/gen-seeds.js) ---"
 if ! node scripts/gen-seeds.js --base "$BASE_REF"; then
   echo "FATAL: the data-layer gate failed; nothing was written, not committing, not pushing"
   echo "       fix data/*.json by hand, re-run the gate, then push"
-  echo "weekly dashboard update finished"
+  echo "dashboard update finished"
   exit 1
 fi
 
@@ -249,7 +337,7 @@ fi
 # The guard is a publish gate, not just an alarm: a damaged state is never pushed.
 if [ $GUARD_STATUS -ne 0 ]; then
   echo "FATAL: refusing to commit or push with the student sections damaged"
-  echo "weekly dashboard update finished"
+  echo "dashboard update finished"
   exit 1
 fi
 
@@ -258,10 +346,10 @@ fi
 # week -- after the guards, so what gets recorded is what gets published, and before the
 # commit, so the file is actually staged rather than left untracked for the next run's
 # dirty-tree check to trip over.
-echo "--- week snapshot (scripts/week-archive.js) ---"
-if ! node scripts/week-archive.js; then
+echo "--- week + day snapshot (scripts/week-archive.js) ---"
+if ! node scripts/week-archive.js --date "$TODAY"; then
   echo "FATAL: week snapshot failed; not committing, not pushing"
-  echo "weekly dashboard update finished"
+  echo "dashboard update finished"
   exit 1
 fi
 
@@ -272,7 +360,7 @@ fi
 if [ -n "$(git status --porcelain -- data/ index.html)" ]; then
   echo "--- committing the generated layer ---"
   git add data/ index.html
-  git commit -m "chore: PI ledger and regenerated seeds ($(date '+%Y-%m-%d'))" || {
+  git commit -m "chore: PI ledger, seeds and snapshots ($TODAY, $MODE)" || {
     echo "FATAL: could not commit the generated layer"; exit 1; }
 fi
 
@@ -287,14 +375,14 @@ elif git diff --quiet "@{upstream}..HEAD" 2>/dev/null; then
 else
   if ! git push; then
     echo "FATAL: git push failed; the work is committed locally but not published"
-    echo "weekly dashboard update finished"
+    echo "dashboard update finished"
     exit 1
   fi
   echo "pushed: $(git rev-parse --short HEAD)"
 fi
 
 echo "--- done ---"
-echo "weekly dashboard update finished"
+echo "dashboard update finished"
 echo
 
 RUN_COMPLETED=1

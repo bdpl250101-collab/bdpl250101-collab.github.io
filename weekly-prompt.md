@@ -1,5 +1,14 @@
 # Weekly Battery Dashboard Update
 
+> **Since October 2026 the dashboard updates daily.** The scheduled entry point is now
+> `daily-prompt.md`, which `run-weekly.sh` feeds to Claude Code every morning at 06:00 KST.
+> This file is kept as the **rulebook** that `daily-prompt.md` cites section by section:
+> the research buckets, Crossref/OpenAlex procedure, schema, archive rules, student-section
+> rules, quality rules and verification checks below all still apply. Its window rule
+> (§1), its full-replacement rule (§3) and its finish step (§7) are superseded for the
+> daily run — `daily-prompt.md` section D0 has the exact mapping. Edit rules here; edit
+> cadence there.
+
 You are updating the BDPL (DGIST Battery Design & Processing Lab) weekly battery-research
 dashboard. The entire dashboard is a single self-contained file: `index.html` in this repo
 root. There are no other assets — the logo is embedded base64, there is no build step, and
