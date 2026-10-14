@@ -9,7 +9,9 @@ and shows a **rolling 7-day window**: every research / industry / science item t
 *added* in the last seven days. Each run adds that day's new items; a script takes items
 off again once they are a week old. Nothing is rebuilt from scratch.
 
-The run parameters are in the header at the very top of this input:
+The run parameters are in the header at the very top of this input — or, when this runs
+as a Claude Code Desktop scheduled task (`desktop-task-prompt.md`), in the block that
+`./run-weekly.sh --phase pre` printed:
 
 | Parameter | Meaning |
 |---|---|

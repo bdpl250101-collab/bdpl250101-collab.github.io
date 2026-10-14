@@ -18,6 +18,14 @@
 #                               7-day window; weekly mode ALSO refreshes the student
 #                               sections (weekly-prompt.md section 8) and the KPI tiles
 #                               and themes, and gets the larger turn and time budget.
+#   ./run-weekly.sh --phase pre|post
+#                               Split the run around the AI step, for when the AI is NOT
+#                               the `claude` CLI but a Claude Code Desktop scheduled task
+#                               (desktop-task-prompt.md). `pre` does everything up to and
+#                               including the window roll, saves its state to .run-state
+#                               and prints the run parameters; the session then does the
+#                               daily-prompt.md work; `post` runs every gate, snapshots,
+#                               commits and pushes. Default is `all`, the CLI path.
 #
 # EDITING THIS FILE: commit the change before you run it. The dirty-tree guard below
 # does `git reset --hard`, which reverts an uncommitted edit to this very script while
@@ -28,16 +36,20 @@ set -uo pipefail
 
 NO_PUSH=0
 MODE=auto
+PHASE=all
 while [ $# -gt 0 ]; do
   case "$1" in
     --no-push|--dry-run) NO_PUSH=1 ;;
     --mode) shift; MODE="${1:-}" ;;
     --mode=*) MODE="${1#--mode=}" ;;
+    --phase) shift; PHASE="${1:-}" ;;
+    --phase=*) PHASE="${1#--phase=}" ;;
     *) echo "unknown argument: $1" >&2; exit 2 ;;
   esac
   shift
 done
 case "$MODE" in auto|daily|weekly) ;; *) echo "bad --mode: $MODE (auto|daily|weekly)" >&2; exit 2 ;; esac
+case "$PHASE" in all|pre|post) ;; *) echo "bad --phase: $PHASE (all|pre|post)" >&2; exit 2 ;; esac
 
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 LOG_FILE="$REPO_DIR/.weekly-update.log"
@@ -52,6 +64,10 @@ stamp() {
 }
 
 # Everything from here on — stdout and stderr — goes to the log, timestamped.
+# fd 3 keeps the caller's terminal: everything else goes only to the log, but the run
+# parameters and the final verdict are also echoed there, so a desktop session that ran
+# this script through its shell tool can read them without opening the log.
+exec 3>&1
 exec > >(stamp) 2>&1
 STAMP_PID=$!
 
@@ -71,6 +87,11 @@ STAMP_PID=$!
 #      truncated 09-08 log), the direct write still lands.
 RUN_COMPLETED=0
 STATUS_FILE="$REPO_DIR/.weekly-last-status"
+STATE_FILE="$REPO_DIR/.run-state"
+# The verdict a successful run records. `pre` records PRE-COMPLETE, never COMPLETE, so
+# publish-now.sh cannot mistake half a run for a finished one.
+OK_VERDICT=COMPLETE
+[ "$PHASE" = "pre" ] && OK_VERDICT=PRE-COMPLETE
 
 on_exit() {
   local ec=$?
@@ -81,9 +102,10 @@ on_exit() {
   wait "${STAMP_PID:-}" 2>/dev/null
   local ts; ts="$(date '+%Y-%m-%d %H:%M:%S %z')"
   local head; head="$(git -C "$REPO_DIR" rev-parse --short HEAD 2>/dev/null || echo unknown)"
-  local verdict; [ "${RUN_COMPLETED:-0}" -eq 1 ] && verdict=COMPLETE || verdict=INCOMPLETE
+  local verdict; [ "${RUN_COMPLETED:-0}" -eq 1 ] && verdict="$OK_VERDICT" || verdict=INCOMPLETE
   printf '%s RUN-VERDICT: %s (exit=%s, head=%s)\n' "$ts" "$verdict" "$ec" "$head" >> "$LOG_FILE"
   printf '%s\t%s\texit=%s\thead=%s\n' "$ts" "$verdict" "$ec" "$head" > "$STATUS_FILE"
+  printf 'RUN-VERDICT: %s (exit=%s, phase=%s) -- details: tail -40 .weekly-update.log\n' "$verdict" "$ec" "${PHASE:-all}" >&3 2>/dev/null
   # Report failure to the scheduler when a run that claimed success never reached the end.
   if [ "${RUN_COMPLETED:-0}" -ne 1 ] && [ "$ec" -eq 0 ]; then
     exit 90   # incomplete run that would otherwise have exited 0
@@ -116,7 +138,21 @@ DOW="$(node -e 'console.log(new Date(process.argv[1]+"T00:00:00Z").getUTCDay())'
 if [ "$MODE" = "auto" ]; then
   if [ "$DOW" = "1" ]; then MODE=weekly; else MODE=daily; fi
 fi
-echo "run date (KST): $TODAY   mode: $MODE"
+
+if [ "$PHASE" = "post" ]; then
+  # Resume the run that `pre` started: same date, mode, baseline and rolled file.
+  if [ ! -f "$STATE_FILE" ]; then
+    echo "FATAL: --phase post but $STATE_FILE is missing -- run --phase pre first"; exit 1
+  fi
+  # shellcheck disable=SC1090
+  . "$STATE_FILE"
+  for v in TODAY MODE PREV_RUN_DATE DELTA_START BASE_REF ROLLED_SHA PRE_OK; do
+    if [ -z "${!v:-}" ]; then echo "FATAL: $STATE_FILE has no $v"; exit 1; fi
+  done
+fi
+echo "run date (KST): $TODAY   mode: $MODE   phase: $PHASE"
+
+if [ "$PHASE" != "post" ]; then
 
 # Dirty-tree guard. If a previous run died mid-edit (session limit, the task's
 # ExecutionTimeLimit, a crash), index.html is left half-written and uncommitted.
@@ -207,6 +243,28 @@ else
   MAX_TURNS=60; TIME_LIMIT=100m
 fi
 
+fi   # end of: PHASE != post
+
+if [ "$PHASE" = "pre" ]; then
+  {
+    printf 'TODAY=%q\nMODE=%q\nPREV_RUN_DATE=%q\nDELTA_START=%q\n' "$TODAY" "$MODE" "$PREV_RUN_DATE" "$DELTA_START"
+    printf 'BASE_REF=%q\nROLLED_SHA=%q\nPRE_OK=%q\n' "$BASE_REF" "$ROLLED_SHA" "$PRE_OK"
+  } > "$STATE_FILE"
+  # Printed to the terminal as well as the log: the desktop session reads it from here.
+  HDR="<!-- RUN PARAMETERS (written by run-weekly.sh --phase pre) -->
+RUN_MODE: $MODE
+TODAY: $TODAY
+PREV_RUN_DATE: $PREV_RUN_DATE
+SEARCH_WINDOW: $DELTA_START .. $TODAY
+<!-- end of run parameters -->"
+  printf '%s\n' "$HDR"
+  printf '%s\n' "$HDR" >&3
+  echo "pre phase done: now do daily-prompt.md, commit, then run ./run-weekly.sh --phase post"
+  RUN_COMPLETED=1
+  exit 0
+fi
+
+if [ "$PHASE" = "all" ]; then
 echo "--- claude ---"
 # --max-turns 90: the 2026-08-26 run died on "Reached max turns (60)" having written
 # only the two sweep arrays. Section 8 adds three more sections to the run; the
@@ -243,6 +301,11 @@ echo "--- claude ---"
 CLAUDE_STATUS=$?
 if [ $CLAUDE_STATUS -eq 124 ]; then
   echo "FATAL: claude hit the $TIME_LIMIT timeout"
+fi
+else
+  # --phase post: the AI step was a Claude Code Desktop session, not this script's child.
+  CLAUDE_STATUS=0
+  echo "--- AI step was done outside this script (desktop session); resuming at the gates ---"
 fi
 
 # Breadcrumb written straight to the log. On 2026-09-08 nothing past
@@ -381,6 +444,7 @@ else
   echo "pushed: $(git rev-parse --short HEAD)"
 fi
 
+rm -f "$STATE_FILE"
 echo "--- done ---"
 echo "dashboard update finished"
 echo

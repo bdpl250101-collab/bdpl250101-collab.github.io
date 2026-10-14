@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit",
+      "Write",
+      "Glob",
+      "Grep",
+      "WebSearch",
+      "WebFetch",
+      "Bash(bash ./run-weekly.sh --phase pre)",
+      "Bash(bash ./run-weekly.sh --phase post)",
+      "Bash(git *)",
+      "Bash(node *)",
+      "Bash(./check-student-sections.sh)",
+      "Bash(bash ./check-student-sections.sh)",
+      "Bash(tail *)",
+      "Bash(cat *)",
+      "Bash(ls *)"
+    ],
+    "deny": [
+      "Bash(claude *)",
+      "Bash(git push --force*)",
+      "Bash(git push -f*)"
+    ]
+  }
+}
