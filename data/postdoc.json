@@ -149,10 +149,11 @@
       "deadline": "2026-10-21",
       "deadline_en": "21 Oct 2026",
       "ok": true,
-      "link": "https://www.jobs.ac.uk/job/DTB754/research-associate-in-engineering",
-      "link_type": "deep",
+      "link": "https://www.jobs.ac.uk",
+      "link_type": "portal",
       "desc": "지속가능하고 회복력 있는 알루미늄이온 전지를 주제로 전과정평가(LCA), 기술경제 모델링, 공급망·물질흐름 분석을 맡는 박사후 연구직입니다. 9월 28일 게시, 마감 10월 21일이며 런던 가중 포함 £45,031–£52,514의 기간제입니다. 실험 합성보다 시스템·평가 쪽 연구라는 점에 유의하세요.",
-      "desc_en": "A post-PhD research role on sustainable and resilient aluminium-ion batteries, covering life-cycle assessment, techno-economic modelling, and supply-chain and material-flow analysis. Posted on 28 September and closing on 21 October, it is fixed-term at £45,031–£52,514 including London weighting. Note that the work is systems and assessment rather than experimental synthesis."
+      "desc_en": "A post-PhD research role on sustainable and resilient aluminium-ion batteries, covering life-cycle assessment, techno-economic modelling, and supply-chain and material-flow analysis. Posted on 28 September and closing on 21 October, it is fixed-term at £45,031–£52,514 including London weighting. Note that the work is systems and assessment rather than experimental synthesis.",
+      "query": "Research Associate in Engineering — 알루미늄이온 전지"
     },
     {
       "group": "영국",
