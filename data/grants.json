@@ -1,12 +1,12 @@
 {
-  "updated": "2026-09-22",
+  "updated": "2026-10-19",
   "notice": {
     "ko": "공고 자동수집은 best-effort이며 누락 가능 — 아래 공식 포털에서 직접 확인 권장.",
     "en": "Automated collection of announcements is best-effort and may miss items — please confirm directly on the official portals below."
   },
   "context": {
-    "ko": "2026년 부처개편으로 에너지 R&D는 기후에너지환경부(MCEE)와 KETEP, 산업 R&D는 KEIT, 기초·원천은 NRF가 맡고, 통합 공고는 IRIS에 게시됩니다. <b>2026-09-22 확인 결과에도 IRIS 접수중 목록, NRF 공고 첫 페이지, KETEP 목록 어디에도 이차전지·에너지저장 전용 공고가 한 건도 없었습니다</b> — IRIS에는 소재·부품, 항공우주, 재생의료, 지역 과학기술혁신이, NRF에는 AI 기반 대학 과학기술 혁신, 국가과학자지원, 미래개척융합과학기술개발이, KETEP에는 탄소포집활용(CCU) 실증지원센터(9월 10일)와 3차 재생에너지R&D 태양광(9월 1일)이 올라와 있습니다. <b>네 회차 연속으로 배터리 전용 공고가 없는 상태이며, 이는 검색 실패가 아니라 실제로 공고가 비어 있는 구간입니다.</b> 한-EU 공동연구지원사업은 원문을 직접 열어 D-1(9월 23일 18시 마감)로 접수중임을 재확인했습니다 — 지원을 검토 중이라면 사실상 오늘이 마지막입니다. <b>마감일(9월 15일)이 지난 NRF 인터내셔널 모빌리티 공모는 목록에서 내렸습니다.</b> KETEP 수소 재공고는 목록 첫 페이지에서 밀려나 이번 회차에 상태를 확인하지 못해 ‘재확인 필요’로 내렸습니다.",
-    "en": "After the 2026 ministry reorganisation, energy R&D sits with the Ministry of Climate, Energy and Environment (MCEE) and KETEP, industrial R&D with KEIT, and basic and source technology with the NRF, while consolidated announcements are posted on IRIS. <b>As of 22 September 2026 neither the IRIS open-call list, nor the first page of NRF announcements, nor the KETEP list contained a single call dedicated to secondary batteries or energy storage</b> — IRIS carries materials and components, aerospace, regenerative medicine and regional science and technology innovation; the NRF carries AI-based university research innovation, the national scientist programme and pioneering convergence technology; KETEP carries a carbon capture and utilisation demonstration centre (10 September) and a third round of solar renewable-energy R&D (1 September). <b>That is now four runs in a row with no battery-specific call: a genuinely empty stretch rather than a failed search.</b> The Korea–EU joint research call was opened directly and re-confirmed open at D-1, closing 23 September at 18:00 — effectively today is the last chance for anyone considering it. <b>The NRF International Mobility call, whose 15 September deadline has passed, has been taken off the list.</b> The KETEP hydrogen re-announcement has dropped off the first page of the list and its status could not be confirmed this run, so it has been moved to needs-re-check."
+    "ko": "2026년 부처개편으로 에너지 R&D는 기후에너지환경부(MCEE)와 KETEP, 산업 R&D는 KEIT, 기초·원천은 NRF가 맡고, 통합 공고는 IRIS에 게시됩니다. <b>2026-10-19 확인 결과에도 IRIS 접수중 목록(10건), NRF 공고 첫 페이지, KEIT SROME 목록, KETEP 목록 어디에도 이차전지·에너지저장 전용 공고는 없었습니다.</b> 직전 회차 항목은 대부분 정리했습니다 — <b>한-EU 공동연구지원사업(9월 23일 마감)</b>은 마감이 지나 내렸고, <b>KETEP의 산업기술R&D연구기획사업, 2027년 에너지국제공동연구 기술수요조사, 2차 신재생에너지R&D(수소) 재공고</b>는 KETEP 목록에서 모두 ‘완료’로 바뀌어 내렸습니다. <b>리튬황 이차전지 원천기술개발 재공모(5월 공고)</b>는 원문에 연구기간이 2026년 7월 시작으로 명시돼 있어 접수가 이미 끝난 것으로 판단해 내렸습니다. 대신 KETEP 목록에서 ‘진행’ 상태이고 ESS 분야(리튬전지 안전성·경쟁력, 비리튬계 저가 ESS, 장주기 ESS)를 명시한 <b>2028년 에너지기술개발사업 기술수요조사</b>(2027년 5월 31일까지 상시 접수)를 올렸습니다. 참고로 현재 접수중인 KEIT 소재부품기술개발사업(4차, 10월 21일 마감)은 공고 본문에 세부 RFP 목록이 없어 이차전지 과제 포함 여부를 확인하지 못했고, KETEP 에너지기술 수용성 제고 및 사업화 촉진 공고(11월 10일 마감)는 기후가치 평가방법론 1개 과제로 에너지저장과 무관해 올리지 않았습니다.",
+    "en": "After the 2026 ministry reorganisation, energy R&D sits with the Ministry of Climate, Energy and Environment (MCEE) and KETEP, industrial R&D with KEIT, and basic and source technology with the NRF, while consolidated announcements are posted on IRIS. <b>As of 19 October 2026 neither the IRIS open-call list (10 calls), nor the first page of NRF announcements, nor the KEIT SROME list, nor the KETEP list contained a call dedicated to secondary batteries or energy storage.</b> Most of last run’s items have been cleared — <b>the Korea–EU joint research call (closed 23 September)</b> has passed its deadline, and <b>KETEP’s industrial technology R&D planning call, the 2027 international energy joint-research needs survey and the second-round hydrogen R&D re-announcement</b> are all now marked ‘completed’ on the KETEP list. <b>The lithium-sulfur battery source-technology re-solicitation (announced in May)</b> states a research period starting in July 2026, so its application window has evidently closed and it has been removed. Added in their place is <b>the 2028 energy technology development programme needs survey</b>, shown as in progress on the KETEP list, which names ESS explicitly (lithium battery safety and competitiveness, low-cost non-lithium ESS, long-duration ESS) and accepts submissions until 31 May 2027. For reference, KEIT’s open materials and components technology development call (round 4, closing 21 October) lists no RFP topics in its announcement text, so whether it includes battery projects could not be confirmed; and KETEP’s energy technology acceptance and commercialisation call (closing 10 November) is a single climate-value assessment methodology project unrelated to storage, so neither was added."
   },
   "portals_title": {
     "ko": "모니터링 공식 포털",
@@ -38,89 +38,19 @@
     {
       "group": "접수중",
       "group_en": "Open",
-      "tag": "NRF / 과기정통부",
-      "tag_en": "NRF / MSIT",
-      "title": "2026년도 한-EU 공동연구지원사업 신규과제 공모",
-      "title_en": "2026 Korea–EU joint research programme — new project call",
-      "meta": "한국연구재단 · 과학기술정보통신부",
-      "meta_en": "NRF · Ministry of Science and ICT",
-      "deadline": "2026-09-23",
-      "deadline_en": "23 Sep 2026",
+      "tag": "KETEP / MCEE",
+      "tag_en": "KETEP / MCEE",
+      "title": "2028년 에너지기술개발사업 기술수요조사",
+      "title_en": "2028 energy technology development programme — technology needs survey",
+      "meta": "기후에너지환경부 · 한국에너지기술평가원",
+      "meta_en": "MCEE · KETEP",
+      "deadline": "2027-05-31",
+      "deadline_en": "31 May 2027",
       "ok": true,
-      "link": "https://www.nrf.re.kr/biz/notice/view?menuNo=362&postNo=280133&bizNotGubn=guide",
+      "link": "https://www.ketep.re.kr/businessAcment/view?menuId=MENU002080200000000&uni_ancm_id=10254",
       "link_type": "deep",
-      "desc": "8월 24일 게시된 국제협력 공모로, 2026-09-22에 원문을 다시 열어 D-1로 접수중임을 재확인했습니다. 마감은 9월 23일 18시이며 접수는 IRIS를 통합니다. 분야가 이차전지로 한정되지는 않지만 Horizon Europe 파트너로 확정된 연구자에게 열려 있어, EU 파트너와의 공동연구를 찾는 배터리 그룹에 해당하는 창구입니다. 남은 시간이 하루뿐입니다.",
-      "desc_en": "An international-cooperation call posted on 24 August. The announcement itself was reopened on 22 September 2026 and re-confirmed open at D-1, closing 23 September at 18:00 with applications routed through IRIS. It is not restricted to secondary batteries, but it is open to researchers confirmed as Horizon Europe partners, making it a live route for battery groups seeking an EU collaboration. Only one day remains."
-    },
-    {
-      "group": "접수중",
-      "group_en": "Open",
-      "tag": "KETEP / MCEE",
-      "tag_en": "KETEP / MCEE",
-      "title": "2026년도 산업기술R&D연구기획사업 신규지원대상 연구개발과제 공고",
-      "title_en": "2026 industrial technology R&D research planning programme — new project call",
-      "meta": "기후에너지환경부 · 한국에너지기술평가원",
-      "meta_en": "MCEE · KETEP",
-      "deadline": "2026-10-07",
-      "deadline_en": "7 Oct 2026",
-      "ok": true,
-      "link": "https://www.ketep.re.kr/businessAcment?menuId=MENU002080200000000",
-      "link_type": "portal",
-      "query": "산업기술R&D연구기획사업",
-      "query_en": "industrial technology R&D research planning",
-      "desc": "9월 7일 공고돼 2026-09-22 확인 시에도 KETEP 목록에서 상태가 ‘진행’으로 유지되고 있었습니다. 접수는 10월 7일 18시까지이며 총 4.93억 원 규모, 과제당 6,500만~1.2억 원에 지원기간은 5개월입니다. 이차전지 전용은 아니지만 전력망, 에너지안전, 에너지 실증, 원자력·방사선 활용, 에너지 AI 두 갈래까지 6개 기획 주제를 다루므로 저장·계통 쪽 주제를 올릴 수 있습니다.",
-      "desc_en": "Announced on 7 September and still showing as in progress on the KETEP list as of 22 September 2026. Applications close on 7 October at 18:00; the total budget is about KRW 493 million, with KRW 65–120 million per project over a five-month period. It is not battery-specific, but it spans six planning themes — power grids, energy safety, energy demonstration, nuclear and radiation applications, and two strands of energy AI — so storage and grid topics can be proposed into it."
-    },
-    {
-      "group": "접수중",
-      "group_en": "Open",
-      "tag": "KETEP / MCEE",
-      "tag_en": "KETEP / MCEE",
-      "title": "2027년 에너지국제공동연구사업 기술수요조사",
-      "title_en": "2027 international energy joint-research programme — technology needs survey",
-      "meta": "기후에너지환경부 · 한국에너지기술평가원",
-      "meta_en": "MCEE · KETEP",
-      "deadline": "재확인 필요 — 목록에 마감일 미표기",
-      "deadline_en": "Needs re-checking — no deadline shown on the list",
-      "ok": false,
-      "link": "https://www.ketep.re.kr/businessAcment/view?menuId=MENU002080200000000&uni_ancm_id=10262",
-      "link_type": "deep",
-      "desc": "8월 27일 등록된 기술수요조사로, 2026-09-22 확인 시에도 KETEP 목록에서 상태가 ‘진행’이었습니다. 과제 공모가 아니라 2027년 사업 기획에 반영할 기술수요를 받는 단계이므로, 배터리·에너지저장 주제를 미리 올려 둘 수 있는 통로입니다. 목록에 마감일이 표시되지 않아 원문에서 확인이 필요합니다.",
-      "desc_en": "A technology-needs survey registered on 27 August and still showing as in progress on the KETEP list as of 22 September 2026. It is not a project call but the stage at which technology needs are collected to shape the 2027 programme, so it is a route for putting battery and storage topics on the agenda early. No deadline is displayed on the list, so it must be checked against the announcement itself."
-    },
-    {
-      "group": "재확인 필요",
-      "group_en": "Needs re-check",
-      "tag": "KETEP / MCEE",
-      "tag_en": "KETEP / MCEE",
-      "title": "2026년도 2차 신재생에너지 R&D (수소) 신규지원대상 연구개발과제 재공고",
-      "title_en": "2026 second-round renewable energy R&D (hydrogen) — re-announced new projects",
-      "meta": "기후에너지환경부 · 한국에너지기술평가원",
-      "meta_en": "MCEE · KETEP",
-      "deadline": "재확인 필요 — 목록 첫 페이지에서 밀려남",
-      "deadline_en": "Needs re-checking — dropped off the first page of the list",
-      "ok": false,
-      "link": "https://www.ketep.re.kr/businessAcment/view?menuId=MENU002080200000000&uni_ancm_id=D202610538",
-      "link_type": "deep",
-      "desc": "8월 19일 등록된 재공고로 직전 회차에는 ‘진행’으로 확인됐으나, 2026-09-22 확인 시 KETEP 목록 첫 페이지에서 밀려나 현재 상태를 확인하지 못했습니다. 접수 마감일이 애초에 목록에 표시되지 않았던 항목이므로 원문 공고문에서 직접 확인해야 합니다. 수소 분야이므로 이차전지와는 직접 겹치지 않지만 같은 창구를 쓰는 참고 항목으로 남깁니다.",
-      "desc_en": "A re-announced call registered on 19 August and confirmed in progress last run, but as of 22 September 2026 it had dropped off the first page of the KETEP list and its current status could not be verified. It never displayed an application deadline on the list in the first place, so that must be checked against the announcement itself. It is a hydrogen call rather than a battery one, kept here as a reference point that runs through the same channel."
-    },
-    {
-      "group": "재확인 필요",
-      "group_en": "Needs re-check",
-      "tag": "NRF / 과기정통부",
-      "tag_en": "NRF / MSIT",
-      "title": "미래혁신 선도형 이차전지 원천기술개발 (리튬황) 재공모",
-      "title_en": "Future-innovation leading secondary battery source technology development (lithium-sulfur) — re-solicitation",
-      "meta": "한국연구재단 · 과학기술정보통신부",
-      "meta_en": "NRF · Ministry of Science and ICT",
-      "deadline": "5월 공고분 — 마감 가능성 높음, 재확인 필요",
-      "deadline_en": "Announced in May — likely closed, needs re-checking",
-      "ok": false,
-      "link": "https://svakorea.org/news/530",
-      "link_type": "deep",
-      "desc": "리튬황 전지 원천기술 과제로 연 10억 원 · 4.5년 규모입니다. 2026-09-22 확인 시에도 NRF 공고 목록 첫 페이지에서 이차전지 관련 항목이 보이지 않아 이미 마감된 것으로 보이나, 확정하지 못해 재확인 표기를 유지합니다. 이 대시보드가 추적하는 범위에서 이차전지를 명시한 국내 공모는 여전히 이 한 건뿐입니다.",
-      "desc_en": "A lithium-sulfur source-technology project funded at KRW 1B per year over 4.5 years. No battery-related item was visible on the first page of the NRF announcement list as of 22 September 2026 either, suggesting it has closed, but this could not be confirmed so the re-check flag is kept. It remains the only Korean call within this dashboard's scope that names secondary batteries explicitly."
+      "desc": "6월 17일 등록돼 2026-10-19 확인 시 KETEP 목록에서 ‘진행’ 상태인 기술수요조사로, 2027년 5월 31일 18시까지 산·학·연 누구나 제출할 수 있습니다(6월 19~30일은 집중 접수 기간이었음). 과제 공모가 아니라 2028년 사업 기획에 반영할 수요를 받는 단계이지만, ESS 분야에 리튬전지 안전성·경쟁력 강화, 비리튬계 저가 ESS, 열·기계식 대용량·장주기 ESS가 명시돼 있어 배터리·에너지저장 주제를 미리 올려 둘 수 있는 통로입니다.",
+      "desc_en": "A technology-needs survey registered on 17 June and shown as in progress on the KETEP list as of 19 October 2026; industry, academia and research institutes can submit until 31 May 2027 at 18:00 (19–30 June was the concentrated submission window). It is not a project call but the stage at which needs are collected to shape the 2028 programme, and its ESS category explicitly names lithium battery safety and competitiveness, low-cost non-lithium ESS, and thermal and mechanical long-duration ESS — so it is a route for putting battery and storage topics on the agenda early."
     }
   ]
 }

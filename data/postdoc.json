@@ -1,12 +1,12 @@
 {
-  "updated": "2026-09-22",
+  "updated": "2026-10-19",
   "notice": {
     "ko": "공고 자동수집은 best-effort이며 누락 가능 — 아래 공식 잡보드에서 직접 확인 권장.",
     "en": "Automated collection of postings is best-effort and may miss items — please confirm directly on the official job boards below."
   },
   "context": {
-    "ko": "시드 워치리스트(data/postdoc_watchlist.json)의 그룹 페이지와 잡보드를 매주 확인해 채웁니다. 2026-09-22 확인 결과, LBNL Helms 공고와 Ceder 그룹 모집은 그대로 살아 있었습니다. <b>마감일(9월 14일)이 지난 Gelion 공고는 목록에서 내렸습니다.</b> Faraday 잡보드에서는 <b>Agratas 항목이 ‘Senior Solid-State Scientist’에서 ‘Senior Mechanical Engineer (Li-ion Battery Cell Development)’로 바뀌어</b> 제목과 설명을 고쳤고, CPI 공고는 그대로 남아 있었으며 Integrals Power의 Battery Chemical Scientist를 새로 추가했습니다. 같은 보드에 AESC의 선덜랜드 기가팩토리 다수 직군과 UKBIC의 Cell Development Engineer도 올라와 있으나 포닥 성격이 아니어서 별도 항목으로 올리지 않았습니다. <b>MEET에서는 연구원(E 13 TV-L) 직함이 채용 페이지에서 아예 사라지고 학생 보조 1건만 남았습니다</b> — 직전 회차의 HTTP 410에 이어 자리 자체가 내려간 것으로 보여 항목을 ‘공석 없음’으로 고쳤습니다. HIU는 ‘현재 열린 자리’ 페이지에 단 한 건도 게시돼 있지 않았습니다. 케임브리지 화학과는 포닥 공고가 5건에서 2건으로 줄었고 연구분야가 목록에 표시되지 않아 배터리 여부를 확인할 수 없었습니다. <b>ECS 잡보드(jobs.electrochem.org)는 네 회차 연속 HTTP 403</b>으로 차단돼 Sandia 항목은 또 재확인하지 못했습니다. data/pi_archive.json은 98명을 기록 중이나 <b>flag가 붙은 PI가 아직 한 명도 없어</b> ‘아카이브 2회+’ 항목은 이번에도 추가하지 않았습니다.",
-    "en": "This list is filled each week by checking the group pages and job boards in the seed watchlist (data/postdoc_watchlist.json). As of 22 September 2026 the LBNL Helms posting and the Ceder group's recruitment are both still live. <b>The Gelion posting, whose 14 September deadline has passed, has been taken off the list.</b> On the Faraday board the <b>Agratas entry has changed from 'Senior Solid-State Scientist' to 'Senior Mechanical Engineer (Li-ion Battery Cell Development)'</b>, so its title and description were corrected; the CPI role is unchanged, and Integrals Power's Battery Chemical Scientist has been added. The same board also carries AESC's many Sunderland gigafactory roles and UKBIC's Cell Development Engineer, but neither is postdoc-shaped and neither was given its own entry. <b>At MEET the Research Associate (E 13 TV-L) title has disappeared from the jobs page altogether, leaving only a student assistant role</b> — following last run's HTTP 410 this looks like the position itself coming down, so the item has been changed to 'no vacancy'. HIU's open-positions page listed nothing at all. Cambridge Chemistry's postdoc count has fallen from five to two, and the listing shows no research area, so whether either is battery-related could not be determined. <b>The ECS job board (jobs.electrochem.org) returned HTTP 403 for the fourth run running</b>, so the Sandia item again could not be re-checked. data/pi_archive.json now holds 98 names but <b>not one yet carries a flag</b>, so no '2+ in archive' item was added this run either."
+    "ko": "시드 워치리스트(data/postdoc_watchlist.json)의 그룹 페이지와 잡보드를 매주 확인해 채웁니다. 2026-10-19 확인 결과, LBNL Helms 공고와 Ceder 그룹 모집은 그대로 살아 있었습니다. <b>Faraday 잡보드에서 Agratas(현재 ‘자유지원’ 목록으로만 남음)와 CPI 공고가 사라져 두 항목을 내렸고</b>, Integrals Power 공고는 그대로 남아 있었습니다. 같은 보드에서 찾은 <b>옥스퍼드 재료공학과 Saiful Islam 그룹의 양극재 전산 포닥(마감 10월 20일 정오)</b>과 jobs.ac.uk 검색에서 찾은 <b>킹스칼리지런던 알루미늄이온 전지 연구직(마감 10월 21일)</b>을 새로 올렸습니다. 버밍엄대 Research Fellow(Battery Materials and Interfaces)는 마감(10월 16일)이 지나 올리지 않았습니다. 케임브리지 화학과는 직전 회차의 포닥 2건이 마감됐고 현재 배터리 과제가 없어 ‘공고 없음’으로 고쳤습니다. MEET와 HIU에는 여전히 연구직 공고가 없습니다. <b>ECS 잡보드(jobs.electrochem.org)는 다섯 회차 연속 HTTP 403</b>으로 차단돼 Sandia 항목은 또 재확인하지 못했습니다. data/pi_archive.json에서 flag가 붙은 PI는 2명입니다 — <b>Partha P. Mukherjee(퍼듀대)</b>는 그룹 사이트(ETSL)에 모집 페이지가 없고 공개된 포닥 공고도 찾지 못했으며, <b>Yongyao Xia(푸단대)</b>는 중국 소재로 이 탭의 범위(미국·영국·독일) 밖이어서, ‘아카이브 2회+’ 항목은 추가하지 않았습니다.",
+    "en": "This list is filled each week by checking the group pages and job boards in the seed watchlist (data/postdoc_watchlist.json). As of 19 October 2026 the LBNL Helms posting and the Ceder group’s recruitment are both still live. <b>The Agratas role (Agratas now appears only under speculative applications) and the CPI role have gone from the Faraday board, so both items were removed</b>; the Integrals Power role is still listed. Newly added are <b>a computational cathode-materials postdoc in Saiful Islam’s group at Oxford Materials (closing 20 October at noon)</b>, found on the same board, and <b>a King’s College London research associate role on aluminium-ion batteries (closing 21 October)</b>, found through jobs.ac.uk. The University of Birmingham Research Fellow (Battery Materials and Interfaces) closed on 16 October and was not added. At Cambridge Chemistry the two postdoc roles carried last run have closed and no battery project is advertised, so that item now reads ‘no posting’. MEET and HIU still advertise no research roles. <b>The ECS job board (jobs.electrochem.org) returned HTTP 403 for the fifth run running</b>, so the Sandia item again could not be re-checked. Two PIs carry a flag in data/pi_archive.json: <b>Partha P. Mukherjee (Purdue)</b> has no openings page on his group site (ETSL) and no public postdoc posting was found, and <b>Yongyao Xia (Fudan)</b> is in China, outside this tab’s US/UK/Germany scope — so no ‘2+ in archive’ item was added."
   },
   "portals_title": {
     "ko": "모니터링 잡보드",
@@ -64,8 +64,8 @@
       "ok": true,
       "link": "https://ceder.berkeley.edu/contact-us/openings/",
       "link_type": "deep",
-      "desc": "2026-09-22 확인 시에도 에너지 소재의 전산 설계, 실험 합성·분석, 머신러닝/AI 세 분야로 포닥을 모집하고 있었습니다. 시작 시점은 협의 가능하며 국적 제한이 없다고 명시돼 있고, 지원은 전산(ceder-hr-comp@lbl.gov)과 실험(ceder-hr-exp@lbl.gov) 주소가 분리돼 있습니다. 개별 공고 전문은 하위 페이지(/openings/postdoctoral-positions/)로 안내됩니다.",
-      "desc_en": "As of 22 September 2026 the group is still recruiting postdocs in three areas: computational design of energy materials, experimental synthesis and characterisation, and machine learning and AI. Starting dates are negotiable and the page states explicitly that there are no citizenship restrictions, with separate application addresses for computational (ceder-hr-comp@lbl.gov) and experimental (ceder-hr-exp@lbl.gov) roles. Full postings are signposted to a sub-page (/openings/postdoctoral-positions/)."
+      "desc": "2026-10-19 확인 시에도 에너지 소재의 전산 설계, 실험 합성·분석, 머신러닝/AI 세 분야로 포닥을 모집하고 있었습니다. 시작 시점은 협의 가능하다고 명시돼 있으며, 개별 공고 전문은 하위 페이지(/openings/postdoctoral-positions/)로 안내됩니다.",
+      "desc_en": "As of 19 October 2026 the group is still recruiting postdocs in three areas: computational design of energy materials, experimental synthesis and characterisation, and machine learning and AI. Starting dates are stated as negotiable, and full postings are signposted to a sub-page (/openings/postdoctoral-positions/)."
     },
     {
       "group": "미국",
@@ -81,8 +81,8 @@
       "ok": true,
       "link": "https://lbl.referrals.selectminds.com/jobs/postdoctoral-researcher-%E2%80%93-battery-materials-electrochemical-energy-storage-7559",
       "link_type": "deep",
-      "desc": "LBNL 공식 채용 시스템의 포닥 공고로, 2026-09-22에 다시 열어 게시 중임을 확인했습니다. 8월 19일 우선 검토 마감은 지났으나 ‘공고가 내려갈 때까지 접수한다’는 문구가 그대로 남아 있어 지금도 지원할 수 있습니다. 버클리 근무, 2년 임용입니다.",
-      "desc_en": "A postdoc posting on LBNL's official recruiting system, reopened on 22 September 2026 and confirmed still live. The 19 August priority review date has passed, but the posting still states that applications are accepted until it is removed, so it remains open. The role is based in Berkeley on a two-year appointment."
+      "desc": "LBNL 공식 채용 시스템의 포닥 공고로, 2026-10-19에 다시 열어 게시 중임을 확인했습니다. 8월 19일 우선 검토 마감은 지났으나 ‘공고가 내려갈 때까지 접수한다’는 문구가 그대로 남아 있어 지금도 지원할 수 있습니다. 버클리 근무, 2년 임용입니다.",
+      "desc_en": "A postdoc posting on LBNL’s official recruiting system, reopened on 19 October 2026 and confirmed still live. The 19 August priority review date has passed, but the posting still states that applications are accepted until it is removed, so it remains open. The role is based in Berkeley on a two-year appointment."
     },
     {
       "group": "미국",
@@ -100,8 +100,8 @@
       "link_type": "search",
       "query": "batteries and energy storage",
       "query_en": "batteries and energy storage",
-      "desc": "7월 말 게시가 확인됐던 모델링 포닥 공고입니다. 이 공고는 ECS 잡보드를 통해 확인했는데, 2026-09-22에도 해당 보드가 HTTP 403을 반환해 네 회차 연속으로 게시 여부를 확인하지 못했습니다.",
-      "desc_en": "A modelling postdoc posting confirmed as listed in late July. It was found through the ECS job board, which returned HTTP 403 again on 22 September 2026, so its continued listing has now gone four runs without confirmation."
+      "desc": "7월 말 게시가 확인됐던 모델링 포닥 공고입니다. 이 공고는 ECS 잡보드를 통해 확인했는데, 2026-10-19에도 해당 보드가 HTTP 403을 반환해 다섯 회차 연속으로 게시 여부를 확인하지 못했습니다.",
+      "desc_en": "A modelling postdoc posting confirmed as listed in late July. It was found through the ECS job board, which returned HTTP 403 again on 19 October 2026, so its continued listing has now gone five runs without confirmation."
     },
     {
       "group": "미국",
@@ -117,52 +117,48 @@
       "ok": false,
       "link": "https://www.postdocjobs.com/posting/7308882",
       "link_type": "deep",
-      "desc": "2026-09-22에 페이지를 다시 열어 공고가 아직 접근 가능한 것은 확인했으나, 게시 시점이 여전히 ‘6개월 전’으로 표시되고 마감일 표기가 없어 현재도 충원 중인지는 확정할 수 없습니다. 지원 전 아르곤 채용 사이트에서 직접 확인하세요.",
-      "desc_en": "Reopened on 22 September 2026: the page is still reachable, but it is still stamped 'posted six months ago' and states no deadline, so it cannot be confirmed as still being filled. Check Argonne's own careers site before applying."
-    },
-    {
-      "group": "영국",
-      "group_en": "UK",
-      "tag": "변경",
-      "tag_en": "Changed",
-      "title": "Senior Mechanical Engineer — Li-ion Battery Cell Development",
-      "title_en": "Senior Mechanical Engineer — Li-ion Battery Cell Development",
-      "meta": "Agratas (Faraday Institution 잡보드 경유)",
-      "meta_en": "Agratas (via the Faraday Institution job board)",
-      "deadline": "재확인 필요 — 잡보드에 마감일 미표기",
-      "deadline_en": "Needs re-checking — no closing date shown on the board",
-      "ok": false,
-      "link": "https://www.faraday.ac.uk/opportunities/job-opportunities/",
-      "link_type": "portal",
-      "query": "Agratas Senior Mechanical Engineer",
-      "query_en": "Agratas Senior Mechanical Engineer",
-      "desc": "직전 회차에 실었던 Agratas의 ‘Senior Solid-State Scientist’는 2026-09-22 확인 시 Faraday 잡보드에서 사라졌고, 대신 리튬이온 셀 개발 분야의 선임 기계엔지니어 공고가 올라와 있었습니다. Agratas는 타타그룹의 영국 배터리 셀 제조사입니다. 잡보드에 마감일이 표시되지 않아 개별 공고에서 직접 확인해야 합니다.",
-      "desc_en": "The Agratas 'Senior Solid-State Scientist' role carried last run was gone from the Faraday board as of 22 September 2026, replaced by a senior mechanical engineering post in lithium-ion cell development. Agratas is Tata Group's UK battery cell manufacturer. The board shows no closing date, so that must be checked against the posting itself."
-    },
-    {
-      "group": "영국",
-      "group_en": "UK",
-      "tag": "유지",
-      "tag_en": "Still listed",
-      "title": "Senior Research Scientist — Battery Materials",
-      "title_en": "Senior Research Scientist — Battery Materials",
-      "meta": "CPI (Faraday Institution 잡보드 경유)",
-      "meta_en": "CPI (via the Faraday Institution job board)",
-      "deadline": "재확인 필요 — 잡보드에 마감일 미표기",
-      "deadline_en": "Needs re-checking — no closing date shown on the board",
-      "ok": false,
-      "link": "https://www.faraday.ac.uk/opportunities/job-opportunities/",
-      "link_type": "portal",
-      "query": "Senior Research Scientist Battery Materials",
-      "query_en": "Senior Research Scientist Battery Materials",
-      "desc": "2026-09-22 확인 시에도 Faraday 잡보드에 그대로 남아 있던 배터리 소재 선임 연구직입니다. CPI는 영국의 공정 스케일업 전문 기관으로, 실험실 수준 소재를 파일럿 규모로 넘기는 일에 가깝습니다. 마감일이 여전히 표시되지 않아 재확인이 필요합니다.",
-      "desc_en": "A senior battery-materials research role still on the Faraday board as of 22 September 2026. CPI is a UK process scale-up organisation, so the work sits closer to taking laboratory-scale materials to pilot scale. No closing date is shown, so it still needs re-checking."
+      "desc": "2026-10-19에 페이지를 다시 열어 공고가 아직 접근 가능한 것은 확인했으나, 게시 시점이 여전히 ‘6개월 전’으로 표시되고 마감일 표기가 없어 현재도 충원 중인지는 확정할 수 없습니다. 지원 전 아르곤 채용 사이트에서 직접 확인하세요.",
+      "desc_en": "Reopened on 19 October 2026: the page is still reachable, but it is still stamped ‘posted six months ago’ and states no deadline, so it cannot be confirmed as still being filled. Check Argonne’s own careers site before applying."
     },
     {
       "group": "영국",
       "group_en": "UK",
       "tag": "신규",
       "tag_en": "New",
+      "title": "Postdoctoral Researcher in Computer Modelling of Battery Cathode Materials",
+      "title_en": "Postdoctoral Researcher in Computer Modelling of Battery Cathode Materials",
+      "meta": "Saiful Islam · University of Oxford, Department of Materials",
+      "meta_en": "Saiful Islam · University of Oxford, Department of Materials",
+      "deadline": "2026-10-20 (정오, 영국 시간)",
+      "deadline_en": "20 Oct 2026 (12:00 UK time)",
+      "ok": true,
+      "link": "https://www.jobs.ac.uk/job/DTB373/postdoctoral-researcher-in-computer-modelling-of-battery-cathode-materials",
+      "link_type": "deep",
+      "desc": "Faraday Institution이 지원하는 3D-CAT 과제(차세대 Li-rich 3D 양극재)의 전산 포닥으로, DFT·분자동역학·클러스터 전개·머신러닝으로 구조, 산화환원, 이온 이동, 계면 특성을 다룹니다. 9월 25일 게시, 임용은 2026-12-01부터 2028-09-30까지이며 Grade 7(£39,424–£47,779)입니다. 2026-10-19 확인 기준 마감이 내일(10월 20일 정오)입니다.",
+      "desc_en": "A computational postdoc on the Faraday Institution-funded 3D-CAT project (next-generation Li-rich 3D cathode materials), using DFT, molecular dynamics, cluster expansion and machine learning to study structure, redox, transport and interface properties. Posted on 25 September; the appointment runs from 1 December 2026 to 30 September 2028 at Grade 7 (£39,424–£47,779). As checked on 19 October 2026 it closes tomorrow, 20 October at noon."
+    },
+    {
+      "group": "영국",
+      "group_en": "UK",
+      "tag": "신규",
+      "tag_en": "New",
+      "title": "Research Associate in Engineering — 알루미늄이온 전지",
+      "title_en": "Research Associate in Engineering — aluminium-ion batteries",
+      "meta": "King’s College London · Engineering (NMES)",
+      "meta_en": "King’s College London · Engineering (NMES)",
+      "deadline": "2026-10-21",
+      "deadline_en": "21 Oct 2026",
+      "ok": true,
+      "link": "https://www.jobs.ac.uk/job/DTB754/research-associate-in-engineering",
+      "link_type": "deep",
+      "desc": "지속가능하고 회복력 있는 알루미늄이온 전지를 주제로 전과정평가(LCA), 기술경제 모델링, 공급망·물질흐름 분석을 맡는 박사후 연구직입니다. 9월 28일 게시, 마감 10월 21일이며 런던 가중 포함 £45,031–£52,514의 기간제입니다. 실험 합성보다 시스템·평가 쪽 연구라는 점에 유의하세요.",
+      "desc_en": "A post-PhD research role on sustainable and resilient aluminium-ion batteries, covering life-cycle assessment, techno-economic modelling, and supply-chain and material-flow analysis. Posted on 28 September and closing on 21 October, it is fixed-term at £45,031–£52,514 including London weighting. Note that the work is systems and assessment rather than experimental synthesis."
+    },
+    {
+      "group": "영국",
+      "group_en": "UK",
+      "tag": "유지",
+      "tag_en": "Still listed",
       "title": "Battery Chemical Scientist",
       "title_en": "Battery Chemical Scientist",
       "meta": "Integrals Power (Faraday Institution 잡보드 경유)",
@@ -174,27 +170,27 @@
       "link_type": "portal",
       "query": "Integrals Power Battery Chemical Scientist",
       "query_en": "Integrals Power Battery Chemical Scientist",
-      "desc": "2026-09-22 확인 시 Faraday 잡보드에 새로 보인 배터리 화학 연구직입니다. Integrals Power는 LFP·LMFP 양극재를 개발하는 영국 소재 기업으로, 박사 후 소재 개발 트랙에 해당합니다. 잡보드에는 직함과 고용주만 표시되고 마감일이나 상세 요건은 나오지 않아 개별 공고에서 확인해야 합니다.",
-      "desc_en": "A battery chemistry research role newly visible on the Faraday board as of 22 September 2026. Integrals Power is a UK materials company developing LFP and LMFP cathode materials, so this is a post-PhD materials development track. The board shows only the title and employer — no closing date or detailed requirements — so those must be checked against the posting itself."
+      "desc": "2026-10-19 확인 시에도 Faraday 잡보드에 그대로 남아 있던 배터리 화학 연구직입니다. Integrals Power는 LFP·LMFP 양극재를 개발하는 영국 소재 기업으로, 박사 후 소재 개발 트랙에 해당합니다. 잡보드에는 직함과 고용주만 표시되고 마감일이나 상세 요건은 나오지 않아 개별 공고에서 확인해야 합니다.",
+      "desc_en": "A battery chemistry research role still on the Faraday board as of 19 October 2026. Integrals Power is a UK materials company developing LFP and LMFP cathode materials, so this is a post-PhD materials development track. The board shows only the title and employer — no closing date or detailed requirements — so those must be checked against the posting itself."
     },
     {
       "group": "영국",
       "group_en": "UK",
-      "tag": "확인 불가",
-      "tag_en": "Undetermined",
-      "title": "포닥 2건 게시 중 — 연구분야 미표시로 배터리 여부 불명",
-      "title_en": "Two postdoc roles listed — research area not shown, battery relevance unknown",
+      "tag": "공고 없음",
+      "tag_en": "No posting",
+      "title": "배터리·전기화학 포닥 공고 없음",
+      "title_en": "No battery or electrochemistry postdoc posting",
       "meta": "Clare Grey · University of Cambridge",
       "meta_en": "Clare Grey · University of Cambridge",
-      "deadline": "2026-09-22 / 2026-10-02",
-      "deadline_en": "22 Sep 2026 / 2 Oct 2026",
-      "ok": false,
+      "deadline": "해당 없음",
+      "deadline_en": "Not applicable",
+      "ok": true,
       "link": "https://www.ch.cam.ac.uk/jobs",
       "link_type": "portal",
       "query": "battery electrochemistry",
       "query_en": "battery electrochemistry",
-      "desc": "2026-09-22 확인 시 화학과 잡보드의 포닥 공고는 직전 5건에서 2건으로 줄었습니다 — MA50990(마감 9월 22일)과 MA50962 2인 모집(마감 10월 2일)입니다. 다만 이번에는 목록에 연구분야가 전혀 표시되지 않아 배터리·전기화학 과제인지 확인할 수 없었으므로 ‘확인 불가’로 둡니다.",
-      "desc_en": "As of 22 September 2026 the department's job board has fallen from five open postdoc roles to two — MA50990 (closing 22 September) and MA50962, a two-post advert (closing 2 October). This time the listing showed no research area at all, so whether either is a battery or electrochemistry project could not be determined, and the item is left as undetermined."
+      "desc": "직전 회차의 포닥 2건(MA50990, MA50962)은 마감일(9월 22일, 10월 2일)이 지나 목록에서 사라졌습니다. 2026-10-19 확인 시 화학과 잡보드의 연구직은 광학 현미경 개발 포닥(MA50992)과 생물물리화학 선임연구원(MA51403)뿐으로, 배터리·전기화학 과제는 없었습니다.",
+      "desc_en": "The two postdoc roles carried last run (MA50990 and MA50962) have passed their 22 September and 2 October closing dates and are gone from the list. As of 19 October 2026 the only research roles on the department’s job board were an optical-microscopy development postdoc (MA50992) and a senior research associate in biophysical chemistry (MA51403); neither is a battery or electrochemistry project."
     },
     {
       "group": "영국",
@@ -212,16 +208,16 @@
       "link_type": "search",
       "query": "battery postdoc",
       "query_en": "battery postdoc",
-      "desc": "기존 공고가 만료된 뒤 2026-09-22 확인 시에도 신규 공고는 확인되지 않았습니다. Faraday 잡보드에는 옥스퍼드 공학과(Department of Engineering Science)의 포닥 자리가 여전히 묶음으로 언급되나 마감일 표기가 없고 해당 그룹 공고인지도 확인되지 않아 별도 항목으로 올리지 않았습니다.",
-      "desc_en": "After the previous posting expired, no new one was confirmed as of 22 September 2026 either. The Faraday board still mentions postdoc roles in Oxford's Department of Engineering Science as a bundle, but they carry no closing date and are still not confirmed as belonging to this group, so they are not listed separately."
+      "desc": "2026-10-19 확인 시에도 이 그룹의 신규 포닥 공고는 확인되지 않았습니다. 같은 옥스퍼드 재료공학과의 Saiful Islam 그룹 전산 포닥은 별도 항목으로 올렸습니다. jobs.ac.uk의 ‘battery postdoc’ 검색은 이번 회차에 1건(킹스칼리지런던)만 반환했습니다.",
+      "desc_en": "No new postdoc posting for this group was confirmed as of 19 October 2026 either. A computational postdoc in Saiful Islam’s group in the same Oxford Materials department is listed as a separate item. The jobs.ac.uk ‘battery postdoc’ search returned a single result (King’s College London) this run."
     },
     {
       "group": "독일",
       "group_en": "Germany",
       "tag": "공석 없음",
       "tag_en": "No vacancy",
-      "title": "연구원(E 13 TV-L) 자리 내려감 — 학생 보조 1건만 게시",
-      "title_en": "Research Associate (E 13 TV-L) taken down — only a student assistant role listed",
+      "title": "연구원·포닥 공고 없음 — 학생 보조 1건만 게시",
+      "title_en": "No research associate or postdoc posting — only a student assistant role listed",
       "meta": "MEET Battery Research Center · Univ. Münster",
       "meta_en": "MEET Battery Research Center · Univ. of Münster",
       "deadline": "해당 없음",
@@ -231,8 +227,8 @@
       "link_type": "portal",
       "query": "MEET jobs",
       "query_en": "MEET jobs",
-      "desc": "직전 회차에는 개별 공고 URL만 HTTP 410이고 채용 페이지에는 연구원(E 13 TV-L) 직함이 남아 있었으나, 2026-09-22 확인 시에는 그 직함마저 페이지에서 사라지고 학생 보조(Studentische Hilfskraft) 1건만 남았습니다. 자리 자체가 내려간 것으로 보아 ‘공석 없음’으로 고칩니다. 페이지에는 공석이 없을 때 자유지원을 받는다는 안내가 함께 있습니다(meet.hr@uni-muenster.de).",
-      "desc_en": "Last run only the individual posting URL returned HTTP 410 while the jobs page still carried the Research Associate (E 13 TV-L) title; as of 22 September 2026 that title has gone from the page too, leaving only a student assistant role. That reads as the position itself coming down, so the item is changed to 'no vacancy'. The page continues to invite unsolicited applications when nothing is advertised (meet.hr@uni-muenster.de)."
+      "desc": "2026-10-19 확인 시에도 채용 페이지에는 학생 보조(Student Assistant) 1건만 게시돼 있고 연구원·포닥 공고는 없었습니다. 페이지에는 공석이 없을 때 자유지원을 받는다는 안내가 함께 있습니다(meet.hr@uni-muenster.de).",
+      "desc_en": "As of 19 October 2026 the jobs page still lists only a student assistant role and no research associate or postdoc posting. The page continues to invite unsolicited applications when nothing is advertised (meet.hr@uni-muenster.de)."
     },
     {
       "group": "독일",
@@ -248,8 +244,8 @@
       "ok": true,
       "link": "https://hiu-batteries.de/karriere/offene-stellen/",
       "link_type": "deep",
-      "desc": "2026-09-22 확인 시 HIU의 ‘현재 열린 자리(Offene Stellen)’ 페이지에는 단 한 건도 게시돼 있지 않았습니다 — 직전 회차에 있던 학생 보조 공고도 사라졌습니다. 페이지는 공고가 없더라도 연구그룹 리더에게 직접 연락해 자유지원하라고 안내하고 있습니다.",
-      "desc_en": "As of 22 September 2026 HIU's open-positions page listed nothing at all — even the student assistant role present last run has gone. The page invites candidates to apply on their own initiative and to contact the relevant research group leader directly even when nothing is advertised."
+      "desc": "2026-10-19 확인 시에도 HIU의 ‘현재 열린 자리(Offene Stellen)’ 페이지에는 단 한 건도 게시돼 있지 않았습니다. 페이지는 공고가 없더라도 연구그룹 리더에게 직접 연락해 자유지원하라고 안내하고 있습니다.",
+      "desc_en": "As of 19 October 2026 HIU’s open-positions page still listed nothing at all. The page invites candidates to apply on their own initiative and to contact the relevant research group leader directly even when nothing is advertised."
     }
   ]
 }
