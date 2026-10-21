@@ -435,6 +435,24 @@
       "flag": false
     },
     {
+      "key": "cheol-min-park|department-of-materials-science-and-engineering-kumoh-national-institute-of-technology-gumi-gyeongbuk-republic-of-korea",
+      "pi": "Cheol‐Min Park",
+      "org": "Department of Materials Science and Engineering Kumoh National Institute of Technology  Gumi Gyeongbuk Republic of Korea",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/aenm.71728",
+          "date": "2026-10-21",
+          "journal": "Advanced Energy Materials",
+          "title": "Reaction-Driven Coupled Transport–Nanostructure Evolution in SnSb Anodes for High-Energy All-Solid-State Li-Ion Batteries",
+          "link": "https://doi.org/10.1002/aenm.71728"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "chuhong-zhang|state-key-laboratory-of-advanced-polymer-materials-polymer-research-institute-sichuan-university-chengdu-china",
       "pi": "Chuhong Zhang",
       "org": "State Key Laboratory of Advanced Polymer Materials Polymer Research Institute Sichuan University  Chengdu China",
@@ -651,6 +669,24 @@
       "flag": false
     },
     {
+      "key": "feng-lin|virginia-tech",
+      "pi": "Feng Lin",
+      "org": "Virginia Tech , , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/jacs.6c10977",
+          "date": "2026-10-21",
+          "journal": "JACS",
+          "title": "Fluorine-Mediated Molten-Salt Crystallization Regulates Phase Evolution and Structural Stability in Sodium Layered Oxides",
+          "link": "https://doi.org/10.1021/jacs.6c10977"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "feng-pan|school-of-advanced-materials-peking-university-shenzhen-graduate-school-peking-university-shenzhen-china",
       "pi": "Feng Pan",
       "org": "School of Advanced Materials Peking University Shenzhen Graduate School Peking University Shenzhen China",
@@ -682,6 +718,24 @@
           "title": "IonNet: composition-only deep-learning discovery of fast lithium-ion solid electrolytes",
           "link": "https://www.science.org/doi/10.1126/sciadv.aee4959",
           "doi": "10.1126/sciadv.aee4959"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "florian-strauss|karlsruhe-institute-of-technology-kit-kaiserstr-12",
+      "pi": "Florian Strauss",
+      "org": "Karlsruhe Institute of Technology (KIT) , , Kaiserstr. 12 , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/jacs.6c14489",
+          "date": "2026-10-21",
+          "journal": "JACS",
+          "title": "Kinetic Control of Polymorphism in Li10.5Si1.5P1.5S12–Based Solid Electrolytes",
+          "link": "https://doi.org/10.1021/jacs.6c14489"
         }
       ],
       "flag": false
@@ -1371,6 +1425,24 @@
       "flag": false
     },
     {
+      "key": "jun-huang|department-of-polymeric-materials-amp-engineering-college-of-materials-amp-metallurgy-guizhou-university-guiyang-china",
+      "pi": "Jun Huang",
+      "org": "Department of Polymeric Materials &amp; Engineering College of Materials &amp; Metallurgy Guizhou University  Guiyang China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75467",
+          "date": "2026-10-21",
+          "journal": "Advanced Materials",
+          "title": "Atomic-Level Regulating Layer-by-Layer Zinc Deposition by High-Entropy Single-Atoms Electrolyte Additive",
+          "link": "https://doi.org/10.1002/adma.75467"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "jun-lu|college-of-chemical-and-biological-engineering-zhejiang-university-hangzhou-china",
       "pi": "Jun Lu",
       "org": "College of Chemical and Biological Engineering Zhejiang University  Hangzhou China",
@@ -2037,6 +2109,24 @@
       "flag": false
     },
     {
+      "key": "rajendra-k-bordia|department-of-materials-science-and-engineering-clemson-university-clemson-south-carolina-usa",
+      "pi": "Rajendra K. Bordia",
+      "org": "Department of Materials Science and Engineering Clemson University  Clemson South Carolina USA",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/batt.70494",
+          "date": "2026-10-20",
+          "journal": "Batteries & Supercaps",
+          "title": "Si-Rich SiOC–rGO Composites as Advanced Anodes for Lithium-Ion Batteries",
+          "link": "https://doi.org/10.1002/batt.70494"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "ranran-wang|institute-of-environmental-sciences-cml-leiden-university-leiden-netherlands",
       "pi": "Ranran Wang",
       "org": "Institute of Environmental Sciences (CML), Leiden University, Leiden, Netherlands.",
@@ -2068,6 +2158,24 @@
           "journal": "J. Electrochemical Society",
           "title": "Assessment of Power-Limiting Processes in LiFePO4-Based Composite Electrodes: Linking Design and Electrochemical Performance",
           "link": "https://doi.org/10.1149/1945-7111/ae9b72"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "renbing-wu|college-of-smart-materials-and-future-energy-state-key-laboratory-of-advanced-coatings-for-equipment-fudan-university-shanghai-people-s-republic-of-china",
+      "pi": "Renbing Wu",
+      "org": "College of Smart Materials and Future Energy State Key Laboratory of Advanced Coatings for Equipment Fudan University  Shanghai People's Republic of China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/smll.76368",
+          "date": "2026-10-20",
+          "journal": "Small",
+          "title": "Pre-Embedded CNTs Architecture Differentiates Carbon Functions for Kinetics Boosting in All-Solid-State Li–S Cathodes",
+          "link": "https://doi.org/10.1002/smll.76368"
         }
       ],
       "flag": false
@@ -2739,6 +2847,24 @@
       "flag": false
     },
     {
+      "key": "xianglong-li|laboratory-of-nanosystem-and-hierarchical-fabrication-cas-center-for-excellence-in-nanoscience-national-center-for-nanoscience-and-technology-beijing-p-r-china",
+      "pi": "Xianglong Li",
+      "org": "Laboratory of Nanosystem and Hierarchical Fabrication CAS Center for Excellence in Nanoscience National Center for Nanoscience and Technology  Beijing P. R. China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75453",
+          "date": "2026-10-21",
+          "journal": "Advanced Materials",
+          "title": "Interface-Mediated Architectural Engineering of Silicon for Solid-State Batteries: Current Status and Future Outlook",
+          "link": "https://doi.org/10.1002/adma.75453"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "xifei-li|institute-of-advanced-electrochemical-energy-amp-school-of-materials-science-and-engineering-xi-an-university-of-technology-xi-an-shaanxi-people-s-republic-of-china",
       "pi": "Xifei Li",
       "org": "Institute of Advanced Electrochemical Energy &amp; School of Materials Science and Engineering Xi'an University of Technology  Xi'an Shaanxi People's Republic of China",
@@ -2770,6 +2896,24 @@
           "journal": "ACS Energy Letters",
           "title": "Pressure-Driven Topological Reconfiguration toward Fast-Charging Hard Carbon with Plateau-Capacity Retention",
           "link": "https://doi.org/10.1021/acsenergylett.6c02684"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "xiufang-wang|school-of-materials-and-chemical-engineering-anhui-jianzhu-university-hefei-anhui-people-s-republic-of-china",
+      "pi": "Xiufang Wang",
+      "org": "School of Materials and Chemical Engineering Anhui Jianzhu University  Hefei Anhui People's Republic of China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/smll.76317",
+          "date": "2026-10-21",
+          "journal": "Small",
+          "title": "Efficient Pulse Formation to Stabilize SEI Film and Improve Performance of Commercial Lithium-ion Batteries",
+          "link": "https://doi.org/10.1002/smll.76317"
         }
       ],
       "flag": false
@@ -4125,6 +4269,26 @@
       "link": "https://doi.org/10.1038/s41578-026-00971-x",
       "orgs": [],
       "pi_guess": "Guanjie He",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.nanoen.2026.112515",
+      "date": "2026-10",
+      "journal": "Nano Energy",
+      "title": "Thermodynamic equilibrium-potential mechanism guides electrochemical relithiation of degraded lithium-ion cathodes",
+      "link": "https://doi.org/10.1016/j.nanoen.2026.112515",
+      "orgs": [],
+      "pi_guess": "Guangmin Zhou",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.joule.2026.102706",
+      "date": "2026-10",
+      "journal": "Joule",
+      "title": "In situ formation of lithiophobic and tough grain boundary interphases for dendrite-resistant solid-state batteries",
+      "link": "https://doi.org/10.1016/j.joule.2026.102706",
+      "orgs": [],
+      "pi_guess": "Teng Cui",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]
