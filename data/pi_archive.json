@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -14,6 +14,32 @@
     "en": "The names in this edition come from the weekly report summary, not from a direct reading of each paper's author list, so corresponding_confirmed is false throughout. From the next automated run the intent is to resolve corresponding authors through Crossref and OpenAlex."
   },
   "entries": [
+    {
+      "key": "hua-wang|state-key-laboratory-of-bioinspired-interfacial-materials-science-school-of-chemistry-beihang-university-beijing-china",
+      "pi": "Hua Wang",
+      "org": "State Key Laboratory of Bioinspired Interfacial Materials Science School of Chemistry Beihang University  Beijing China",
+      "count": 2,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.74820",
+          "date": "2026-08-25",
+          "journal": "Advanced Materials",
+          "title": "Interface Reconstruction Reviving Dead Na Enables 3,800-Cycle Ah-Level Anode-Free Sodium Batteries",
+          "link": "https://doi.org/10.1002/adma.74820"
+        },
+        {
+          "doi": "10.1002/adma.75401",
+          "date": "2026-10-22",
+          "journal": "Advanced Materials",
+          "title": "Cathode Depolarization Enables 1300‐Cycle Ah‐Level Anode‐Free Sodium Batteries",
+          "link": "https://doi.org/10.1002/adma.75401"
+        }
+      ],
+      "flag": true,
+      "flagged_since": "2026-10-22"
+    },
     {
       "key": "jongwoo-lim|seoul-national-university-1-gwanak-ro-gwanak-gu",
       "pi": "Jongwoo Lim",
@@ -65,6 +91,32 @@
       ],
       "flag": true,
       "flagged_since": "2026-10-15"
+    },
+    {
+      "key": "yong-sheng-hu|institute-of-physics-chinese-academy-of-sciences",
+      "pi": "Yong-Sheng Hu",
+      "org": "Institute of Physics, Chinese Academy of Sciences , , ,",
+      "count": 2,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsenergylett.6c01963",
+          "date": "2026-09-26",
+          "journal": "ACS Energy Letters",
+          "title": "Phosphoric Acid Cross-linking Regulates Closed Pores for Scalable Hard Carbon Anodes",
+          "link": "https://doi.org/10.1021/acsenergylett.6c01963"
+        },
+        {
+          "doi": "10.1021/jacs.6c04535",
+          "date": "2026-10-22",
+          "journal": "JACS",
+          "title": "Dual-Polyhedral Distortion for Low-Cost Amorphous Halide Electrolytes with Improved Ionic Conductivity",
+          "link": "https://doi.org/10.1021/jacs.6c04535"
+        }
+      ],
+      "flag": true,
+      "flagged_since": "2026-10-22"
     },
     {
       "key": "yongyao-xia|fudan-university",
@@ -903,6 +955,24 @@
       "flag": false
     },
     {
+      "key": "han-yong-bae|department-of-chemistry-sungkyunkwan-university-suwon-republic-of-korea",
+      "pi": "Han Yong Bae",
+      "org": "Department of Chemistry Sungkyunkwan University  Suwon Republic of Korea",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/smll.76257",
+          "date": "2026-10-22",
+          "journal": "Small",
+          "title": "Direct Nickel Recovery From Spent NCM Lithium‐Ion Batteries Enabled by Hydrophobic Sulfur‐Donor Extractants",
+          "link": "https://doi.org/10.1002/smll.76257"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "haolun-wang|key-laboratory-of-advanced-spatial-mechanism-and-intelligent-spacecraft-school-of-aeronautics-and-astronautics-ministry-of-education-sichuan-university-chengdu-china",
       "pi": "Haolun Wang",
       "org": "Key Laboratory of Advanced Spatial Mechanism and Intelligent Spacecraft School of Aeronautics and Astronautics Ministry of Education, Sichuan University  Chengdu China",
@@ -970,24 +1040,6 @@
           "journal": "Small",
           "title": "Cabbage-Inspired Graphene Aerogel Microspheres as Efficient Micro-Reactors for High-Yield Production of Short Carbon Nanotubes Toward Li+ Battery",
           "link": "https://doi.org/10.1002/smll.75860"
-        }
-      ],
-      "flag": false
-    },
-    {
-      "key": "hua-wang|state-key-laboratory-of-bioinspired-interfacial-materials-science-school-of-chemistry-beihang-university-beijing-china",
-      "pi": "Hua Wang",
-      "org": "State Key Laboratory of Bioinspired Interfacial Materials Science School of Chemistry Beihang University  Beijing China",
-      "count": 1,
-      "corresponding_confirmed": false,
-      "resolved_by": "crossref-last-author",
-      "papers": [
-        {
-          "doi": "10.1002/adma.74820",
-          "date": "2026-08-25",
-          "journal": "Advanced Materials",
-          "title": "Interface Reconstruction Reviving Dead Na Enables 3,800-Cycle Ah-Level Anode-Free Sodium Batteries",
-          "link": "https://doi.org/10.1002/adma.74820"
         }
       ],
       "flag": false
@@ -3135,19 +3187,37 @@
       "flag": false
     },
     {
-      "key": "yong-sheng-hu|institute-of-physics-chinese-academy-of-sciences",
+      "key": "yong-sheng-hu|chinese-academy-of-sciences",
       "pi": "Yong-Sheng Hu",
-      "org": "Institute of Physics, Chinese Academy of Sciences , , ,",
+      "org": "Chinese Academy of Sciences , , ,",
       "count": 1,
       "corresponding_confirmed": false,
       "resolved_by": "crossref-last-author",
       "papers": [
         {
-          "doi": "10.1021/acsenergylett.6c01963",
-          "date": "2026-09-26",
+          "doi": "10.1021/acsenergylett.6c02972",
+          "date": "2026-10-22",
           "journal": "ACS Energy Letters",
-          "title": "Phosphoric Acid Cross-linking Regulates Closed Pores for Scalable Hard Carbon Anodes",
-          "link": "https://doi.org/10.1021/acsenergylett.6c01963"
+          "title": "Low-Cost Iron/Manganese-Based Polyanionic Cathodes for Sustainable Na-Ion Batteries",
+          "link": "https://doi.org/10.1021/acsenergylett.6c02972"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "yong-tae-kim|department-of-materials-science-and-engineering-pohang-university-of-science-and-technology-postech-pohang-republic-of-korea",
+      "pi": "Yong‐Tae Kim",
+      "org": "Department of Materials Science and Engineering Pohang University of Science and Technology (POSTECH)  Pohang Republic of Korea",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/aenm.71727",
+          "date": "2026-10-22",
+          "journal": "Advanced Energy Materials",
+          "title": "Tracing and Healing Multiscale Defects for Cost‐Effective Lithium Carbonate‐Derived Layered Oxide Cathodes",
+          "link": "https://doi.org/10.1002/aenm.71727"
         }
       ],
       "flag": false
@@ -3346,6 +3416,24 @@
           "journal": "Advanced Materials",
           "title": "Multi-Physical Field Coupling Mechanisms and Multi-Scale Design for All-Solid-State Lithium Batteries",
           "link": "https://doi.org/10.1002/adma.74798"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "yunhui-huang|state-key-laboratory-of-material-processing-and-die-amp-mould-technology-school-of-materials-science-and-engineering-huazhong-university-of-science-and-technology-wuhan-hubei-china",
+      "pi": "Yunhui Huang",
+      "org": "State Key Laboratory of Material Processing and Die &amp; Mould Technology School of Materials Science and Engineering Huazhong University of Science and Technology  Wuhan Hubei China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75466",
+          "date": "2026-10-21",
+          "journal": "Advanced Materials",
+          "title": "Industry‐Scalable Interfacial Design for Stabilizing PET‐Cu Current Collectors",
+          "link": "https://doi.org/10.1002/adma.75466"
         }
       ],
       "flag": false
@@ -4289,6 +4377,26 @@
       "link": "https://doi.org/10.1016/j.joule.2026.102706",
       "orgs": [],
       "pi_guess": "Teng Cui",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.241800",
+      "date": "2027-01",
+      "journal": "Journal of Power Sources",
+      "title": "Ultrafast Laser structuring of thick NMC90 cathodes for enhanced high-rate performance and reduced tortuosity",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241800",
+      "orgs": [],
+      "pi_guess": "Alessandro Fortunato",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.241716",
+      "date": "2027-01",
+      "journal": "Journal of Power Sources",
+      "title": "Experimental investigation of long-term damage evolution in mechanically indented lithium-ion pouch cells",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241716",
+      "orgs": [],
+      "pi_guess": "Christopher D. Rahn",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]

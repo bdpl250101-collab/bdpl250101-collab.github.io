@@ -2,20 +2,100 @@
   "week": "2026-W43",
   "iso_year": 2026,
   "iso_week": 43,
-  "generated": "2026-10-22",
+  "generated": "2026-10-23",
   "note": {
     "ko": "주차별 스냅샷입니다. 페이지는 최근 7일 롤링 창이라, 이 파일은 그 주의 마지막 실행 시점 상태를 담습니다. 일별 기록은 data/archive/daily/ 에 있습니다.",
     "en": "A per-week snapshot. The page is a rolling 7-day window, so this file holds the state at the week's last run. Per-day records live in data/archive/daily/."
   },
   "counts": {
-    "research": 45,
-    "industry": 10,
-    "science": 9,
+    "research": 53,
+    "industry": 13,
+    "science": 11,
     "jobs": 4,
     "postdoc": 11,
     "grants": 1
   },
   "research": [
+    {
+      "cat": "셀",
+      "sub": "무음극 셀",
+      "title": "Cathode Depolarization Enables 1300‐Cycle Ah‐Level Anode‐Free Sodium Batteries",
+      "org": "Jiang et al. (Jiamusi Univ.)",
+      "journal": "Advanced Materials",
+      "date": "2026-10-22",
+      "added": "2026-10-23",
+      "link": "https://doi.org/10.1002/adma.75401"
+    },
+    {
+      "cat": "전극",
+      "sub": "집전체",
+      "title": "Industry‐Scalable Interfacial Design for Stabilizing PET‐Cu Current Collectors",
+      "org": "Zhao et al. (Huazhong Univ. of Sci. & Tech.)",
+      "journal": "Advanced Materials",
+      "date": "2026-10-21",
+      "added": "2026-10-23",
+      "link": "https://doi.org/10.1002/adma.75466"
+    },
+    {
+      "cat": "소재",
+      "sub": "합성 공정",
+      "title": "Tracing and Healing Multiscale Defects for Cost‐Effective Lithium Carbonate‐Derived Layered Oxide Cathodes",
+      "org": "Kwon et al. (POSTECH)",
+      "journal": "Advanced Energy Materials",
+      "date": "2026-10-22",
+      "added": "2026-10-23",
+      "link": "https://doi.org/10.1002/aenm.71727"
+    },
+    {
+      "cat": "소재",
+      "sub": "고체전해질",
+      "title": "Dual-Polyhedral Distortion for Low-Cost Amorphous Halide Electrolytes with Improved Ionic Conductivity",
+      "org": "Zhu et al. (Inst. of Physics, CAS)",
+      "journal": "JACS",
+      "date": "2026-10-22",
+      "added": "2026-10-23",
+      "link": "https://doi.org/10.1021/jacs.6c04535"
+    },
+    {
+      "cat": "전극",
+      "sub": "전극 구조",
+      "title": "Ultrafast Laser structuring of thick NMC90 cathodes for enhanced high-rate performance and reduced tortuosity",
+      "org": "Magrini et al.",
+      "journal": "Journal of Power Sources",
+      "date": "2027-01",
+      "added": "2026-10-23",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241800"
+    },
+    {
+      "cat": "셀",
+      "sub": "안전성",
+      "title": "Experimental investigation of long-term damage evolution in mechanically indented lithium-ion pouch cells",
+      "org": "Moon et al.",
+      "journal": "Journal of Power Sources",
+      "date": "2027-01",
+      "added": "2026-10-23",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241716"
+    },
+    {
+      "cat": "공정",
+      "sub": "리사이클링",
+      "title": "Direct Nickel Recovery From Spent NCM Lithium‐Ion Batteries Enabled by Hydrophobic Sulfur‐Donor Extractants",
+      "org": "Koo et al. (Sungkyunkwan Univ.)",
+      "journal": "Small",
+      "date": "2026-10-22",
+      "added": "2026-10-23",
+      "link": "https://doi.org/10.1002/smll.76257"
+    },
+    {
+      "cat": "저널",
+      "sub": "나트륨",
+      "title": "Low-Cost Iron/Manganese-Based Polyanionic Cathodes for Sustainable Na-Ion Batteries",
+      "org": "Xu et al. (Southwest Jiaotong Univ.)",
+      "journal": "ACS Energy Letters",
+      "date": "2026-10-22",
+      "added": "2026-10-23",
+      "link": "https://doi.org/10.1021/acsenergylett.6c02972"
+    },
     {
       "cat": "공정",
       "sub": "화성 공정",
@@ -471,6 +551,30 @@
     {
       "region": "해외",
       "type": "실적",
+      "company": "QuantumScape",
+      "date": "2026-10-21",
+      "added": "2026-10-23",
+      "link": "https://www.sec.gov/Archives/edgar/data/0001811414/000119312526427862/qs-ex99_1.htm"
+    },
+    {
+      "region": "해외",
+      "type": "판매",
+      "company": "CATL",
+      "date": "2026-10-22",
+      "added": "2026-10-23",
+      "link": "https://cnevpost.com/2026/10/22/catl-battery-swap-baic-adoption"
+    },
+    {
+      "region": "해외",
+      "type": "신기술",
+      "company": "GM",
+      "date": "2026-10-22",
+      "added": "2026-10-23",
+      "link": "https://www.thelec.net/news/articleView.html?idxno=14836"
+    },
+    {
+      "region": "해외",
+      "type": "실적",
       "company": "CATL",
       "date": "2026-10-21",
       "added": "2026-10-22",
@@ -550,6 +654,22 @@
     }
   ],
   "science": [
+    {
+      "field": "생명",
+      "title": "Oxford Scientists Discover How Viruses Build Themselves Without a Blueprint",
+      "source": "ScienceDaily / Univ. of Oxford",
+      "date": "2026-10-22",
+      "added": "2026-10-23",
+      "link": "https://www.sciencedaily.com/releases/2026/10/261021231248.htm"
+    },
+    {
+      "field": "우주",
+      "title": "NASA’s Curiosity Rover Reveals a Spectacular New View of Mars with a Mystery on the Horizon",
+      "source": "ScienceDaily / NASA JPL",
+      "date": "2026-10-22",
+      "added": "2026-10-23",
+      "link": "https://www.sciencedaily.com/releases/2026/10/261021231238.htm"
+    },
     {
       "field": "우주",
       "title": "A train was delayed by a solar storm. But something didn’t add up.",
