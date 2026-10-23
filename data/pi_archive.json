@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22",
+  "updated": "2026-10-23",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -883,6 +883,24 @@
       "flag": false
     },
     {
+      "key": "guanglei-cui|college-of-chemistry-chemical-engineering-and-materials-science-shandong-normal-university-jinan-p-r-china",
+      "pi": "Guanglei Cui",
+      "org": "College of Chemistry Chemical Engineering and Materials Science Shandong Normal University  Jinan P. R. China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/anie.6271722",
+          "date": "2026-10-23",
+          "journal": "Angewandte Chemie Int. Ed.",
+          "title": "Non‐Fluorinated Electrolytes Enable Long‐Cycling Micron‐Sized Silicon Anodes",
+          "link": "https://doi.org/10.1002/anie.6271722"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "guoxiu-wang|centre-for-clean-energy-technology-university-of-technology-sydney-sydney-new-south-wales-australia",
       "pi": "Guoxiu Wang",
       "org": "Centre For Clean Energy Technology University of Technology Sydney  Sydney New South Wales Australia",
@@ -932,6 +950,24 @@
           "journal": "ChemRxiv (preprint)",
           "title": "Achieving High Active Material Loading for Co- and Ni-free Cathodes for Lithium-Ion Batteries Through Conductive Network Integration",
           "link": "https://doi.org/10.26434/chemrxiv.15007802/v1"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "haijiao-zhang|shanghai-university",
+      "pi": "Haijiao Zhang",
+      "org": "Shanghai University , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsnano.6c13032",
+          "date": "2026-10-23",
+          "journal": "ACS Nano",
+          "title": "Coupled Design of Silicon Anodes and Solid-State Electrolytes for High-Performance All-Solid-State Batteries",
+          "link": "https://doi.org/10.1021/acsnano.6c13032"
         }
       ],
       "flag": false
@@ -1724,6 +1760,24 @@
           "journal": "Advanced Materials",
           "title": "Voltage Hysteresis Induced by Fragile Quasi-Flat Bands in Oxygen-Redox Cathodes",
           "link": "https://doi.org/10.1002/adma.75396"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "linfeng-hu|southeast-university",
+      "pi": "Linfeng Hu",
+      "org": "Southeast University , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/jacs.6c15227",
+          "date": "2026-10-23",
+          "journal": "JACS",
+          "title": "Mechanistic Insights of Jahn–Teller Effect Suppression in High-Entropy Prussian Blue Analogue Cathodes",
+          "link": "https://doi.org/10.1021/jacs.6c15227"
         }
       ],
       "flag": false
@@ -3061,6 +3115,24 @@
       "flag": false
     },
     {
+      "key": "yang-kook-sun|hanyang-university",
+      "pi": "Yang-Kook Sun",
+      "org": "Hanyang University , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsenergylett.6c02808",
+          "date": "2026-10-23",
+          "journal": "ACS Energy Letters",
+          "title": "High-Performance LiNiO2 Cathodes through Microstructural Engineering",
+          "link": "https://doi.org/10.1021/acsenergylett.6c02808"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "yet-ming-chiang|department-of-materials-science-engineering",
       "pi": "Yet-Ming Chiang",
       "org": "Department of Materials Science & Engineering",
@@ -3110,6 +3182,24 @@
           "journal": "Small",
           "title": "Recent Progress of Single-Atom Catalysts for High-Performance Metal-Sulfur Batteries",
           "link": "https://doi.org/10.1002/smll.75895"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "yi-cui|stanford-university",
+      "pi": "Yi Cui",
+      "org": "Stanford University , , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsenergylett.6c01766",
+          "date": "2026-10-23",
+          "journal": "ACS Energy Letters",
+          "title": "Quantifying Sodium Metal SEI Dissolution and Relation to Corrosion Using Quartz Crystal Microbalance",
+          "link": "https://doi.org/10.1021/acsenergylett.6c01766"
         }
       ],
       "flag": false
@@ -4397,6 +4487,46 @@
       "link": "https://doi.org/10.1016/j.jpowsour.2026.241716",
       "orgs": [],
       "pi_guess": "Christopher D. Rahn",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1038/s41893-026-01970-0",
+      "date": "2026-10-23",
+      "journal": "Nature Sustainability",
+      "title": "A circular oligo(disulfide) anolyte enables practical aqueous redox flow batteries",
+      "link": "https://doi.org/10.1038/s41893-026-01970-0",
+      "orgs": [],
+      "pi_guess": "Yongzhu Fu",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.241717",
+      "date": "2027-01",
+      "journal": "Journal of Power Sources",
+      "title": "A combined preheating approach for fast charging of lithium-ion batteries at sub-zero temperatures",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241717",
+      "orgs": [],
+      "pi_guess": "Mahesh Krishnamurthy",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.ensm.2026.105603",
+      "date": "2026-10",
+      "journal": "Energy Storage Materials",
+      "title": "Mechanistic Asymmetry: Thermo-Electrochemical Interactions in Silicon-Graphite Composite Anodes",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105603",
+      "orgs": [],
+      "pi_guess": "Partha P. Mukherjee",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.joule.2026.102712",
+      "date": "2026-10",
+      "journal": "Joule",
+      "title": "The Battery Data Commons registry",
+      "link": "https://doi.org/10.1016/j.joule.2026.102712",
+      "orgs": [],
+      "pi_guess": "Gonçalo dos Reis",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]

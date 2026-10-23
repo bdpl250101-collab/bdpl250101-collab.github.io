@@ -2,20 +2,110 @@
   "week": "2026-W43",
   "iso_year": 2026,
   "iso_week": 43,
-  "generated": "2026-10-23",
+  "generated": "2026-10-24",
   "note": {
     "ko": "주차별 스냅샷입니다. 페이지는 최근 7일 롤링 창이라, 이 파일은 그 주의 마지막 실행 시점 상태를 담습니다. 일별 기록은 data/archive/daily/ 에 있습니다.",
     "en": "A per-week snapshot. The page is a rolling 7-day window, so this file holds the state at the week's last run. Per-day records live in data/archive/daily/."
   },
   "counts": {
-    "research": 53,
-    "industry": 13,
-    "science": 11,
+    "research": 62,
+    "industry": 14,
+    "science": 13,
     "jobs": 4,
     "postdoc": 11,
     "grants": 1
   },
   "research": [
+    {
+      "cat": "소재",
+      "sub": "양극",
+      "title": "High-Performance LiNiO2 Cathodes through Microstructural Engineering",
+      "org": "Park et al. (Hanyang Univ.)",
+      "journal": "ACS Energy Letters",
+      "date": "2026-10-23",
+      "added": "2026-10-24",
+      "link": "https://doi.org/10.1021/acsenergylett.6c02808"
+    },
+    {
+      "cat": "소재",
+      "sub": "실리콘 음극",
+      "title": "Non‐Fluorinated Electrolytes Enable Long‐Cycling Micron‐Sized Silicon Anodes",
+      "org": "Qu et al. (Shandong Normal Univ.)",
+      "journal": "Angewandte Chemie Int. Ed.",
+      "date": "2026-10-23",
+      "added": "2026-10-24",
+      "link": "https://doi.org/10.1002/anie.6271722"
+    },
+    {
+      "cat": "소재",
+      "sub": "양극",
+      "title": "Mechanistic Insights of Jahn–Teller Effect Suppression in High-Entropy Prussian Blue Analogue Cathodes",
+      "org": "Wu et al. (Southeast Univ.)",
+      "journal": "JACS",
+      "date": "2026-10-23",
+      "added": "2026-10-24",
+      "link": "https://doi.org/10.1021/jacs.6c15227"
+    },
+    {
+      "cat": "소재",
+      "sub": "흐름전지",
+      "title": "A circular oligo(disulfide) anolyte enables practical aqueous redox flow batteries",
+      "org": "Chen et al.",
+      "journal": "Nature Sustainability",
+      "date": "2026-10-23",
+      "added": "2026-10-24",
+      "link": "https://doi.org/10.1038/s41893-026-01970-0"
+    },
+    {
+      "cat": "셀",
+      "sub": "Na금속 SEI",
+      "title": "Quantifying Sodium Metal SEI Dissolution and Relation to Corrosion Using Quartz Crystal Microbalance",
+      "org": "Cai et al. (Stanford Univ.)",
+      "journal": "ACS Energy Letters",
+      "date": "2026-10-23",
+      "added": "2026-10-24",
+      "link": "https://doi.org/10.1021/acsenergylett.6c01766"
+    },
+    {
+      "cat": "셀",
+      "sub": "급속충전",
+      "title": "A combined preheating approach for fast charging of lithium-ion batteries at sub-zero temperatures",
+      "org": "Yassin et al.",
+      "journal": "Journal of Power Sources",
+      "date": "2027-01",
+      "added": "2026-10-24",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241717"
+    },
+    {
+      "cat": "셀",
+      "sub": "열화 기구",
+      "title": "Mechanistic Asymmetry: Thermo-Electrochemical Interactions in Silicon-Graphite Composite Anodes",
+      "org": "Kim et al.",
+      "journal": "Energy Storage Materials",
+      "date": "2026-10",
+      "added": "2026-10-24",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105603"
+    },
+    {
+      "cat": "저널",
+      "sub": "리뷰",
+      "title": "Coupled Design of Silicon Anodes and Solid-State Electrolytes for High-Performance All-Solid-State Batteries",
+      "org": "Zhou et al. (Shanghai Univ.)",
+      "journal": "ACS Nano",
+      "date": "2026-10-23",
+      "added": "2026-10-24",
+      "link": "https://doi.org/10.1021/acsnano.6c13032"
+    },
+    {
+      "cat": "저널",
+      "sub": "데이터 인프라",
+      "title": "The Battery Data Commons registry",
+      "org": "Hassini et al.",
+      "journal": "Joule",
+      "date": "2026-10",
+      "added": "2026-10-24",
+      "link": "https://doi.org/10.1016/j.joule.2026.102712"
+    },
     {
       "cat": "셀",
       "sub": "무음극 셀",
@@ -550,6 +640,14 @@
   "industry": [
     {
       "region": "해외",
+      "type": "신기술",
+      "company": "Chery",
+      "date": "2026-10-23",
+      "added": "2026-10-24",
+      "link": "https://www.electrive.com/2026/10/23/chery-launches-megawatt-charging-system-for-passenger-evs/"
+    },
+    {
+      "region": "해외",
       "type": "실적",
       "company": "QuantumScape",
       "date": "2026-10-21",
@@ -654,6 +752,22 @@
     }
   ],
   "science": [
+    {
+      "field": "지구",
+      "title": "One of Earth’s Most Powerful Supervolcanoes Is Refilling with Fresh Magma",
+      "source": "ScienceDaily / Kobe Univ.",
+      "date": "2026-10-23",
+      "added": "2026-10-24",
+      "link": "https://www.sciencedaily.com/releases/2026/10/261023003214.htm"
+    },
+    {
+      "field": "물리",
+      "title": "A Tiny Defect in a Crystal Reveals a Big Quantum Surprise",
+      "source": "ScienceDaily / Univ. of Chicago PME",
+      "date": "2026-10-23",
+      "added": "2026-10-24",
+      "link": "https://www.sciencedaily.com/releases/2026/10/261022081302.htm"
+    },
     {
       "field": "생명",
       "title": "Oxford Scientists Discover How Viruses Build Themselves Without a Blueprint",
