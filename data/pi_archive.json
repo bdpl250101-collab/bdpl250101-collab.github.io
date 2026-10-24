@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23",
+  "updated": "2026-10-24",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -14,6 +14,32 @@
     "en": "The names in this edition come from the weekly report summary, not from a direct reading of each paper's author list, so corresponding_confirmed is false throughout. From the next automated run the intent is to resolve corresponding authors through Crossref and OpenAlex."
   },
   "entries": [
+    {
+      "key": "feng-pan|school-of-advanced-materials-peking-university-shenzhen-graduate-school-peking-university-shenzhen-china",
+      "pi": "Feng Pan",
+      "org": "School of Advanced Materials Peking University Shenzhen Graduate School Peking University Shenzhen China",
+      "count": 2,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.74909",
+          "date": "2026-09-05",
+          "journal": "Advanced Materials",
+          "title": "Decoupled Synthesis Pathway via Precursor Functionalization Stabilizes High-Voltage Nickel-Based Cathodes",
+          "link": "https://doi.org/10.1002/adma.74909"
+        },
+        {
+          "doi": "10.1002/anie.4356451",
+          "date": "2026-10-24",
+          "journal": "Angewandte Chemie Int. Ed.",
+          "title": "Suppressing Irreversible Interfacial Spatial Electron Transfer for High‐Temperature 4.6 V LiCoO2",
+          "link": "https://doi.org/10.1002/anie.4356451"
+        }
+      ],
+      "flag": true,
+      "flagged_since": "2026-10-24"
+    },
     {
       "key": "hua-wang|state-key-laboratory-of-bioinspired-interfacial-materials-science-school-of-chemistry-beihang-university-beijing-china",
       "pi": "Hua Wang",
@@ -739,24 +765,6 @@
       "flag": false
     },
     {
-      "key": "feng-pan|school-of-advanced-materials-peking-university-shenzhen-graduate-school-peking-university-shenzhen-china",
-      "pi": "Feng Pan",
-      "org": "School of Advanced Materials Peking University Shenzhen Graduate School Peking University Shenzhen China",
-      "count": 1,
-      "corresponding_confirmed": false,
-      "resolved_by": "crossref-last-author",
-      "papers": [
-        {
-          "doi": "10.1002/adma.74909",
-          "date": "2026-09-05",
-          "journal": "Advanced Materials",
-          "title": "Decoupled Synthesis Pathway via Precursor Functionalization Stabilizes High-Voltage Nickel-Based Cathodes",
-          "link": "https://doi.org/10.1002/adma.74909"
-        }
-      ],
-      "flag": false
-    },
-    {
       "key": "fengqi-you|cornell-university",
       "pi": "Fengqi You",
       "org": "Cornell University",
@@ -1004,6 +1012,24 @@
           "journal": "Small",
           "title": "Direct Nickel Recovery From Spent NCM Lithium‐Ion Batteries Enabled by Hydrophobic Sulfur‐Donor Extractants",
           "link": "https://doi.org/10.1002/smll.76257"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "haobo-li|school-of-chemistry-chemical-engineering-and-biotechnology-nanyang-technological-university-singapore-singapore",
+      "pi": "Haobo Li",
+      "org": "School of Chemistry Chemical Engineering and Biotechnology Nanyang Technological University  Singapore Singapore",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75492",
+          "date": "2026-10-23",
+          "journal": "Advanced Materials",
+          "title": "Machine‐Learning‐Potential‐Driven Volcano Relationship in Grain Boundary Amorphicity and Ionic Transport of Antiperovskite Solid Electrolytes",
+          "link": "https://doi.org/10.1002/adma.75492"
         }
       ],
       "flag": false
@@ -1729,6 +1755,24 @@
       "flag": false
     },
     {
+      "key": "li-li|innovative-research-team-in-high-safety-energy-storage-system-and-smart-microgrids-of-guangdong-province-beijing-institute-of-technology-zhuhai-zhuhai-china",
+      "pi": "Li Li",
+      "org": "Innovative Research Team in High–Safety Energy Storage System and Smart Microgrids of Guangdong Province Beijing Institute of Technology (Zhuhai) Zhuhai China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/anie.5827213",
+          "date": "2026-10-24",
+          "journal": "Angewandte Chemie Int. Ed.",
+          "title": "Spatial Redistribution of Intrinsic Cation Disorder Toward Ultra‐Stable Regeneration of LiNi0.5Co0.2Mn0.3O2 Cathode",
+          "link": "https://doi.org/10.1002/anie.5827213"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "liang-zhang|soochow-university",
       "pi": "Liang Zhang",
       "org": "Soochow University , , , ,",
@@ -2156,6 +2200,24 @@
           "journal": "Science Advances",
           "title": "Dipole-dipole interaction facilitates anion-rich solvation structures in polymer electrolytes for solid-state lithium metal batteries",
           "link": "https://doi.org/10.1126/sciadv.aej0175"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "qichun-zhang|department-of-materials-science-and-engineering-amp-department-of-chemistry-city-university-of-hong-kong-hong-kong-hong-kong",
+      "pi": "Qichun Zhang",
+      "org": "Department of Materials Science and Engineering &amp; Department of Chemistry City University of Hong Kong  Hong Kong Hong Kong",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75494",
+          "date": "2026-10-23",
+          "journal": "Advanced Materials",
+          "title": "Amorphization Unlocks Active Sites in Organic Small Molecules for Ah‐Level Aqueous Ammonium‐Ion Batteries",
+          "link": "https://doi.org/10.1002/adma.75494"
         }
       ],
       "flag": false
@@ -2971,6 +3033,24 @@
       "flag": false
     },
     {
+      "key": "xiangming-he|institute-of-nuclear-amp-new-energy-technology-tsinghua-university-beijing-china",
+      "pi": "Xiangming He",
+      "org": "Institute of Nuclear &amp; New Energy Technology Tsinghua University  Beijing China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/aenm.71748",
+          "date": "2026-10-24",
+          "journal": "Advanced Energy Materials",
+          "title": "Mineral Particle Suspensions in Carbonate Electrolyte Enable LiF‐Rich Interphases for Durable Lithium Metal Batteries",
+          "link": "https://doi.org/10.1002/aenm.71748"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "xifei-li|institute-of-advanced-electrochemical-energy-amp-school-of-materials-science-and-engineering-xi-an-university-of-technology-xi-an-shaanxi-people-s-republic-of-china",
       "pi": "Xifei Li",
       "org": "Institute of Advanced Electrochemical Energy &amp; School of Materials Science and Engineering Xi'an University of Technology  Xi'an Shaanxi People's Republic of China",
@@ -3272,6 +3352,24 @@
           "journal": "Small",
           "title": "Unveiling the Structural Advantages in PTFE-Based Dry-Processed Electrodes for Sulfide-Based All-Solid-State Batteries",
           "link": "https://doi.org/10.1002/smll.75974"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "yong-mook-kang|korea-university",
+      "pi": "Yong-Mook Kang",
+      "org": "Korea University , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/jacs.6c17588",
+          "date": "2026-10-24",
+          "journal": "JACS",
+          "title": "Vacancy-Induced Ligand-Hole Character Redirects Oxygen Redox in Li-Rich Layered Oxides",
+          "link": "https://doi.org/10.1021/jacs.6c17588"
         }
       ],
       "flag": false
@@ -4527,6 +4625,16 @@
       "link": "https://doi.org/10.1016/j.joule.2026.102712",
       "orgs": [],
       "pi_guess": "Gonçalo dos Reis",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.electacta.2026.150269",
+      "date": "2026-10",
+      "journal": "Electrochimica Acta",
+      "title": "Strain-induced Crystallization Enabled HSBR-CMC Composite Binder for High Performance Silicon Anodes",
+      "link": "https://doi.org/10.1016/j.electacta.2026.150269",
+      "orgs": [],
+      "pi_guess": "Dongmei Yue",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]

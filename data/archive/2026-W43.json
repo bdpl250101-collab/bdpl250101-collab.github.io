@@ -2,20 +2,90 @@
   "week": "2026-W43",
   "iso_year": 2026,
   "iso_week": 43,
-  "generated": "2026-10-24",
+  "generated": "2026-10-25",
   "note": {
     "ko": "주차별 스냅샷입니다. 페이지는 최근 7일 롤링 창이라, 이 파일은 그 주의 마지막 실행 시점 상태를 담습니다. 일별 기록은 data/archive/daily/ 에 있습니다.",
     "en": "A per-week snapshot. The page is a rolling 7-day window, so this file holds the state at the week's last run. Per-day records live in data/archive/daily/."
   },
   "counts": {
-    "research": 62,
-    "industry": 14,
-    "science": 13,
+    "research": 69,
+    "industry": 16,
+    "science": 14,
     "jobs": 4,
     "postdoc": 11,
     "grants": 1
   },
   "research": [
+    {
+      "cat": "소재",
+      "sub": "리튬과잉 양극",
+      "title": "Vacancy-Induced Ligand-Hole Character Redirects Oxygen Redox in Li-Rich Layered Oxides",
+      "org": "Jeong et al. (Korea Univ.)",
+      "journal": "JACS",
+      "date": "2026-10-24",
+      "added": "2026-10-25",
+      "link": "https://doi.org/10.1021/jacs.6c17588"
+    },
+    {
+      "cat": "셀",
+      "sub": "Li금속 SEI",
+      "title": "Mineral Particle Suspensions in Carbonate Electrolyte Enable LiF‐Rich Interphases for Durable Lithium Metal Batteries",
+      "org": "Liang et al. (Chongqing Univ.)",
+      "journal": "Advanced Energy Materials",
+      "date": "2026-10-24",
+      "added": "2026-10-25",
+      "link": "https://doi.org/10.1002/aenm.71748"
+    },
+    {
+      "cat": "소재",
+      "sub": "용매 설계",
+      "title": "Suppressing Irreversible Interfacial Spatial Electron Transfer for High‐Temperature 4.6 V LiCoO2",
+      "org": "Wang et al. (Peking Univ. Shenzhen Grad. School)",
+      "journal": "Angewandte Chemie Int. Ed.",
+      "date": "2026-10-24",
+      "added": "2026-10-25",
+      "link": "https://doi.org/10.1002/anie.4356451"
+    },
+    {
+      "cat": "공정",
+      "sub": "직접 리사이클링",
+      "title": "Spatial Redistribution of Intrinsic Cation Disorder Toward Ultra‐Stable Regeneration of LiNi0.5Co0.2Mn0.3O2 Cathode",
+      "org": "Zhu et al. (Beijing Inst. of Tech., Zhuhai)",
+      "journal": "Angewandte Chemie Int. Ed.",
+      "date": "2026-10-24",
+      "added": "2026-10-25",
+      "link": "https://doi.org/10.1002/anie.5827213"
+    },
+    {
+      "cat": "소재",
+      "sub": "고체전해질",
+      "title": "Machine‐Learning‐Potential‐Driven Volcano Relationship in Grain Boundary Amorphicity and Ionic Transport of Antiperovskite Solid Electrolytes",
+      "org": "Bin Faheem et al. (Nanyang Technological Univ.)",
+      "journal": "Advanced Materials",
+      "date": "2026-10-23",
+      "added": "2026-10-25",
+      "link": "https://doi.org/10.1002/adma.75492"
+    },
+    {
+      "cat": "셀",
+      "sub": "수계 전지",
+      "title": "Amorphization Unlocks Active Sites in Organic Small Molecules for Ah‐Level Aqueous Ammonium‐Ion Batteries",
+      "org": "Ma et al. (Shandong Univ. of Sci. & Tech.)",
+      "journal": "Advanced Materials",
+      "date": "2026-10-23",
+      "added": "2026-10-25",
+      "link": "https://doi.org/10.1002/adma.75494"
+    },
+    {
+      "cat": "전극",
+      "sub": "바인더",
+      "title": "Strain-induced Crystallization Enabled HSBR-CMC Composite Binder for High Performance Silicon Anodes",
+      "org": "Yang et al.",
+      "journal": "Electrochimica Acta",
+      "date": "2026-10",
+      "added": "2026-10-25",
+      "link": "https://doi.org/10.1016/j.electacta.2026.150269"
+    },
     {
       "cat": "소재",
       "sub": "양극",
@@ -641,6 +711,22 @@
     {
       "region": "해외",
       "type": "신기술",
+      "company": "Fraunhofer",
+      "date": "2026-10-24",
+      "added": "2026-10-25",
+      "link": "https://www.electrive.com/2026/10/24/fraunhofer-researchers-aim-to-unlock-the-potential-of-lithium-metal-anodes/"
+    },
+    {
+      "region": "해외",
+      "type": "판매",
+      "company": "CATL",
+      "date": "2026-10-24",
+      "added": "2026-10-25",
+      "link": "https://cnevpost.com/2026/10/24/catl-qilin-battery-nio-firefly-60-kwh/"
+    },
+    {
+      "region": "해외",
+      "type": "신기술",
       "company": "Chery",
       "date": "2026-10-23",
       "added": "2026-10-24",
@@ -752,6 +838,14 @@
     }
   ],
   "science": [
+    {
+      "field": "우주",
+      "title": "NASA’s Asteroid Bennu Samples Reveal a 4.5-Billion-Year-Old Secret",
+      "source": "ScienceDaily / ETH Zurich",
+      "date": "2026-10-24",
+      "added": "2026-10-25",
+      "link": "https://www.sciencedaily.com/releases/2026/10/261023023734.htm"
+    },
     {
       "field": "지구",
       "title": "One of Earth’s Most Powerful Supervolcanoes Is Refilling with Fresh Magma",
