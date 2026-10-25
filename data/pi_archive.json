@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-24",
+  "updated": "2026-10-25",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -202,6 +202,24 @@
           "journal": "Batteries & Supercaps",
           "title": "Accelerated Parameter Optimization of Granular Models of Battery Manufacturing",
           "link": "https://doi.org/10.1002/batt.70490"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "alejandro-a-franco|laboratoire-de-r-activit-et-de-chimie-des-solides-umr-cnrs-7314-universit-de-picardie-jules-verne-amiens-france",
+      "pi": "Alejandro A. Franco",
+      "org": "Laboratoire de Réactivité et de Chimie des Solides, UMR CNRS 7314, Université de Picardie Jules Verne  Amiens France",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/batt.70512",
+          "date": "2026-10-25",
+          "journal": "Batteries & Supercaps",
+          "title": "Insights Into Electrolyte Effects on Interfacial Kinetics and Transport in Porous Redox Flow Battery Electrodes: A Multiparadigm Modeling Study",
+          "link": "https://doi.org/10.1002/batt.70512"
         }
       ],
       "flag": false
@@ -1174,6 +1192,24 @@
           "journal": "Advanced Energy Materials",
           "title": "Ultrafast Synthesis of High-Purity LiMnₓFe₁₋ₓPO₄ With Locked-Nanosize From Spent LiFePO₄",
           "link": "https://doi.org/10.1002/aenm.71487"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "huolin-l-xin|university-of-california",
+      "pi": "Huolin L. Xin",
+      "org": "University of California , , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsenergylett.6c01681",
+          "date": "2026-10-25",
+          "journal": "ACS Energy Letters",
+          "title": "Making 1000 Wh/kg LiNiO2 Cathode Nearly Strain-Free by Complex-Concentrated Doping",
+          "link": "https://doi.org/10.1021/acsenergylett.6c01681"
         }
       ],
       "flag": false
@@ -2740,6 +2776,24 @@
           "journal": "Advanced Materials",
           "title": "Intermediate-Phase Buffering Unlocks Reversible High-Voltage Cycling in O3-Type Sodium Oxide Cathodes",
           "link": "https://doi.org/10.1002/adma.74755"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "verena-k-pers|meet-battery-research-center-institute-of-physical-chemistry-university-of-m-nster-m-nster-germany",
+      "pi": "Verena Küpers",
+      "org": "MEET Battery Research Center Institute of Physical Chemistry University of Münster  Münster Germany",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/batt.70515",
+          "date": "2026-10-25",
+          "journal": "Batteries & Supercaps",
+          "title": "TTE‐Based Localized High‐Concentration Electrolytes in Li Metal Cells: Effects on Li Reactivity and Solid Electrolyte Interphase Formation",
+          "link": "https://doi.org/10.1002/batt.70515"
         }
       ],
       "flag": false
@@ -4635,6 +4689,46 @@
       "link": "https://doi.org/10.1016/j.electacta.2026.150269",
       "orgs": [],
       "pi_guess": "Dongmei Yue",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.ensm.2026.105609",
+      "date": "2026-10",
+      "journal": "Energy Storage Materials",
+      "title": "A bulk-surface co-modification strategy enabling stable operation of ultrahigh-nickel Li(Ni0.96Co0.03Mn0.01)O2 cathode beyond 4.7 V",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105609",
+      "orgs": [],
+      "pi_guess": "Lifeng Liu",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.ensm.2026.105607",
+      "date": "2026-10",
+      "journal": "Energy Storage Materials",
+      "title": "The Kinetic Mechanism of Electrochemical Oscillation in Co-Doped Lithium Titanate",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105607",
+      "orgs": [],
+      "pi_guess": "Yong Chen",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.241796",
+      "date": "2027-01",
+      "journal": "Journal of Power Sources",
+      "title": "Fluorine and cyano-functionalized additive boosting PEO electrolytes toward high room-temperature ionic conductivity and high-voltage stability",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241796",
+      "orgs": [],
+      "pi_guess": "Cheng Zhang",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.electacta.2026.150282",
+      "date": "2026-10",
+      "journal": "Electrochimica Acta",
+      "title": "Fe-Mn Dual-Metal Catalytic Carbon Nanotube Aerogels for High-Loading Lithium-Sulfur Batteries",
+      "link": "https://doi.org/10.1016/j.electacta.2026.150282",
+      "orgs": [],
+      "pi_guess": "Che-Ning Yeh",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]
