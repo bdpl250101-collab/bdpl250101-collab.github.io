@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -117,6 +117,32 @@
       ],
       "flag": true,
       "flagged_since": "2026-10-15"
+    },
+    {
+      "key": "xianfeng-li|dalian-institute-of-chemical-physics-chinese-academy-of-sciences",
+      "pi": "Xianfeng Li",
+      "org": "Dalian Institute of Chemical Physics, Chinese Academy of Sciences , , ,",
+      "count": 2,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/jacs.6c17473",
+          "date": "2026-10-15",
+          "journal": "JACS",
+          "title": "High-Resolution 6Li Solid-State Nuclear Magnetic Resonance Reveals Hidden Lithium Dynamics in All-Solid-State Cathodes",
+          "link": "https://doi.org/10.1021/jacs.6c17473"
+        },
+        {
+          "doi": "10.1021/jacs.6c16957",
+          "date": "2026-10-26",
+          "journal": "JACS",
+          "title": "Amorphous Halide Cathodes Enable 75C All-Solid-State Lithium Batteries",
+          "link": "https://doi.org/10.1021/jacs.6c16957"
+        }
+      ],
+      "flag": true,
+      "flagged_since": "2026-10-26"
     },
     {
       "key": "yong-sheng-hu|institute-of-physics-chinese-academy-of-sciences",
@@ -441,6 +467,24 @@
       "flag": false
     },
     {
+      "key": "burkhard-beckhoff|physikalisch-technische-bundesanstalt-ptb-abbestra-e-2-12",
+      "pi": "Burkhard Beckhoff",
+      "org": "Physikalisch-Technische Bundesanstalt (PTB) , Abbestraße 2-12 , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acs.chemmater.6c01078",
+          "date": "2026-10-26",
+          "journal": "Chemistry of Materials",
+          "title": "Quantitative Investigation of Spatial Inhomogeneity of Transition Metal Deposition in Commercial Automotive Cylindrical Cells under Overvoltage Conditions",
+          "link": "https://doi.org/10.1021/acs.chemmater.6c01078"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "ce-wen-nan|state-key-laboratory-of-new-ceramic-materials-school-of-materials-science-and-engineering-tsinghua-university-beijing-china",
       "pi": "Ce‐Wen Nan",
       "org": "State Key Laboratory of New Ceramic Materials School of Materials Science and Engineering Tsinghua University  Beijing China",
@@ -490,6 +534,24 @@
           "journal": "Angewandte Chemie Int. Ed.",
           "title": "Solid-State-Enabled Three-Stage Delithiation Pathway of Li5FeO4 for Silicon-Based All-Solid-State Batteries",
           "link": "https://doi.org/10.1002/anie.9668428"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "chao-yang|shanghai-key-laboratory-of-advanced-high-temperature-materials-and-precision-forming-school-of-materials-science-and-engineering-shanghai-jiao-tong-university-shanghai-p-r-china",
+      "pi": "Chao Yang",
+      "org": "Shanghai Key Laboratory of Advanced High‐Temperature Materials and Precision Forming School of Materials Science and Engineering Shanghai Jiao Tong University  Shanghai P.R. China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75517",
+          "date": "2026-10-26",
+          "journal": "Advanced Materials",
+          "title": "A Precursor Design Principle for Archipelagic Hard‐Carbon Structural Evolution Through Cohesion–Solvation Regulation of Asphaltene Molecular Heterogeneity",
+          "link": "https://doi.org/10.1002/adma.75517"
         }
       ],
       "flag": false
@@ -670,6 +732,24 @@
           "journal": "Advanced Materials",
           "title": "Closed Pores as Internal Stress-Regulation Units for Practical Silicon–Carbon Anodes",
           "link": "https://doi.org/10.1002/adma.75427"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "dong-hwa-seo|department-of-materials-science-and-engineering",
+      "pi": "Dong-Hwa Seo",
+      "org": "Department of Materials Science and Engineering",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.26434/chemrxiv.15011034/v1",
+          "date": "2026-10-26",
+          "journal": "ChemRxiv",
+          "title": "Site-Selective Fluorination for Decoupling Oxidative Stability and Ionic Transport of Oxychloride Solid Electrolytes",
+          "link": "https://doi.org/10.26434/chemrxiv.15011034/v1"
         }
       ],
       "flag": false
@@ -1341,6 +1421,24 @@
       "flag": false
     },
     {
+      "key": "jean-marie-tarascon|chimie-du-solide-energie-umr-8260-coll-ge-de-france-paris-france",
+      "pi": "Jean‐Marie Tarascon",
+      "org": "Chimie du Solide‐Energie UMR 8260 Collège de France  Paris France",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/aenm.71736",
+          "date": "2026-10-25",
+          "journal": "Advanced Energy Materials",
+          "title": "Mechanochemically Disordered Li2Ta2OCl10 Oxyhalide Unlocks Superionic Conductivity (>10 mS cm−1)",
+          "link": "https://doi.org/10.1002/aenm.71736"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "jeffrey-lopez|department-of-chemical-and-biological-engineering-northwestern-university-633-clark-st-evanston-il-united-states-of-america-60208",
       "pi": "Jeffrey Lopez",
       "org": "Department of Chemical and Biological Engineering, Northwestern University, 633 Clark St, Evanston, IL, United States of America, 60208",
@@ -1426,6 +1524,24 @@
           "journal": "Angewandte Chemie Int. Ed.",
           "title": "Precise and Rapid Prelithiation of Hard Carbon Anodes via Tuning the Solution Chemistry of Aryl–Lithium Reagents",
           "link": "https://doi.org/10.1002/anie.2432431"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "jiangjiang-duan|wuhan-national-laboratory-for-optoelectronics-school-of-optical-and-electronic-information-huazhong-university-of-science-and-technology-wuhan-china",
+      "pi": "Jiangjiang Duan",
+      "org": "Wuhan National Laboratory for Optoelectronics School of Optical and Electronic Information Huazhong University of Science and Technology  Wuhan China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75512",
+          "date": "2026-10-26",
+          "journal": "Advanced Materials",
+          "title": "Lewis‐Basic Metal Sulfide Electrode Interfaces Unlock High Power Density Alkaline All‐Iron Redox Flow Batteries",
+          "link": "https://doi.org/10.1002/adma.75512"
         }
       ],
       "flag": false
@@ -1570,6 +1686,24 @@
           "journal": "ACS Energy Letters",
           "title": "Stabilizing High-Voltage Operation in O3-Type Na-Layered Cathodes by Suppressing Distortion-Driven Fe Migration",
           "link": "https://doi.org/10.1021/acsenergylett.6c02530"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "jongwoo-lim|department-of-chemistry-seoul-national-university-seoul-republic-of-korea",
+      "pi": "Jongwoo Lim",
+      "org": "Department of Chemistry Seoul National University  Seoul Republic of Korea",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/aenm.71746",
+          "date": "2026-10-26",
+          "journal": "Advanced Energy Materials",
+          "title": "Resolving the Structural Origin of Lattice Oxygen Release across Scales in Practical Lithium‐Manganese‐Rich Electrodes",
+          "link": "https://doi.org/10.1002/aenm.71746"
         }
       ],
       "flag": false
@@ -3010,24 +3144,6 @@
           "journal": "Small",
           "title": "A Universal Strategy for Optimizing Surface Residual Alkali via Binders to Enhance the Electrochemical Performance of Sodium-Ion Batteries",
           "link": "https://doi.org/10.1002/smll.75284"
-        }
-      ],
-      "flag": false
-    },
-    {
-      "key": "xianfeng-li|dalian-institute-of-chemical-physics-chinese-academy-of-sciences",
-      "pi": "Xianfeng Li",
-      "org": "Dalian Institute of Chemical Physics, Chinese Academy of Sciences , , ,",
-      "count": 1,
-      "corresponding_confirmed": false,
-      "resolved_by": "crossref-last-author",
-      "papers": [
-        {
-          "doi": "10.1021/jacs.6c17473",
-          "date": "2026-10-15",
-          "journal": "JACS",
-          "title": "High-Resolution 6Li Solid-State Nuclear Magnetic Resonance Reveals Hidden Lithium Dynamics in All-Solid-State Cathodes",
-          "link": "https://doi.org/10.1021/jacs.6c17473"
         }
       ],
       "flag": false
@@ -4729,6 +4845,46 @@
       "link": "https://doi.org/10.1016/j.electacta.2026.150282",
       "orgs": [],
       "pi_guess": "Che-Ning Yeh",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.joule.2026.102713",
+      "date": "2026-10",
+      "journal": "Joule",
+      "title": "Regulating carrier transport and oxychloride interphase formation by increasing configurational complexity in solid-state halide electrolytes",
+      "link": "https://doi.org/10.1016/j.joule.2026.102713",
+      "orgs": [],
+      "pi_guess": "Linda F. Nazar",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jechem.2026.10.025",
+      "date": "2026-10",
+      "journal": "Journal of Energy Chemistry",
+      "title": "Coordination-stabilized organic-inorganic composite phase-change materials for battery thermal runaway mitigation",
+      "link": "https://doi.org/10.1016/j.jechem.2026.10.025",
+      "orgs": [],
+      "pi_guess": "Yulong Ding",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.ensm.2026.105610",
+      "date": "2026-10",
+      "journal": "Energy Storage Materials",
+      "title": "A Physics-Guided Virtual Probe for Anode Potential Estimation via Target-Label-Free Sim-to-Real Adaptation",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105610",
+      "orgs": [],
+      "pi_guess": "Yikai Jia",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.electacta.2026.150291",
+      "date": "2026-10",
+      "journal": "Electrochimica Acta",
+      "title": "Tailoring Lithiophilic Surface Chemistry of Free-Standing MXene Films for Lithium Metal Anodes",
+      "link": "https://doi.org/10.1016/j.electacta.2026.150291",
+      "orgs": [],
+      "pi_guess": "Yisi Liu",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]

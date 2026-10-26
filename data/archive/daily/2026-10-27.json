@@ -1,0 +1,1155 @@
+{
+  "week": "2026-W44",
+  "iso_year": 2026,
+  "iso_week": 44,
+  "generated": "2026-10-27",
+  "note": {
+    "ko": "일별 스냅샷입니다. 이 날 06:00 KST 실행 후 페이지에 실린 최근 7일 항목 전체이며, added 가 이 날짜인 항목이 그날 새로 추가된 것입니다.",
+    "en": "A per-day snapshot: everything the page carried after this day's 06:00 KST run. Items whose `added` equals this date were new that day."
+  },
+  "counts": {
+    "research": 68,
+    "industry": 15,
+    "science": 13,
+    "jobs": 3,
+    "postdoc": 15,
+    "grants": 1
+  },
+  "research": [
+    {
+      "cat": "소재",
+      "sub": "고체전해질",
+      "title": "Site-Selective Fluorination for Decoupling Oxidative Stability and Ionic Transport of Oxychloride Solid Electrolytes",
+      "org": "Kim et al. (Seoul National Univ. & KAIST)",
+      "journal": "ChemRxiv",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://doi.org/10.26434/chemrxiv.15011034/v1"
+    },
+    {
+      "cat": "전극",
+      "sub": "전고체 전극",
+      "title": "Amorphous Halide Cathodes Enable 75C All-Solid-State Lithium Batteries",
+      "org": "Duan et al. (Dalian Inst. of Chemical Physics, CAS)",
+      "journal": "JACS",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://doi.org/10.1021/jacs.6c16957"
+    },
+    {
+      "cat": "소재",
+      "sub": "고체전해질",
+      "title": "Mechanochemically Disordered Li2Ta2OCl10 Oxyhalide Unlocks Superionic Conductivity (>10 mS cm−1)",
+      "org": "Morel et al. (Collège de France)",
+      "journal": "Advanced Energy Materials",
+      "date": "2026-10-25",
+      "added": "2026-10-27",
+      "link": "https://doi.org/10.1002/aenm.71736"
+    },
+    {
+      "cat": "소재",
+      "sub": "고체전해질",
+      "title": "Regulating carrier transport and oxychloride interphase formation by increasing configurational complexity in solid-state halide electrolytes",
+      "org": "Yu et al.",
+      "journal": "Joule",
+      "date": "2026-10",
+      "added": "2026-10-27",
+      "link": "https://doi.org/10.1016/j.joule.2026.102713"
+    },
+    {
+      "cat": "소재",
+      "sub": "격자 산소",
+      "title": "Resolving the Structural Origin of Lattice Oxygen Release across Scales in Practical Lithium‐Manganese‐Rich Electrodes",
+      "org": "Kim et al. (Seoul National Univ.)",
+      "journal": "Advanced Energy Materials",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://doi.org/10.1002/aenm.71746"
+    },
+    {
+      "cat": "소재",
+      "sub": "하드카본",
+      "title": "A Precursor Design Principle for Archipelagic Hard‐Carbon Structural Evolution Through Cohesion–Solvation Regulation of Asphaltene Molecular Heterogeneity",
+      "org": "Liu et al. (Shanghai Jiao Tong Univ.)",
+      "journal": "Advanced Materials",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://doi.org/10.1002/adma.75517"
+    },
+    {
+      "cat": "전극",
+      "sub": "흐름전지",
+      "title": "Lewis‐Basic Metal Sulfide Electrode Interfaces Unlock High Power Density Alkaline All‐Iron Redox Flow Batteries",
+      "org": "Yang et al. (Huazhong Univ. of Sci. & Tech.)",
+      "journal": "Advanced Materials",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://doi.org/10.1002/adma.75512"
+    },
+    {
+      "cat": "셀",
+      "sub": "원통형 셀",
+      "title": "Quantitative Investigation of Spatial Inhomogeneity of Transition Metal Deposition in Commercial Automotive Cylindrical Cells under Overvoltage Conditions",
+      "org": "Mathies et al. (PTB, Germany)",
+      "journal": "Chemistry of Materials",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://doi.org/10.1021/acs.chemmater.6c01078"
+    },
+    {
+      "cat": "셀",
+      "sub": "안전성",
+      "title": "Coordination-stabilized organic-inorganic composite phase-change materials for battery thermal runaway mitigation",
+      "org": "Li et al.",
+      "journal": "Journal of Energy Chemistry",
+      "date": "2026-10",
+      "added": "2026-10-27",
+      "link": "https://doi.org/10.1016/j.jechem.2026.10.025"
+    },
+    {
+      "cat": "셀",
+      "sub": "진단",
+      "title": "A Physics-Guided Virtual Probe for Anode Potential Estimation via Target-Label-Free Sim-to-Real Adaptation",
+      "org": "Xiong et al.",
+      "journal": "Energy Storage Materials",
+      "date": "2026-10",
+      "added": "2026-10-27",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105610"
+    },
+    {
+      "cat": "소재",
+      "sub": "Li금속 SEI",
+      "title": "Tailoring Lithiophilic Surface Chemistry of Free-Standing MXene Films for Lithium Metal Anodes",
+      "org": "Xiong et al.",
+      "journal": "Electrochimica Acta",
+      "date": "2026-10",
+      "added": "2026-10-27",
+      "link": "https://doi.org/10.1016/j.electacta.2026.150291"
+    },
+    {
+      "cat": "소재",
+      "sub": "양극",
+      "title": "Making 1000 Wh/kg LiNiO2 Cathode Nearly Strain-Free by Complex-Concentrated Doping",
+      "org": "Jing et al. (UC Irvine)",
+      "journal": "ACS Energy Letters",
+      "date": "2026-10-25",
+      "added": "2026-10-26",
+      "link": "https://doi.org/10.1021/acsenergylett.6c01681"
+    },
+    {
+      "cat": "소재",
+      "sub": "Li금속 SEI",
+      "title": "TTE‐Based Localized High‐Concentration Electrolytes in Li Metal Cells: Effects on Li Reactivity and Solid Electrolyte Interphase Formation",
+      "org": "Stuckenberg et al. (MEET, Univ. of Münster)",
+      "journal": "Batteries & Supercaps",
+      "date": "2026-10-25",
+      "added": "2026-10-26",
+      "link": "https://doi.org/10.1002/batt.70515"
+    },
+    {
+      "cat": "전극",
+      "sub": "흐름전지",
+      "title": "Insights Into Electrolyte Effects on Interfacial Kinetics and Transport in Porous Redox Flow Battery Electrodes: A Multiparadigm Modeling Study",
+      "org": "Balasubramanian et al. (Univ. of Picardie Jules Verne)",
+      "journal": "Batteries & Supercaps",
+      "date": "2026-10-25",
+      "added": "2026-10-26",
+      "link": "https://doi.org/10.1002/batt.70512"
+    },
+    {
+      "cat": "소재",
+      "sub": "양극",
+      "title": "A bulk-surface co-modification strategy enabling stable operation of ultrahigh-nickel Li(Ni0.96Co0.03Mn0.01)O2 cathode beyond 4.7 V",
+      "org": "Zhang et al.",
+      "journal": "Energy Storage Materials",
+      "date": "2026-10",
+      "added": "2026-10-26",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105609"
+    },
+    {
+      "cat": "소재",
+      "sub": "LTO 음극",
+      "title": "The Kinetic Mechanism of Electrochemical Oscillation in Co-Doped Lithium Titanate",
+      "org": "Ji et al.",
+      "journal": "Energy Storage Materials",
+      "date": "2026-10",
+      "added": "2026-10-26",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105607"
+    },
+    {
+      "cat": "소재",
+      "sub": "고체전해질",
+      "title": "Fluorine and cyano-functionalized additive boosting PEO electrolytes toward high room-temperature ionic conductivity and high-voltage stability",
+      "org": "Liu et al.",
+      "journal": "Journal of Power Sources",
+      "date": "2027-01",
+      "added": "2026-10-26",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241796"
+    },
+    {
+      "cat": "전극",
+      "sub": "Li-S 전지",
+      "title": "Fe-Mn Dual-Metal Catalytic Carbon Nanotube Aerogels for High-Loading Lithium-Sulfur Batteries",
+      "org": "Chuang et al.",
+      "journal": "Electrochimica Acta",
+      "date": "2026-10",
+      "added": "2026-10-26",
+      "link": "https://doi.org/10.1016/j.electacta.2026.150282"
+    },
+    {
+      "cat": "소재",
+      "sub": "리튬과잉 양극",
+      "title": "Vacancy-Induced Ligand-Hole Character Redirects Oxygen Redox in Li-Rich Layered Oxides",
+      "org": "Jeong et al. (Korea Univ.)",
+      "journal": "JACS",
+      "date": "2026-10-24",
+      "added": "2026-10-25",
+      "link": "https://doi.org/10.1021/jacs.6c17588"
+    },
+    {
+      "cat": "셀",
+      "sub": "Li금속 SEI",
+      "title": "Mineral Particle Suspensions in Carbonate Electrolyte Enable LiF‐Rich Interphases for Durable Lithium Metal Batteries",
+      "org": "Liang et al. (Chongqing Univ.)",
+      "journal": "Advanced Energy Materials",
+      "date": "2026-10-24",
+      "added": "2026-10-25",
+      "link": "https://doi.org/10.1002/aenm.71748"
+    },
+    {
+      "cat": "소재",
+      "sub": "용매 설계",
+      "title": "Suppressing Irreversible Interfacial Spatial Electron Transfer for High‐Temperature 4.6 V LiCoO2",
+      "org": "Wang et al. (Peking Univ. Shenzhen Grad. School)",
+      "journal": "Angewandte Chemie Int. Ed.",
+      "date": "2026-10-24",
+      "added": "2026-10-25",
+      "link": "https://doi.org/10.1002/anie.4356451"
+    },
+    {
+      "cat": "공정",
+      "sub": "직접 리사이클링",
+      "title": "Spatial Redistribution of Intrinsic Cation Disorder Toward Ultra‐Stable Regeneration of LiNi0.5Co0.2Mn0.3O2 Cathode",
+      "org": "Zhu et al. (Beijing Inst. of Tech., Zhuhai)",
+      "journal": "Angewandte Chemie Int. Ed.",
+      "date": "2026-10-24",
+      "added": "2026-10-25",
+      "link": "https://doi.org/10.1002/anie.5827213"
+    },
+    {
+      "cat": "소재",
+      "sub": "고체전해질",
+      "title": "Machine‐Learning‐Potential‐Driven Volcano Relationship in Grain Boundary Amorphicity and Ionic Transport of Antiperovskite Solid Electrolytes",
+      "org": "Bin Faheem et al. (Nanyang Technological Univ.)",
+      "journal": "Advanced Materials",
+      "date": "2026-10-23",
+      "added": "2026-10-25",
+      "link": "https://doi.org/10.1002/adma.75492"
+    },
+    {
+      "cat": "셀",
+      "sub": "수계 전지",
+      "title": "Amorphization Unlocks Active Sites in Organic Small Molecules for Ah‐Level Aqueous Ammonium‐Ion Batteries",
+      "org": "Ma et al. (Shandong Univ. of Sci. & Tech.)",
+      "journal": "Advanced Materials",
+      "date": "2026-10-23",
+      "added": "2026-10-25",
+      "link": "https://doi.org/10.1002/adma.75494"
+    },
+    {
+      "cat": "전극",
+      "sub": "바인더",
+      "title": "Strain-induced Crystallization Enabled HSBR-CMC Composite Binder for High Performance Silicon Anodes",
+      "org": "Yang et al.",
+      "journal": "Electrochimica Acta",
+      "date": "2026-10",
+      "added": "2026-10-25",
+      "link": "https://doi.org/10.1016/j.electacta.2026.150269"
+    },
+    {
+      "cat": "소재",
+      "sub": "양극",
+      "title": "High-Performance LiNiO2 Cathodes through Microstructural Engineering",
+      "org": "Park et al. (Hanyang Univ.)",
+      "journal": "ACS Energy Letters",
+      "date": "2026-10-23",
+      "added": "2026-10-24",
+      "link": "https://doi.org/10.1021/acsenergylett.6c02808"
+    },
+    {
+      "cat": "소재",
+      "sub": "실리콘 음극",
+      "title": "Non‐Fluorinated Electrolytes Enable Long‐Cycling Micron‐Sized Silicon Anodes",
+      "org": "Qu et al. (Shandong Normal Univ.)",
+      "journal": "Angewandte Chemie Int. Ed.",
+      "date": "2026-10-23",
+      "added": "2026-10-24",
+      "link": "https://doi.org/10.1002/anie.6271722"
+    },
+    {
+      "cat": "소재",
+      "sub": "양극",
+      "title": "Mechanistic Insights of Jahn–Teller Effect Suppression in High-Entropy Prussian Blue Analogue Cathodes",
+      "org": "Wu et al. (Southeast Univ.)",
+      "journal": "JACS",
+      "date": "2026-10-23",
+      "added": "2026-10-24",
+      "link": "https://doi.org/10.1021/jacs.6c15227"
+    },
+    {
+      "cat": "소재",
+      "sub": "흐름전지",
+      "title": "A circular oligo(disulfide) anolyte enables practical aqueous redox flow batteries",
+      "org": "Chen et al.",
+      "journal": "Nature Sustainability",
+      "date": "2026-10-23",
+      "added": "2026-10-24",
+      "link": "https://doi.org/10.1038/s41893-026-01970-0"
+    },
+    {
+      "cat": "셀",
+      "sub": "Na금속 SEI",
+      "title": "Quantifying Sodium Metal SEI Dissolution and Relation to Corrosion Using Quartz Crystal Microbalance",
+      "org": "Cai et al. (Stanford Univ.)",
+      "journal": "ACS Energy Letters",
+      "date": "2026-10-23",
+      "added": "2026-10-24",
+      "link": "https://doi.org/10.1021/acsenergylett.6c01766"
+    },
+    {
+      "cat": "셀",
+      "sub": "급속충전",
+      "title": "A combined preheating approach for fast charging of lithium-ion batteries at sub-zero temperatures",
+      "org": "Yassin et al.",
+      "journal": "Journal of Power Sources",
+      "date": "2027-01",
+      "added": "2026-10-24",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241717"
+    },
+    {
+      "cat": "셀",
+      "sub": "열화 기구",
+      "title": "Mechanistic Asymmetry: Thermo-Electrochemical Interactions in Silicon-Graphite Composite Anodes",
+      "org": "Kim et al.",
+      "journal": "Energy Storage Materials",
+      "date": "2026-10",
+      "added": "2026-10-24",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105603"
+    },
+    {
+      "cat": "저널",
+      "sub": "리뷰",
+      "title": "Coupled Design of Silicon Anodes and Solid-State Electrolytes for High-Performance All-Solid-State Batteries",
+      "org": "Zhou et al. (Shanghai Univ.)",
+      "journal": "ACS Nano",
+      "date": "2026-10-23",
+      "added": "2026-10-24",
+      "link": "https://doi.org/10.1021/acsnano.6c13032"
+    },
+    {
+      "cat": "저널",
+      "sub": "데이터 인프라",
+      "title": "The Battery Data Commons registry",
+      "org": "Hassini et al.",
+      "journal": "Joule",
+      "date": "2026-10",
+      "added": "2026-10-24",
+      "link": "https://doi.org/10.1016/j.joule.2026.102712"
+    },
+    {
+      "cat": "셀",
+      "sub": "무음극 셀",
+      "title": "Cathode Depolarization Enables 1300‐Cycle Ah‐Level Anode‐Free Sodium Batteries",
+      "org": "Jiang et al. (Jiamusi Univ.)",
+      "journal": "Advanced Materials",
+      "date": "2026-10-22",
+      "added": "2026-10-23",
+      "link": "https://doi.org/10.1002/adma.75401"
+    },
+    {
+      "cat": "전극",
+      "sub": "집전체",
+      "title": "Industry‐Scalable Interfacial Design for Stabilizing PET‐Cu Current Collectors",
+      "org": "Zhao et al. (Huazhong Univ. of Sci. & Tech.)",
+      "journal": "Advanced Materials",
+      "date": "2026-10-21",
+      "added": "2026-10-23",
+      "link": "https://doi.org/10.1002/adma.75466"
+    },
+    {
+      "cat": "소재",
+      "sub": "합성 공정",
+      "title": "Tracing and Healing Multiscale Defects for Cost‐Effective Lithium Carbonate‐Derived Layered Oxide Cathodes",
+      "org": "Kwon et al. (POSTECH)",
+      "journal": "Advanced Energy Materials",
+      "date": "2026-10-22",
+      "added": "2026-10-23",
+      "link": "https://doi.org/10.1002/aenm.71727"
+    },
+    {
+      "cat": "소재",
+      "sub": "고체전해질",
+      "title": "Dual-Polyhedral Distortion for Low-Cost Amorphous Halide Electrolytes with Improved Ionic Conductivity",
+      "org": "Zhu et al. (Inst. of Physics, CAS)",
+      "journal": "JACS",
+      "date": "2026-10-22",
+      "added": "2026-10-23",
+      "link": "https://doi.org/10.1021/jacs.6c04535"
+    },
+    {
+      "cat": "전극",
+      "sub": "전극 구조",
+      "title": "Ultrafast Laser structuring of thick NMC90 cathodes for enhanced high-rate performance and reduced tortuosity",
+      "org": "Magrini et al.",
+      "journal": "Journal of Power Sources",
+      "date": "2027-01",
+      "added": "2026-10-23",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241800"
+    },
+    {
+      "cat": "셀",
+      "sub": "안전성",
+      "title": "Experimental investigation of long-term damage evolution in mechanically indented lithium-ion pouch cells",
+      "org": "Moon et al.",
+      "journal": "Journal of Power Sources",
+      "date": "2027-01",
+      "added": "2026-10-23",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241716"
+    },
+    {
+      "cat": "공정",
+      "sub": "리사이클링",
+      "title": "Direct Nickel Recovery From Spent NCM Lithium‐Ion Batteries Enabled by Hydrophobic Sulfur‐Donor Extractants",
+      "org": "Koo et al. (Sungkyunkwan Univ.)",
+      "journal": "Small",
+      "date": "2026-10-22",
+      "added": "2026-10-23",
+      "link": "https://doi.org/10.1002/smll.76257"
+    },
+    {
+      "cat": "저널",
+      "sub": "나트륨",
+      "title": "Low-Cost Iron/Manganese-Based Polyanionic Cathodes for Sustainable Na-Ion Batteries",
+      "org": "Xu et al. (Southwest Jiaotong Univ.)",
+      "journal": "ACS Energy Letters",
+      "date": "2026-10-22",
+      "added": "2026-10-23",
+      "link": "https://doi.org/10.1021/acsenergylett.6c02972"
+    },
+    {
+      "cat": "공정",
+      "sub": "화성 공정",
+      "title": "Efficient Pulse Formation to Stabilize SEI Film and Improve Performance of Commercial Lithium-ion Batteries",
+      "org": "Huang et al.",
+      "journal": "Small",
+      "date": "2026-10-21",
+      "added": "2026-10-22",
+      "link": "https://doi.org/10.1002/smll.76317"
+    },
+    {
+      "cat": "공정",
+      "sub": "직접 리사이클링",
+      "title": "Thermodynamic equilibrium-potential mechanism guides electrochemical relithiation of degraded lithium-ion cathodes",
+      "org": "Zhao et al.",
+      "journal": "Nano Energy",
+      "date": "2026-10",
+      "added": "2026-10-22",
+      "link": "https://doi.org/10.1016/j.nanoen.2026.112515"
+    },
+    {
+      "cat": "공정",
+      "sub": "합성 공정",
+      "title": "Fluorine-Mediated Molten-Salt Crystallization Regulates Phase Evolution and Structural Stability in Sodium Layered Oxides",
+      "org": "Shi et al.",
+      "journal": "JACS",
+      "date": "2026-10-21",
+      "added": "2026-10-22",
+      "link": "https://doi.org/10.1021/jacs.6c10977"
+    },
+    {
+      "cat": "전극",
+      "sub": "전고체 전극",
+      "title": "Pre-Embedded CNTs Architecture Differentiates Carbon Functions for Kinetics Boosting in All-Solid-State Li–S Cathodes",
+      "org": "Zhu et al.",
+      "journal": "Small",
+      "date": "2026-10-20",
+      "added": "2026-10-22",
+      "link": "https://doi.org/10.1002/smll.76368"
+    },
+    {
+      "cat": "소재",
+      "sub": "고체전해질",
+      "title": "Kinetic Control of Polymorphism in Li10.5Si1.5P1.5S12–Based Solid Electrolytes",
+      "org": "Yang et al.",
+      "journal": "JACS",
+      "date": "2026-10-21",
+      "added": "2026-10-22",
+      "link": "https://doi.org/10.1021/jacs.6c14489"
+    },
+    {
+      "cat": "소재",
+      "sub": "덴드라이트",
+      "title": "In situ formation of lithiophobic and tough grain boundary interphases for dendrite-resistant solid-state batteries",
+      "org": "Wang et al.",
+      "journal": "Joule",
+      "date": "2026-10",
+      "added": "2026-10-22",
+      "link": "https://doi.org/10.1016/j.joule.2026.102706"
+    },
+    {
+      "cat": "소재",
+      "sub": "합금 음극",
+      "title": "Reaction-Driven Coupled Transport–Nanostructure Evolution in SnSb Anodes for High-Energy All-Solid-State Li-Ion Batteries",
+      "org": "Han et al.",
+      "journal": "Advanced Energy Materials",
+      "date": "2026-10-21",
+      "added": "2026-10-22",
+      "link": "https://doi.org/10.1002/aenm.71728"
+    },
+    {
+      "cat": "소재",
+      "sub": "실리콘 음극",
+      "title": "Si-Rich SiOC–rGO Composites as Advanced Anodes for Lithium-Ion Batteries",
+      "org": "Sapkota et al. (Clemson Univ.)",
+      "journal": "Batteries & Supercaps",
+      "date": "2026-10-20",
+      "added": "2026-10-22",
+      "link": "https://doi.org/10.1002/batt.70494"
+    },
+    {
+      "cat": "소재",
+      "sub": "Zn 금속 음극",
+      "title": "Atomic-Level Regulating Layer-by-Layer Zinc Deposition by High-Entropy Single-Atoms Electrolyte Additive",
+      "org": "Liu et al.",
+      "journal": "Advanced Materials",
+      "date": "2026-10-21",
+      "added": "2026-10-22",
+      "link": "https://doi.org/10.1002/adma.75467"
+    },
+    {
+      "cat": "저널",
+      "sub": "리뷰",
+      "title": "Interface-Mediated Architectural Engineering of Silicon for Solid-State Batteries: Current Status and Future Outlook",
+      "org": "Ma et al.",
+      "journal": "Advanced Materials",
+      "date": "2026-10-21",
+      "added": "2026-10-22",
+      "link": "https://doi.org/10.1002/adma.75453"
+    },
+    {
+      "cat": "셀",
+      "sub": "캘린더 열화",
+      "title": "Durable Interphase Incorporating Cross-Linked Polymer Enables Long-Calendar-Life Lithium Metal Batteries",
+      "org": "Li et al. (Beijing Inst. of Technology)",
+      "journal": "Advanced Materials",
+      "date": "2026-10-18",
+      "added": "2026-10-21",
+      "link": "https://doi.org/10.1002/adma.75435"
+    },
+    {
+      "cat": "소재",
+      "sub": "실리콘 음극",
+      "title": "Closed Pores as Internal Stress-Regulation Units for Practical Silicon–Carbon Anodes",
+      "org": "Li et al.",
+      "journal": "Advanced Materials",
+      "date": "2026-10-19",
+      "added": "2026-10-21",
+      "link": "https://doi.org/10.1002/adma.75427"
+    },
+    {
+      "cat": "공정",
+      "sub": "합성 공정",
+      "title": "Tailoring Crystal Facets Enables Scalable Synthesis of Highly Dispersed Single Crystal NCM90",
+      "org": "Li et al.",
+      "journal": "Advanced Energy Materials",
+      "date": "2026-10-20",
+      "added": "2026-10-21",
+      "link": "https://doi.org/10.1002/aenm.71723"
+    },
+    {
+      "cat": "소재",
+      "sub": "고체전해질",
+      "title": "Dual Anion-Involved Interfacial Chemistry Enables Ultra-Stable PEO-Based Solid-State Lithium Metal Batteries by Suppressing NMP-Induced Side Reactions",
+      "org": "Li et al.",
+      "journal": "Advanced Energy Materials",
+      "date": "2026-10-20",
+      "added": "2026-10-21",
+      "link": "https://doi.org/10.1002/aenm.71721"
+    },
+    {
+      "cat": "소재",
+      "sub": "용매 설계",
+      "title": "Physically Grounded Descriptors for Machine-Learning-Guided Diluent Design in Lithium Metal Batteries",
+      "org": "Kim et al.",
+      "journal": "JACS",
+      "date": "2026-10-20",
+      "added": "2026-10-21",
+      "link": "https://doi.org/10.1021/jacs.6c16379"
+    },
+    {
+      "cat": "소재",
+      "sub": "나트륨",
+      "title": "Bridging Ionic Field Strength Disparity in O3-Type Layered Oxides for High-Voltage Sodium-Ion Batteries",
+      "org": "Zhang et al.",
+      "journal": "JACS",
+      "date": "2026-10-20",
+      "added": "2026-10-21",
+      "link": "https://doi.org/10.1021/jacs.6c11691"
+    },
+    {
+      "cat": "소재",
+      "sub": "Na금속 SEI",
+      "title": "Anion-Cation Targeted Regulation Enables Ultrafast and Stable Sodium Metal Batteries at Low Temperatures",
+      "org": "Zhang et al.",
+      "journal": "Angewandte Chemie Int. Ed.",
+      "date": "2026-10-20",
+      "added": "2026-10-21",
+      "link": "https://doi.org/10.1002/anie.6809424"
+    },
+    {
+      "cat": "전극",
+      "sub": "건식 전극",
+      "title": "Tuning the mechanical and electrochemical properties of NMC622 dry electrodes via the incorporation of fluorine free co-binders to dry fibrillation processing",
+      "org": "Lonergan et al.",
+      "journal": "Journal of Power Sources",
+      "date": "2027-01",
+      "added": "2026-10-21",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241700"
+    },
+    {
+      "cat": "셀",
+      "sub": "수명 예측",
+      "title": "Prior-guided learning for ordered battery degradation trajectory prediction from partial charging observations under variable protocols",
+      "org": "Yu et al. (Southwest Jiaotong Univ.)",
+      "journal": "Journal of Power Sources",
+      "date": "2027-01",
+      "added": "2026-10-21",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241668"
+    },
+    {
+      "cat": "전극",
+      "sub": "이온 수송",
+      "title": "Aluminum phosphate functionalization of graphite promoting interfacial lithium ion desolvation",
+      "org": "Chen et al.",
+      "journal": "Journal of Energy Chemistry",
+      "date": "2026-10",
+      "added": "2026-10-21",
+      "link": "https://doi.org/10.1016/j.jechem.2026.10.005"
+    },
+    {
+      "cat": "소재",
+      "sub": "양극",
+      "title": "Localized Cationic Clustering as an Atomic-scale Descriptor for Understanding and Mitigating High-voltage Instability in Ni-rich Layered Oxide Cathodes",
+      "org": "Wu et al.",
+      "journal": "Energy Storage Materials",
+      "date": "2026-10",
+      "added": "2026-10-21",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105604"
+    },
+    {
+      "cat": "셀",
+      "sub": "스택 압력",
+      "title": "Low Stack Pressure Anode Interfaces in Sulfide-Based All-Solid-State Batteries With Lithium Plating",
+      "org": "Oh (Sookmyung Women’s Univ.)",
+      "journal": "Batteries & Supercaps",
+      "date": "2026-10-18",
+      "added": "2026-10-21",
+      "link": "https://doi.org/10.1002/batt.70514"
+    },
+    {
+      "cat": "공정",
+      "sub": "직접 리사이클링",
+      "title": "A Holistic Direct Regeneration Strategy for Ni-Rich Ternary Cathode Scraps: Linking Stage-Specific Descriptors to Electrochemical Restoration",
+      "org": "Jang et al.",
+      "journal": "Nano Energy",
+      "date": "2026-10",
+      "added": "2026-10-21",
+      "link": "https://doi.org/10.1016/j.nanoen.2026.112507"
+    },
+    {
+      "cat": "셀",
+      "sub": "전해질 첨가제",
+      "title": "Rational Integration of Multiple Additives for High-Temperature Lithium-Ion Batteries",
+      "org": "Lee et al. (KAIST)",
+      "journal": "ACS Energy Letters",
+      "date": "2026-10-19",
+      "added": "2026-10-21",
+      "link": "https://doi.org/10.1021/acsenergylett.6c02555"
+    },
+    {
+      "cat": "소재",
+      "sub": "리튬과잉 양극",
+      "title": "Manipulating Li2MnO3-Like Domain Dispersion in Lithium-Rich Layered Oxides Inherited from Precursor",
+      "org": "Sohn et al. (Korea Basic Science Inst.)",
+      "journal": "ACS Energy Letters",
+      "date": "2026-10-19",
+      "added": "2026-10-21",
+      "link": "https://doi.org/10.1021/acsenergylett.6c02547"
+    },
+    {
+      "cat": "저널",
+      "sub": "수계 전지",
+      "title": "Water serves as a charge-transfer medium for ultrafast aqueous batteries",
+      "org": "Chen et al. (University College London)",
+      "journal": "Nature Reviews Materials",
+      "date": "2026-10-19",
+      "added": "2026-10-21",
+      "link": "https://doi.org/10.1038/s41578-026-00971-x"
+    }
+  ],
+  "industry": [
+    {
+      "region": "국내",
+      "type": "판매",
+      "company": "삼성SDI",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://www.thelec.net/news/articleView.html?idxno=14906"
+    },
+    {
+      "region": "국내",
+      "type": "공장/공정",
+      "company": "민테크",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://www.thelec.net/news/articleView.html?idxno=14929"
+    },
+    {
+      "region": "해외",
+      "type": "공장/공정",
+      "company": "Svolt",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://cnevpost.com/2026/10/26/svolt-begins-mass-production-100-kwh-semi-solid-packs/"
+    },
+    {
+      "region": "해외",
+      "type": "신기술",
+      "company": "Nio",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://cnevpost.com/2026/10/26/nio-presses-ahead-cylindrical-cells-limited-output-year-end/"
+    },
+    {
+      "region": "국내",
+      "type": "신기술",
+      "company": "한화파워",
+      "date": "2026-10-25",
+      "added": "2026-10-26",
+      "link": "https://www.thelec.net/news/articleView.html?idxno=14880"
+    },
+    {
+      "region": "해외",
+      "type": "신기술",
+      "company": "Fraunhofer",
+      "date": "2026-10-24",
+      "added": "2026-10-25",
+      "link": "https://www.electrive.com/2026/10/24/fraunhofer-researchers-aim-to-unlock-the-potential-of-lithium-metal-anodes/"
+    },
+    {
+      "region": "해외",
+      "type": "판매",
+      "company": "CATL",
+      "date": "2026-10-24",
+      "added": "2026-10-25",
+      "link": "https://cnevpost.com/2026/10/24/catl-qilin-battery-nio-firefly-60-kwh/"
+    },
+    {
+      "region": "해외",
+      "type": "신기술",
+      "company": "Chery",
+      "date": "2026-10-23",
+      "added": "2026-10-24",
+      "link": "https://www.electrive.com/2026/10/23/chery-launches-megawatt-charging-system-for-passenger-evs/"
+    },
+    {
+      "region": "해외",
+      "type": "실적",
+      "company": "QuantumScape",
+      "date": "2026-10-21",
+      "added": "2026-10-23",
+      "link": "https://www.sec.gov/Archives/edgar/data/0001811414/000119312526427862/qs-ex99_1.htm"
+    },
+    {
+      "region": "해외",
+      "type": "판매",
+      "company": "CATL",
+      "date": "2026-10-22",
+      "added": "2026-10-23",
+      "link": "https://cnevpost.com/2026/10/22/catl-battery-swap-baic-adoption"
+    },
+    {
+      "region": "해외",
+      "type": "신기술",
+      "company": "GM",
+      "date": "2026-10-22",
+      "added": "2026-10-23",
+      "link": "https://www.thelec.net/news/articleView.html?idxno=14836"
+    },
+    {
+      "region": "해외",
+      "type": "실적",
+      "company": "CATL",
+      "date": "2026-10-21",
+      "added": "2026-10-22",
+      "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=279370"
+    },
+    {
+      "region": "해외",
+      "type": "전망",
+      "company": "중국 배터리 6사",
+      "date": "2026-10-21",
+      "added": "2026-10-22",
+      "link": "https://www.businesskorea.co.kr/news/articleView.html?idxno=279368"
+    },
+    {
+      "region": "해외",
+      "type": "신기술",
+      "company": "CATL",
+      "date": "2026-10-20",
+      "added": "2026-10-21",
+      "link": "https://cnevpost.com/2026/10/20/catl-dual-battery-system-heavy-truck-electrification/"
+    },
+    {
+      "region": "해외",
+      "type": "공장/공정",
+      "company": "Saft",
+      "date": "2026-10-20",
+      "added": "2026-10-21",
+      "link": "https://thedriven.io/2026/10/20/oil-giants-battery-unit-to-begin-manufacturing-solid-state-batteries-for-aviation-and-space-sectors/"
+    }
+  ],
+  "science": [
+    {
+      "field": "기술",
+      "title": "New 3D thermal invisibility cloak makes objects disappear from infrared cameras",
+      "source": "ScienceDaily / UIUC",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://www.sciencedaily.com/releases/2026/10/261025073051.htm"
+    },
+    {
+      "field": "지구",
+      "title": "A 2,700-year-old solar eclipse just revealed something surprising about Earth",
+      "source": "ScienceDaily / Nagoya Univ.",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://www.sciencedaily.com/releases/2026/10/261025073055.htm"
+    },
+    {
+      "field": "우주",
+      "title": "Three giant black holes discovered in a galaxy from the dawn of time",
+      "source": "ScienceDaily / MPE",
+      "date": "2026-10-25",
+      "added": "2026-10-26",
+      "link": "https://www.sciencedaily.com/releases/2026/10/261024222000.htm"
+    },
+    {
+      "field": "생명",
+      "title": "New evidence suggests spinosaurus spent most of its life underwater",
+      "source": "ScienceDaily / Yale Univ.",
+      "date": "2026-10-25",
+      "added": "2026-10-26",
+      "link": "https://www.sciencedaily.com/releases/2026/10/261024221956.htm"
+    },
+    {
+      "field": "우주",
+      "title": "NASA’s Asteroid Bennu Samples Reveal a 4.5-Billion-Year-Old Secret",
+      "source": "ScienceDaily / ETH Zurich",
+      "date": "2026-10-24",
+      "added": "2026-10-25",
+      "link": "https://www.sciencedaily.com/releases/2026/10/261023023734.htm"
+    },
+    {
+      "field": "지구",
+      "title": "One of Earth’s Most Powerful Supervolcanoes Is Refilling with Fresh Magma",
+      "source": "ScienceDaily / Kobe Univ.",
+      "date": "2026-10-23",
+      "added": "2026-10-24",
+      "link": "https://www.sciencedaily.com/releases/2026/10/261023003214.htm"
+    },
+    {
+      "field": "물리",
+      "title": "A Tiny Defect in a Crystal Reveals a Big Quantum Surprise",
+      "source": "ScienceDaily / Univ. of Chicago PME",
+      "date": "2026-10-23",
+      "added": "2026-10-24",
+      "link": "https://www.sciencedaily.com/releases/2026/10/261022081302.htm"
+    },
+    {
+      "field": "생명",
+      "title": "Oxford Scientists Discover How Viruses Build Themselves Without a Blueprint",
+      "source": "ScienceDaily / Univ. of Oxford",
+      "date": "2026-10-22",
+      "added": "2026-10-23",
+      "link": "https://www.sciencedaily.com/releases/2026/10/261021231248.htm"
+    },
+    {
+      "field": "우주",
+      "title": "NASA’s Curiosity Rover Reveals a Spectacular New View of Mars with a Mystery on the Horizon",
+      "source": "ScienceDaily / NASA JPL",
+      "date": "2026-10-22",
+      "added": "2026-10-23",
+      "link": "https://www.sciencedaily.com/releases/2026/10/261021231238.htm"
+    },
+    {
+      "field": "우주",
+      "title": "A train was delayed by a solar storm. But something didn’t add up.",
+      "source": "ScienceDaily / RMIT Univ.",
+      "date": "2026-10-21",
+      "added": "2026-10-22",
+      "link": "https://www.sciencedaily.com/releases/2026/10/261020085021.htm"
+    },
+    {
+      "field": "생명",
+      "title": "Rejuvenation breakthrough: Scientists reverse 60 years of aging in human cells",
+      "source": "ScienceDaily / Univ. of Bonn",
+      "date": "2026-10-21",
+      "added": "2026-10-22",
+      "link": "https://www.sciencedaily.com/releases/2026/10/261020085013.htm"
+    },
+    {
+      "field": "지구",
+      "title": "A massive asteroid slammed into the North Sea and unleashed a 330-foot tsunami",
+      "source": "ScienceDaily / Heriot-Watt Univ.",
+      "date": "2026-10-21",
+      "added": "2026-10-21",
+      "link": "https://www.sciencedaily.com/releases/2026/10/261020085727.htm"
+    },
+    {
+      "field": "우주",
+      "title": "Astronomers uncover new secrets of the Universe’s first five minutes",
+      "source": "ScienceDaily / Univ. of Minnesota",
+      "date": "2026-10-20",
+      "added": "2026-10-21",
+      "link": "https://www.sciencedaily.com/releases/2026/10/261019093442.htm"
+    }
+  ],
+  "student": {
+    "jobs": {
+      "updated": "2026-10-26",
+      "items": [
+        {
+          "group": "삼성SDI",
+          "tag": "상시",
+          "title": "인재 등록 — 상시 지원",
+          "meta": "삼성SDI 채용포털",
+          "deadline": "상시",
+          "ok": true,
+          "link": "https://www.samsungcareers.com/subsid/detail/C31",
+          "link_type": "portal",
+          "query": "인재 등록"
+        },
+        {
+          "group": "LG에너지솔루션",
+          "tag": "상시",
+          "title": "상시 인재풀 등록 (신입 · 경력)",
+          "meta": "LG에너지솔루션 채용포털",
+          "deadline": "재확인 필요",
+          "ok": false,
+          "link": "https://careers.lg.com/apply?c=LGES",
+          "link_type": "portal",
+          "query": "LG에너지솔루션 인재풀"
+        },
+        {
+          "group": "SK온",
+          "tag": "수시",
+          "title": "R&D 트랙 수시 채용 — 선행Cell공정개발 · Cell개발 · System개발",
+          "meta": "대전 배터리연구원",
+          "deadline": "재확인 필요",
+          "ok": false,
+          "link": "https://www.sk-on.com/recruit/recruiting.asp",
+          "link_type": "portal",
+          "query": "선행Cell공정개발"
+        }
+      ]
+    },
+    "postdoc": {
+      "updated": "2026-10-26",
+      "items": [
+        {
+          "group": "미국",
+          "tag": "오픈",
+          "title": "포닥 모집 — 전산 설계 · 실험 합성/분석 · 머신러닝",
+          "meta": "Gerbrand Ceder · UC Berkeley / LBNL",
+          "deadline": "상시",
+          "ok": true,
+          "link": "https://ceder.berkeley.edu/contact-us/openings/",
+          "link_type": "deep",
+          "query": null
+        },
+        {
+          "group": "미국",
+          "tag": "오픈",
+          "title": "Postdoc: Battery Materials & Electrochemical Energy Storage",
+          "meta": "Brett Helms · Lawrence Berkeley National Laboratory",
+          "deadline": "상시 (우선마감 2026-08-19 경과)",
+          "ok": true,
+          "link": "https://lbl.referrals.selectminds.com/jobs/postdoctoral-researcher-%E2%80%93-battery-materials-electrochemical-energy-storage-7559",
+          "link_type": "deep",
+          "query": null
+        },
+        {
+          "group": "미국",
+          "tag": "재확인",
+          "title": "Postdoctoral Appointee — Modeling Batteries and Battery Systems (Onsite)",
+          "meta": "Sandia National Laboratories · 앨버커키",
+          "deadline": "재확인 필요 — 마감일 미표기",
+          "ok": false,
+          "link": "https://postdocjobs.com/posting/7367765",
+          "link_type": "deep",
+          "query": null
+        },
+        {
+          "group": "미국",
+          "tag": "재확인",
+          "title": "Postdoctoral Appointee — Battery Materials Research",
+          "meta": "Argonne National Laboratory",
+          "deadline": "마감일 미표기 · 게시 6개월 경과 — 재확인 필요",
+          "ok": false,
+          "link": "https://www.postdocjobs.com/posting/7308882",
+          "link_type": "deep",
+          "query": null
+        },
+        {
+          "group": "영국",
+          "tag": "신규",
+          "title": "Postdoctoral Research Associate in the Development of the Lithium-Air Battery",
+          "meta": "University of Oxford · Department of Materials (책임자 미표기)",
+          "deadline": "2026-11-03 (정오, 영국 시간)",
+          "ok": true,
+          "link": "https://www.jobs.ac.uk",
+          "link_type": "portal",
+          "query": "Postdoctoral Research Associate in the Development of the Lithium-Air Battery"
+        },
+        {
+          "group": "영국",
+          "tag": "신규",
+          "title": "Research Assistant/Associate in Emulsion Templating of Battery Materials",
+          "meta": "Holly Shaw · University of Cambridge, Department of Engineering",
+          "deadline": "2026-10-29",
+          "ok": true,
+          "link": "https://www.jobs.ac.uk",
+          "link_type": "portal",
+          "query": "Research Assistant/Associate in Emulsion Templating of Battery Materials"
+        },
+        {
+          "group": "영국",
+          "tag": "신규",
+          "title": "Research Associate in the Photophysics of Battery Materials & Molecular Systems",
+          "meta": "Akshay Rao · University of Cambridge, Cavendish Laboratory",
+          "deadline": "2026-11-01",
+          "ok": true,
+          "link": "https://www.jobs.ac.uk",
+          "link_type": "portal",
+          "query": "Research Associate in the Photophysics of Battery Materials & Molecular Systems"
+        },
+        {
+          "group": "영국",
+          "tag": "신규",
+          "title": "Research Fellow (Battery Materials Recycling) — HERMES",
+          "meta": "Rob Sommerville · University of Birmingham, School of Metallurgy and Materials",
+          "deadline": "2026-11-01",
+          "ok": true,
+          "link": "https://www.jobs.ac.uk/job/DTF017/research-fellow-battery-materials-recycling",
+          "link_type": "deep",
+          "query": null
+        },
+        {
+          "group": "영국",
+          "tag": "신규",
+          "title": "Research Fellow (Battery Shredding & Separation — SHREDDER)",
+          "meta": "Rob Sommerville · University of Birmingham, School of Metallurgy and Materials",
+          "deadline": "2026-11-01",
+          "ok": true,
+          "link": "https://www.jobs.ac.uk/job/DTC243/research-fellow-battery-shredding-and-separation-shredder",
+          "link_type": "deep",
+          "query": null
+        },
+        {
+          "group": "영국",
+          "tag": "신규",
+          "title": "Research Fellow in Sustainable Batteries for Seamless Textile Electronics for Healthcare",
+          "meta": "Nuria Garcia-Araez · University of Southampton, Electrochemistry",
+          "deadline": "2026-11-16",
+          "ok": true,
+          "link": "https://www.jobs.ac.uk/job/DTG323/research-fellow-in-sustainable-batteries-for-seamless-textile-electronics-for-healthcare",
+          "link_type": "deep",
+          "query": null
+        },
+        {
+          "group": "영국",
+          "tag": "유지",
+          "title": "Battery Chemical Scientist",
+          "meta": "Integrals Power (Faraday Institution 잡보드 경유)",
+          "deadline": "재확인 필요 — 잡보드에 마감일 미표기",
+          "ok": false,
+          "link": "https://www.faraday.ac.uk/opportunities/job-opportunities/",
+          "link_type": "portal",
+          "query": "Integrals Power Battery Chemical Scientist"
+        },
+        {
+          "group": "영국",
+          "tag": "공고 없음",
+          "title": "배터리·전기화학 포닥 공고 없음",
+          "meta": "Clare Grey · University of Cambridge",
+          "deadline": "해당 없음",
+          "ok": true,
+          "link": "https://www.ch.cam.ac.uk/jobs",
+          "link_type": "portal",
+          "query": "battery electrochemistry"
+        },
+        {
+          "group": "영국",
+          "tag": "공고 없음",
+          "title": "포닥 공고 없음 — 신규 공고 확인되지 않음",
+          "meta": "Peter Bruce · University of Oxford",
+          "deadline": "해당 없음",
+          "ok": true,
+          "link": "https://www.jobs.ac.uk/search/?keywords=battery",
+          "link_type": "search",
+          "query": "battery"
+        },
+        {
+          "group": "독일",
+          "tag": "공석 없음",
+          "title": "게시된 공석 0건 — 자유지원만 안내",
+          "meta": "MEET Battery Research Center · Univ. Münster",
+          "deadline": "해당 없음",
+          "ok": true,
+          "link": "https://www.uni-muenster.de/MEET/en/institute/jobs.shtml",
+          "link_type": "portal",
+          "query": "MEET jobs"
+        },
+        {
+          "group": "독일",
+          "tag": "공석 없음",
+          "title": "게시된 공석 0건 — 자유지원만 안내",
+          "meta": "KIT / Helmholtz Institute Ulm",
+          "deadline": "해당 없음",
+          "ok": true,
+          "link": "https://hiu-batteries.de/karriere/offene-stellen/",
+          "link_type": "deep",
+          "query": null
+        }
+      ]
+    },
+    "grants": {
+      "updated": "2026-10-26",
+      "items": [
+        {
+          "group": "접수중",
+          "tag": "KETEP / MCEE",
+          "title": "2028년 에너지기술개발사업 기술수요조사",
+          "meta": "기후에너지환경부 · 한국에너지기술평가원",
+          "deadline": "2027-05-31",
+          "ok": true,
+          "link": "https://www.ketep.re.kr/businessAcment/view?menuId=MENU002080200000000&uni_ancm_id=10254",
+          "link_type": "deep",
+          "query": null
+        }
+      ]
+    }
+  },
+  "day": "2026-10-27"
+}

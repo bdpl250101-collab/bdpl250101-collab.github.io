@@ -2,20 +2,130 @@
   "week": "2026-W44",
   "iso_year": 2026,
   "iso_week": 44,
-  "generated": "2026-10-26",
+  "generated": "2026-10-27",
   "note": {
     "ko": "주차별 스냅샷입니다. 페이지는 최근 7일 롤링 창이라, 이 파일은 그 주의 마지막 실행 시점 상태를 담습니다. 일별 기록은 data/archive/daily/ 에 있습니다.",
     "en": "A per-week snapshot. The page is a rolling 7-day window, so this file holds the state at the week's last run. Per-day records live in data/archive/daily/."
   },
   "counts": {
-    "research": 57,
-    "industry": 11,
-    "science": 11,
+    "research": 68,
+    "industry": 15,
+    "science": 13,
     "jobs": 3,
     "postdoc": 15,
     "grants": 1
   },
   "research": [
+    {
+      "cat": "소재",
+      "sub": "고체전해질",
+      "title": "Site-Selective Fluorination for Decoupling Oxidative Stability and Ionic Transport of Oxychloride Solid Electrolytes",
+      "org": "Kim et al. (Seoul National Univ. & KAIST)",
+      "journal": "ChemRxiv",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://doi.org/10.26434/chemrxiv.15011034/v1"
+    },
+    {
+      "cat": "전극",
+      "sub": "전고체 전극",
+      "title": "Amorphous Halide Cathodes Enable 75C All-Solid-State Lithium Batteries",
+      "org": "Duan et al. (Dalian Inst. of Chemical Physics, CAS)",
+      "journal": "JACS",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://doi.org/10.1021/jacs.6c16957"
+    },
+    {
+      "cat": "소재",
+      "sub": "고체전해질",
+      "title": "Mechanochemically Disordered Li2Ta2OCl10 Oxyhalide Unlocks Superionic Conductivity (>10 mS cm−1)",
+      "org": "Morel et al. (Collège de France)",
+      "journal": "Advanced Energy Materials",
+      "date": "2026-10-25",
+      "added": "2026-10-27",
+      "link": "https://doi.org/10.1002/aenm.71736"
+    },
+    {
+      "cat": "소재",
+      "sub": "고체전해질",
+      "title": "Regulating carrier transport and oxychloride interphase formation by increasing configurational complexity in solid-state halide electrolytes",
+      "org": "Yu et al.",
+      "journal": "Joule",
+      "date": "2026-10",
+      "added": "2026-10-27",
+      "link": "https://doi.org/10.1016/j.joule.2026.102713"
+    },
+    {
+      "cat": "소재",
+      "sub": "격자 산소",
+      "title": "Resolving the Structural Origin of Lattice Oxygen Release across Scales in Practical Lithium‐Manganese‐Rich Electrodes",
+      "org": "Kim et al. (Seoul National Univ.)",
+      "journal": "Advanced Energy Materials",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://doi.org/10.1002/aenm.71746"
+    },
+    {
+      "cat": "소재",
+      "sub": "하드카본",
+      "title": "A Precursor Design Principle for Archipelagic Hard‐Carbon Structural Evolution Through Cohesion–Solvation Regulation of Asphaltene Molecular Heterogeneity",
+      "org": "Liu et al. (Shanghai Jiao Tong Univ.)",
+      "journal": "Advanced Materials",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://doi.org/10.1002/adma.75517"
+    },
+    {
+      "cat": "전극",
+      "sub": "흐름전지",
+      "title": "Lewis‐Basic Metal Sulfide Electrode Interfaces Unlock High Power Density Alkaline All‐Iron Redox Flow Batteries",
+      "org": "Yang et al. (Huazhong Univ. of Sci. & Tech.)",
+      "journal": "Advanced Materials",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://doi.org/10.1002/adma.75512"
+    },
+    {
+      "cat": "셀",
+      "sub": "원통형 셀",
+      "title": "Quantitative Investigation of Spatial Inhomogeneity of Transition Metal Deposition in Commercial Automotive Cylindrical Cells under Overvoltage Conditions",
+      "org": "Mathies et al. (PTB, Germany)",
+      "journal": "Chemistry of Materials",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://doi.org/10.1021/acs.chemmater.6c01078"
+    },
+    {
+      "cat": "셀",
+      "sub": "안전성",
+      "title": "Coordination-stabilized organic-inorganic composite phase-change materials for battery thermal runaway mitigation",
+      "org": "Li et al.",
+      "journal": "Journal of Energy Chemistry",
+      "date": "2026-10",
+      "added": "2026-10-27",
+      "link": "https://doi.org/10.1016/j.jechem.2026.10.025"
+    },
+    {
+      "cat": "셀",
+      "sub": "진단",
+      "title": "A Physics-Guided Virtual Probe for Anode Potential Estimation via Target-Label-Free Sim-to-Real Adaptation",
+      "org": "Xiong et al.",
+      "journal": "Energy Storage Materials",
+      "date": "2026-10",
+      "added": "2026-10-27",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105610"
+    },
+    {
+      "cat": "소재",
+      "sub": "Li금속 SEI",
+      "title": "Tailoring Lithiophilic Surface Chemistry of Free-Standing MXene Films for Lithium Metal Anodes",
+      "org": "Xiong et al.",
+      "journal": "Electrochimica Acta",
+      "date": "2026-10",
+      "added": "2026-10-27",
+      "link": "https://doi.org/10.1016/j.electacta.2026.150291"
+    },
     {
       "cat": "소재",
       "sub": "양극",
@@ -590,6 +700,38 @@
   "industry": [
     {
       "region": "국내",
+      "type": "판매",
+      "company": "삼성SDI",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://www.thelec.net/news/articleView.html?idxno=14906"
+    },
+    {
+      "region": "국내",
+      "type": "공장/공정",
+      "company": "민테크",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://www.thelec.net/news/articleView.html?idxno=14929"
+    },
+    {
+      "region": "해외",
+      "type": "공장/공정",
+      "company": "Svolt",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://cnevpost.com/2026/10/26/svolt-begins-mass-production-100-kwh-semi-solid-packs/"
+    },
+    {
+      "region": "해외",
+      "type": "신기술",
+      "company": "Nio",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://cnevpost.com/2026/10/26/nio-presses-ahead-cylindrical-cells-limited-output-year-end/"
+    },
+    {
+      "region": "국내",
       "type": "신기술",
       "company": "한화파워",
       "date": "2026-10-25",
@@ -678,6 +820,22 @@
     }
   ],
   "science": [
+    {
+      "field": "기술",
+      "title": "New 3D thermal invisibility cloak makes objects disappear from infrared cameras",
+      "source": "ScienceDaily / UIUC",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://www.sciencedaily.com/releases/2026/10/261025073051.htm"
+    },
+    {
+      "field": "지구",
+      "title": "A 2,700-year-old solar eclipse just revealed something surprising about Earth",
+      "source": "ScienceDaily / Nagoya Univ.",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "link": "https://www.sciencedaily.com/releases/2026/10/261025073055.htm"
+    },
     {
       "field": "우주",
       "title": "Three giant black holes discovered in a galaxy from the dawn of time",
