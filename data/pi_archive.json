@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27",
+  "updated": "2026-11-03",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -241,6 +241,24 @@
       "flag": false
     },
     {
+      "key": "alejandro-a-franco|hub-de-l-energie-umr-cnrs-15-rue-baudelocque-amiens-cedex-france-80039",
+      "pi": "Alejandro A. Franco",
+      "org": "Hub de l’Energie, UMR CNRS, 15 rue Baudelocque, Amiens Cedex, France, 80039",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.26434/chemrxiv.15011566/v1",
+          "date": "2026-11-02",
+          "journal": "ChemRxiv",
+          "title": "Warm Isostatic vs. Cold Uniaxial Pressing in All-Solid-State Battery Cathodes: Linking Microstructure, Transport, and Mechano-Electrochemical Response",
+          "link": "https://doi.org/10.26434/chemrxiv.15011566/v1"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "alejandro-a-franco|laboratoire-de-r-activit-et-de-chimie-des-solides-lrcs-umr-cnrs-7314-hub-de-l-energie-universit-de-picardie-jules-verne-amiens-france",
       "pi": "Alejandro A. Franco",
       "org": "Laboratoire de Réactivité et de Chimie des Solides (LRCS) UMR CNRS 7314 Hub de l’Energie Université de Picardie Jules Verne  Amiens France",
@@ -380,6 +398,24 @@
           "journal": "ACS Energy Letters",
           "title": "Defect-Targeted Passivation Enabling Capacity Compensation of Hard Carbon Anodes for Sodium-Ion Batteries",
           "link": "https://doi.org/10.1021/acsenergylett.6c01903"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "arumugam-manthiram|walker-department-of-mechanical-engineering-and-texas-materials-institute-the-university-of-texas-at-austin-austin-texas-usa",
+      "pi": "Arumugam Manthiram",
+      "org": "Walker Department of Mechanical Engineering and Texas Materials Institute The University of Texas at Austin  Austin Texas USA",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75548",
+          "date": "2026-10-27",
+          "journal": "Advanced Materials",
+          "title": "Mechanically-Driven Reconstruction of Lithium Metal for Stable All-Solid-State Batteries",
+          "link": "https://doi.org/10.1002/adma.75548"
         }
       ],
       "flag": false
@@ -1339,6 +1375,24 @@
       "flag": false
     },
     {
+      "key": "hui-ying-yang|department-of-materials-science-and-engineering-college-of-design-and-engineering-national-university-of-singapore-9-engineering-drive-1-singapore-117575-singapore",
+      "pi": "Hui Ying Yang",
+      "org": "Department of Materials Science and Engineering, College of Design and Engineering, National University of Singapore, 9 Engineering Drive 1, Singapore 117575, Singapore.",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1126/sciadv.aek6073",
+          "date": "2026-10-30",
+          "journal": "Science Advances",
+          "title": "Engineering a closed-loop electrochemical pathway for cadmium recovery and aqueous battery reutilization",
+          "link": "https://doi.org/10.1126/sciadv.aek6073"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "huidong-dai|department-of-chemistry-and-chemical-biology-northeastern-university-boston-massachusetts-usa",
       "pi": "Huidong Dai",
       "org": "Department of Chemistry and Chemical Biology Northeastern University  Boston Massachusetts USA",
@@ -1730,6 +1784,24 @@
           "journal": "Small",
           "title": "Electrochemical Stabilization of PTFE in Thick Dry-Processed Hard Carbon Anodes",
           "link": "https://doi.org/10.1002/smll.75459"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "jing-li|school-of-materials-and-chemistry-southwest-university-of-science-and-technology-mianyang-p-r-china",
+      "pi": "Jing Li",
+      "org": "School of Materials and Chemistry Southwest University of Science and Technology  Mianyang P.R. China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75621",
+          "date": "2026-11-02",
+          "journal": "Advanced Materials",
+          "title": "Cross-System Recycling of Spent Layered Oxides Boosts Synergistic Optimization of Na4Fe3(PO4)2P2O7 Cathodes via Site-Selective Ni/Mn Co-Doping",
+          "link": "https://doi.org/10.1002/adma.75621"
         }
       ],
       "flag": false
@@ -2131,6 +2203,24 @@
       "flag": false
     },
     {
+      "key": "liwei-chen|shanghai-jiao-tong-university",
+      "pi": "Liwei Chen",
+      "org": "Shanghai Jiao Tong University , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsenergylett.6c02308",
+          "date": "2026-10-31",
+          "journal": "ACS Energy Letters",
+          "title": "Ultralow Deposition Potential and Antisite-Boosted Diffusivity of Li3Ga2 Anode for All-Solid-State Batteries",
+          "link": "https://doi.org/10.1021/acsenergylett.6c02308"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "maria-c-morant-mi-ana|centre-for-cooperative-research-on-alternative-energies-cic-energigune-basque-research-and-technology-alliance-brta-alava-technology-park-vitoria-gasteiz-spain",
       "pi": "Maria C. Morant‐Miñana",
       "org": "Centre for Cooperative Research on Alternative Energies (CIC energiGUNE) Basque Research and Technology Alliance (BRTA) Alava Technology Park  Vitoria‐Gasteiz Spain",
@@ -2144,6 +2234,24 @@
           "journal": "Advanced Energy Materials",
           "title": "Electrochemical and Mechanical Understanding of Extruded and Solvent-Cast Solid Polymer Electrolytes",
           "link": "https://doi.org/10.1002/aenm.71697"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "mario-el-kazzi|psi-center-for-energy-and-environmental-sciences-psi-villigen-switzerland",
+      "pi": "Mario El Kazzi",
+      "org": "PSI Center for Energy and Environmental Sciences PSI  Villigen Switzerland",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/smll.76550",
+          "date": "2026-10-31",
+          "journal": "Small",
+          "title": "Correlative Operando X-Ray Imaging and Diffraction Revealing Mechanical Failure Pathways in Lithium Metal Sulfide-Based All-Solid-State Batteries",
+          "link": "https://doi.org/10.1002/smll.76550"
         }
       ],
       "flag": false
@@ -2180,6 +2288,24 @@
           "journal": "Advanced Energy Materials",
           "title": "3D Printed Ordered Porous Architectures of Functional Metal Tellurides for Ultra-High Mass-Loaded Ammonium-Ion Batteries",
           "link": "https://doi.org/10.1002/aenm.71567"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "masahito-arima|daiwa-can-company",
+      "pi": "Masahito Arima",
+      "org": "Daiwa Can Company",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1149/1945-7111/aebac0",
+          "date": "2026-10-28",
+          "journal": "J. Electrochemical Society",
+          "title": "Kinetic Transitions and Irreversible Changes in OCV Hysteresis of LiFePO4 Batteries under Cold Exposure",
+          "link": "https://doi.org/10.1149/1945-7111/aebac0"
         }
       ],
       "flag": false
@@ -2558,6 +2684,24 @@
           "journal": "ACS Nano",
           "title": "Tailoring Ion-Transport Networks for Wide-Temperature Mg-Organic Batteries",
           "link": "https://doi.org/10.1021/acsnano.6c13540"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "qisheng-wu|suzhou-national-laboratory",
+      "pi": "Qisheng Wu",
+      "org": "Suzhou National Laboratory , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsnano.6c16367",
+          "date": "2026-11-02",
+          "journal": "ACS Nano",
+          "title": "Turning Insulators into Accelerators: Deciphering the Interfacial Ionic Conductivity Boost in Composite Solid-State Electrolytes through Machine Learning Molecular Dynamics Simulations",
+          "link": "https://doi.org/10.1021/acsnano.6c16367"
         }
       ],
       "flag": false
@@ -3427,6 +3571,24 @@
       "flag": false
     },
     {
+      "key": "xuefeng-wang|chinese-academy-of-sciences",
+      "pi": "Xuefeng Wang",
+      "org": "Chinese Academy of Sciences , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsenergylett.6c03027",
+          "date": "2026-10-30",
+          "journal": "ACS Energy Letters",
+          "title": "Constructing Hybrid Solid–Liquid Li+ Transport Networks for Fast-Charging Thick Electrodes",
+          "link": "https://doi.org/10.1021/acsenergylett.6c03027"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "ya-you|wuhan-university-of-technology",
       "pi": "Ya You",
       "org": "Wuhan University of Technology , ,",
@@ -3440,6 +3602,24 @@
           "journal": "ACS Energy Letters",
           "title": "Flammability Is Not the Whole Story: Rethinking Battery Safety",
           "link": "https://doi.org/10.1021/acsenergylett.6c02478"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "yaling-he|xi-an-jiaotong-university",
+      "pi": "Yaling He",
+      "org": "Xi’an Jiaotong University , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/jacs.6c16293",
+          "date": "2026-10-30",
+          "journal": "JACS",
+          "title": "Machine Learning-Guided Precise Electrolyte Engineering Enables Stable Lithium Metal Pouch Cells Exceeding 350 Wh/kg at −40 °C",
+          "link": "https://doi.org/10.1021/jacs.6c16293"
         }
       ],
       "flag": false
@@ -3607,6 +3787,24 @@
       "flag": false
     },
     {
+      "key": "yiyang-li|department-of-materials-science-and-engineering",
+      "pi": "Yiyang Li",
+      "org": "Department of Materials Science and Engineering",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.26434/chemrxiv.15011238/v1",
+          "date": "2026-10-29",
+          "journal": "ChemRxiv",
+          "title": "Electrolyte-derived interphases control nonuniform charging in battery particle networks",
+          "link": "https://doi.org/10.26434/chemrxiv.15011238/v1"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "yohan-davit|ups",
       "pi": "Yohan Davit",
       "org": "UPS",
@@ -3715,6 +3913,24 @@
       "flag": false
     },
     {
+      "key": "yongchen-song|key-laboratory-of-ocean-energy-utilization-and-energy-conservation-of-ministry-of-education-dalian-university-of-technology-dalian-people-s-republic-of-china",
+      "pi": "Yongchen Song",
+      "org": "Key Laboratory of Ocean Energy Utilization and Energy Conservation of Ministry of Education Dalian University of Technology  Dalian People's Republic of China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/aenm.71762",
+          "date": "2026-10-29",
+          "journal": "Advanced Energy Materials",
+          "title": "Operando Mapping of Population Phase Separation and Lithium-Plating Dynamics in Graphite Electrode Using Optical Microscopy and Microstructure Modeling",
+          "link": "https://doi.org/10.1002/aenm.71762"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "yongcheng-jin|school-of-materials-science-and-engineering-ocean-university-of-china-qingdao-people-s-republic-of-china",
       "pi": "Yongcheng Jin",
       "org": "School of Materials Science and Engineering Ocean University of China  Qingdao People's Republic of China",
@@ -3728,6 +3944,24 @@
           "journal": "Advanced Energy Materials",
           "title": "Dual Anion-Involved Interfacial Chemistry Enables Ultra-Stable PEO-Based Solid-State Lithium Metal Batteries by Suppressing NMP-Induced Side Reactions",
           "link": "https://doi.org/10.1002/aenm.71721"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "yonggang-wang|department-of-chemistry-and-shanghai-key-laboratory-of-molecular-catalysis-and-innovative-materials-institute-of-new-energy-ichem-collaborative-innovation-center-of-chemistry-for-energy-materials-fudan-university-shanghai-200433-china",
+      "pi": "Yonggang Wang",
+      "org": "Department of Chemistry and Shanghai Key Laboratory of Molecular Catalysis and Innovative Materials, Institute of New Energy, iChEM (Collaborative Innovation Center of Chemistry for Energy Materials), Fudan University, Shanghai 200433, China.",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1126/sciadv.aei9538",
+          "date": "2026-10-30",
+          "journal": "Science Advances",
+          "title": "A unified lattice–surface engineering strategy stabilizing oxygen redox in Li-rich cathodes for all-solid-state batteries",
+          "link": "https://doi.org/10.1126/sciadv.aei9538"
         }
       ],
       "flag": false
@@ -3836,6 +4070,24 @@
           "journal": "Advanced Materials",
           "title": "Cyclic Nonequilibrium Processing of Halide Solid Electrolytes for Low-Pressure Operation of all-Solid-State Batteries",
           "link": "https://doi.org/10.1002/adma.75398"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "yuhui-chen|nanjing-tech-university",
+      "pi": "Yuhui Chen",
+      "org": "Nanjing Tech University , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/jacs.6c17088",
+          "date": "2026-10-29",
+          "journal": "JACS",
+          "title": "Not Every Semicircle Is Interfacial: High-Frequency Shielding Artifacts in Three-Electrode Electrochemical Impedance Measurements",
+          "link": "https://doi.org/10.1021/jacs.6c17088"
         }
       ],
       "flag": false
@@ -4021,6 +4273,24 @@
       "flag": false
     },
     {
+      "key": "zhao-qing-liu|school-of-chemistry-and-chemical-engineering-institute-of-clean-energy-and-materials-key-laboratory-for-clean-energy-and-materials-guangzhou-university-guangzhou-p-r-china",
+      "pi": "Zhao‐Qing Liu",
+      "org": "School of Chemistry and Chemical Engineering/Institute of Clean Energy and Materials/Key Laboratory for Clean Energy and Materials Guangzhou University  Guangzhou P. R. China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/batt.70479",
+          "date": "2026-11",
+          "journal": "Batteries & Supercaps",
+          "title": "Progress on Failure Mechanisms and Modification Strategies of Ni-Rich Ternary Cathode Materials",
+          "link": "https://doi.org/10.1002/batt.70479"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "zhen-li|state-key-laboratory-of-materials-processing-and-die-amp-mould-technology-school-of-materials-science-and-engineering-huazhong-university-of-science-and-technology-wuhan-p-r-china",
       "pi": "Zhen Li",
       "org": "State Key Laboratory of Materials Processing and Die &amp;Mould Technology School of Materials Science and Engineering Huazhong University of Science and Technology  Wuhan P. R. China",
@@ -4160,6 +4430,24 @@
           "title": "IonNet: composition-only deep-learning discovery of fast lithium-ion solid electrolytes",
           "link": "https://www.science.org/doi/10.1126/sciadv.aee4959",
           "doi": "10.1126/sciadv.aee4959"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "zhongmin-su|state-key-laboratory-of-supramolecular-structure-and-materials-college-of-chemistry-jilin-university-changchun-china",
+      "pi": "Zhongmin Su",
+      "org": "State Key Laboratory of Supramolecular Structure and Materials College of Chemistry Jilin University  Changchun China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/anie.3787629",
+          "date": "2026-11-02",
+          "journal": "Angewandte Chemie Int. Ed.",
+          "title": "Carbonyl-Rich Polyimide Covalent Organic Frameworks as Anode Coating for Uniform Sodium Deposition",
+          "link": "https://doi.org/10.1002/anie.3787629"
         }
       ],
       "flag": false
@@ -5069,6 +5357,116 @@
       "link": "https://doi.org/10.1016/j.jpowsour.2026.241794",
       "orgs": [],
       "pi_guess": "Jae-Young Choi",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1038/s41560-026-02154-y",
+      "date": "2026-11-02",
+      "journal": "Nature Energy",
+      "title": "Stable anode-free sodium batteries enabled by controlled oligomerization",
+      "link": "https://doi.org/10.1038/s41560-026-02154-y",
+      "orgs": [],
+      "pi_guess": "Weijiang Xue",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1038/s41560-026-02152-0",
+      "date": "2026-10-29",
+      "journal": "Nature Energy",
+      "title": "Translating sulfur flow batteries into deployable systems",
+      "link": "https://doi.org/10.1038/s41560-026-02152-0",
+      "orgs": [],
+      "pi_guess": "Yi-Chun Lu",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.241801",
+      "date": "2027-01",
+      "journal": "Journal of Power Sources",
+      "title": "Mechanistic insights into the thermal runaway of cylindrical lithium-ion cells with lithium plating using high speed X-ray computed tomography",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241801",
+      "orgs": [],
+      "pi_guess": "James B. Robinson",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.241804",
+      "date": "2027-01",
+      "journal": "Journal of Power Sources",
+      "title": "Calorimetric heat flux analysis as an accelerated alternative to OCV drop screening for end-of-line testing of lithium-ion battery cells",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241804",
+      "orgs": [],
+      "pi_guess": "Christian von Lüders",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.electacta.2026.150336",
+      "date": "2026-10",
+      "journal": "Electrochimica Acta",
+      "title": "Effect of separator materials on high-temperature-triggered thermal runaway in lithium-ion batteries",
+      "link": "https://doi.org/10.1016/j.electacta.2026.150336",
+      "orgs": [],
+      "pi_guess": "Di Cai",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.electacta.2026.150307",
+      "date": "2027-01",
+      "journal": "Electrochimica Acta",
+      "title": "Mechanistic insights into the formation of coated pitch and its tailored compatibility with silicon-graphite composite anode",
+      "link": "https://doi.org/10.1016/j.electacta.2026.150307",
+      "orgs": [],
+      "pi_guess": "Dong Liu",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jechem.2026.10.038",
+      "date": "2026-11",
+      "journal": "Journal of Energy Chemistry",
+      "title": "Improved high-voltage operation and fast-discharge performance of O3-type layered cathodes for Na-ion batteries by regulating the Fe-driven distortion-dissolution cascade",
+      "link": "https://doi.org/10.1016/j.jechem.2026.10.038",
+      "orgs": [],
+      "pi_guess": "Jongsoon Kim",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.ensm.2026.105613",
+      "date": "2026-10",
+      "journal": "Energy Storage Materials",
+      "title": "Accelerating Formation Cycle in Battery Manufacturing: Real-Time Insights Using Operando Techniques",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105613",
+      "orgs": [],
+      "pi_guess": "Vibha Kalra",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.ensm.2026.105620",
+      "date": "2026-10",
+      "journal": "Energy Storage Materials",
+      "title": "A Mechanically Adaptive Silicon-Carbon Anode with a Self-Limiting Interphase for High-Loading Quasi-Solid-State Batteries without External Stack Pressure",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105620",
+      "orgs": [],
+      "pi_guess": "Xiang Han",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.nanoen.2026.112577",
+      "date": "2026-11",
+      "journal": "Nano Energy",
+      "title": "Asynchronous Lithiation Enables Durable Fast Charging in Graphite Anodes via Interphase Ion Redistribution",
+      "link": "https://doi.org/10.1016/j.nanoen.2026.112577",
+      "orgs": [],
+      "pi_guess": "Minghua Chen",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.nanoen.2026.112580",
+      "date": "2026-11",
+      "journal": "Nano Energy",
+      "title": "Direct Measurement of Scale-Dependent Ion Transport in Individual Solid-Electrolyte Particles",
+      "link": "https://doi.org/10.1016/j.nanoen.2026.112580",
+      "orgs": [],
+      "pi_guess": "Zhe Li",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]
