@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -686,6 +686,24 @@
           "journal": "J. Electrochemical Society",
           "title": "Extending a Thermal Runaway Modeling Framework to Cells of Different Formats, Sizes, and Chemistries",
           "link": "https://doi.org/10.1149/1945-7111/aeb4ef"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "christopher-j-bartel|university-of-minnesota",
+      "pi": "Christopher J. Bartel",
+      "org": "University of Minnesota , , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acs.chemmater.6c02216",
+          "date": "2026-11-04",
+          "journal": "Chemistry of Materials",
+          "title": "Electronic Structure Perspective on Cation and Anion Redox in Li2FeS2",
+          "link": "https://doi.org/10.1021/acs.chemmater.6c02216"
         }
       ],
       "flag": false
@@ -1645,6 +1663,24 @@
       "flag": false
     },
     {
+      "key": "jia-lyu|hanyang-university",
+      "pi": "Jia Lyu",
+      "org": "Hanyang University",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.26434/chemrxiv.15011674/v1",
+          "date": "2026-11-04",
+          "journal": "ChemRxiv",
+          "title": "Critical Evaluation of Electrochemical Impedance Spectroscopy for State-of-Health Estimation of Lithium-Ion Cells Against Battery Management System Baselines",
+          "link": "https://doi.org/10.26434/chemrxiv.15011674/v1"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "jia-qi-huang|school-of-materials-science-and-engineering-beijing-institute-of-technology-beijing-p-r-china",
       "pi": "Jia‐Qi Huang",
       "org": "School of Materials Science and Engineering Beijing Institute of Technology  Beijing P. R. China",
@@ -2581,6 +2617,24 @@
       "flag": false
     },
     {
+      "key": "ping-gao|college-of-chemistry-key-laboratory-of-environmentally-friendly-chemistry-and-application-of-ministry-of-education-xiangtan-university-xiangtan-p-r-china",
+      "pi": "Ping Gao",
+      "org": "College of Chemistry Key Laboratory of Environmentally Friendly Chemistry and Application of Ministry of Education Xiangtan University  Xiangtan P. R. China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/anie.5985645",
+          "date": "2026-11-04",
+          "journal": "Angewandte Chemie Int. Ed.",
+          "title": "Porphyrin Integration Enhances Bipolar Redox Accessibility for High-Rate Sodium-Based Dual-Ion Storage",
+          "link": "https://doi.org/10.1002/anie.5985645"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "puru-jena|virginia-commonwealth-university",
       "pi": "Puru Jena",
       "org": "Virginia Commonwealth University , , , ,",
@@ -2666,6 +2720,24 @@
           "journal": "Advanced Energy Materials",
           "title": "Redox-Mediated Electrified Method for Green and Low-Cost Spent Lithium-Ion Battery Materials Recycling",
           "link": "https://doi.org/10.1002/aenm.71530"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "qingxi-yuan|chinese-academy-of-sciences-yuquan-road-shijingshan-district",
+      "pi": "Qingxi Yuan",
+      "org": "Chinese Academy of Sciences , , Yuquan Road , Shijingshan District, ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsnano.6c08435",
+          "date": "2026-11-04",
+          "journal": "ACS Nano",
+          "title": "In Situ Nanoscale Visualization of Stripping-Induced Failure Behavior in Aqueous Zinc Batteries",
+          "link": "https://doi.org/10.1021/acsnano.6c08435"
         }
       ],
       "flag": false
@@ -3193,6 +3265,24 @@
       "flag": false
     },
     {
+      "key": "valentine-p-ananikov|zelinsky-institute-of-organic-chemistry-russian-academy-of-sciences",
+      "pi": "Valentine P. Ananikov",
+      "org": "Zelinsky Institute of Organic Chemistry, Russian Academy of Sciences",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.26434/chemrxiv.15011654/v1",
+          "date": "2026-11-04",
+          "journal": "ChemRxiv",
+          "title": "How to Discover New Electrolyte Additives for Lithium Batteries: A Computational Roadmap",
+          "link": "https://doi.org/10.26434/chemrxiv.15011654/v1"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "verena-k-pers|meet-battery-research-center-institute-of-physical-chemistry-university-of-m-nster-m-nster-germany",
       "pi": "Verena Küpers",
       "org": "MEET Battery Research Center Institute of Physical Chemistry University of Münster  Münster Germany",
@@ -3409,6 +3499,24 @@
       "flag": false
     },
     {
+      "key": "xia-lu|sun-yat-sen-university",
+      "pi": "Xia Lu",
+      "org": "Sun Yat-sen University , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsenergylett.6c02456",
+          "date": "2026-11-04",
+          "journal": "ACS Energy Letters",
+          "title": "Covalent-Bond Engineering Stabilizes Layered Oxide Cathodes for Sodium-Ion Batteries",
+          "link": "https://doi.org/10.1021/acsenergylett.6c02456"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "xian-guo-ma|school-of-chemical-engineering-school-of-food-and-drug-manufacturing-engineering-guizhou-institute-of-technology-guiyang-people-s-republic-of-china",
       "pi": "Xian‐Guo Ma",
       "org": "School of Chemical Engineering School of Food and Drug Manufacturing Engineering Guizhou Institute of Technology  Guiyang People's Republic of China",
@@ -3530,6 +3638,24 @@
           "journal": "ACS Energy Letters",
           "title": "Pressure-Driven Topological Reconfiguration toward Fast-Charging Hard Carbon with Plateau-Capacity Retention",
           "link": "https://doi.org/10.1021/acsenergylett.6c02684"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "xinyang-yue|frontiers-science-center-for-transformative-molecules-school-of-chemistry-and-chemical-engineering-shanghai-jiao-tong-university-shanghai-china",
+      "pi": "Xinyang Yue",
+      "org": "Frontiers Science Center for Transformative Molecules School of Chemistry and Chemical Engineering Shanghai Jiao Tong University  Shanghai China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/smll.76625",
+          "date": "2026-11-04",
+          "journal": "Small",
+          "title": "Synergistic Li3Sb/LiF Hybrid Networks in Poly(Tetrahydrofuran) Electrolyte for High-Performance Solid-State Lithium Metal Batteries",
+          "link": "https://doi.org/10.1002/smll.76625"
         }
       ],
       "flag": false
@@ -5467,6 +5593,76 @@
       "link": "https://doi.org/10.1016/j.nanoen.2026.112580",
       "orgs": [],
       "pi_guess": "Zhe Li",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.joule.2026.102716",
+      "date": "2026-11",
+      "journal": "Joule",
+      "title": "Why sulfur stays present but inaccessible in practical lithium-sulfur pouch cells",
+      "link": "https://doi.org/10.1016/j.joule.2026.102716",
+      "orgs": [],
+      "pi_guess": "Quanquan Pang",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1038/s41557-026-02291-7",
+      "date": "2026-11-04",
+      "journal": "Nature Chemistry",
+      "title": "Facet-dependent molecular adsorption modulates zinc anode work function for the favourable orientation of zinc electrocrystallization",
+      "link": "https://doi.org/10.1038/s41557-026-02291-7",
+      "orgs": [],
+      "pi_guess": "Chaoji Chen",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.ensm.2026.105638",
+      "date": "2026-11",
+      "journal": "Energy Storage Materials",
+      "title": "Cross-modal topology decodes battery faults from sparse voltage snapshots",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105638",
+      "orgs": [],
+      "pi_guess": "Xiaosong Hu",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.ensm.2026.105639",
+      "date": "2026-11",
+      "journal": "Energy Storage Materials",
+      "title": "Boron-driven closed-pore formation and interphase stabilization in hard carbon anodes for sodium-ion batteries",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105639",
+      "orgs": [],
+      "pi_guess": "Yuanzhen Chen",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jechem.2026.10.043",
+      "date": "2026-11",
+      "journal": "Journal of Energy Chemistry",
+      "title": "Safety assessment and mechanistic analysis of large-format LiCoO2 batteries",
+      "link": "https://doi.org/10.1016/j.jechem.2026.10.043",
+      "orgs": [],
+      "pi_guess": "Lei Li",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jechem.2026.10.051",
+      "date": "2026-11",
+      "journal": "Journal of Energy Chemistry",
+      "title": "Supramolecular-based binders for durable silicon anodes: Advances, mechanisms, and challenges",
+      "link": "https://doi.org/10.1016/j.jechem.2026.10.051",
+      "orgs": [],
+      "pi_guess": "Tao Meng",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.241859",
+      "date": "2027-01",
+      "journal": "Journal of Power Sources",
+      "title": "Unraveling the correlation between internal stress and sulfur redox reversibility in laser induced hole patterned cathodes for Li-S batteries",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241859",
+      "orgs": [],
+      "pi_guess": "Jinhong Lee",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]

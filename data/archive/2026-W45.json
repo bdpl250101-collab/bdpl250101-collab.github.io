@@ -2,20 +2,160 @@
   "week": "2026-W45",
   "iso_year": 2026,
   "iso_week": 45,
-  "generated": "2026-11-04",
+  "generated": "2026-11-05",
   "note": {
     "ko": "주차별 스냅샷입니다. 페이지는 최근 7일 롤링 창이라, 이 파일은 그 주의 마지막 실행 시점 상태를 담습니다. 일별 기록은 data/archive/daily/ 에 있습니다.",
     "en": "A per-week snapshot. The page is a rolling 7-day window, so this file holds the state at the week's last run. Per-day records live in data/archive/daily/."
   },
   "counts": {
-    "research": 30,
-    "industry": 12,
-    "science": 9,
+    "research": 41,
+    "industry": 11,
+    "science": 10,
     "jobs": 3,
     "postdoc": 15,
     "grants": 1
   },
   "research": [
+    {
+      "cat": "셀",
+      "sub": "Li-S 전지",
+      "title": "Why sulfur stays present but inaccessible in practical lithium-sulfur pouch cells",
+      "org": "LeGe et al.",
+      "journal": "Joule",
+      "date": "2026-11",
+      "added": "2026-11-05",
+      "link": "https://doi.org/10.1016/j.joule.2026.102716"
+    },
+    {
+      "cat": "소재",
+      "sub": "Zn 금속 음극",
+      "title": "Facet-dependent molecular adsorption modulates zinc anode work function for the favourable orientation of zinc electrocrystallization",
+      "org": "Wang et al.",
+      "journal": "Nature Chemistry",
+      "date": "2026-11-04",
+      "added": "2026-11-05",
+      "link": "https://doi.org/10.1038/s41557-026-02291-7"
+    },
+    {
+      "cat": "소재",
+      "sub": "양극",
+      "title": "Covalent-Bond Engineering Stabilizes Layered Oxide Cathodes for Sodium-Ion Batteries",
+      "org": "Muhtar et al. (Sun Yat-sen Univ.)",
+      "journal": "ACS Energy Letters",
+      "date": "2026-11-04",
+      "added": "2026-11-05",
+      "link": "https://doi.org/10.1021/acsenergylett.6c02456"
+    },
+    {
+      "cat": "셀",
+      "sub": "고체전해질",
+      "title": "Synergistic Li3Sb/LiF Hybrid Networks in Poly(Tetrahydrofuran) Electrolyte for High-Performance Solid-State Lithium Metal Batteries",
+      "org": "Shi et al. (Shanghai Jiao Tong Univ.)",
+      "journal": "Small",
+      "date": "2026-11-04",
+      "added": "2026-11-05",
+      "link": "https://doi.org/10.1002/smll.76625"
+    },
+    {
+      "cat": "소재",
+      "sub": "음이온 산화환원",
+      "title": "Electronic Structure Perspective on Cation and Anion Redox in Li2FeS2",
+      "org": "Cheng et al. (Univ. of Minnesota)",
+      "journal": "Chemistry of Materials",
+      "date": "2026-11-04",
+      "added": "2026-11-05",
+      "link": "https://doi.org/10.1021/acs.chemmater.6c02216"
+    },
+    {
+      "cat": "셀",
+      "sub": "진단",
+      "title": "Cross-modal topology decodes battery faults from sparse voltage snapshots",
+      "org": "Li et al.",
+      "journal": "Energy Storage Materials",
+      "date": "2026-11",
+      "added": "2026-11-05",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105638"
+    },
+    {
+      "cat": "소재",
+      "sub": "하드카본",
+      "title": "Boron-driven closed-pore formation and interphase stabilization in hard carbon anodes for sodium-ion batteries",
+      "org": "Ren et al.",
+      "journal": "Energy Storage Materials",
+      "date": "2026-11",
+      "added": "2026-11-05",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105639"
+    },
+    {
+      "cat": "셀",
+      "sub": "안전성",
+      "title": "Safety assessment and mechanistic analysis of large-format LiCoO2 batteries",
+      "org": "Ye et al.",
+      "journal": "Journal of Energy Chemistry",
+      "date": "2026-11",
+      "added": "2026-11-05",
+      "link": "https://doi.org/10.1016/j.jechem.2026.10.043"
+    },
+    {
+      "cat": "전극",
+      "sub": "바인더",
+      "title": "Supramolecular-based binders for durable silicon anodes: Advances, mechanisms, and challenges",
+      "org": "Ye et al.",
+      "journal": "Journal of Energy Chemistry",
+      "date": "2026-11",
+      "added": "2026-11-05",
+      "link": "https://doi.org/10.1016/j.jechem.2026.10.051"
+    },
+    {
+      "cat": "전극",
+      "sub": "전극 구조",
+      "title": "Unraveling the correlation between internal stress and sulfur redox reversibility in laser induced hole patterned cathodes for Li-S batteries",
+      "org": "Kim et al.",
+      "journal": "Journal of Power Sources",
+      "date": "2027-01",
+      "added": "2026-11-05",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241859"
+    },
+    {
+      "cat": "소재",
+      "sub": "Zn 금속 음극",
+      "title": "In Situ Nanoscale Visualization of Stripping-Induced Failure Behavior in Aqueous Zinc Batteries",
+      "org": "Ding et al. (Chinese Academy of Sciences)",
+      "journal": "ACS Nano",
+      "date": "2026-11-04",
+      "added": "2026-11-05",
+      "link": "https://doi.org/10.1021/acsnano.6c08435"
+    },
+    {
+      "cat": "소재",
+      "sub": "유기 전극",
+      "title": "Porphyrin Integration Enhances Bipolar Redox Accessibility for High-Rate Sodium-Based Dual-Ion Storage",
+      "org": "Peng et al. (Xiangtan Univ.)",
+      "journal": "Angewandte Chemie Int. Ed.",
+      "date": "2026-11-04",
+      "added": "2026-11-05",
+      "link": "https://doi.org/10.1002/anie.5985645"
+    },
+    {
+      "cat": "셀",
+      "sub": "EIS 측정",
+      "title": "Critical Evaluation of Electrochemical Impedance Spectroscopy for State-of-Health Estimation of Lithium-Ion Cells Against Battery Management System Baselines",
+      "org": "Zhang et al. (Hanyang Univ.)",
+      "journal": "ChemRxiv",
+      "date": "2026-11-04",
+      "added": "2026-11-05",
+      "link": "https://doi.org/10.26434/chemrxiv.15011674/v1"
+    },
+    {
+      "cat": "저널",
+      "sub": "전해질 첨가제",
+      "title": "How to Discover New Electrolyte Additives for Lithium Batteries: A Computational Roadmap",
+      "org": "Chepkasov et al. (Skoltech)",
+      "journal": "ChemRxiv",
+      "date": "2026-11-04",
+      "added": "2026-11-05",
+      "link": "https://doi.org/10.26434/chemrxiv.15011654/v1"
+    },
     {
       "cat": "셀",
       "sub": "무음극 셀",
@@ -285,39 +425,25 @@
       "date": "2026-10-29",
       "added": "2026-11-04",
       "link": "https://doi.org/10.26434/chemrxiv.15011238/v1"
-    },
-    {
-      "cat": "셀",
-      "sub": "안전성",
-      "title": "Bifunctional Additive Enabled Thermoresponsive Electrolytes With Dual-Mode Manipulation Toward Safe Lithium Metal Batteries",
-      "org": "Yang et al. (Beijing Univ. of Chemical Technology)",
-      "journal": "Advanced Energy Materials",
-      "date": "2026-10-27",
-      "added": "2026-10-28",
-      "link": "https://doi.org/10.1002/aenm.71759"
-    },
-    {
-      "cat": "셀",
-      "sub": "무음극 셀",
-      "title": "Redirecting Bond Cleavage in Sacrificial Prelithiation via Dual-Side Separator Engineering for Anode-Free Lithium Batteries",
-      "org": "Zhang et al. (Northwestern Polytechnical Univ.)",
-      "journal": "Advanced Energy Materials",
-      "date": "2026-10-27",
-      "added": "2026-10-28",
-      "link": "https://doi.org/10.1002/aenm.71761"
-    },
-    {
-      "cat": "소재",
-      "sub": "하드카본",
-      "title": "Discovering Underpotentially Deposited Crystalline Sodium Metal Nanoparticles on the Surface of Hard Carbon Anodes",
-      "org": "Liu et al. (Stanford Univ.)",
-      "journal": "JACS",
-      "date": "2026-10-27",
-      "added": "2026-10-28",
-      "link": "https://doi.org/10.1021/jacs.6c11841"
     }
   ],
   "industry": [
+    {
+      "region": "국내",
+      "type": "소재사",
+      "company": "덕산일렉테라",
+      "date": "2026-11-04",
+      "added": "2026-11-05",
+      "link": "https://www.thelec.net/news/articleView.html?idxno=15272"
+    },
+    {
+      "region": "해외",
+      "type": "신기술",
+      "company": "Mercedes-Benz",
+      "date": "2026-11-04",
+      "added": "2026-11-05",
+      "link": "https://www.electrive.com/2026/11/04/mercedes-power-converter-decouples-high-voltage-supply-from-battery-state/"
+    },
     {
       "region": "국내",
       "type": "실적",
@@ -389,33 +515,41 @@
       "date": "2026-11-02",
       "added": "2026-11-04",
       "link": "https://www.electrive.com/2026/11/02/webasto-poised-to-sell-its-battery-systems-business/"
-    },
-    {
-      "region": "해외",
-      "type": "소재사",
-      "company": "Nexeon",
-      "date": "2026-10-27",
-      "added": "2026-10-28",
-      "link": "https://www.electrive.com/2026/10/27/nexeon-secures-52-6m-from-uk-national-wealth-fund/"
-    },
-    {
-      "region": "국내",
-      "type": "판매",
-      "company": "삼성SDI",
-      "date": "2026-10-26",
-      "added": "2026-10-27",
-      "link": "https://www.thelec.net/news/articleView.html?idxno=14906"
-    },
-    {
-      "region": "국내",
-      "type": "공장/공정",
-      "company": "민테크",
-      "date": "2026-10-26",
-      "added": "2026-10-27",
-      "link": "https://www.thelec.net/news/articleView.html?idxno=14929"
     }
   ],
   "science": [
+    {
+      "field": "물리",
+      "title": "SLAC scientists find conclusive proof of a mysterious third type of magnetism",
+      "source": "ScienceDaily / SLAC",
+      "date": "2026-11-04",
+      "added": "2026-11-05",
+      "link": "https://www.sciencedaily.com/releases/2026/11/261104012256.htm"
+    },
+    {
+      "field": "우주",
+      "title": "NASA is racing against time to save the Hubble Space Telescope",
+      "source": "ScienceDaily / NASA",
+      "date": "2026-11-04",
+      "added": "2026-11-05",
+      "link": "https://www.sciencedaily.com/releases/2026/11/261104012254.htm"
+    },
+    {
+      "field": "생명",
+      "title": "Scientists may have finally explained why our brains and bodies are cross-wired",
+      "source": "ScienceDaily / Frontiers",
+      "date": "2026-11-04",
+      "added": "2026-11-05",
+      "link": "https://www.sciencedaily.com/releases/2026/11/261103003146.htm"
+    },
+    {
+      "field": "기술",
+      "title": "MIT scientists break a 20-year rule and unlock never-before-seen crystal structures",
+      "source": "ScienceDaily / MIT",
+      "date": "2026-11-04",
+      "added": "2026-11-05",
+      "link": "https://www.sciencedaily.com/releases/2026/11/261104012248.htm"
+    },
     {
       "field": "우주",
       "title": "NASA’s Voyager 1 is about to reach a historic one-light-day milestone",
@@ -463,30 +597,6 @@
       "date": "2026-10-28",
       "added": "2026-11-04",
       "link": "https://www.sciencedaily.com/releases/2026/10/261027063702.htm"
-    },
-    {
-      "field": "우주",
-      "title": "James Webb discovers a scorching lava planet with a “giant sunscreen”",
-      "source": "ScienceDaily / Univ. of Birmingham",
-      "date": "2026-10-27",
-      "added": "2026-10-28",
-      "link": "https://www.sciencedaily.com/releases/2026/10/261026225603.htm"
-    },
-    {
-      "field": "생명",
-      "title": "Do spiders dream? Scientists just found a surprising clue",
-      "source": "ScienceDaily / Univ. of Bonn",
-      "date": "2026-10-27",
-      "added": "2026-10-28",
-      "link": "https://www.sciencedaily.com/releases/2026/10/261026225555.htm"
-    },
-    {
-      "field": "기술",
-      "title": "New 3D thermal invisibility cloak makes objects disappear from infrared cameras",
-      "source": "ScienceDaily / UIUC",
-      "date": "2026-10-26",
-      "added": "2026-10-27",
-      "link": "https://www.sciencedaily.com/releases/2026/10/261025073051.htm"
     }
   ],
   "student": {
