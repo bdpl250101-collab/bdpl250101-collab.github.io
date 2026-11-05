@@ -2,20 +2,120 @@
   "week": "2026-W45",
   "iso_year": 2026,
   "iso_week": 45,
-  "generated": "2026-11-05",
+  "generated": "2026-11-06",
   "note": {
     "ko": "주차별 스냅샷입니다. 페이지는 최근 7일 롤링 창이라, 이 파일은 그 주의 마지막 실행 시점 상태를 담습니다. 일별 기록은 data/archive/daily/ 에 있습니다.",
     "en": "A per-week snapshot. The page is a rolling 7-day window, so this file holds the state at the week's last run. Per-day records live in data/archive/daily/."
   },
   "counts": {
-    "research": 41,
-    "industry": 11,
-    "science": 10,
+    "research": 51,
+    "industry": 14,
+    "science": 12,
     "jobs": 3,
     "postdoc": 15,
     "grants": 1
   },
   "research": [
+    {
+      "cat": "셀",
+      "sub": "전고체 셀",
+      "title": "Engineering a borate-rich interphase for highly stable all-solid-state sodium batteries",
+      "org": "Wang et al.",
+      "journal": "Joule",
+      "date": "2026-11",
+      "added": "2026-11-06",
+      "link": "https://doi.org/10.1016/j.joule.2026.102718"
+    },
+    {
+      "cat": "셀",
+      "sub": "안전성",
+      "title": "Rethinking Battery Safety: Unveiling Aluminum Propellant-Like Reactions During Thermal Runaway and Developing Protective Solutions",
+      "org": "Lin et al.",
+      "journal": "Advanced Energy Materials",
+      "date": "2026-11-05",
+      "added": "2026-11-06",
+      "link": "https://doi.org/10.1002/aenm.71790"
+    },
+    {
+      "cat": "셀",
+      "sub": "전고체 셀",
+      "title": "Stress-Regulated Li Plating in Hybrid Ag–Carbon/Carbon Nanofiber Anodes for Durable All-Solid-State Batteries",
+      "org": "Kang et al. (Hanyang Univ.)",
+      "journal": "Advanced Energy Materials",
+      "date": "2026-11-05",
+      "added": "2026-11-06",
+      "link": "https://doi.org/10.1002/aenm.71816"
+    },
+    {
+      "cat": "셀",
+      "sub": "덴드라이트",
+      "title": "Cathode-Induced Stress Can Suppress Dendritic Failure in Thin Solid Electrolyte Separators",
+      "org": "Spencer-Jolly et al. (Univ. of Birmingham)",
+      "journal": "Chemistry of Materials",
+      "date": "2026-11-05",
+      "added": "2026-11-06",
+      "link": "https://doi.org/10.1021/acs.chemmater.6c02340"
+    },
+    {
+      "cat": "셀",
+      "sub": "Li 도금",
+      "title": "Operando Quantifying Li Plating Processes in Lithium-Ion Pouch Cells",
+      "org": "Hu et al. (Xiamen Univ.)",
+      "journal": "Angewandte Chemie Int. Ed.",
+      "date": "2026-11-04",
+      "added": "2026-11-06",
+      "link": "https://doi.org/10.1002/anie.1710608"
+    },
+    {
+      "cat": "셀",
+      "sub": "고분자 전해질",
+      "title": "UV-Cured Semi-Interpenetrating Polymer Network Electrolyte for High-Performance Bipolar-Stacked Quasi-Solid-State Lithium Metal Batteries",
+      "org": "Lee et al. (Sungkyunkwan Univ.)",
+      "journal": "Small",
+      "date": "2026-11-05",
+      "added": "2026-11-06",
+      "link": "https://doi.org/10.1002/smll.76636"
+    },
+    {
+      "cat": "소재",
+      "sub": "급속충전",
+      "title": "Charge-to-Mass Ratio Regulation of Solvated Li+ Clusters for Ultrafast-Charging Lithium Battery Electrolytes",
+      "org": "Kang et al. (Tsinghua Univ.)",
+      "journal": "JACS",
+      "date": "2026-11-05",
+      "added": "2026-11-06",
+      "link": "https://doi.org/10.1021/jacs.6c20698"
+    },
+    {
+      "cat": "소재",
+      "sub": "합금 음극",
+      "title": "Non-Selective Suppression of Cation and Anion Crosstalk from an Anode Perspective",
+      "org": "Song et al. (Fudan Univ.)",
+      "journal": "Advanced Materials",
+      "date": "2026-11-05",
+      "added": "2026-11-06",
+      "link": "https://doi.org/10.1002/adma.75632"
+    },
+    {
+      "cat": "소재",
+      "sub": "합금 음극",
+      "title": "(De)Sodiation Mechanisms and Cycling Stability of Entropy-Engineered Sodium-Ion Battery Alloy Anodes by Operando X-ray Diffraction",
+      "org": "Dericiler et al. (Chalmers Univ. of Technology)",
+      "journal": "Batteries & Supercaps",
+      "date": "2026-11",
+      "added": "2026-11-06",
+      "link": "https://doi.org/10.1002/batt.70521"
+    },
+    {
+      "cat": "공정",
+      "sub": "화염 합성",
+      "title": "Directing selective cation ordering in flame synthesis toward layered NM82 cathodes",
+      "org": "Li et al.",
+      "journal": "Journal of Power Sources",
+      "date": "2027-02",
+      "added": "2026-11-06",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241895"
+    },
     {
       "cat": "셀",
       "sub": "Li-S 전지",
@@ -430,6 +530,30 @@
   "industry": [
     {
       "region": "국내",
+      "type": "실적",
+      "company": "에코프로비엠",
+      "date": "2026-11-05",
+      "added": "2026-11-06",
+      "link": "https://www.thelec.net/news/articleView.html?idxno=15310"
+    },
+    {
+      "region": "국내",
+      "type": "실적",
+      "company": "롯데에너지머티리얼즈",
+      "date": "2026-11-05",
+      "added": "2026-11-06",
+      "link": "https://www.thelec.net/news/articleView.html?idxno=15308"
+    },
+    {
+      "region": "국내",
+      "type": "소재사",
+      "company": "피노",
+      "date": "2026-11-05",
+      "added": "2026-11-06",
+      "link": "https://www.thelec.net/news/articleView.html?idxno=15318"
+    },
+    {
+      "region": "국내",
       "type": "소재사",
       "company": "덕산일렉테라",
       "date": "2026-11-04",
@@ -518,6 +642,22 @@
     }
   ],
   "science": [
+    {
+      "field": "생명",
+      "title": "400,000-year-old teeth reveal a stunning twist in human evolution",
+      "source": "ScienceDaily / The Conversation",
+      "date": "2026-11-05",
+      "added": "2026-11-06",
+      "link": "https://www.sciencedaily.com/releases/2026/11/261102202836.htm"
+    },
+    {
+      "field": "기술",
+      "title": "A clever molecular trick unlocks previously impossible properties in glass",
+      "source": "ScienceDaily / Paderborn Univ.",
+      "date": "2026-11-05",
+      "added": "2026-11-06",
+      "link": "https://www.sciencedaily.com/releases/2026/11/261103003202.htm"
+    },
     {
       "field": "물리",
       "title": "SLAC scientists find conclusive proof of a mysterious third type of magnetism",

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04",
+  "updated": "2026-11-05",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -889,6 +889,24 @@
       "flag": false
     },
     {
+      "key": "dukjoon-kim|department-of-chemical-engineering-sungkyunkwan-university-suwon-gyeonggi-republic-of-korea",
+      "pi": "Dukjoon Kim",
+      "org": "Department of Chemical Engineering Sungkyunkwan University  Suwon Gyeonggi Republic of Korea",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/smll.76636",
+          "date": "2026-11-05",
+          "journal": "Small",
+          "title": "UV-Cured Semi-Interpenetrating Polymer Network Electrolyte for High-Performance Bipolar-Stacked Quasi-Solid-State Lithium Metal Batteries",
+          "link": "https://doi.org/10.1002/smll.76636"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "enyuan-hu|brookhaven-national-laboratory",
       "pi": "Enyuan Hu",
       "org": "Brookhaven National Laboratory , , , ,",
@@ -1753,6 +1771,24 @@
       "flag": false
     },
     {
+      "key": "jianhui-wang|zhejiang-key-laboratory-of-3d-micro-nano-fabrication-and-characterization-department-of-electronic-and-information-engineering-school-of-engineering-westlake-university-hangzhou-china",
+      "pi": "Jianhui Wang",
+      "org": "Zhejiang Key Laboratory of 3D Micro/Nano Fabrication and Characterization Department of Electronic and Information Engineering School of Engineering Westlake University  Hangzhou China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/aenm.71790",
+          "date": "2026-11-05",
+          "journal": "Advanced Energy Materials",
+          "title": "Rethinking Battery Safety: Unveiling Aluminum Propellant-Like Reactions During Thermal Runaway and Developing Protective Solutions",
+          "link": "https://doi.org/10.1002/aenm.71790"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "jianyu-huang|school-of-materials-science-and-engineering-key-laboratory-of-low-dimensional-materials-and-application-technology-of-ministry-of-education-xiangtan-university-xiangtan-people-s-republic-of-china",
       "pi": "Jianyu Huang",
       "org": "School of Materials Science and Engineering Key Laboratory of Low Dimensional Materials and Application Technology of Ministry of Education Xiangtan University  Xiangtan People's Republic of China",
@@ -1784,6 +1820,24 @@
           "journal": "ACS Energy Letters",
           "title": "Designing Pitch-Derived Spherical Hard Carbon via Catalytic Aerobic Oxidation and Closed-Pore Regulation",
           "link": "https://doi.org/10.1021/acsenergylett.6c01910"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "jie-zhao|college-of-smart-materials-and-future-energy-state-key-laboratory-of-molecular-engineering-of-polymers-fudan-university-shanghai-china",
+      "pi": "Jie Zhao",
+      "org": "College of Smart Materials and Future Energy State Key Laboratory of Molecular Engineering of Polymers Fudan University  Shanghai China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75632",
+          "date": "2026-11-05",
+          "journal": "Advanced Materials",
+          "title": "Non-Selective Suppression of Cation and Anion Crosstalk from an Anode Perspective",
+          "link": "https://doi.org/10.1002/adma.75632"
         }
       ],
       "flag": false
@@ -1874,6 +1928,24 @@
           "journal": "Small",
           "title": "Grain-Boundary Electronic Insulation and Interfacial Self-Passivation Synergistic Strategy for High-Performance All-Solid-State Lithium Batteries",
           "link": "https://doi.org/10.1002/smll.75699"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "jong-won-lee|division-of-materials-science-and-engineering-hanyang-university-seoul-republic-of-korea",
+      "pi": "Jong‐Won Lee",
+      "org": "Division of Materials Science and Engineering Hanyang University  Seoul Republic of Korea",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/aenm.71816",
+          "date": "2026-11-05",
+          "journal": "Advanced Energy Materials",
+          "title": "Stress-Regulated Li Plating in Hybrid Ag–Carbon/Carbon Nanofiber Anodes for Durable All-Solid-State Batteries",
+          "link": "https://doi.org/10.1002/aenm.71816"
         }
       ],
       "flag": false
@@ -2509,6 +2581,24 @@
       "flag": false
     },
     {
+      "key": "patrik-johansson|department-of-physics-and-astronomy-chalmers-university-of-technology-g-teborg-sweden",
+      "pi": "Patrik Johansson",
+      "org": "Department of Physics and Astronomy Chalmers University of Technology  Göteborg Sweden",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/batt.70521",
+          "date": "2026-11",
+          "journal": "Batteries & Supercaps",
+          "title": "(De)Sodiation Mechanisms and Cycling Stability of Entropy-Engineered Sodium-Ion Battery Alloy Anodes by Operando X-ray Diffraction",
+          "link": "https://doi.org/10.1002/batt.70521"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "paul-shearing|university-of-oxford",
       "pi": "Paul Shearing",
       "org": "University of Oxford",
@@ -2558,6 +2648,24 @@
           "journal": "Advanced Energy Materials",
           "title": "Mechanically Robust Sulfide Electrolyte Membrane Featuring In Situ Dendrite Depletion for High-Stability All-Solid-State Lithium Metal Batteries",
           "link": "https://doi.org/10.1002/aenm.71576"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "peter-g-bruce|the-faraday-institution-harwell-science-and-innovation-campus",
+      "pi": "Peter G. Bruce",
+      "org": "The Faraday Institution, Harwell Science and Innovation Campus , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acs.chemmater.6c02340",
+          "date": "2026-11-05",
+          "journal": "Chemistry of Materials",
+          "title": "Cathode-Induced Stress Can Suppress Dendritic Failure in Thin Solid Electrolyte Separators",
+          "link": "https://doi.org/10.1021/acs.chemmater.6c02340"
         }
       ],
       "flag": false
@@ -3877,6 +3985,24 @@
       "flag": false
     },
     {
+      "key": "yidan-cao|tsinghua-university",
+      "pi": "Yidan Cao",
+      "org": "Tsinghua University , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/jacs.6c20698",
+          "date": "2026-11-05",
+          "journal": "JACS",
+          "title": "Charge-to-Mass Ratio Regulation of Solvated Li+ Clusters for Ultrafast-Charging Lithium Battery Electrolytes",
+          "link": "https://doi.org/10.1021/jacs.6c20698"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "ying-bai|school-of-materials-science-and-engineering-beijing-institute-of-technology-beijing-p-r-china",
       "pi": "Ying Bai",
       "org": "School of Materials Science and Engineering Beijing Institute of Technology  Beijing P.R. China",
@@ -4034,6 +4160,24 @@
           "journal": "Advanced Energy Materials",
           "title": "Generalizable Mechanism-Anchored Health Management for Lithium-Ion Batteries Across Complex Degradation Trajectories",
           "link": "https://doi.org/10.1002/aenm.71572"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "yong-yang|state-key-laboratory-for-physical-chemistry-of-solid-surfaces-department-of-chemistry-college-of-chemistry-and-chemical-engineering-xiamen-university-xiamen-china",
+      "pi": "Yong Yang",
+      "org": "State Key Laboratory for Physical Chemistry of Solid Surfaces Department of Chemistry College of Chemistry and Chemical Engineering Xiamen University  Xiamen China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/anie.1710608",
+          "date": "2026-11-04",
+          "journal": "Angewandte Chemie Int. Ed.",
+          "title": "Operando Quantifying Li Plating Processes in Lithium-Ion Pouch Cells",
+          "link": "https://doi.org/10.1002/anie.1710608"
         }
       ],
       "flag": false
@@ -5663,6 +5807,26 @@
       "link": "https://doi.org/10.1016/j.jpowsour.2026.241859",
       "orgs": [],
       "pi_guess": "Jinhong Lee",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.joule.2026.102718",
+      "date": "2026-11",
+      "journal": "Joule",
+      "title": "Engineering a borate-rich interphase for highly stable all-solid-state sodium batteries",
+      "link": "https://doi.org/10.1016/j.joule.2026.102718",
+      "orgs": [],
+      "pi_guess": "Xiaogang Han",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.241895",
+      "date": "2027-02",
+      "journal": "Journal of Power Sources",
+      "title": "Directing selective cation ordering in flame synthesis toward layered NM82 cathodes",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241895",
+      "orgs": [],
+      "pi_guess": "Kun Wang",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]
