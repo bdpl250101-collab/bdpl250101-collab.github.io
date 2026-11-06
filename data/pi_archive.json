@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -542,6 +542,24 @@
           "journal": "Chemistry of Materials",
           "title": "Quantitative Investigation of Spatial Inhomogeneity of Transition Metal Deposition in Commercial Automotive Cylindrical Cells under Overvoltage Conditions",
           "link": "https://doi.org/10.1021/acs.chemmater.6c01078"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "caihong-wang|school-of-chemical-engineering-sichuan-university-chengdu-china",
+      "pi": "Caihong Wang",
+      "org": "School of Chemical Engineering Sichuan University  Chengdu China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/smll.76644",
+          "date": "2026-11-06",
+          "journal": "Small",
+          "title": "Ionic Liquid Regulated Wetting and Chemo-Mechanical Stabilization of NCM811 Cathodes",
+          "link": "https://doi.org/10.1002/smll.76644"
         }
       ],
       "flag": false
@@ -1987,6 +2005,24 @@
       "flag": false
     },
     {
+      "key": "jun-cheng|xiamen-university",
+      "pi": "Jun Cheng",
+      "org": "Xiamen University , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsnano.6c13417",
+          "date": "2026-11-06",
+          "journal": "ACS Nano",
+          "title": "Unraveling the Impact of Surface Lithiation on the Initial Solid Electrolyte Interphase Formation on Graphite via Machine Learning Molecular Dynamics",
+          "link": "https://doi.org/10.1021/acsnano.6c13417"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "jun-huang|department-of-polymeric-materials-amp-engineering-college-of-materials-amp-metallurgy-guizhou-university-guiyang-china",
       "pi": "Jun Huang",
       "org": "Department of Polymeric Materials &amp; Engineering College of Materials &amp; Metallurgy Guizhou University  Guiyang China",
@@ -2810,6 +2846,24 @@
           "journal": "Advanced Materials",
           "title": "Amorphization Unlocks Active Sites in Organic Small Molecules for Ah‐Level Aqueous Ammonium‐Ion Batteries",
           "link": "https://doi.org/10.1002/adma.75494"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "qifeng-zheng|south-china-normal-university",
+      "pi": "Qifeng Zheng",
+      "org": "South China Normal University , , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/jacs.6c10960",
+          "date": "2026-11-06",
+          "journal": "JACS",
+          "title": "Machine Learning-Driven Electrolyte Additive Discovery for Ultrafast Charging of Sodium Metal Batteries",
+          "link": "https://doi.org/10.1021/jacs.6c10960"
         }
       ],
       "flag": false
@@ -3746,6 +3800,24 @@
           "journal": "ACS Energy Letters",
           "title": "Pressure-Driven Topological Reconfiguration toward Fast-Charging Hard Carbon with Plateau-Capacity Retention",
           "link": "https://doi.org/10.1021/acsenergylett.6c02684"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "xinyan-huang|department-of-building-environment-and-energy-engineering-the-hong-kong-polytechnic-university-hong-kong-china",
+      "pi": "Xinyan Huang",
+      "org": "Department of Building Environment and Energy Engineering The Hong Kong Polytechnic University  Hong Kong China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75673",
+          "date": "2026-11-05",
+          "journal": "Advanced Materials",
+          "title": "Cathode-Driven Aluminothermic Fronts Amplify Thermal Runaway in Lithium-Ion Batteries",
+          "link": "https://doi.org/10.1002/adma.75673"
         }
       ],
       "flag": false
@@ -5827,6 +5899,46 @@
       "link": "https://doi.org/10.1016/j.jpowsour.2026.241895",
       "orgs": [],
       "pi_guess": "Kun Wang",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.nanoen.2026.112597",
+      "date": "2026-11",
+      "journal": "Nano Energy",
+      "title": "Dynamic Mn Evolution Chemistry Governs Anode Degradation and Guides Electrolyte Engineering in LiNi0.5Mn1.5O4||Graphite Pouch Cells",
+      "link": "https://doi.org/10.1016/j.nanoen.2026.112597",
+      "orgs": [],
+      "pi_guess": "Ke Du",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.ensm.2026.105640",
+      "date": "2026-11",
+      "journal": "Energy Storage Materials",
+      "title": "TiI4-Mediated Mechanochemical Reconstruction of Cathodes Enabling Stable All-Solid-State Lithium Sulfur Batteries",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105640",
+      "orgs": [],
+      "pi_guess": "Jiangping Tu",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.241856",
+      "date": "2027-01",
+      "journal": "Journal of Power Sources",
+      "title": "Progress towards industrial recycling of end-of-life graphite for demanding applications",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241856",
+      "orgs": [],
+      "pi_guess": "Andrew M. Colclasure",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.241885",
+      "date": "2027-02",
+      "journal": "Journal of Power Sources",
+      "title": "Temperature-dependent porosity increment in a polyethylene lithium-ion battery separator quantified by nondestructive terahertz spectroscopy",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241885",
+      "orgs": [],
+      "pi_guess": "Dae-Hyun Han",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]

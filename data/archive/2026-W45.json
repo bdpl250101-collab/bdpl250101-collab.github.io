@@ -2,20 +2,100 @@
   "week": "2026-W45",
   "iso_year": 2026,
   "iso_week": 45,
-  "generated": "2026-11-06",
+  "generated": "2026-11-07",
   "note": {
     "ko": "주차별 스냅샷입니다. 페이지는 최근 7일 롤링 창이라, 이 파일은 그 주의 마지막 실행 시점 상태를 담습니다. 일별 기록은 data/archive/daily/ 에 있습니다.",
     "en": "A per-week snapshot. The page is a rolling 7-day window, so this file holds the state at the week's last run. Per-day records live in data/archive/daily/."
   },
   "counts": {
-    "research": 51,
-    "industry": 14,
-    "science": 12,
+    "research": 59,
+    "industry": 17,
+    "science": 14,
     "jobs": 3,
     "postdoc": 15,
     "grants": 1
   },
   "research": [
+    {
+      "cat": "셀",
+      "sub": "안전성",
+      "title": "Cathode-Driven Aluminothermic Fronts Amplify Thermal Runaway in Lithium-Ion Batteries",
+      "org": "Zhou et al. (Hong Kong PolyU)",
+      "journal": "Advanced Materials",
+      "date": "2026-11-05",
+      "added": "2026-11-07",
+      "link": "https://doi.org/10.1002/adma.75673"
+    },
+    {
+      "cat": "소재",
+      "sub": "전해질 첨가제",
+      "title": "Machine Learning-Driven Electrolyte Additive Discovery for Ultrafast Charging of Sodium Metal Batteries",
+      "org": "Ye et al. (South China Normal Univ.)",
+      "journal": "JACS",
+      "date": "2026-11-06",
+      "added": "2026-11-07",
+      "link": "https://doi.org/10.1021/jacs.6c10960"
+    },
+    {
+      "cat": "전극",
+      "sub": "바인더",
+      "title": "Ionic Liquid Regulated Wetting and Chemo-Mechanical Stabilization of NCM811 Cathodes",
+      "org": "Huang et al. (Sichuan Univ.)",
+      "journal": "Small",
+      "date": "2026-11-06",
+      "added": "2026-11-07",
+      "link": "https://doi.org/10.1002/smll.76644"
+    },
+    {
+      "cat": "소재",
+      "sub": "계면 분석",
+      "title": "Unraveling the Impact of Surface Lithiation on the Initial Solid Electrolyte Interphase Formation on Graphite via Machine Learning Molecular Dynamics",
+      "org": "Tang et al. (Xiamen Univ.)",
+      "journal": "ACS Nano",
+      "date": "2026-11-06",
+      "added": "2026-11-07",
+      "link": "https://doi.org/10.1021/acsnano.6c13417"
+    },
+    {
+      "cat": "셀",
+      "sub": "열화 기구",
+      "title": "Dynamic Mn Evolution Chemistry Governs Anode Degradation and Guides Electrolyte Engineering in LiNi0.5Mn1.5O4||Graphite Pouch Cells",
+      "org": "Shen et al.",
+      "journal": "Nano Energy",
+      "date": "2026-11",
+      "added": "2026-11-07",
+      "link": "https://doi.org/10.1016/j.nanoen.2026.112597"
+    },
+    {
+      "cat": "셀",
+      "sub": "전고체 셀",
+      "title": "TiI4-Mediated Mechanochemical Reconstruction of Cathodes Enabling Stable All-Solid-State Lithium Sulfur Batteries",
+      "org": "Zhu et al.",
+      "journal": "Energy Storage Materials",
+      "date": "2026-11",
+      "added": "2026-11-07",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105640"
+    },
+    {
+      "cat": "공정",
+      "sub": "리사이클링",
+      "title": "Progress towards industrial recycling of end-of-life graphite for demanding applications",
+      "org": "Henckel et al.",
+      "journal": "Journal of Power Sources",
+      "date": "2027-01",
+      "added": "2026-11-07",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241856"
+    },
+    {
+      "cat": "소재",
+      "sub": "분리막",
+      "title": "Temperature-dependent porosity increment in a polyethylene lithium-ion battery separator quantified by nondestructive terahertz spectroscopy",
+      "org": "Song et al.",
+      "journal": "Journal of Power Sources",
+      "date": "2027-02",
+      "added": "2026-11-07",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241885"
+    },
     {
       "cat": "셀",
       "sub": "전고체 셀",
@@ -530,6 +610,30 @@
   "industry": [
     {
       "region": "국내",
+      "type": "판매",
+      "company": "LG에너지솔루션",
+      "date": "2026-11-06",
+      "added": "2026-11-07",
+      "link": "https://www.thelec.net/news/articleView.html?idxno=15336"
+    },
+    {
+      "region": "국내",
+      "type": "실적",
+      "company": "LG화학",
+      "date": "2026-11-06",
+      "added": "2026-11-07",
+      "link": "https://www.thelec.net/news/articleView.html?idxno=15350"
+    },
+    {
+      "region": "해외",
+      "type": "판매",
+      "company": "중국 배터리 6사",
+      "date": "2026-11-06",
+      "added": "2026-11-07",
+      "link": "https://www.electrive.com/2026/11/06/sne-research-chinese-oems-increasingly-dominate-global-ev-battery-market/"
+    },
+    {
+      "region": "국내",
       "type": "실적",
       "company": "에코프로비엠",
       "date": "2026-11-05",
@@ -642,6 +746,22 @@
     }
   ],
   "science": [
+    {
+      "field": "우주",
+      "title": "NASA’s Swift telescope falls to Earth after nearly 22 years in space",
+      "source": "ScienceDaily / NASA",
+      "date": "2026-11-06",
+      "added": "2026-11-07",
+      "link": "https://www.sciencedaily.com/releases/2026/11/261105224545.htm"
+    },
+    {
+      "field": "생명",
+      "title": "Scientists just found dinosaur blood that survived 115 million years",
+      "source": "ScienceDaily / Curtin Univ.",
+      "date": "2026-11-06",
+      "added": "2026-11-07",
+      "link": "https://www.sciencedaily.com/releases/2026/11/261105224542.htm"
+    },
     {
       "field": "생명",
       "title": "400,000-year-old teeth reveal a stunning twist in human evolution",
