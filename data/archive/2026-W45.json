@@ -2,20 +2,100 @@
   "week": "2026-W45",
   "iso_year": 2026,
   "iso_week": 45,
-  "generated": "2026-11-07",
+  "generated": "2026-11-08",
   "note": {
     "ko": "주차별 스냅샷입니다. 페이지는 최근 7일 롤링 창이라, 이 파일은 그 주의 마지막 실행 시점 상태를 담습니다. 일별 기록은 data/archive/daily/ 에 있습니다.",
     "en": "A per-week snapshot. The page is a rolling 7-day window, so this file holds the state at the week's last run. Per-day records live in data/archive/daily/."
   },
   "counts": {
-    "research": 59,
-    "industry": 17,
-    "science": 14,
+    "research": 67,
+    "industry": 20,
+    "science": 16,
     "jobs": 3,
     "postdoc": 15,
     "grants": 1
   },
   "research": [
+    {
+      "cat": "소재",
+      "sub": "급속충전",
+      "title": "Cation-Effect-Driven Modulation of Interfacial Solvation Structures Enables Fast-Charging Lithium-Ion Batteries",
+      "org": "Tu et al. (Adelaide Univ.)",
+      "journal": "JACS",
+      "date": "2026-11-07",
+      "added": "2026-11-08",
+      "link": "https://doi.org/10.1021/jacs.6c21052"
+    },
+    {
+      "cat": "소재",
+      "sub": "전해질 첨가제",
+      "title": "Regioisomeric Engineering of Pyridone Electrolyte Additives Enables Stably High-Voltage LiCoO2 Cathodes Lithium-Ion Batteries",
+      "org": "Amzil et al. (Hohai Univ.)",
+      "journal": "Angewandte Chemie Int. Ed.",
+      "date": "2026-11-07",
+      "added": "2026-11-08",
+      "link": "https://doi.org/10.1002/anie.2372098"
+    },
+    {
+      "cat": "셀",
+      "sub": "Li금속 셀",
+      "title": "Anchoring LiZn Nanocrystals With Oligomer Binders for Enhanced Interfacial Stability in Lithium Metal Batteries",
+      "org": "Wang et al. (Southeast Univ.)",
+      "journal": "Advanced Energy Materials",
+      "date": "2026-11-07",
+      "added": "2026-11-08",
+      "link": "https://doi.org/10.1002/aenm.71814"
+    },
+    {
+      "cat": "전극",
+      "sub": "전고체 전극",
+      "title": "Ultra-High Ionic Conductivity Sulfide-Based Composite Membranes Paired With Stable Interfacial Layer Enables High-Energy-Density All-Solid-State Batteries",
+      "org": "Li et al. (USTB)",
+      "journal": "Advanced Energy Materials",
+      "date": "2026-11-07",
+      "added": "2026-11-08",
+      "link": "https://doi.org/10.1002/aenm.71813"
+    },
+    {
+      "cat": "공정",
+      "sub": "합성 공정",
+      "title": "A General Deep Eutectic Solvent-Mediated Scalable Preparation of Halide Solid-State Electrolytes for All-Solid-State Batteries",
+      "org": "Zhang et al. (USTC)",
+      "journal": "Angewandte Chemie Int. Ed.",
+      "date": "2026-11-06",
+      "added": "2026-11-08",
+      "link": "https://doi.org/10.1002/anie.6271513"
+    },
+    {
+      "cat": "소재",
+      "sub": "전해질",
+      "title": "Resolving the graphite compatibility boundary with an electrolyte-native anion 19F NMR descriptor",
+      "org": "Tu et al.",
+      "journal": "Energy Storage Materials",
+      "date": "2026-11",
+      "added": "2026-11-08",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105643"
+    },
+    {
+      "cat": "셀",
+      "sub": "열화 기구",
+      "title": "Rate-Dependent Aging Behavior and Degradation Mechanisms of NCM523/Graphite Lithium-Ion Batteries",
+      "org": "Yuan et al.",
+      "journal": "Electrochimica Acta",
+      "date": "2026-11",
+      "added": "2026-11-08",
+      "link": "https://doi.org/10.1016/j.electacta.2026.150384"
+    },
+    {
+      "cat": "소재",
+      "sub": "이온 수송",
+      "title": "Structural Evolution of State-Dependent Kinetics during Potassium Storage in Layered CrSe2",
+      "org": "Li et al. (Univ. of Glasgow)",
+      "journal": "ACS Energy Letters",
+      "date": "2026-11-07",
+      "added": "2026-11-08",
+      "link": "https://doi.org/10.1021/acsenergylett.6c02828"
+    },
     {
       "cat": "셀",
       "sub": "안전성",
@@ -611,6 +691,30 @@
     {
       "region": "국내",
       "type": "판매",
+      "company": "삼성SDI",
+      "date": "2026-11-07",
+      "added": "2026-11-08",
+      "link": "https://www.thelec.net/news/articleView.html?idxno=15385"
+    },
+    {
+      "region": "국내",
+      "type": "소재사",
+      "company": "LG화학",
+      "date": "2026-11-07",
+      "added": "2026-11-08",
+      "link": "https://www.thelec.net/news/articleView.html?idxno=15374"
+    },
+    {
+      "region": "해외",
+      "type": "전망",
+      "company": "CATL",
+      "date": "2026-11-07",
+      "added": "2026-11-08",
+      "link": "https://carnewschina.com/2026/11/07/catl-is-exploring-an-air-breathing-battery-could-it-give-evs-2000-km-of-range"
+    },
+    {
+      "region": "국내",
+      "type": "판매",
       "company": "LG에너지솔루션",
       "date": "2026-11-06",
       "added": "2026-11-07",
@@ -746,6 +850,22 @@
     }
   ],
   "science": [
+    {
+      "field": "우주",
+      "title": "Rubin Observatory discovers two hidden companions of the Milky Way. Hundreds more may be waiting",
+      "source": "ScienceDaily / Yale Univ.",
+      "date": "2026-11-07",
+      "added": "2026-11-08",
+      "link": "https://www.sciencedaily.com/releases/2026/11/261104012252.htm"
+    },
+    {
+      "field": "지구",
+      "title": "Scientists discover Europe’s ancient forests were nothing like we imagined",
+      "source": "ScienceDaily / Aarhus Univ.",
+      "date": "2026-11-07",
+      "added": "2026-11-08",
+      "link": "https://www.sciencedaily.com/releases/2026/11/261104012333.htm"
+    },
     {
       "field": "우주",
       "title": "NASA’s Swift telescope falls to Earth after nearly 22 years in space",

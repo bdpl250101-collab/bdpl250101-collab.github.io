@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -326,6 +326,24 @@
           "journal": "Batteries & Supercaps",
           "title": "Toward a Standardized Classification of Surface Defects in the Coating and Drying Processes of Lithium-Ion Battery Electrodes",
           "link": "https://doi.org/10.1002/batt.70481"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "alexey-y-ganin|university-of-glasgow",
+      "pi": "Alexey Y. Ganin",
+      "org": "University of Glasgow , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsenergylett.6c02828",
+          "date": "2026-11-07",
+          "journal": "ACS Energy Letters",
+          "title": "Structural Evolution of State-Dependent Kinetics during Potassium Storage in Layered CrSe2",
+          "link": "https://doi.org/10.1021/acsenergylett.6c02828"
         }
       ],
       "flag": false
@@ -2275,6 +2293,24 @@
       "flag": false
     },
     {
+      "key": "li-zhen-fan|institute-for-advanced-materials-and-technology-university-of-science-and-technology-beijing-beijing-china",
+      "pi": "Li‐Zhen Fan",
+      "org": "Institute for Advanced Materials and Technology University of Science and Technology Beijing  Beijing China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/aenm.71813",
+          "date": "2026-11-07",
+          "journal": "Advanced Energy Materials",
+          "title": "Ultra-High Ionic Conductivity Sulfide-Based Composite Membranes Paired With Stable Interfacial Layer Enables High-Energy-Density All-Solid-State Batteries",
+          "link": "https://doi.org/10.1002/aenm.71813"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "liang-zhang|soochow-university",
       "pi": "Liang Zhang",
       "org": "Soochow University , , , ,",
@@ -2887,6 +2923,24 @@
       "flag": false
     },
     {
+      "key": "qinghua-liang|school-of-rare-earth-university-of-science-and-technology-of-china-hefei-anhui-china",
+      "pi": "Qinghua Liang",
+      "org": "School of Rare Earth University of Science and Technology of China Hefei Anhui China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/anie.6271513",
+          "date": "2026-11-06",
+          "journal": "Angewandte Chemie Int. Ed.",
+          "title": "A General Deep Eutectic Solvent-Mediated Scalable Preparation of Halide Solid-State Electrolytes for All-Solid-State Batteries",
+          "link": "https://doi.org/10.1002/anie.6271513"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "qingxi-yuan|chinese-academy-of-sciences-yuquan-road-shijingshan-district",
       "pi": "Qingxi Yuan",
       "org": "Chinese Academy of Sciences , , Yuquan Road , Shijingshan District, ,",
@@ -3224,6 +3278,24 @@
           "journal": "Chemistry of Materials",
           "title": "Regulating Zn2+ Desolvation and (002)-Oriented Deposition for Stable Zinc Metal Anodes",
           "link": "https://doi.org/10.1021/acs.chemmater.6c00791"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "shi-zhang-qiao|adelaide-university",
+      "pi": "Shi-Zhang Qiao",
+      "org": "Adelaide University , , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/jacs.6c21052",
+          "date": "2026-11-07",
+          "journal": "JACS",
+          "title": "Cation-Effect-Driven Modulation of Interfacial Solvation Structures Enables Fast-Charging Lithium-Ion Batteries",
+          "link": "https://doi.org/10.1021/jacs.6c21052"
         }
       ],
       "flag": false
@@ -3787,6 +3859,24 @@
       "flag": false
     },
     {
+      "key": "xin-bing-cheng|z-energy-storage-center-school-of-energy-and-environment-key-laboratory-of-energy-thermal-conversion-and-control-of-ministry-of-education-southeast-university-nanjing-china",
+      "pi": "Xin‐Bing Cheng",
+      "org": "Z Energy Storage Center School of Energy and Environment Key Laboratory of Energy Thermal Conversion and Control of Ministry of Education Southeast University  Nanjing China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/aenm.71814",
+          "date": "2026-11-07",
+          "journal": "Advanced Energy Materials",
+          "title": "Anchoring LiZn Nanocrystals With Oligomer Binders for Enhanced Interfacial Stability in Lithium Metal Batteries",
+          "link": "https://doi.org/10.1002/aenm.71814"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "xing-long-wu|state-key-laboratory-of-integrated-optoelectronics-and-moe-key-laboratory-for-uv-light-emitting-materials-and-technology-northeast-normal-university",
       "pi": "Xing-Long Wu",
       "org": "State Key Laboratory of Integrated Optoelectronics, and MOE Key Laboratory for UV Light-Emitting Materials and Technology, Northeast Normal University , , , ,",
@@ -4304,6 +4394,24 @@
           "journal": "Science Advances",
           "title": "A unified lattice–surface engineering strategy stabilizing oxygen redox in Li-rich cathodes for all-solid-state batteries",
           "link": "https://doi.org/10.1126/sciadv.aei9538"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "yonggao-xia|chinese-academy-of-sciences-ningbo-institute-of-materials-technology-and-engineering-ningbo-zhejiang-china",
+      "pi": "Yonggao Xia",
+      "org": "Chinese Academy of Sciences Ningbo Institute of Materials Technology and Engineering  Ningbo Zhejiang China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/anie.2372098",
+          "date": "2026-11-07",
+          "journal": "Angewandte Chemie Int. Ed.",
+          "title": "Regioisomeric Engineering of Pyridone Electrolyte Additives Enables Stably High-Voltage LiCoO2 Cathodes Lithium-Ion Batteries",
+          "link": "https://doi.org/10.1002/anie.2372098"
         }
       ],
       "flag": false
@@ -5939,6 +6047,26 @@
       "link": "https://doi.org/10.1016/j.jpowsour.2026.241885",
       "orgs": [],
       "pi_guess": "Dae-Hyun Han",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.ensm.2026.105643",
+      "date": "2026-11",
+      "journal": "Energy Storage Materials",
+      "title": "Resolving the graphite compatibility boundary with an electrolyte-native anion 19F NMR descriptor",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105643",
+      "orgs": [],
+      "pi_guess": "Huilin Pan",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.electacta.2026.150384",
+      "date": "2026-11",
+      "journal": "Electrochimica Acta",
+      "title": "Rate-Dependent Aging Behavior and Degradation Mechanisms of NCM523/Graphite Lithium-Ion Batteries",
+      "link": "https://doi.org/10.1016/j.electacta.2026.150384",
+      "orgs": [],
+      "pi_guess": "Hai Ming",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]
