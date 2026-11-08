@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-16",
+  "updated": "2026-11-08",
   "purpose": {
     "ko": "매주 이 목록의 그룹 페이지와 잡보드를 확인해 data/postdoc.json 을 갱신하기 위한 시드 워치리스트입니다.",
     "en": "A seed watchlist: check each of these group pages and job boards weekly, then refresh data/postdoc.json from what is found."
@@ -36,7 +36,8 @@
         { "type": "pi", "name": "Billy Wu", "org": "Imperial College London", "org_ko": "임페리얼 칼리지 런던" },
         { "type": "lab", "name": "University of Birmingham", "org": "University of Birmingham", "org_ko": "버밍엄대" },
         { "type": "lab", "name": "Faraday Institution", "org": "Faraday Institution", "org_ko": "패러데이 연구소", "url": "https://www.faraday.ac.uk/opportunities/job-opportunities/" },
-        { "type": "lab", "name": "University of St Andrews", "org": "University of St Andrews", "org_ko": "세인트앤드루스대" }
+        { "type": "lab", "name": "University of St Andrews", "org": "University of St Andrews", "org_ko": "세인트앤드루스대" },
+        { "type": "pi", "name": "Elisabetta Arca", "org": "University of Liverpool (Stephenson Institute)", "org_ko": "리버풀대 (스티븐슨 연구소)" }
       ]
     },
     {
