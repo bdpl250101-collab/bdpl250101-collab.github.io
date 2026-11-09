@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08",
+  "updated": "2026-11-09",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -542,6 +542,24 @@
           "journal": "Advanced Energy Materials",
           "title": "Anion-Driven Solvent Degradation Networks in High-Concentration Battery Electrolytes",
           "link": "https://doi.org/10.1002/aenm.71634"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "bryan-d-mccloskey|department-of-chemical-and-biomolecular-engineering-university-of-california-berkeley-ca-usa",
+      "pi": "Bryan D. McCloskey",
+      "org": "Department of Chemical and Biomolecular Engineering University of California  Berkeley CA USA",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/aenm.71806",
+          "date": "2026-11-09",
+          "journal": "Advanced Energy Materials",
+          "title": "Understanding Charge Acceptance Limitations During Extreme Fast‐Charging of Li‐ion Batteries",
+          "link": "https://doi.org/10.1002/aenm.71806"
         }
       ],
       "flag": false
@@ -2401,6 +2419,24 @@
       "flag": false
     },
     {
+      "key": "m-rosa-palaci-n|institut-de-cie-ncia-de-materials-de-barcelona-icmab-csic-carrer-dels-til-lers",
+      "pi": "M. Rosa Palacín",
+      "org": "Institut de Ciència de Materials de Barcelona (ICMAB-CSIC) , Carrer dels Til·lers , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acs.chemmater.6c02303",
+          "date": "2026-11-09",
+          "journal": "Chemistry of Materials",
+          "title": "Exploring Charge Distribution and Rate Variation in LiNi0.8Mn0.1Co0.1O2/LiMn0.7Fe0.3PO4 Blends for High Rate Electrodes",
+          "link": "https://doi.org/10.1021/acs.chemmater.6c02303"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "maria-c-morant-mi-ana|centre-for-cooperative-research-on-alternative-energies-cic-energigune-basque-research-and-technology-alliance-brta-alava-technology-park-vitoria-gasteiz-spain",
       "pi": "Maria C. Morant‐Miñana",
       "org": "Centre for Cooperative Research on Alternative Energies (CIC energiGUNE) Basque Research and Technology Alliance (BRTA) Alava Technology Park  Vitoria‐Gasteiz Spain",
@@ -3116,6 +3152,24 @@
           "journal": "ChemRxiv (preprint)",
           "title": "Environmental benefits and trade-offs of dry coating for battery electrode production",
           "link": "https://doi.org/10.26434/chemrxiv.15008600/v1"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "rui-xiao|key-laboratory-of-energy-thermal-conversion-and-control-of-ministry-of-education-school-of-energy-and-environment-southeast-university-nanjing-people-s-republic-of-china",
+      "pi": "Rui Xiao",
+      "org": "Key Laboratory of Energy Thermal Conversion and Control of Ministry of Education School of Energy and Environment Southeast University  Nanjing People's Republic of China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/aenm.71823",
+          "date": "2026-11-09",
+          "journal": "Advanced Energy Materials",
+          "title": "Data‐Driven Host Microstructure Design Toward Efficient and Durable Room‐Temperature Sodium–Sulfur Batteries",
+          "link": "https://doi.org/10.1002/aenm.71823"
         }
       ],
       "flag": false
@@ -6067,6 +6121,46 @@
       "link": "https://doi.org/10.1016/j.electacta.2026.150384",
       "orgs": [],
       "pi_guess": "Hai Ming",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.241922",
+      "date": "2027-02",
+      "journal": "Journal of Power Sources",
+      "title": "High-throughput anomaly screening of retired batteries by dry-coupled ultrasonic array scanning",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241922",
+      "orgs": [],
+      "pi_guess": "Fan Shi",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.241909",
+      "date": "2027-02",
+      "journal": "Journal of Power Sources",
+      "title": "From ore to olivine: Sustainable production pathways for iron-manganese phosphate cathodes in lithium-ion batteries",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241909",
+      "orgs": [],
+      "pi_guess": "Karim Zaghib",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.ensm.2026.105644",
+      "date": "2026-11",
+      "journal": "Energy Storage Materials",
+      "title": "Symmetry Breaking Drives Topological Dissociation of Grain-Boundary Heterophases for Single-Crystal Regeneration of Spent NCM Cathodes",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105644",
+      "orgs": [],
+      "pi_guess": "Yingjie Zhang",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.electacta.2026.150393",
+      "date": "2026-11",
+      "journal": "Electrochimica Acta",
+      "title": "Edge-Active Graphenic Carbon Black Mediated Interfacial Chemical Bonding for High-Rate and Long-Life SiOC Anodes",
+      "link": "https://doi.org/10.1016/j.electacta.2026.150393",
+      "orgs": [],
+      "pi_guess": "Liwei Su",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]
