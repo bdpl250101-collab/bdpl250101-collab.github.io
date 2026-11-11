@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10",
+  "updated": "2026-11-11",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -1249,6 +1249,24 @@
       "flag": false
     },
     {
+      "key": "guangmin-zhou|tsinghua-university",
+      "pi": "Guangmin Zhou",
+      "org": "Tsinghua University , , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsenergylett.6c02914",
+          "date": "2026-11-10",
+          "journal": "ACS Energy Letters",
+          "title": "Decoding Symmetry-Breaking Band Structures in Nanocatalysts for Kinetically Favorable Li-S Batteries",
+          "link": "https://doi.org/10.1021/acsenergylett.6c02914"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "guoxiu-wang|centre-for-clean-energy-technology-university-of-technology-sydney-sydney-new-south-wales-australia",
       "pi": "Guoxiu Wang",
       "org": "Centre For Clean Energy Technology University of Technology Sydney  Sydney New South Wales Australia",
@@ -1406,6 +1424,24 @@
           "journal": "Small",
           "title": "Material Development of Aerogels: Application to Thermal Runaway Protection in Lithium-Ion Batteries",
           "link": "https://doi.org/10.1002/smll.76315"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "haoshen-zhou|college-of-engineering-and-applied-sciences-national-laboratory-of-solid-state-microstructures-nanjing-university-nanjing-china",
+      "pi": "Haoshen Zhou",
+      "org": "College of Engineering and Applied Sciences National Laboratory of Solid State Microstructures Nanjing University  Nanjing China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/anie.3309393",
+          "date": "2026-11-11",
+          "journal": "Angewandte Chemie Int. Ed.",
+          "title": "Layer Stacking Structure Governed Transition‐Metal Interlayer Migration for Reversible High‐Voltage Oxygen Redox Plateau",
+          "link": "https://doi.org/10.1002/anie.3309393"
         }
       ],
       "flag": false
@@ -1676,6 +1712,24 @@
           "title": "Spandex-polyacrylic acid hybrid binder for slurry-cast ultra-thick electrodes",
           "link": "https://www.nature.com/articles/s41467-026-76014-4",
           "doi": "10.1038/s41467-026-76014-4"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "jaegeon-ryu|department-of-chemical-and-biomolecular-engineering-sogang-university-seoul-republic-of-korea",
+      "pi": "Jaegeon Ryu",
+      "org": "Department of Chemical and Biomolecular Engineering Sogang University  Seoul Republic of Korea",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75684",
+          "date": "2026-11-10",
+          "journal": "Advanced Materials",
+          "title": "Deciphering Roles of Interfacial Tunable Primer for High Active Material Contents Pure Silicon Electrodes",
+          "link": "https://doi.org/10.1002/adma.75684"
         }
       ],
       "flag": false
@@ -2216,6 +2270,24 @@
           "title": "Spandex-polyacrylic acid hybrid binder for slurry-cast ultra-thick electrodes",
           "link": "https://www.nature.com/articles/s41467-026-76014-4",
           "doi": "10.1038/s41467-026-76014-4"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "kai-liu|department-of-chemical-engineering-amp-state-key-laboratory-of-chemical-engineering-and-low-carbon-technology-tsinghua-university-beijing-china",
+      "pi": "Kai Liu",
+      "org": "Department of Chemical Engineering &amp; State Key Laboratory of Chemical Engineering and Low‐carbon Technology Tsinghua University  Beijing China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75615",
+          "date": "2026-11-10",
+          "journal": "Advanced Materials",
+          "title": "Constructing Low‐Friction Ion Transport Pathways in Crosslinked Polymer Electrolyte for Practical Quasi‐Solid‐State Lithium Metal Batteries",
+          "link": "https://doi.org/10.1002/adma.75615"
         }
       ],
       "flag": false
@@ -6353,6 +6425,46 @@
       "link": "https://doi.org/10.1016/j.ensm.2026.105649",
       "orgs": [],
       "pi_guess": "Jiang Xu",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1038/s41586-026-11282-0",
+      "date": "2026-11-11",
+      "journal": "Nature",
+      "title": "Non-halogen aqueous electrolytes for four-electron iodine conversion",
+      "link": "https://doi.org/10.1038/s41586-026-11282-0",
+      "orgs": [],
+      "pi_guess": "Guanjie He",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.241954",
+      "date": "2027-02",
+      "journal": "Journal of Power Sources",
+      "title": "Pre-fibrillated PTFE-assisted dry processing of flexible Li6PS5Cl solid electrolyte membranes for all-solid-state lithium batteries",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241954",
+      "orgs": [],
+      "pi_guess": "Xiwen Wang",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.241947",
+      "date": "2027-02",
+      "journal": "Journal of Power Sources",
+      "title": "Agentic AI for intelligent battery management systems: From diagnosis to autonomous control",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241947",
+      "orgs": [],
+      "pi_guess": "Mohamad Fani Sulaima",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.electacta.2026.150410",
+      "date": "2026-11",
+      "journal": "Electrochimica Acta",
+      "title": "Balanced Ionic-Electronic Transport Enables High-Performance Composite Cathodes in Sulfide All-Solid-State Batteries",
+      "link": "https://doi.org/10.1016/j.electacta.2026.150410",
+      "orgs": [],
+      "pi_guess": "Jinxiao Bao",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]
