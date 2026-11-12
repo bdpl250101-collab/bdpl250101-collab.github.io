@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -979,6 +979,24 @@
       "flag": false
     },
     {
+      "key": "eliana-quartarone|department-of-chemistry-and-instm-gisel-university-of-pavia-university-of-pavia-pavia-italy",
+      "pi": "Eliana Quartarone",
+      "org": "Department of Chemistry and INSTM‐GISEL University of Pavia University of Pavia  Pavia Italy",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/batt.70527",
+          "date": "2026-11",
+          "journal": "Batteries & Supercaps",
+          "title": "Synergistic Integration of Mg Doping and Advanced Presodiation Strategies for High-Performance P2-Type Sodium-Ion Full Cells",
+          "link": "https://doi.org/10.1002/batt.70527"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "enyuan-hu|brookhaven-national-laboratory",
       "pi": "Enyuan Hu",
       "org": "Brookhaven National Laboratory , , , ,",
@@ -1663,6 +1681,24 @@
       "flag": false
     },
     {
+      "key": "ieuan-d-seymour|university-of-aberdeen",
+      "pi": "Ieuan D. Seymour",
+      "org": "University of Aberdeen , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acs.chemmater.6c01808",
+          "date": "2026-11-12",
+          "journal": "Chemistry of Materials",
+          "title": "Induced Structural Disorder Enables High Ionic Conductivity and Capacity in Li2Fe1−xMnxCl4 Cathodes",
+          "link": "https://doi.org/10.1021/acs.chemmater.6c01808"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "j-janek|institute-for-physical-chemistry-justus-liebig-university-giessen",
       "pi": "J. Janek",
       "org": "Institute for Physical Chemistry, Justus-Liebig-University Giessen",
@@ -1964,6 +2000,24 @@
           "journal": "Advanced Energy Materials",
           "title": "Rethinking Battery Safety: Unveiling Aluminum Propellant-Like Reactions During Thermal Runaway and Developing Protective Solutions",
           "link": "https://doi.org/10.1002/aenm.71790"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "jianwen-liang|grinm-group-co-ltd",
+      "pi": "Jianwen Liang",
+      "org": "GRINM Group Co. Ltd , ., ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/jacs.6c17602",
+          "date": "2026-11-12",
+          "journal": "JACS",
+          "title": "A Crystalline LaCl3 Reinforced Amorphous Oxyhalide Electrolyte for Thermally Stable All-Solid-State Batteries",
+          "link": "https://doi.org/10.1021/jacs.6c17602"
         }
       ],
       "flag": false
@@ -3643,6 +3697,24 @@
       "flag": false
     },
     {
+      "key": "sung-gap-im|korea-advanced-institute-of-science-and-technology-kaist-291-daehak-ro-yuseong-gu",
+      "pi": "Sung Gap Im",
+      "org": "Korea Advanced Institute of Science and Technology (KAIST) , , 291 Daehak-ro, Yuseong-gu , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsenergylett.6c02511",
+          "date": "2026-11-12",
+          "journal": "ACS Energy Letters",
+          "title": "Engineering Ultrathin, Tough Polymer Networks for Stable Lithium Metal Anode Interphases",
+          "link": "https://doi.org/10.1021/acsenergylett.6c02511"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "taro-hitosugi|institute-of-science-tokyo-2-12-1-ookayama",
       "pi": "Taro Hitosugi",
       "org": "Institute of Science Tokyo , , 2-12-1 Ookayama , , ,",
@@ -3692,6 +3764,24 @@
           "journal": "ChemRxiv (preprint)",
           "title": "Reversibility of (De)lithiation of Antiperovskite Li2FeOS through a Paracrystalline, Mixed-Valent Intermediate",
           "link": "https://doi.org/10.26434/chemrxiv.15008493/v1"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "thomas-waldmann|zsw-zentrum-f-r-sonnenenergie-und-wasserstoff-forschung-baden-w-rttemberg",
+      "pi": "Thomas Waldmann",
+      "org": "ZSW—Zentrum für Sonnenenergie- und Wasserstoff-Forschung Baden-Württemberg",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1149/1945-7111/aeba21",
+          "date": "2026-11-12",
+          "journal": "J. Electrochemical Society",
+          "title": "Effect of Silicon-Graphite-Based Anode Slurry Storage Conditions on Rheology, Stability, and Electrochemical Performance",
+          "link": "https://doi.org/10.1149/1945-7111/aeba21"
         }
       ],
       "flag": false
@@ -4790,6 +4880,24 @@
           "journal": "Advanced Materials",
           "title": "Cyclic Nonequilibrium Processing of Halide Solid Electrolytes for Low-Pressure Operation of all-Solid-State Batteries",
           "link": "https://doi.org/10.1002/adma.75398"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "yufeng-zhao|shanghai-university",
+      "pi": "Yufeng Zhao",
+      "org": "Shanghai University , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/jacs.6c17549",
+          "date": "2026-11-12",
+          "journal": "JACS",
+          "title": "Solvent/Anion Codepleted Solvation Engineering Enables Low-Coordination Electrolytes for High-Energy and Low-Temperature Sodium-Ion Pouch Cells",
+          "link": "https://doi.org/10.1021/jacs.6c17549"
         }
       ],
       "flag": false
@@ -6465,6 +6573,26 @@
       "link": "https://doi.org/10.1016/j.electacta.2026.150410",
       "orgs": [],
       "pi_guess": "Jinxiao Bao",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.electacta.2026.150404",
+      "date": "2026-11",
+      "journal": "Electrochimica Acta",
+      "title": "Demonstrating Linked Battery Data to Accelerate Knowledge Flow in Battery Science",
+      "link": "https://doi.org/10.1016/j.electacta.2026.150404",
+      "orgs": [],
+      "pi_guess": "Sabine Paarmann",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jechem.2026.10.067",
+      "date": "2026-11",
+      "journal": "Journal of Energy Chemistry",
+      "title": "Decoupling bulk and interfacial gas evolution mechanisms in Li-rich Mn-based cathodes",
+      "link": "https://doi.org/10.1016/j.jechem.2026.10.067",
+      "orgs": [],
+      "pi_guess": "Qiang Zhang",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]
