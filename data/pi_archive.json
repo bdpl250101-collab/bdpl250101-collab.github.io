@@ -2527,6 +2527,24 @@
       "flag": false
     },
     {
+      "key": "kai-zhang|state-key-laboratory-of-advanced-chemical-power-sources-key-laboratory-of-advanced-energy-materials-chemistry-ministry-of-education-nankai-university-tianjin-china",
+      "pi": "Kai Zhang",
+      "org": "State Key Laboratory of Advanced Chemical Power Sources, Key Laboratory of Advanced Energy Materials Chemistry (Ministry of Education) Nankai University  Tianjin China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75716",
+          "date": "2026-11-14",
+          "journal": "Advanced Materials",
+          "title": "Topological Superlattice Stabilized Layered Oxide Cathodes With Sustainable Anionic Redox",
+          "link": "https://doi.org/10.1002/adma.75716"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "karim-zaghib|department-of-chemical-and-materials-engineering-concordia-university-montreal-quebec-canada",
       "pi": "Karim Zaghib",
       "org": "Department of Chemical and Materials Engineering Concordia University  Montreal Quebec Canada",
@@ -3787,6 +3805,24 @@
       "flag": false
     },
     {
+      "key": "shuaifeng-lou|state-key-laboratory-of-space-power-sources-school-of-chemistry-and-chemical-engineering-harbin-institute-of-technology-harbin-china",
+      "pi": "Shuaifeng Lou",
+      "org": "State Key Laboratory of Space Power‐Sources School of Chemistry and Chemical Engineering Harbin Institute of Technology  Harbin China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/anie.5340472",
+          "date": "2026-11-15",
+          "journal": "Angewandte Chemie Int. Ed.",
+          "title": "Trigonal Prismatic Coordination Field‐Induced d‐Orbital Splitting Enables σ Electron Activation for Efficient Polysulfide Conversion in Li–S Batteries",
+          "link": "https://doi.org/10.1002/anie.5340472"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "shulei-chou|wenzhou-university",
       "pi": "Shulei Chou",
       "org": "Wenzhou University , , , ,",
@@ -5024,6 +5060,24 @@
           "journal": "Small",
           "title": "Potassium Regulation at Na1 Sites for Enhanced Redox Utilization and Structural Reversibility in Multimetal NASICON Cathodes",
           "link": "https://doi.org/10.1002/smll.76656"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "yu-zhang|state-key-laboratory-of-bioinspired-interfacial-materials-science-bioinspired-science-innovation-center-hangzhou-international-innovation-institute-beihang-university-hangzhou-china",
+      "pi": "Yu Zhang",
+      "org": "State Key Laboratory of Bioinspired Interfacial Materials Science Bioinspired Science Innovation Center Hangzhou International Innovation Institute Beihang University  Hangzhou China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75717",
+          "date": "2026-11-14",
+          "journal": "Advanced Materials",
+          "title": "Non‐Precious Metal High‐Entropy Oxide Sub‐1 nm Nanowires for Li‐O2 Batteries",
+          "link": "https://doi.org/10.1002/adma.75717"
         }
       ],
       "flag": false
@@ -6803,6 +6857,36 @@
       "link": "https://doi.org/10.1016/j.jechem.2026.10.058",
       "orgs": [],
       "pi_guess": "Zhe Chen",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.ensm.2026.105655",
+      "date": "2026-11",
+      "journal": "Energy Storage Materials",
+      "title": "Primary-solvation and free-state molecule design enables durable and safe lithium metal batteries",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105655",
+      "orgs": [],
+      "pi_guess": "Xiaopeng Han",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.ensm.2026.105650",
+      "date": "2026-11",
+      "journal": "Energy Storage Materials",
+      "title": "Advanced data-driven surrogate modelling for high-fidelity P2D electrochemical simulation of Lithium-Ion batteries",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105650",
+      "orgs": [],
+      "pi_guess": "Tim Ricken",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.electacta.2026.150416",
+      "date": "2026-11",
+      "journal": "Electrochimica Acta",
+      "title": "Investigating and engineering the evolution of electrolyte driven solid electrolyte interface layer in Na3V2(PO4)3 anodes for achieving high rate sodium ion battery",
+      "link": "https://doi.org/10.1016/j.electacta.2026.150416",
+      "orgs": [],
+      "pi_guess": "Yun Sung Lee",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]
