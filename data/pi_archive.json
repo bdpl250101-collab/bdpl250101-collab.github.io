@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12",
+  "updated": "2026-11-15",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -1267,6 +1267,24 @@
       "flag": false
     },
     {
+      "key": "guanglei-cui|qingdao-new-energy-shandong-laboratory-qingdao-industrial-energy-storage-research-institute-qingdao-institute-of-bioenergy-and-bioprocess-technology-chinese-academy-of-sciences-qingdao-china",
+      "pi": "Guanglei Cui",
+      "org": "Qingdao New Energy Shandong Laboratory, Qingdao Industrial Energy Storage Research Institute, Qingdao Institute of Bioenergy and Bioprocess Technology Chinese Academy of Sciences  Qingdao China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/anie.6121408",
+          "date": "2026-11-14",
+          "journal": "Angewandte Chemie Int. Ed.",
+          "title": "Unveiling the Intrinsic Disparity of Ethylene Carbonate and Fluoroethylene Carbonate in Lithium Metal Battery Exceeding 600 Wh kg−1",
+          "link": "https://doi.org/10.1002/anie.6121408"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "guangmin-zhou|tsinghua-university",
       "pi": "Guangmin Zhou",
       "org": "Tsinghua University , , , ,",
@@ -1285,6 +1303,24 @@
       "flag": false
     },
     {
+      "key": "guobao-xu|xiangtan-university",
+      "pi": "Guobao Xu",
+      "org": "Xiangtan University , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsnano.6c15117",
+          "date": "2026-11-13",
+          "journal": "ACS Nano",
+          "title": "Interphase-Adaptive Chloride Solid Electrolyte Enables High-Performance All-Solid-State Lithium Batteries",
+          "link": "https://doi.org/10.1021/acsnano.6c15117"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "guoxiu-wang|centre-for-clean-energy-technology-university-of-technology-sydney-sydney-new-south-wales-australia",
       "pi": "Guoxiu Wang",
       "org": "Centre For Clean Energy Technology University of Technology Sydney  Sydney New South Wales Australia",
@@ -1298,6 +1334,24 @@
           "journal": "Angewandte Chemie Int. Ed.",
           "title": "Anchored Oxygen-Release-Suppression Phase Stabilizing High-Voltage Ni-Rich Cathode Materials",
           "link": "https://doi.org/10.1002/anie.9916183"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "guozhen-chen|hubei-institute-of-aerospace-chemotechnology",
+      "pi": "guozhen chen",
+      "org": "Hubei Institute of Aerospace Chemotechnology",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1149/1945-7111/aec201",
+          "date": "2026-11-13",
+          "journal": "J. Electrochemical Society",
+          "title": "Achieving Cyclic Structural Stability in 20% Si/C Anodes via a Hydroxyl-Rich Ternary Copolymer Binder",
+          "link": "https://doi.org/10.1149/1945-7111/aec201"
         }
       ],
       "flag": false
@@ -1465,6 +1519,24 @@
       "flag": false
     },
     {
+      "key": "hee-dae-lim|department-of-battery-engineering-hanyang-university-seoul-republic-of-korea",
+      "pi": "Hee‐Dae Lim",
+      "org": "Department of Battery Engineering Hanyang University  Seoul Republic of Korea",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/smll.76713",
+          "date": "2026-11-13",
+          "journal": "Small",
+          "title": "Interfacial Chemo‐Mechanical Engineering of a Vertically Aligned Host for Reversible Anode‐Less Lithium Metal Batteries",
+          "link": "https://doi.org/10.1002/smll.76713"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "hee-tak-kim|korea-advanced-institute-of-science-and-technology-291-daehak-ro-yuseung-gu",
       "pi": "Hee-Tak Kim",
       "org": "Korea Advanced Institute of Science and Technology , , 291 Daehak-ro, Yuseung-gu , ,",
@@ -1532,6 +1604,24 @@
           "journal": "Advanced Materials",
           "title": "Rate Capability of Lithium‐Rich Manganese‐Based Oxide Cathodes: Charge–Discharge Kinetics, Multiscale Bottlenecks, and Dynamic Rate‐Determining Steps",
           "link": "https://doi.org/10.1002/adma.75619"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "hongli-zhu|department-of-mechanical-and-industrial-engineering-northeastern-university-boston-ma-02115-usa",
+      "pi": "Hongli Zhu",
+      "org": "Department of Mechanical and Industrial Engineering, Northeastern University, Boston, MA 02115, USA.",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1126/sciadv.ael0210",
+          "date": "2026-11-13",
+          "journal": "Science Advances",
+          "title": "Time-evolved hetero-alkali interphases enable long-life sulfide-based anode-free solid-state batteries",
+          "link": "https://doi.org/10.1126/sciadv.ael0210"
         }
       ],
       "flag": false
@@ -1933,6 +2023,24 @@
       "flag": false
     },
     {
+      "key": "jiajun-wang|moe-engineering-research-center-for-electrochemical-energy-storage-and-carbon-neutrality-in-cold-regions-school-of-chemistry-and-chemical-engineering-harbin-institute-of-technology-harbin-pr-china",
+      "pi": "Jiajun Wang",
+      "org": "MOE Engineering Research Center for Electrochemical Energy Storage and Carbon Neutrality in Cold Regions School of Chemistry and Chemical Engineering Harbin Institute of Technology  Harbin PR China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75687",
+          "date": "2026-11-13",
+          "journal": "Advanced Materials",
+          "title": "A Scalable Protrusion‐Targeted Electrolyte Enables 500 Wh Kg−1 Lithium Metal Batteries With 500‐Cycle Stability",
+          "link": "https://doi.org/10.1002/adma.75687"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "jiangfeng-qian|hubei-key-laboratory-of-electrochemical-power-sources-college-of-chemistry-and-molecular-sciences-wuhan-university-wuhan-hubei-china",
       "pi": "Jiangfeng Qian",
       "org": "Hubei Key Laboratory of Electrochemical Power Sources, College of Chemistry and Molecular Sciences Wuhan University  Wuhan Hubei China",
@@ -2072,6 +2180,24 @@
           "journal": "Advanced Materials",
           "title": "Non-Selective Suppression of Cation and Anion Crosstalk from an Anode Perspective",
           "link": "https://doi.org/10.1002/adma.75632"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "jihee-yoon|composites-amp-convergence-materials-research-division-korea-institute-of-materials-science-kims-changwon-republic-of-korea",
+      "pi": "Jihee Yoon",
+      "org": "Composites &amp; Convergence Materials Research Division Korea Institute of Materials Science (KIMS)  Changwon Republic of Korea",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/smll.76504",
+          "date": "2026-11-13",
+          "journal": "Small",
+          "title": "A Multifunctional Epoxy–Polyether Network for Chemo‐Mechanical Stabilization of High‐Loading Ni‐Rich Cathodes",
+          "link": "https://doi.org/10.1002/smll.76504"
         }
       ],
       "flag": false
@@ -2576,6 +2702,24 @@
           "journal": "Advanced Materials",
           "title": "Voltage Hysteresis Induced by Fragile Quasi-Flat Bands in Oxygen-Redox Cathodes",
           "link": "https://doi.org/10.1002/adma.75396"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "lin-li|wenzhou-university",
+      "pi": "Lin Li",
+      "org": "Wenzhou University , , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/jacs.6c18128",
+          "date": "2026-11-13",
+          "journal": "JACS",
+          "title": "Overturning the Thermal Instability Paradigm of Ether-Based Electrolytes via Multi-Anion-Driven Solvation Reconstruction",
+          "link": "https://doi.org/10.1021/jacs.6c18128"
         }
       ],
       "flag": false
@@ -3625,6 +3769,24 @@
       "flag": false
     },
     {
+      "key": "shuaifeng-lou|school-of-chemistry-and-chemical-engineering-harbin-institute-of-technology",
+      "pi": "Shuaifeng Lou",
+      "org": "School of Chemistry and Chemical Engineering, Harbin Institute of Technology , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsenergylett.6c02761",
+          "date": "2026-11-12",
+          "journal": "ACS Energy Letters",
+          "title": "Anion Sublattice Engineering Induced Niobium-Tungsten Oxide with Near-Zero Residual Strain for Stable 100 C Cycling Capability",
+          "link": "https://doi.org/10.1021/acsenergylett.6c02761"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "shulei-chou|wenzhou-university",
       "pi": "Shulei Chou",
       "org": "Wenzhou University , , , ,",
@@ -3800,6 +3962,24 @@
           "journal": "Advanced Materials",
           "title": "Intermediate-Phase Buffering Unlocks Reversible High-Voltage Cycling in O3-Type Sodium Oxide Cathodes",
           "link": "https://doi.org/10.1002/adma.74755"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "torben-r-jensen|aarhus-university-langelandsgade-140",
+      "pi": "Torben R. Jensen",
+      "org": "Aarhus University , , Langelandsgade 140 , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acs.chemmater.6c02020",
+          "date": "2026-11-14",
+          "journal": "Chemistry of Materials",
+          "title": "A Stable and Highly Selective Sodium Solid-State Electrolyte — High-Energy Mechanochemical Treatment of Disodium Dodecahydridododecaborate",
+          "link": "https://doi.org/10.1021/acs.chemmater.6c02020"
         }
       ],
       "flag": false
@@ -6593,6 +6773,36 @@
       "link": "https://doi.org/10.1016/j.jechem.2026.10.067",
       "orgs": [],
       "pi_guess": "Qiang Zhang",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.electacta.2026.150426",
+      "date": "2026-11",
+      "journal": "Electrochimica Acta",
+      "title": "Direct Electrochemical Model Parameterization from Lithium-Ion Battery Impedance Spectra",
+      "link": "https://doi.org/10.1016/j.electacta.2026.150426",
+      "orgs": [],
+      "pi_guess": "Zihao Zhang",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.241977",
+      "date": "2027-02",
+      "journal": "Journal of Power Sources",
+      "title": "Supercritical CO2–assisted construction of porous LLZO–Al–Ga/PVDF–HFP composite electrolytes for high-performance quasi-solid-state lithium batteries",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241977",
+      "orgs": [],
+      "pi_guess": "Zhijun Liu",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jechem.2026.10.058",
+      "date": "2026-11",
+      "journal": "Journal of Energy Chemistry",
+      "title": "Hard carbon anodes for sodium-ion batteries: from sodium storage mechanisms to multi-dimensional performance optimization strategies",
+      "link": "https://doi.org/10.1016/j.jechem.2026.10.058",
+      "orgs": [],
+      "pi_guess": "Zhe Chen",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]
