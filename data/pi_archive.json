@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15",
+  "updated": "2026-11-16",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -668,6 +668,24 @@
           "journal": "Angewandte Chemie Int. Ed.",
           "title": "Solid-State-Enabled Three-Stage Delithiation Pathway of Li5FeO4 for Silicon-Based All-Solid-State Batteries",
           "link": "https://doi.org/10.1002/anie.9668428"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "changshin-jo|pohang-university-of-science-and-technology-postech-77-cheongam-ro-nam-gu",
+      "pi": "Changshin Jo",
+      "org": "Pohang University of Science and Technology (POSTECH) , , 77 Cheongam-Ro, Nam-Gu , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsnano.6c07366",
+          "date": "2026-11-16",
+          "journal": "ACS Nano",
+          "title": "Interfacial Electrochemical Reconstruction Enables Direct Regeneration of Graphite Anodes",
+          "link": "https://doi.org/10.1021/acsnano.6c07366"
         }
       ],
       "flag": false
@@ -1915,6 +1933,42 @@
       "flag": false
     },
     {
+      "key": "jang-wook-choi|school-of-chemical-and-biological-engineering-and-institute-of-chemical-processes",
+      "pi": "Jang Wook Choi",
+      "org": "School of Chemical and Biological Engineering and Institute of Chemical Processes",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.26434/chemrxiv.15012255/v1",
+          "date": "2026-11-16",
+          "journal": "ChemRxiv",
+          "title": "Short-circuit-resistant sulfide solid-state batteries through lithium dewetting",
+          "link": "https://doi.org/10.26434/chemrxiv.15012255/v1"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "jang-wook-choi|seoul-national-university-1-gwanak-ro-gwanak-gu",
+      "pi": "Jang Wook Choi",
+      "org": "Seoul National University , , 1 Gwanak-ro , Gwanak-gu, ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/jacs.6c17148",
+          "date": "2026-11-16",
+          "journal": "JACS",
+          "title": "Secondary Solvation Shell Regulation for Fast-Charging Lithium Metal Batteries",
+          "link": "https://doi.org/10.1021/jacs.6c17148"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "jean-marie-tarascon|chimie-du-solide-energie-umr-8260-coll-ge-de-france-paris-france",
       "pi": "Jean‐Marie Tarascon",
       "org": "Chimie du Solide‐Energie UMR 8260 Collège de France  Paris France",
@@ -2270,6 +2324,24 @@
           "journal": "Advanced Energy Materials",
           "title": "Biodegradable and Closed-Loop Recyclable Hyaluronic Acid/Alginate Gel Electrolyte for Ultra-Durable Zinc-Iodine Batteries",
           "link": "https://doi.org/10.1002/aenm.71558"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "jinhyuk-lee|department-of-mining-and-materials-engineering-mcgill-university-montreal-quebec-canada",
+      "pi": "Jinhyuk Lee",
+      "org": "Department of Mining and Materials Engineering McGill University  Montreal Quebec Canada",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75720",
+          "date": "2026-11-15",
+          "journal": "Advanced Materials",
+          "title": "Thermodynamically Controlled Multiphase Evolution in Single-Crystal Cation-Disordered Li-Ion Cathode Materials",
+          "link": "https://doi.org/10.1002/adma.75720"
         }
       ],
       "flag": false
@@ -3674,6 +3746,24 @@
           "journal": "Advanced Energy Materials",
           "title": "Nanoscale In2O3 Induced Fast Kinetics and Stable Interface for High-Loading Solid-State Cathode",
           "link": "https://doi.org/10.1002/aenm.71543"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "shaohua-shen|international-research-center-for-renewable-energy-state-key-laboratory-of-multiphase-flow-in-power-engineering-xi-an-jiaotong-university-xi-an-china",
+      "pi": "Shaohua Shen",
+      "org": "International Research Center For Renewable Energy State Key Laboratory of Multiphase Flow in Power Engineering Xi'an Jiaotong University  Xi'an China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/anie.5975631",
+          "date": "2026-11-16",
+          "journal": "Angewandte Chemie Int. Ed.",
+          "title": "A Scalable Presodiation Strategy Enabling Dry-Air-Processable Hard Carbon Anodes for High Energy Sodium-Ion Batteries",
+          "link": "https://doi.org/10.1002/anie.5975631"
         }
       ],
       "flag": false
@@ -6887,6 +6977,36 @@
       "link": "https://doi.org/10.1016/j.electacta.2026.150416",
       "orgs": [],
       "pi_guess": "Yun Sung Lee",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.241952",
+      "date": "2027-02",
+      "journal": "Journal of Power Sources",
+      "title": "Cell teardown and post mortem degradation analysis of commercial 18650 sodium-ion batteries",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241952",
+      "orgs": [],
+      "pi_guess": "Sascha Nowak",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.241974",
+      "date": "2027-02",
+      "journal": "Journal of Power Sources",
+      "title": "Degradation mechanism of all-solid-state batteries with Li7−xPS6−xClx under IEC 62660-1-based and WLTC-mode cycling",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241974",
+      "orgs": [],
+      "pi_guess": "Tomoyuki Matsuda",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.ensm.2026.105660",
+      "date": "2026-11",
+      "journal": "Energy Storage Materials",
+      "title": "Poly(ethyl cyanoacrylate) Binder Prepared via Anionic Polymerization for Improved Structural Integrity and Electrochemical Performance of LiFePO4 Cathodes",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105660",
+      "orgs": [],
+      "pi_guess": "Yingze Song",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]
