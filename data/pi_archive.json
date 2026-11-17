@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16",
+  "updated": "2026-11-17",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -290,6 +290,24 @@
           "journal": "Batteries & Supercaps",
           "title": "Insights Into Electrolyte Effects on Interfacial Kinetics and Transport in Porous Redox Flow Battery Electrodes: A Multiparadigm Modeling Study",
           "link": "https://doi.org/10.1002/batt.70512"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "alejandro-a-franco|umr-cnrs-universit-de-picardie-jules-verne-15-rue-baudelocque-amiens-cedex-france-80039",
+      "pi": "Alejandro A. Franco",
+      "org": "UMR CNRS, Université de Picardie Jules Verne, 15, rue Baudelocque, Amiens Cedex, France, 80039",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.26434/chemrxiv.15012329/v1",
+          "date": "2026-11-17",
+          "journal": "ChemRxiv",
+          "title": "Microstructure-resolved modeling of fused filament fabrication of lithium-ion battery electrodes",
+          "link": "https://doi.org/10.26434/chemrxiv.15012329/v1"
         }
       ],
       "flag": false
@@ -889,6 +907,24 @@
       "flag": false
     },
     {
+      "key": "damien-dambournet|sorbonne-universite-cnrs-physico-chimie-des-e-lectrolytes-et-nano-syste-mes-interfaciaux-phenix",
+      "pi": "Damien Dambournet",
+      "org": "Sorbonne Université, CNRS, Physico-chimie des électrolytes et nano-systèmes interfaciaux, PHENIX , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acs.chemmater.6c02845",
+          "date": "2026-11-17",
+          "journal": "Chemistry of Materials",
+          "title": "Lux−Flood Acid−Base Concept Applied to Salt-Conversion Recycling of Positive Electrode Layered Transition-Metal Oxides",
+          "link": "https://doi.org/10.1021/acs.chemmater.6c02845"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "daniel-r-baker|independent-researcher",
       "pi": "Daniel R. Baker",
       "org": "Independent Researcher",
@@ -1280,6 +1316,24 @@
           "journal": "Angewandte Chemie Int. Ed.",
           "title": "Non‐Fluorinated Electrolytes Enable Long‐Cycling Micron‐Sized Silicon Anodes",
           "link": "https://doi.org/10.1002/anie.6271722"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "guanglei-cui|qingdao-industrial-energy-storage-research-institute-qingdao-institute-of-bioenergy-and-bioprocess-technology-chinese-academy-of-sciences-qingdao-china",
+      "pi": "Guanglei Cui",
+      "org": "Qingdao Industrial Energy Storage Research Institute Qingdao Institute of Bioenergy and Bioprocess Technology Chinese Academy of Sciences Qingdao China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75766",
+          "date": "2026-11-17",
+          "journal": "Advanced Materials",
+          "title": "Reconceptualizing Thermal Runaway Mechanisms in Sulfide Solid‐State Batteries via Dynamic Interfacial Reconstruction",
+          "link": "https://doi.org/10.1002/adma.75766"
         }
       ],
       "flag": false
@@ -4507,6 +4561,24 @@
       "flag": false
     },
     {
+      "key": "xingbin-yan|school-of-materials-science-and-engineering-sun-yat-sen-university",
+      "pi": "Xingbin Yan",
+      "org": "School of Materials Science and Engineering, Sun Yat-sen University , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsenergylett.6c02924",
+          "date": "2026-11-16",
+          "journal": "ACS Energy Letters",
+          "title": "From Nonstep to Step: Voltage‑Response‑Driven Interfacial Evolution and Closed‑Pore Sodium Filling in Hard Carbon Anode",
+          "link": "https://doi.org/10.1021/acsenergylett.6c02924"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "xinyan-huang|department-of-building-environment-and-energy-engineering-the-hong-kong-polytechnic-university-hong-kong-china",
       "pi": "Xinyan Huang",
       "org": "Department of Building Environment and Energy Engineering The Hong Kong Polytechnic University  Hong Kong China",
@@ -4664,6 +4736,24 @@
           "journal": "Advanced Energy Materials",
           "title": "Upcycling Strategy for Mixed Spent Batteries to Enable NMC622 & Graphite Full Batteries",
           "link": "https://doi.org/10.1002/aenm.71680"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "yan-yu|hefei-national-research-center-for-physical-sciences-at-the-microscale-department-of-materials-science-and-engineering-university-of-science-and-technology-of-china-hefei-anhui-china",
+      "pi": "Yan Yu",
+      "org": "Hefei National Research Center for Physical Sciences at the Microscale Department of Materials Science and Engineering University of Science and Technology of China  Hefei Anhui China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75760",
+          "date": "2026-11-17",
+          "journal": "Advanced Materials",
+          "title": "Sequential Regulation of Dendrite Initiation and Propagation for High‐Current Hydroborate‐Based Solid‐State Sodium Metal Batteries",
+          "link": "https://doi.org/10.1002/adma.75760"
         }
       ],
       "flag": false
@@ -7007,6 +7097,56 @@
       "link": "https://doi.org/10.1016/j.ensm.2026.105660",
       "orgs": [],
       "pi_guess": "Yingze Song",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.ensm.2026.105661",
+      "date": "2026-11",
+      "journal": "Energy Storage Materials",
+      "title": "Calendering simulation and structural property analysis of dry coated sulfide solid-state battery cathodes",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105661",
+      "orgs": [],
+      "pi_guess": "Arno Kwade",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.ensm.2026.105665",
+      "date": "2026-11",
+      "journal": "Energy Storage Materials",
+      "title": "Fast and Reversible Oxygen Redox via Delocalized TM–O Hybridized Hole States and Local Coordination Flexibility in Mn-Rich P2-Type Na-Layered Cathodes",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105665",
+      "orgs": [],
+      "pi_guess": "Jongsoon Kim",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.242001",
+      "date": "2027-02",
+      "journal": "Journal of Power Sources",
+      "title": "Uncovering the high voltage cycling stability of LiCoO2 cathode by all-solid-state batteries",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.242001",
+      "orgs": [],
+      "pi_guess": "Yi Zeng",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.242007",
+      "date": "2027-02",
+      "journal": "Journal of Power Sources",
+      "title": "Failure progression in silicon-based all-solid-state batteries: Chemo-mechanics, electrochemical localization, and safety-aware design",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.242007",
+      "orgs": [],
+      "pi_guess": "Xiang Gao",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jechem.2026.11.005",
+      "date": "2026-11",
+      "journal": "Journal of Energy Chemistry",
+      "title": "Leachate-to-cathode reconstructive recycling of spent LiFePO4 cathodes",
+      "link": "https://doi.org/10.1016/j.jechem.2026.11.005",
+      "orgs": [],
+      "pi_guess": "Tao Li",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]
