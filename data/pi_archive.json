@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17",
+  "updated": "2026-11-18",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -14,6 +14,32 @@
     "en": "The names in this edition come from the weekly report summary, not from a direct reading of each paper's author list, so corresponding_confirmed is false throughout. From the next automated run the intent is to resolve corresponding authors through Crossref and OpenAlex."
   },
   "entries": [
+    {
+      "key": "baohua-li|tsinghua-shenzhen-international-graduate-school-tsinghua-university-shenzhen-china",
+      "pi": "Baohua Li",
+      "org": "Tsinghua Shenzhen International Graduate School Tsinghua University  Shenzhen China",
+      "count": 2,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.74955",
+          "date": "2026-09-16",
+          "journal": "Advanced Materials",
+          "title": "Fluorinated Gel Polymer Electrolytes for Lithium Metal Batteries: From Passive Protection to Adaptive Interfacial Regulation",
+          "link": "https://doi.org/10.1002/adma.74955"
+        },
+        {
+          "doi": "10.1002/adma.75751",
+          "date": "2026-11-18",
+          "journal": "Advanced Materials",
+          "title": "Probing Phonon Dynamics for Kinetic Stabilization of Single‐Crystal Nickel‐Rich Cathodes",
+          "link": "https://doi.org/10.1002/adma.75751"
+        }
+      ],
+      "flag": true,
+      "flagged_since": "2026-11-18"
+    },
     {
       "key": "feng-pan|school-of-advanced-materials-peking-university-shenzhen-graduate-school-peking-university-shenzhen-china",
       "pi": "Feng Pan",
@@ -488,24 +514,6 @@
           "journal": "ChemRxiv (preprint)",
           "title": "Thermodynamic hydration boundaries guide storage and closed-loop recycling of sodium-ion battery cathodes",
           "link": "https://doi.org/10.26434/chemrxiv.15004936/v2"
-        }
-      ],
-      "flag": false
-    },
-    {
-      "key": "baohua-li|tsinghua-shenzhen-international-graduate-school-tsinghua-university-shenzhen-china",
-      "pi": "Baohua Li",
-      "org": "Tsinghua Shenzhen International Graduate School Tsinghua University  Shenzhen China",
-      "count": 1,
-      "corresponding_confirmed": false,
-      "resolved_by": "crossref-last-author",
-      "papers": [
-        {
-          "doi": "10.1002/adma.74955",
-          "date": "2026-09-16",
-          "journal": "Advanced Materials",
-          "title": "Fluorinated Gel Polymer Electrolytes for Lithium Metal Batteries: From Passive Protection to Adaptive Interfacial Regulation",
-          "link": "https://doi.org/10.1002/adma.74955"
         }
       ],
       "flag": false
@@ -992,6 +1000,24 @@
           "journal": "ChemRxiv",
           "title": "Site-Selective Fluorination for Decoupling Oxidative Stability and Ionic Transport of Oxychloride Solid Electrolytes",
           "link": "https://doi.org/10.26434/chemrxiv.15011034/v1"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "dongju-fu|college-of-new-materials-and-new-energies-shenzhen-technology-university-shenzhen-china",
+      "pi": "Dongju Fu",
+      "org": "College of New Materials and New Energies Shenzhen Technology University  Shenzhen China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/batt.70537",
+          "date": "2026-11",
+          "journal": "Batteries & Supercaps",
+          "title": "Efficient Recycling and Regeneration of Graphite Anodes From Spent Lithium‐Ion Batteries via Dilute Acid‐Assisted Ultrasonication and Carbon Coating",
+          "link": "https://doi.org/10.1002/batt.70537"
         }
       ],
       "flag": false
@@ -1519,6 +1545,24 @@
       "flag": false
     },
     {
+      "key": "haiyan-wang|hunan-provincial-key-laboratory-of-chemical-power-sources-college-of-chemistry-and-chemical-engineering-central-south-university-changsha-410083-china",
+      "pi": "Haiyan Wang",
+      "org": "Hunan Provincial Key Laboratory of Chemical Power Sources, College of Chemistry and Chemical Engineering, Central South University, Changsha 410083, China.",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1126/sciadv.aeh3524",
+          "date": "2026-11-20",
+          "journal": "Science Advances",
+          "title": "Engineering interfacial nucleation and growth for long-life, ultrahigh-rate anode-free sodium batteries",
+          "link": "https://doi.org/10.1126/sciadv.aeh3524"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "han-yong-bae|department-of-chemistry-sungkyunkwan-university-suwon-republic-of-korea",
       "pi": "Han Yong Bae",
       "org": "Department of Chemistry Sungkyunkwan University  Suwon Republic of Korea",
@@ -1622,6 +1666,24 @@
           "journal": "ACS Energy Letters",
           "title": "Enhancing the Interphasic Stability of Sodium-Ion Batteries via Structural Distortion-Driven Defluorination of Aromatic Additives",
           "link": "https://doi.org/10.1021/acsenergylett.6c01569"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "heng-zhang|key-laboratory-of-material-chemistry-for-energy-conversion-and-storage-ministry-of-education-school-of-chemistry-and-chemical-engineering-huazhong-university-of-science-and-technology-wuhan-china",
+      "pi": "Heng Zhang",
+      "org": "Key Laboratory of Material Chemistry for Energy Conversion and Storage (Ministry of Education) School of Chemistry and Chemical Engineering Huazhong University of Science and Technology  Wuhan China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/anie.7753082",
+          "date": "2026-11-18",
+          "journal": "Angewandte Chemie Int. Ed.",
+          "title": "Beyond Lithium Solvation: Tuning Cation‐Solvent‐Anion Interactions for Stable Lithium‐Metal Batteries",
+          "link": "https://doi.org/10.1002/anie.7753082"
         }
       ],
       "flag": false
@@ -4669,6 +4731,24 @@
       "flag": false
     },
     {
+      "key": "xueping-gao|institute-of-new-energy-material-chemistry-school-of-materials-science-and-engineering-nankai-university-tianjin-china",
+      "pi": "Xueping Gao",
+      "org": "Institute of New Energy Material Chemistry School of Materials Science and Engineering Nankai University  Tianjin China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75779",
+          "date": "2026-11-18",
+          "journal": "Advanced Materials",
+          "title": "Stage‐Specific Pressure Programming Decouples Low‐Pressure Sulfur Reduction From High‐Pressure Interfacial Reconstruction in All‐Solid‐State Lithium–Sulfur Batteries",
+          "link": "https://doi.org/10.1002/adma.75779"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "ya-you|wuhan-university-of-technology",
       "pi": "Ya You",
       "org": "Wuhan University of Technology , ,",
@@ -7147,6 +7227,36 @@
       "link": "https://doi.org/10.1016/j.jechem.2026.11.005",
       "orgs": [],
       "pi_guess": "Tao Li",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.ensm.2026.105670",
+      "date": "2026-11",
+      "journal": "Energy Storage Materials",
+      "title": "Coupling Mechanical Compliance and Conversion Chemistry with a Halide Perovskite Precursor for Anodeless All-Solid-State Batteries",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105670",
+      "orgs": [],
+      "pi_guess": "Hyun-seung Kim",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.joule.2026.102736",
+      "date": "2026-11",
+      "journal": "Joule",
+      "title": "Interfacial void evolution in solid-state batteries",
+      "link": "https://doi.org/10.1016/j.joule.2026.102736",
+      "orgs": [],
+      "pi_guess": "X. Wendy Gu",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.242009",
+      "date": "2027-02",
+      "journal": "Journal of Power Sources",
+      "title": "Rapid identification of lithium-ion battery degradation modes via 15-second-pulse-based fast EIS and physics-informed deep learning",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.242009",
+      "orgs": [],
+      "pi_guess": "Jiuchun Jiang",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]
