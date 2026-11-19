@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -65,6 +65,32 @@
       ],
       "flag": true,
       "flagged_since": "2026-10-24"
+    },
+    {
+      "key": "hongge-pan|institute-of-science-and-technology-for-new-energy-xi-an-technological-university-xi-an-china",
+      "pi": "Hongge Pan",
+      "org": "Institute of Science and Technology for New Energy Xi'an Technological University  Xi'an China",
+      "count": 2,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75619",
+          "date": "2026-11-09",
+          "journal": "Advanced Materials",
+          "title": "Rate Capability of Lithium‐Rich Manganese‐Based Oxide Cathodes: Charge–Discharge Kinetics, Multiscale Bottlenecks, and Dynamic Rate‐Determining Steps",
+          "link": "https://doi.org/10.1002/adma.75619"
+        },
+        {
+          "doi": "10.1002/adma.75775",
+          "date": "2026-11-18",
+          "journal": "Advanced Materials",
+          "title": "Metallurgical Interface Engineering Constructing In Situ Li3N‐Enriched Interphase: A Bulk‐Interface Synergy Strategy Toward Practical Silicon Anodes",
+          "link": "https://doi.org/10.1002/adma.75775"
+        }
+      ],
+      "flag": true,
+      "flagged_since": "2026-11-19"
     },
     {
       "key": "hua-wang|state-key-laboratory-of-bioinspired-interfacial-materials-science-school-of-chemistry-beihang-university-beijing-china",
@@ -856,6 +882,24 @@
           "journal": "Science",
           "title": "Unlocking cycle life of lithium metal batteries",
           "link": "https://doi.org/10.1126/science.aee1630"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "chunyi-zhi|the-university-of-hong-kong-pokfulam",
+      "pi": "Chunyi Zhi",
+      "org": "The University of Hong Kong , , Pokfulam , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/jacs.6c08830",
+          "date": "2026-11-19",
+          "journal": "JACS",
+          "title": "In Situ Polymerized Main/Side-Chain Bifluorinated Cross-Linked Polyether Electrolytes for High-Voltage Lithium Metal Batteries",
+          "link": "https://doi.org/10.1021/jacs.6c08830"
         }
       ],
       "flag": false
@@ -1725,24 +1769,6 @@
       "flag": false
     },
     {
-      "key": "hongge-pan|institute-of-science-and-technology-for-new-energy-xi-an-technological-university-xi-an-china",
-      "pi": "Hongge Pan",
-      "org": "Institute of Science and Technology for New Energy Xi'an Technological University  Xi'an China",
-      "count": 1,
-      "corresponding_confirmed": false,
-      "resolved_by": "crossref-last-author",
-      "papers": [
-        {
-          "doi": "10.1002/adma.75619",
-          "date": "2026-11-09",
-          "journal": "Advanced Materials",
-          "title": "Rate Capability of Lithium‐Rich Manganese‐Based Oxide Cathodes: Charge–Discharge Kinetics, Multiscale Bottlenecks, and Dynamic Rate‐Determining Steps",
-          "link": "https://doi.org/10.1002/adma.75619"
-        }
-      ],
-      "flag": false
-    },
-    {
       "key": "hongli-zhu|department-of-mechanical-and-industrial-engineering-northeastern-university-boston-ma-02115-usa",
       "pi": "Hongli Zhu",
       "org": "Department of Mechanical and Industrial Engineering, Northeastern University, Boston, MA 02115, USA.",
@@ -2607,6 +2633,24 @@
       "flag": false
     },
     {
+      "key": "jun-ming|changchun-institute-of-applied-chemistry-chinese-academy-of-sciences",
+      "pi": "Jun Ming",
+      "org": "Changchun Institute of Applied Chemistry, Chinese Academy of Sciences , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsenergylett.6c02523",
+          "date": "2026-11-19",
+          "journal": "ACS Energy Letters",
+          "title": "Competitive Coordination of Solvent in Electrolyte to Stabilize Li-Rich Mn-Based Batteries",
+          "link": "https://doi.org/10.1021/acsenergylett.6c02523"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "junpeng-li|sino-platinum-metals-co-ltd-kunming-yunnan-china",
       "pi": "Junpeng Li",
       "org": "Sino‐Platinum Metals Co., Ltd  Kunming Yunnan China",
@@ -3039,6 +3083,24 @@
       "flag": false
     },
     {
+      "key": "markus-h-lzle|zsw-zentrum-f-r-sonnenenergie-und-wasserstoff-forschung-baden-w-rttemberg",
+      "pi": "Markus Hölzle",
+      "org": "ZSW—Zentrum für Sonnenenergie- und Wasserstoff-Forschung Baden-Württemberg",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1149/1945-7111/aebfca",
+          "date": "2026-11-19",
+          "journal": "J. Electrochemical Society",
+          "title": "Tear-Down Analysis and Performance of Large Commercial Hard Carbon/NFM Sodium-Ion Batteries",
+          "link": "https://doi.org/10.1149/1945-7111/aebfca"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "martin-pumera|advanced-nanorobots-amp-multiscale-robotics-laboratory-faculty-of-electrical-engineering-and-computer-science-vsb-technical-university-of-ostrava-ostrava-czech-republic",
       "pi": "Martin Pumera",
       "org": "Advanced Nanorobots &amp; Multiscale Robotics Laboratory Faculty of Electrical Engineering and Computer Science VSB—Technical University of Ostrava  Ostrava Czech Republic",
@@ -3453,6 +3515,24 @@
       "flag": false
     },
     {
+      "key": "qichun-zhang|city-university-of-hong-kong-tat-chee-avenue",
+      "pi": "Qichun Zhang",
+      "org": "City University of Hong Kong , , Tat Chee Avenue , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/jacs.6c17196",
+          "date": "2026-11-19",
+          "journal": "JACS",
+          "title": "A Three-Motif-Based One-Dimensional Covalent Organic Framework as an Efficient Cathode Material for Stable Rechargeable Sodium-Ion Batteries",
+          "link": "https://doi.org/10.1021/jacs.6c17196"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "qichun-zhang|department-of-materials-science-and-engineering-amp-department-of-chemistry-city-university-of-hong-kong-hong-kong-hong-kong",
       "pi": "Qichun Zhang",
       "org": "Department of Materials Science and Engineering &amp; Department of Chemistry City University of Hong Kong  Hong Kong Hong Kong",
@@ -3574,6 +3654,24 @@
           "journal": "ACS Nano",
           "title": "Turning Insulators into Accelerators: Deciphering the Interfacial Ionic Conductivity Boost in Composite Solid-State Electrolytes through Machine Learning Molecular Dynamics Simulations",
           "link": "https://doi.org/10.1021/acsnano.6c16367"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "quanquan-pang|peking-university",
+      "pi": "Quanquan Pang",
+      "org": "Peking University , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsenergylett.6c02554",
+          "date": "2026-11-18",
+          "journal": "ACS Energy Letters",
+          "title": "Architected Si-Based Anodes for All-Solid-State Lithium Batteries",
+          "link": "https://doi.org/10.1021/acsenergylett.6c02554"
         }
       ],
       "flag": false
@@ -5338,6 +5436,24 @@
           "journal": "Advanced Materials",
           "title": "Non‐Precious Metal High‐Entropy Oxide Sub‐1 nm Nanowires for Li‐O2 Batteries",
           "link": "https://doi.org/10.1002/adma.75717"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "yue-ma|northwestern-polytechnical-university",
+      "pi": "Yue Ma",
+      "org": "Northwestern Polytechnical University , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsnano.6c14733",
+          "date": "2026-11-19",
+          "journal": "ACS Nano",
+          "title": "Screening of Single-Atom Catalysts for Na2S-Mediated Pre-Sodiation and Interfacial Rejuvenation in Low N/P Ratio Sodium Batteries",
+          "link": "https://doi.org/10.1021/acsnano.6c14733"
         }
       ],
       "flag": false
@@ -7257,6 +7373,36 @@
       "link": "https://doi.org/10.1016/j.jpowsour.2026.242009",
       "orgs": [],
       "pi_guess": "Jiuchun Jiang",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.joule.2026.102744",
+      "date": "2026-11",
+      "journal": "Joule",
+      "title": "Preorganized electrolyte reduction chemistry enables lithium-ion batteries under extreme conditions",
+      "link": "https://doi.org/10.1016/j.joule.2026.102744",
+      "orgs": [],
+      "pi_guess": "Xiulin Fan",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.242032",
+      "date": "2027-02",
+      "journal": "Journal of Power Sources",
+      "title": "Pressure sensitivity descriptor guided bimodal catholyte design for all-solid-state lithium-sulfur batteries",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.242032",
+      "orgs": [],
+      "pi_guess": "Xueping Gao",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jechem.2026.11.012",
+      "date": "2026-11",
+      "journal": "Journal of Energy Chemistry",
+      "title": "Ring structure engineering of active-hydrogen passivator in succinonitrile-based deep eutectic electrolytes for fast-charging lithium-metal batteries",
+      "link": "https://doi.org/10.1016/j.jechem.2026.11.012",
+      "orgs": [],
+      "pi_guess": "Qunhui Yuan",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]

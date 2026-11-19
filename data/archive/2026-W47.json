@@ -2,20 +2,120 @@
   "week": "2026-W47",
   "iso_year": 2026,
   "iso_week": 47,
-  "generated": "2026-11-19",
+  "generated": "2026-11-20",
   "note": {
     "ko": "주차별 스냅샷입니다. 페이지는 최근 7일 롤링 창이라, 이 파일은 그 주의 마지막 실행 시점 상태를 담습니다. 일별 기록은 data/archive/daily/ 에 있습니다.",
     "en": "A per-week snapshot. The page is a rolling 7-day window, so this file holds the state at the week's last run. Per-day records live in data/archive/daily/."
   },
   "counts": {
-    "research": 53,
-    "industry": 23,
+    "research": 55,
+    "industry": 21,
     "science": 12,
     "jobs": 3,
     "postdoc": 13,
     "grants": 1
   },
   "research": [
+    {
+      "cat": "소재",
+      "sub": "전해질",
+      "title": "Preorganized electrolyte reduction chemistry enables lithium-ion batteries under extreme conditions",
+      "org": "Deng et al.",
+      "journal": "Joule",
+      "date": "2026-11",
+      "added": "2026-11-20",
+      "link": "https://doi.org/10.1016/j.joule.2026.102744"
+    },
+    {
+      "cat": "소재",
+      "sub": "실리콘 음극",
+      "title": "Metallurgical Interface Engineering Constructing In Situ Li3N‐Enriched Interphase: A Bulk‐Interface Synergy Strategy Toward Practical Silicon Anodes",
+      "org": "Lan et al. (Xi’an Technological Univ.)",
+      "journal": "Advanced Materials",
+      "date": "2026-11-18",
+      "added": "2026-11-20",
+      "link": "https://doi.org/10.1002/adma.75775"
+    },
+    {
+      "cat": "소재",
+      "sub": "고분자 전해질",
+      "title": "In Situ Polymerized Main/Side-Chain Bifluorinated Cross-Linked Polyether Electrolytes for High-Voltage Lithium Metal Batteries",
+      "org": "Li et al. (Univ. of Hong Kong)",
+      "journal": "JACS",
+      "date": "2026-11-19",
+      "added": "2026-11-20",
+      "link": "https://doi.org/10.1021/jacs.6c08830"
+    },
+    {
+      "cat": "소재",
+      "sub": "유기 전극",
+      "title": "A Three-Motif-Based One-Dimensional Covalent Organic Framework as an Efficient Cathode Material for Stable Rechargeable Sodium-Ion Batteries",
+      "org": "Yang et al. (City Univ. of Hong Kong)",
+      "journal": "JACS",
+      "date": "2026-11-19",
+      "added": "2026-11-20",
+      "link": "https://doi.org/10.1021/jacs.6c17196"
+    },
+    {
+      "cat": "셀",
+      "sub": "Li-S 전지",
+      "title": "Pressure sensitivity descriptor guided bimodal catholyte design for all-solid-state lithium-sulfur batteries",
+      "org": "Zhang et al.",
+      "journal": "Journal of Power Sources",
+      "date": "2027-02",
+      "added": "2026-11-20",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.242032"
+    },
+    {
+      "cat": "셀",
+      "sub": "Na이온 셀 해체",
+      "title": "Tear-Down Analysis and Performance of Large Commercial Hard Carbon/NFM Sodium-Ion Batteries",
+      "org": "Waldmann et al. (ZSW)",
+      "journal": "J. Electrochemical Society",
+      "date": "2026-11-19",
+      "added": "2026-11-20",
+      "link": "https://doi.org/10.1149/1945-7111/aebfca"
+    },
+    {
+      "cat": "소재",
+      "sub": "고속충전 전해질",
+      "title": "Ring structure engineering of active-hydrogen passivator in succinonitrile-based deep eutectic electrolytes for fast-charging lithium-metal batteries",
+      "org": "Tian et al.",
+      "journal": "Journal of Energy Chemistry",
+      "date": "2026-11",
+      "added": "2026-11-20",
+      "link": "https://doi.org/10.1016/j.jechem.2026.11.012"
+    },
+    {
+      "cat": "셀",
+      "sub": "합금 음극",
+      "title": "Architected Si-Based Anodes for All-Solid-State Lithium Batteries",
+      "org": "Zheng et al. (Peking Univ.)",
+      "journal": "ACS Energy Letters",
+      "date": "2026-11-18",
+      "added": "2026-11-20",
+      "link": "https://doi.org/10.1021/acsenergylett.6c02554"
+    },
+    {
+      "cat": "소재",
+      "sub": "리튬과잉 양극",
+      "title": "Competitive Coordination of Solvent in Electrolyte to Stabilize Li-Rich Mn-Based Batteries",
+      "org": "Jia et al. (Henan Normal Univ.)",
+      "journal": "ACS Energy Letters",
+      "date": "2026-11-19",
+      "added": "2026-11-20",
+      "link": "https://doi.org/10.1021/acsenergylett.6c02523"
+    },
+    {
+      "cat": "셀",
+      "sub": "프리소듐화",
+      "title": "Screening of Single-Atom Catalysts for Na2S-Mediated Pre-Sodiation and Interfacial Rejuvenation in Low N/P Ratio Sodium Batteries",
+      "org": "Li et al. (Northwestern Polytechnical Univ.)",
+      "journal": "ACS Nano",
+      "date": "2026-11-19",
+      "added": "2026-11-20",
+      "link": "https://doi.org/10.1021/acsnano.6c14733"
+    },
     {
       "cat": "셀",
       "sub": "무음극 나트륨전지",
@@ -465,89 +565,33 @@
       "date": "2026-11",
       "added": "2026-11-15",
       "link": "https://doi.org/10.1016/j.jechem.2026.10.058"
-    },
-    {
-      "cat": "소재",
-      "sub": "고체전해질",
-      "title": "A Crystalline LaCl3 Reinforced Amorphous Oxyhalide Electrolyte for Thermally Stable All-Solid-State Batteries",
-      "org": "Wang et al. (GRINM)",
-      "journal": "JACS",
-      "date": "2026-11-12",
-      "added": "2026-11-13",
-      "link": "https://doi.org/10.1021/jacs.6c17602"
-    },
-    {
-      "cat": "소재",
-      "sub": "전해질",
-      "title": "Solvent/Anion Codepleted Solvation Engineering Enables Low-Coordination Electrolytes for High-Energy and Low-Temperature Sodium-Ion Pouch Cells",
-      "org": "Hu et al. (Shanghai Univ.)",
-      "journal": "JACS",
-      "date": "2026-11-12",
-      "added": "2026-11-13",
-      "link": "https://doi.org/10.1021/jacs.6c17549"
-    },
-    {
-      "cat": "공정",
-      "sub": "슬러리 레올로지",
-      "title": "Effect of Silicon-Graphite-Based Anode Slurry Storage Conditions on Rheology, Stability, and Electrochemical Performance",
-      "org": "Feser et al. (Porsche AG · ZSW)",
-      "journal": "J. Electrochemical Society",
-      "date": "2026-11-12",
-      "added": "2026-11-13",
-      "link": "https://doi.org/10.1149/1945-7111/aeba21"
-    },
-    {
-      "cat": "저널",
-      "sub": "데이터 인프라",
-      "title": "Demonstrating Linked Battery Data to Accelerate Knowledge Flow in Battery Science",
-      "org": "Dechent et al.",
-      "journal": "Electrochimica Acta",
-      "date": "2026-11",
-      "added": "2026-11-13",
-      "link": "https://doi.org/10.1016/j.electacta.2026.150404"
-    },
-    {
-      "cat": "소재",
-      "sub": "리튬과잉 양극",
-      "title": "Decoupling bulk and interfacial gas evolution mechanisms in Li-rich Mn-based cathodes",
-      "org": "Zhu et al.",
-      "journal": "Journal of Energy Chemistry",
-      "date": "2026-11",
-      "added": "2026-11-13",
-      "link": "https://doi.org/10.1016/j.jechem.2026.10.067"
-    },
-    {
-      "cat": "소재",
-      "sub": "Li금속 SEI",
-      "title": "Engineering Ultrathin, Tough Polymer Networks for Stable Lithium Metal Anode Interphases",
-      "org": "So et al. (KAIST)",
-      "journal": "ACS Energy Letters",
-      "date": "2026-11-12",
-      "added": "2026-11-13",
-      "link": "https://doi.org/10.1021/acsenergylett.6c02511"
-    },
-    {
-      "cat": "전극",
-      "sub": "전고체 전극",
-      "title": "Induced Structural Disorder Enables High Ionic Conductivity and Capacity in Li2Fe1−xMnxCl4 Cathodes",
-      "org": "Newnham et al. (Univ. of Aberdeen)",
-      "journal": "Chemistry of Materials",
-      "date": "2026-11-12",
-      "added": "2026-11-13",
-      "link": "https://doi.org/10.1021/acs.chemmater.6c01808"
-    },
-    {
-      "cat": "셀",
-      "sub": "프리소듐화",
-      "title": "Synergistic Integration of Mg Doping and Advanced Presodiation Strategies for High-Performance P2-Type Sodium-Ion Full Cells",
-      "org": "Canini et al. (Univ. of Pavia)",
-      "journal": "Batteries & Supercaps",
-      "date": "2026-11",
-      "added": "2026-11-13",
-      "link": "https://doi.org/10.1002/batt.70527"
     }
   ],
   "industry": [
+    {
+      "region": "해외",
+      "type": "공장/공정",
+      "company": "Envision AESC",
+      "date": "2026-11-19",
+      "added": "2026-11-20",
+      "link": "https://www.electrive.com/2026/11/19/envision-aesc-surpasses-production-volume-milestone-for-46120-battery-cells/"
+    },
+    {
+      "region": "해외",
+      "type": "소재사",
+      "company": "Sila",
+      "date": "2026-11-19",
+      "added": "2026-11-20",
+      "link": "https://www.electrive.com/2026/11/19/sila-secures-billion-dollar-offtake-agreement-with-panasonic/"
+    },
+    {
+      "region": "해외",
+      "type": "정책",
+      "company": "BMZ",
+      "date": "2026-11-19",
+      "added": "2026-11-20",
+      "link": "https://battery-news.de/en/2026/11/19/bmz-builds-digital-battery-passports-into-eu-series-production/"
+    },
     {
       "region": "국내",
       "type": "소재사",
@@ -691,49 +735,25 @@
       "date": "2026-11-13",
       "added": "2026-11-15",
       "link": "https://battery-news.de/en/2026/11/13/electrode-manufacturing-sensors-detect-minute-damage-to-cutting-tools/"
-    },
-    {
-      "region": "해외",
-      "type": "신기술",
-      "company": "QuantumScape",
-      "date": "2026-11-12",
-      "added": "2026-11-13",
-      "link": "https://www.electrive.com/2026/11/12/quantumscape-launches-open-platform-for-sulphide-based-solid-state-batteries/"
-    },
-    {
-      "region": "해외",
-      "type": "신기술",
-      "company": "GM",
-      "date": "2026-11-12",
-      "added": "2026-11-13",
-      "link": "https://www.thelec.net/news/articleView.html?idxno=15539"
-    },
-    {
-      "region": "해외",
-      "type": "정책",
-      "company": "중국 양극재사",
-      "date": "2026-11-12",
-      "added": "2026-11-13",
-      "link": "https://www.thelec.net/news/articleView.html?idxno=15549"
-    },
-    {
-      "region": "국내",
-      "type": "실적",
-      "company": "솔루스첨단소재",
-      "date": "2026-11-12",
-      "added": "2026-11-13",
-      "link": "https://www.thelec.net/news/articleView.html?idxno=15564"
-    },
-    {
-      "region": "국내",
-      "type": "신기술",
-      "company": "현대로템",
-      "date": "2026-11-12",
-      "added": "2026-11-13",
-      "link": "https://www.thelec.net/news/articleView.html?idxno=15573"
     }
   ],
   "science": [
+    {
+      "field": "지구",
+      "title": "Antarctica’s ice cliffs are collapsing faster than expected, but there’s a twist",
+      "source": "ScienceDaily / MIT·WHOI",
+      "date": "2026-11-19",
+      "added": "2026-11-20",
+      "link": "https://www.sciencedaily.com/releases/2026/11/261117033925.htm"
+    },
+    {
+      "field": "우주",
+      "title": "Webb Catches Giant Star Swallowing Its Smaller Companion in Andromeda Galaxy",
+      "source": "Sci.News / Columbia Univ.",
+      "date": "2026-11-18",
+      "added": "2026-11-20",
+      "link": "https://www.sci.news/astronomy/webb-star-merger-andromeda-galaxy-15207.html"
+    },
     {
       "field": "물리",
       "title": "New discovery reveals what may be holding back room-temperature superconductors",
@@ -813,22 +833,6 @@
       "date": "2026-11-14",
       "added": "2026-11-15",
       "link": "https://www.sciencedaily.com/releases/2026/11/261112230447.htm"
-    },
-    {
-      "field": "우주",
-      "title": "NASA’s Perseverance confirms a key ingredient for life hidden in ancient Mars rocks",
-      "source": "ScienceDaily / Planetary Science Institute",
-      "date": "2026-11-12",
-      "added": "2026-11-13",
-      "link": "https://www.sciencedaily.com/releases/2026/11/261111005908.htm"
-    },
-    {
-      "field": "지구",
-      "title": "Earth’s fiery birth may have created hundreds of oceans’ worth of water",
-      "source": "ScienceDaily / Univ. of New Mexico",
-      "date": "2026-11-12",
-      "added": "2026-11-13",
-      "link": "https://www.sciencedaily.com/releases/2026/11/261110042549.htm"
     }
   ],
   "student": {
