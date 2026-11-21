@@ -2,20 +2,100 @@
   "week": "2026-W47",
   "iso_year": 2026,
   "iso_week": 47,
-  "generated": "2026-11-21",
+  "generated": "2026-11-22",
   "note": {
     "ko": "주차별 스냅샷입니다. 페이지는 최근 7일 롤링 창이라, 이 파일은 그 주의 마지막 실행 시점 상태를 담습니다. 일별 기록은 data/archive/daily/ 에 있습니다.",
     "en": "A per-week snapshot. The page is a rolling 7-day window, so this file holds the state at the week's last run. Per-day records live in data/archive/daily/."
   },
   "counts": {
-    "research": 66,
-    "industry": 24,
-    "science": 14,
+    "research": 61,
+    "industry": 21,
+    "science": 13,
     "jobs": 3,
     "postdoc": 13,
     "grants": 1
   },
   "research": [
+    {
+      "cat": "소재",
+      "sub": "Li금속 전해질 용매화",
+      "title": "Nonpolar Micro‐Environment‐Induced Solvation Field Engineering Enables 600 Wh Kg−1 High‐Voltage Lithium Metal Pouch Cells",
+      "org": "Ding et al.",
+      "journal": "Advanced Materials",
+      "date": "2026-11-20",
+      "added": "2026-11-22",
+      "link": "https://doi.org/10.1002/adma.75821"
+    },
+    {
+      "cat": "소재",
+      "sub": "고체전해질",
+      "title": "Al/F Co‐Doped Sulfide Electrolyte for Durable All‐Solid‐State Lithium‐Organic Batteries",
+      "org": "Li et al. (Shenzhen Univ.)",
+      "journal": "Advanced Energy Materials",
+      "date": "2026-11-21",
+      "added": "2026-11-22",
+      "link": "https://doi.org/10.1002/aenm.71853"
+    },
+    {
+      "cat": "소재",
+      "sub": "음이온 산화환원",
+      "title": "Stabilizing High‐Voltage Oxygen Holes via π‐Bonding Mediated Frontier‐Orbital Character Inversion in Intermediate‐Regime Oxide Cathodes",
+      "org": "Li et al. (USTC)",
+      "journal": "Angewandte Chemie Int. Ed.",
+      "date": "2026-11-20",
+      "added": "2026-11-22",
+      "link": "https://doi.org/10.1002/anie.4101340"
+    },
+    {
+      "cat": "셀",
+      "sub": "Li-S 전지",
+      "title": "Bidirectional Sulfur Redox Regulation Enabling Ultra‐Stable High‐Sulfur‐Loading All‐Solid‐State Lithium‐Sulfur Batteries",
+      "org": "Liu et al. (Curtin Univ.)",
+      "journal": "Angewandte Chemie Int. Ed.",
+      "date": "2026-11-20",
+      "added": "2026-11-22",
+      "link": "https://doi.org/10.1002/anie.6742507"
+    },
+    {
+      "cat": "공정",
+      "sub": "전극 건조",
+      "title": "Migration behavior of binder and dispersant during drying of lithium-ion battery anodes",
+      "org": "Kumano et al.",
+      "journal": "Journal of Power Sources",
+      "date": "2027-02",
+      "added": "2026-11-22",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.242003"
+    },
+    {
+      "cat": "셀",
+      "sub": "진단",
+      "title": "State-of-charge-dependent intercalation kinetics in NMC622 revealed by nonlinear frequency response analysis",
+      "org": "Ulrich et al.",
+      "journal": "Energy Storage Materials",
+      "date": "2026-11",
+      "added": "2026-11-22",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105654"
+    },
+    {
+      "cat": "소재",
+      "sub": "전해질",
+      "title": "Linking Solvation Structure, Activity, and Electronic Structure to Electrochemical Stability in Lithium-ion Battery Electrolytes",
+      "org": "Phelan et al. (Univ. of Oxford)",
+      "journal": "Chemistry of Materials",
+      "date": "2026-11-21",
+      "added": "2026-11-22",
+      "link": "https://doi.org/10.1021/acs.chemmater.6c00938"
+    },
+    {
+      "cat": "소재",
+      "sub": "Li-S 전지",
+      "title": "Interacting Cosolvents-Regulated Solvation for Rapid Quasi-Solid–State Sulfur Reactions in Li–S Batteries",
+      "org": "Shen et al. (Peking Univ.)",
+      "journal": "ACS Nano",
+      "date": "2026-11-21",
+      "added": "2026-11-22",
+      "link": "https://doi.org/10.1021/acsnano.6c12314"
+    },
     {
       "cat": "셀",
       "sub": "Li-S 전지",
@@ -545,136 +625,6 @@
       "date": "2026-11",
       "added": "2026-11-16",
       "link": "https://doi.org/10.1016/j.electacta.2026.150416"
-    },
-    {
-      "cat": "셀",
-      "sub": "무음극 셀",
-      "title": "Time-evolved hetero-alkali interphases enable long-life sulfide-based anode-free solid-state batteries",
-      "org": "Wang et al. (Northeastern Univ.)",
-      "journal": "Science Advances",
-      "date": "2026-11-13",
-      "added": "2026-11-15",
-      "link": "https://doi.org/10.1126/sciadv.ael0210"
-    },
-    {
-      "cat": "셀",
-      "sub": "Li금속 셀",
-      "title": "A Scalable Protrusion‐Targeted Electrolyte Enables 500 Wh Kg−1 Lithium Metal Batteries With 500‐Cycle Stability",
-      "org": "Mo et al. (Harbin Inst. of Technology)",
-      "journal": "Advanced Materials",
-      "date": "2026-11-13",
-      "added": "2026-11-15",
-      "link": "https://doi.org/10.1002/adma.75687"
-    },
-    {
-      "cat": "셀",
-      "sub": "진단",
-      "title": "Direct Electrochemical Model Parameterization from Lithium-Ion Battery Impedance Spectra",
-      "org": "Chen et al.",
-      "journal": "Electrochimica Acta",
-      "date": "2026-11",
-      "added": "2026-11-15",
-      "link": "https://doi.org/10.1016/j.electacta.2026.150426"
-    },
-    {
-      "cat": "소재",
-      "sub": "Li금속 SEI",
-      "title": "Unveiling the Intrinsic Disparity of Ethylene Carbonate and Fluoroethylene Carbonate in Lithium Metal Battery Exceeding 600 Wh kg−1",
-      "org": "Yang et al. (QIBEBT, CAS)",
-      "journal": "Angewandte Chemie Int. Ed.",
-      "date": "2026-11-14",
-      "added": "2026-11-15",
-      "link": "https://doi.org/10.1002/anie.6121408"
-    },
-    {
-      "cat": "소재",
-      "sub": "전해질",
-      "title": "Overturning the Thermal Instability Paradigm of Ether-Based Electrolytes via Multi-Anion-Driven Solvation Reconstruction",
-      "org": "Zeng et al. (Wenzhou Univ.)",
-      "journal": "JACS",
-      "date": "2026-11-13",
-      "added": "2026-11-15",
-      "link": "https://doi.org/10.1021/jacs.6c18128"
-    },
-    {
-      "cat": "소재",
-      "sub": "고체전해질",
-      "title": "Interphase-Adaptive Chloride Solid Electrolyte Enables High-Performance All-Solid-State Lithium Batteries",
-      "org": "Hu et al. (Xiangtan Univ.)",
-      "journal": "ACS Nano",
-      "date": "2026-11-13",
-      "added": "2026-11-15",
-      "link": "https://doi.org/10.1021/acsnano.6c15117"
-    },
-    {
-      "cat": "소재",
-      "sub": "고체전해질",
-      "title": "A Stable and Highly Selective Sodium Solid-State Electrolyte — High-Energy Mechanochemical Treatment of Disodium Dodecahydridododecaborate",
-      "org": "Kristensen et al. (Aarhus Univ.)",
-      "journal": "Chemistry of Materials",
-      "date": "2026-11-14",
-      "added": "2026-11-15",
-      "link": "https://doi.org/10.1021/acs.chemmater.6c02020"
-    },
-    {
-      "cat": "소재",
-      "sub": "급속충전",
-      "title": "Anion Sublattice Engineering Induced Niobium-Tungsten Oxide with Near-Zero Residual Strain for Stable 100 C Cycling Capability",
-      "org": "Wei et al. (Harbin Inst. of Technology)",
-      "journal": "ACS Energy Letters",
-      "date": "2026-11-12",
-      "added": "2026-11-15",
-      "link": "https://doi.org/10.1021/acsenergylett.6c02761"
-    },
-    {
-      "cat": "전극",
-      "sub": "바인더",
-      "title": "A Multifunctional Epoxy–Polyether Network for Chemo‐Mechanical Stabilization of High‐Loading Ni‐Rich Cathodes",
-      "org": "Sun et al. (KIMS)",
-      "journal": "Small",
-      "date": "2026-11-13",
-      "added": "2026-11-15",
-      "link": "https://doi.org/10.1002/smll.76504"
-    },
-    {
-      "cat": "전극",
-      "sub": "바인더",
-      "title": "Achieving Cyclic Structural Stability in 20% Si/C Anodes via a Hydroxyl-Rich Ternary Copolymer Binder",
-      "org": "Shao et al. (Hubei Inst. of Aerospace Chemotechnology)",
-      "journal": "J. Electrochemical Society",
-      "date": "2026-11-13",
-      "added": "2026-11-15",
-      "link": "https://doi.org/10.1149/1945-7111/aec201"
-    },
-    {
-      "cat": "전극",
-      "sub": "수직 정렬 구조",
-      "title": "Interfacial Chemo‐Mechanical Engineering of a Vertically Aligned Host for Reversible Anode‐Less Lithium Metal Batteries",
-      "org": "Mun et al. (Hanyang Univ.)",
-      "journal": "Small",
-      "date": "2026-11-13",
-      "added": "2026-11-15",
-      "link": "https://doi.org/10.1002/smll.76713"
-    },
-    {
-      "cat": "공정",
-      "sub": "합성 공정",
-      "title": "Supercritical CO2–assisted construction of porous LLZO–Al–Ga/PVDF–HFP composite electrolytes for high-performance quasi-solid-state lithium batteries",
-      "org": "Zhao et al.",
-      "journal": "Journal of Power Sources",
-      "date": "2027-02",
-      "added": "2026-11-15",
-      "link": "https://doi.org/10.1016/j.jpowsour.2026.241977"
-    },
-    {
-      "cat": "저널",
-      "sub": "리뷰",
-      "title": "Hard carbon anodes for sodium-ion batteries: from sodium storage mechanisms to multi-dimensional performance optimization strategies",
-      "org": "Liu et al. (Jiangxi Univ. of Water Resources and Electric Power)",
-      "journal": "Journal of Energy Chemistry",
-      "date": "2026-11",
-      "added": "2026-11-15",
-      "link": "https://doi.org/10.1016/j.jechem.2026.10.058"
     }
   ],
   "industry": [
@@ -845,33 +795,17 @@
       "date": "2026-11-15",
       "added": "2026-11-16",
       "link": "https://www.thelec.kr/news/articleView.html?idxno=65450"
-    },
-    {
-      "region": "국내",
-      "type": "신기술",
-      "company": "LG에너지솔루션",
-      "date": "2026-11-15",
-      "added": "2026-11-15",
-      "link": "https://www.thelec.kr/news/articleView.html?idxno=65451"
-    },
-    {
-      "region": "국내",
-      "type": "소재사",
-      "company": "에코프로",
-      "date": "2026-11-15",
-      "added": "2026-11-15",
-      "link": "https://www.thelec.kr/news/articleView.html?idxno=65448"
-    },
-    {
-      "region": "해외",
-      "type": "공장/공정",
-      "company": "Marposs",
-      "date": "2026-11-13",
-      "added": "2026-11-15",
-      "link": "https://battery-news.de/en/2026/11/13/electrode-manufacturing-sensors-detect-minute-damage-to-cutting-tools/"
     }
   ],
   "science": [
+    {
+      "field": "물리",
+      "title": "A decades-old mystery about light could hold the key to faster internet",
+      "source": "ScienceDaily / KAIST",
+      "date": "2026-11-21",
+      "added": "2026-11-22",
+      "link": "https://www.sciencedaily.com/releases/2026/11/261119194544.htm"
+    },
     {
       "field": "물리",
       "title": "CERN scientists finally find evidence of a particle decay so rare it took 40 years to detect",
@@ -967,22 +901,6 @@
       "date": "2026-11-15",
       "added": "2026-11-16",
       "link": "https://www.sciencedaily.com/releases/2026/11/261114202227.htm"
-    },
-    {
-      "field": "물리",
-      "title": "Physicists use laser light to unlock a crystal’s hidden electrical powers",
-      "source": "ScienceDaily / Auburn Univ.",
-      "date": "2026-11-14",
-      "added": "2026-11-15",
-      "link": "https://www.sciencedaily.com/releases/2026/11/261112230500.htm"
-    },
-    {
-      "field": "우주",
-      "title": "A giant icy world hiding beyond Pluto could be our sixth dwarf planet",
-      "source": "ScienceDaily / Univ. of Washington",
-      "date": "2026-11-14",
-      "added": "2026-11-15",
-      "link": "https://www.sciencedaily.com/releases/2026/11/261112230447.htm"
     }
   ],
   "student": {

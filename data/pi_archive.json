@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -169,6 +169,32 @@
       ],
       "flag": true,
       "flagged_since": "2026-10-15"
+    },
+    {
+      "key": "quanquan-pang|peking-university",
+      "pi": "Quanquan Pang",
+      "org": "Peking University , , ,",
+      "count": 2,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsenergylett.6c02554",
+          "date": "2026-11-18",
+          "journal": "ACS Energy Letters",
+          "title": "Architected Si-Based Anodes for All-Solid-State Lithium Batteries",
+          "link": "https://doi.org/10.1021/acsenergylett.6c02554"
+        },
+        {
+          "doi": "10.1021/acsnano.6c12314",
+          "date": "2026-11-21",
+          "journal": "ACS Nano",
+          "title": "Interacting Cosolvents-Regulated Solvation for Rapid Quasi-Solid–State Sulfur Reactions in Li–S Batteries",
+          "link": "https://doi.org/10.1021/acsnano.6c12314"
+        }
+      ],
+      "flag": true,
+      "flagged_since": "2026-11-21"
     },
     {
       "key": "xianfeng-li|dalian-institute-of-chemical-physics-chinese-academy-of-sciences",
@@ -3695,24 +3721,6 @@
       "flag": false
     },
     {
-      "key": "quanquan-pang|peking-university",
-      "pi": "Quanquan Pang",
-      "org": "Peking University , , ,",
-      "count": 1,
-      "corresponding_confirmed": false,
-      "resolved_by": "crossref-last-author",
-      "papers": [
-        {
-          "doi": "10.1021/acsenergylett.6c02554",
-          "date": "2026-11-18",
-          "journal": "ACS Energy Letters",
-          "title": "Architected Si-Based Anodes for All-Solid-State Lithium Batteries",
-          "link": "https://doi.org/10.1021/acsenergylett.6c02554"
-        }
-      ],
-      "flag": false
-    },
-    {
       "key": "qunhui-yuan|school-of-materials-science-and-engineering-harbin-institute-of-technology-shenzhen-shenzhen-china",
       "pi": "Qunhui Yuan",
       "org": "School of Materials Science and Engineering Harbin Institute of Technology (Shenzhen)  Shenzhen China",
@@ -3834,6 +3842,24 @@
           "journal": "ChemRxiv (preprint)",
           "title": "Acoustic Emission to Provide Early Warning Detection of Lithium-Ion Battery Thermal Runaway",
           "link": "https://doi.org/10.26434/chemrxiv.15008458/v1"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "robert-s-weatherup|university-of-oxford-parks-road",
+      "pi": "Robert S. Weatherup",
+      "org": "University of Oxford , , Parks Road , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acs.chemmater.6c00938",
+          "date": "2026-11-21",
+          "journal": "Chemistry of Materials",
+          "title": "Linking Solvation Structure, Activity, and Electronic Structure to Electrochemical Stability in Lithium-ion Battery Electrolytes",
+          "link": "https://doi.org/10.1021/acs.chemmater.6c00938"
         }
       ],
       "flag": false
@@ -4739,6 +4765,24 @@
       "flag": false
     },
     {
+      "key": "xiaosong-liu|national-synchrotron-radiation-laboratory-university-of-science-and-technology-of-china-hefei-china",
+      "pi": "Xiaosong Liu",
+      "org": "National Synchrotron Radiation Laboratory University of Science and Technology of China  Hefei China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/anie.4101340",
+          "date": "2026-11-20",
+          "journal": "Angewandte Chemie Int. Ed.",
+          "title": "Stabilizing High‐Voltage Oxygen Holes via π‐Bonding Mediated Frontier‐Orbital Character Inversion in Intermediate‐Regime Oxide Cathodes",
+          "link": "https://doi.org/10.1002/anie.4101340"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "xiaosong-liu|university-of-science-and-technology-of-china",
       "pi": "Xiaosong Liu",
       "org": "University of Science and Technology of China , , ,",
@@ -5459,6 +5503,24 @@
       "flag": false
     },
     {
+      "key": "yongyao-xia|department-of-chemistry-fudan-university-shanghai-p-r-china",
+      "pi": "Yongyao Xia",
+      "org": "Department of Chemistry Fudan University  Shanghai P. R. China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75821",
+          "date": "2026-11-20",
+          "journal": "Advanced Materials",
+          "title": "Nonpolar Micro‐Environment‐Induced Solvation Field Engineering Enables 600 Wh Kg−1 High‐Voltage Lithium Metal Pouch Cells",
+          "link": "https://doi.org/10.1002/adma.75821"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "yongzhi-zhang|institute-of-new-energy-and-low-carbon-technology-inelt-sichuan-university-chengdu-sichuan-china",
       "pi": "Yongzhi Zhang",
       "org": "Institute of New Energy and Low‐Carbon Technology (INELT) Sichuan University  Chengdu Sichuan China",
@@ -5837,6 +5899,24 @@
       "flag": false
     },
     {
+      "key": "zhe-hu|college-of-civil-and-transportation-engineering-shenzhen-university-shenzhen-p-r-china",
+      "pi": "Zhe Hu",
+      "org": "College of Civil and Transportation Engineering Shenzhen University  Shenzhen P.R. China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/aenm.71853",
+          "date": "2026-11-21",
+          "journal": "Advanced Energy Materials",
+          "title": "Al/F Co‐Doped Sulfide Electrolyte for Durable All‐Solid‐State Lithium‐Organic Batteries",
+          "link": "https://doi.org/10.1002/aenm.71853"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "zhen-li|state-key-laboratory-of-materials-processing-and-die-amp-mould-technology-school-of-materials-science-and-engineering-huazhong-university-of-science-and-technology-wuhan-p-r-china",
       "pi": "Zhen Li",
       "org": "State Key Laboratory of Materials Processing and Die &amp;Mould Technology School of Materials Science and Engineering Huazhong University of Science and Technology  Wuhan P. R. China",
@@ -6012,6 +6092,24 @@
           "journal": "Angewandte Chemie Int. Ed.",
           "title": "Carbonyl-Rich Polyimide Covalent Organic Frameworks as Anode Coating for Uniform Sodium Deposition",
           "link": "https://doi.org/10.1002/anie.3787629"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "zongping-shao|curtin-centre-for-advanced-energy-materials-and-technologies-caemt-western-australian-school-of-mines-wasm-curtin-university-perth-western-australia-australia",
+      "pi": "Zongping Shao",
+      "org": "Curtin Centre for Advanced Energy Materials and Technologies (CAEMT) Western Australian School of Mines (WASM) Curtin University  Perth Western Australia Australia",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/anie.6742507",
+          "date": "2026-11-20",
+          "journal": "Angewandte Chemie Int. Ed.",
+          "title": "Bidirectional Sulfur Redox Regulation Enabling Ultra‐Stable High‐Sulfur‐Loading All‐Solid‐State Lithium‐Sulfur Batteries",
+          "link": "https://doi.org/10.1002/anie.6742507"
         }
       ],
       "flag": false
@@ -7561,6 +7659,26 @@
       "link": "https://doi.org/10.1016/j.ensm.2026.105673",
       "orgs": [],
       "pi_guess": "Yong Min Lee",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.242003",
+      "date": "2027-02",
+      "journal": "Journal of Power Sources",
+      "title": "Migration behavior of binder and dispersant during drying of lithium-ion battery anodes",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.242003",
+      "orgs": [],
+      "pi_guess": "Masato Yamamura",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.ensm.2026.105654",
+      "date": "2026-11",
+      "journal": "Energy Storage Materials",
+      "title": "State-of-charge-dependent intercalation kinetics in NMC622 revealed by nonlinear frequency response analysis",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105654",
+      "orgs": [],
+      "pi_guess": "Ulrike Krewer",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]
