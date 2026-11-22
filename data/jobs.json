@@ -1,12 +1,12 @@
 {
-  "updated": "2026-11-15",
+  "updated": "2026-11-22",
   "notice": {
     "ko": "공고 자동수집은 best-effort이며 누락 가능 — 아래 공식 포털에서 직접 확인 권장.",
     "en": "Automated collection of postings is best-effort and may miss items — please confirm directly on the official portals below."
   },
   "context": {
-    "ko": "2026-11-16 확인. 삼성SDI 채용포털에는 11월 10~17일 접수 공고 5건(중대형·소형사업부 5급 단기계약직 제조·생산, 동탄 보건관리자, 구미 총무지원)이 보였으나 모두 R&D 직무가 아니어서 올리지 않았고, 직무별 ‘인재 등록’ 상시지원 경로는 그대로 남아 있었습니다. LG에너지솔루션 포털은 이번에도 개별 공고가 전혀 표시되지 않았고, SK온(sk-on.com)은 <b>이번에도</b> *.skenergy.com 인증서를 제시해 접속 자체가 실패했습니다. 웹 검색에서도 현재 열린 SK온 R&D 공고는 확인되지 않았습니다 — 두 회사 항목은 상태를 확인하지 못해 ‘재확인 필요’로 유지했습니다. 이번 회차에 새로 확인된 배터리 R&D 공고는 없습니다.",
-    "en": "Checked on 16 November 2026. The Samsung SDI careers portal showed five postings open 10–17 November (short-term contract manufacturing roles in the large and small battery divisions, an occupational health role in Dongtan, and a general-affairs role in Gumi), none of them R&D, so none was added; the rolling talent-registration route for each job family is still there. The LG Energy Solution portal again displayed no individual postings, and sk-on.com <b>once again</b> presented a certificate issued for *.skenergy.com and could not be opened at all. A web search found no currently open SK On R&D posting either — items for both companies remain marked ‘needs re-check’ because their status could not be confirmed. No new battery R&D posting was confirmed this run."
+    "ko": "2026-11-23 확인. 삼성SDI 채용포털에 <b>경력사원 채용(전자재료사업부, 중대형사업부(ESS)) — 11월 16~30일 접수</b> 공고가 새로 게시돼 올렸습니다(ESS 외함·냉각·배관·전장 설계 등 ESS 시스템 개발 직무 포함). 직무별 ‘인재 등록’ 상시지원 경로도 그대로입니다. LG에너지솔루션 포털은 이번에도 로그인 없이는 개별 공고가 전혀 표시되지 않았고, SK온(sk-on.com)은 <b>이번에도</b> 인증서 이름 불일치(ERR_TLS_CERT_ALTNAME_INVALID)로 접속 자체가 실패했습니다 — 두 회사 항목은 상태를 확인하지 못해 ‘재확인 필요’로 유지했습니다.",
+    "en": "Checked on 23 November 2026. The Samsung SDI careers portal now shows <b>an experienced-hire posting for the Electronic Materials and Large Battery (ESS) divisions, open 16–30 November</b>, which has been added (it includes ESS system development roles such as enclosure, cooling, piping and electrical design). The rolling talent-registration route for each job family is still there. The LG Energy Solution portal again displayed no individual postings without a login, and sk-on.com <b>once again</b> failed to open because its certificate does not match the host name (ERR_TLS_CERT_ALTNAME_INVALID) — items for both companies remain marked ‘needs re-check’ because their status could not be confirmed."
   },
   "portals_title": {
     "ko": "공식 채용포털 (상시)",
@@ -38,6 +38,25 @@
     {
       "group": "삼성SDI",
       "group_en": "Samsung SDI",
+      "tag": "경력",
+      "tag_en": "Experienced",
+      "title": "경력사원 채용(전자재료사업부, 중대형사업부(ESS))",
+      "title_en": "Experienced hires — Electronic Materials Division and Large Battery Division (ESS)",
+      "meta": "삼성SDI 중대형사업부(ESS) · 전자재료사업부",
+      "meta_en": "Samsung SDI Large Battery Division (ESS) · Electronic Materials Division",
+      "deadline": "2026-11-30",
+      "deadline_en": "30 Nov 2026",
+      "ok": true,
+      "link": "https://www.samsungcareers.com/subsid/detail/C31",
+      "link_type": "portal",
+      "query": "경력사원 채용(전자재료사업부, 중대형사업부(ESS))",
+      "query_en": "Samsung SDI experienced hires (ESS)",
+      "desc": "2026-11-23 삼성SDI 채용포털에서 확인한 경력 공고로, 접수 기간은 11월 16일~30일입니다. 모집 직무에는 ESS Enclosure 설계, ESS 냉각공조시스템 설계, ESS 냉각시스템 배관 설계, ESS 시스템 전장 및 배전/분배시스템 개발 등 ESS 시스템 개발 직무와 반도체 패키징용 공정 필름 개발(전자재료)이 함께 들어 있습니다. 개별 공고 주소가 스크립트로만 열려 포털 링크를 걸었습니다.",
+      "desc_en": "An experienced-hire posting seen on the Samsung SDI careers portal on 23 November 2026, open from 16 to 30 November. The roles include ESS system development — ESS enclosure design, ESS cooling and HVAC system design, ESS cooling piping design, and ESS electrical and power-distribution system development — alongside a process-film development role for semiconductor packaging (Electronic Materials). The posting itself opens only through a script, so the card links to the portal."
+    },
+    {
+      "group": "삼성SDI",
+      "group_en": "Samsung SDI",
       "tag": "상시",
       "tag_en": "Rolling",
       "title": "인재 등록 — 상시 지원",
@@ -51,8 +70,8 @@
       "link_type": "portal",
       "query": "인재 등록",
       "query_en": "talent registration",
-      "desc": "2026-11-16 확인 시에도 채용포털의 직무 소개마다 ‘인재 등록’ 상시지원 경로가 그대로 게시돼 있었습니다. 직무 소개에는 배터리 셀/소재 개발, 공정/설비 개발, 팩/모듈 개발, 평가 및 공법 개발 등 R&D 직무가 정리돼 있어, 열린 공고가 없는 지금 R&D 지망자가 지원 이력을 남겨 둘 수 있는 경로입니다.",
-      "desc_en": "As of 16 November 2026 every job-family page on the careers portal still offers the rolling talent-registration route. Those pages list R&D tracks including battery cell and materials development, process and equipment development, pack and module development, and evaluation and process-method development, so this is the route for R&D candidates to register interest while no matching posting is open."
+      "desc": "2026-11-23 확인 시에도 채용포털의 직무 소개마다 ‘인재 등록’ 상시지원 경로가 그대로 게시돼 있었습니다. 직무 소개에는 배터리 셀/소재 개발, 공정/설비 개발, 팩/모듈 개발, 평가 및 공법 개발 등 R&D 직무가 정리돼 있어, 열린 공고가 없는 지금 R&D 지망자가 지원 이력을 남겨 둘 수 있는 경로입니다.",
+      "desc_en": "As of 23 November 2026 every job-family page on the careers portal still offers the rolling talent-registration route. Those pages list R&D tracks including battery cell and materials development, process and equipment development, pack and module development, and evaluation and process-method development, so this is the route for R&D candidates to register interest while no matching posting is open."
     },
     {
       "group": "LG에너지솔루션",
@@ -70,8 +89,8 @@
       "link_type": "portal",
       "query": "LG에너지솔루션 인재풀",
       "query_en": "LG Energy Solution talent pool",
-      "desc": "2026-11-16 확인 시에도 페이지는 열렸으나 로그인 없이는 개별 공고가 전혀 표시되지 않아 현재 열린 공고를 확인하지 못했습니다. 인재풀 등록은 상시로 알려져 있으나 이번 회차에도 직접 확인하지 못해 재확인이 필요합니다.",
-      "desc_en": "As of 16 November 2026 the page loaded but again showed no individual postings without a login, so no open role could be confirmed. The talent pool is understood to be rolling, but that could not be verified this run either and needs re-checking."
+      "desc": "2026-11-23 확인 시에도 페이지는 열렸으나 로그인 없이는 개별 공고가 전혀 표시되지 않아 현재 열린 공고를 확인하지 못했습니다. 인재풀 등록은 상시로 알려져 있으나 이번 회차에도 직접 확인하지 못해 재확인이 필요합니다.",
+      "desc_en": "As of 23 November 2026 the page loaded but again showed no individual postings without a login, so no open role could be confirmed. The talent pool is understood to be rolling, but that could not be verified this run either and needs re-checking."
     },
     {
       "group": "SK온",
@@ -89,8 +108,8 @@
       "link_type": "portal",
       "query": "선행Cell공정개발",
       "query_en": "advanced cell process development",
-      "desc": "선행Cell공정개발·Cell개발·System개발 직무가 대전 배터리연구원 기준으로 수시 게시됩니다. 다만 2026-11-16 확인 시에도 sk-on.com이 *.skenergy.com 인증서를 제시해 접속에 실패했고, 웹 검색에서도 현재 열린 SK온 R&D 공고를 찾지 못해 현재 게시 여부를 확인하지 못했습니다.",
-      "desc_en": "Roles in advanced cell process development, cell development and system development are posted on a continuous basis at the Daejeon Battery Research Institute. As of 16 November 2026, however, sk-on.com again presented a certificate issued for *.skenergy.com and could not be opened, and a web search found no currently open SK On R&D posting either, so no current posting could be confirmed."
+      "desc": "선행Cell공정개발·Cell개발·System개발 직무가 대전 배터리연구원 기준으로 수시 게시됩니다. 다만 2026-11-23 확인 시에도 sk-on.com이 인증서 이름 불일치로 접속에 실패해 현재 게시 여부를 확인하지 못했습니다(11월 16일 웹 검색에서도 현재 열린 SK온 R&D 공고는 찾지 못함).",
+      "desc_en": "Roles in advanced cell process development, cell development and system development are posted on a continuous basis at the Daejeon Battery Research Institute. As of 23 November 2026, however, sk-on.com again failed to open because of a certificate name mismatch, so no current posting could be confirmed (a 16 November web search also found no currently open SK On R&D posting)."
     }
   ]
 }
