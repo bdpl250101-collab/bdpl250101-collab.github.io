@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -1111,6 +1111,24 @@
       "flag": false
     },
     {
+      "key": "dongyang-zhang|school-of-chemistry-engineering-research-center-of-energy-storage-materials-and-devices-ministry-of-education-national-key-laboratory-for-high-energy-pulsed-power-engineering-research-center-of-energy-storage-material-and-chemistry-universities-of-shaanxi-province-xi-an-jiaotong-university-xi-an-china",
+      "pi": "Dongyang Zhang",
+      "org": "School of Chemistry Engineering Research Center of Energy Storage Materials and Devices Ministry of Education National Key Laboratory For High Energy Pulsed Power Engineering Research Center of Energy Storage Material and Chemistry Universities of Shaanxi Province, Xi'an Jiaotong University  Xi'an China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/anie.8467989",
+          "date": "2026-11-21",
+          "journal": "Angewandte Chemie Int. Ed.",
+          "title": "Entropy‐Compensated Electrolyte Enables Low‐Temperature 400 Wh Kg−1 Silicon‐Based Lithium‐Ion Batteries",
+          "link": "https://doi.org/10.1002/anie.8467989"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "dukjoon-kim|department-of-chemical-engineering-sungkyunkwan-university-suwon-gyeonggi-republic-of-korea",
       "pi": "Dukjoon Kim",
       "org": "Department of Chemical Engineering Sungkyunkwan University  Suwon Gyeonggi Republic of Korea",
@@ -1484,6 +1502,24 @@
           "journal": "ACS Nano",
           "title": "Interphase-Adaptive Chloride Solid Electrolyte Enables High-Performance All-Solid-State Lithium Batteries",
           "link": "https://doi.org/10.1021/acsnano.6c15117"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "guoqiang-tan|school-of-materials-science-and-engineering-beijing-institute-of-technology",
+      "pi": "Guoqiang Tan",
+      "org": "School of Materials Science and Engineering, Beijing Institute of Technology , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsenergylett.6c02642",
+          "date": "2026-11-21",
+          "journal": "ACS Energy Letters",
+          "title": "Functionalized Interface Engineering of Cellulose-Based Electrolytes for Safety and Long-Life Li–Metal Batteries",
+          "link": "https://doi.org/10.1021/acsenergylett.6c02642"
         }
       ],
       "flag": false
@@ -7679,6 +7715,46 @@
       "link": "https://doi.org/10.1016/j.ensm.2026.105654",
       "orgs": [],
       "pi_guess": "Ulrike Krewer",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.ensm.2026.105678",
+      "date": "2026-11",
+      "journal": "Energy Storage Materials",
+      "title": "Operando Fiber-Optic Sensing of Lithium Status in Commercial Format Pouch Cells",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105678",
+      "orgs": [],
+      "pi_guess": "Jean-Marie Tarascon",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.ensm.2026.105679",
+      "date": "2026-11",
+      "journal": "Energy Storage Materials",
+      "title": "Coupled Transport and Chemo-Mechanical Effects on H2-H3 Phase Evolution in Ni-Rich Cathodes in Solid Electrolyte-Based Cells",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105679",
+      "orgs": [],
+      "pi_guess": "Chia-Chen Li",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.241976",
+      "date": "2027-02",
+      "journal": "Journal of Power Sources",
+      "title": "Ultrafast flame-assisted formation of Al2O3/LiAlO2 coating for stabilizing Li-rich layered oxide cathodes",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.241976",
+      "orgs": [],
+      "pi_guess": "Yan Yu",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.242006",
+      "date": "2027-02",
+      "journal": "Journal of Power Sources",
+      "title": "Early thermal-abnormality warning for lithium-ion batteries via a flame-retardant thermochromic coating integrated with edge vision",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.242006",
+      "orgs": [],
+      "pi_guess": "Huafeng Li",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]
