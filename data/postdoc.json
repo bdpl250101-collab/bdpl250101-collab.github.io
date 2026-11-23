@@ -149,10 +149,11 @@
       "deadline": "2026-12-06",
       "deadline_en": "6 Dec 2026",
       "ok": true,
-      "link": "https://www.jobs.ac.uk/job/DTN709/research-fellow",
-      "link_type": "deep",
+      "link": "https://www.jobs.ac.uk",
+      "link_type": "portal",
       "desc": "Innovate UK 지원 공동과제로, 에너지저장장치(BESS)용 배터리의 시험·모델링과 물리 기반 AI를 이용한 SOC·SOH 추정을 산업 파트너와 함께 수행합니다. 원 공고 제목은 ‘Research Fellow’뿐이라 카드 제목에 과제 내용을 덧붙였습니다. 11월 4일 게시, 마감 12월 6일이며 12개월 기간제(£38,784–£42,254)입니다(2026-11-23 재확인, jobs.ac.uk·Faraday 잡보드 모두 게시 중).",
-      "desc_en": "An Innovate UK-funded collaborative project with industry partners on battery testing, modelling and physics-guided AI estimation of state of charge and state of health for battery energy storage systems. The posting itself is titled only ‘Research Fellow’, so the topic has been added to the card title. Posted on 4 November and closing on 6 December, it is a 12-month fixed-term post (£38,784–£42,254) (re-checked 23 November 2026, still listed on both jobs.ac.uk and the Faraday board)."
+      "desc_en": "An Innovate UK-funded collaborative project with industry partners on battery testing, modelling and physics-guided AI estimation of state of charge and state of health for battery energy storage systems. The posting itself is titled only ‘Research Fellow’, so the topic has been added to the card title. Posted on 4 November and closing on 6 December, it is a 12-month fixed-term post (£38,784–£42,254) (re-checked 23 November 2026, still listed on both jobs.ac.uk and the Faraday board).",
+      "query": "Research Fellow — 에너지저장장치(BESS)용 배터리 인텔리전스"
     },
     {
       "group": "영국",
@@ -184,10 +185,11 @@
       "deadline": "2026-12-10",
       "deadline_en": "10 Dec 2026",
       "ok": true,
-      "link": "https://www.jobs.ac.uk/job/DTQ900/research-fellow",
-      "link_type": "deep",
+      "link": "https://www.jobs.ac.uk",
+      "link_type": "portal",
       "desc": "물리학과에서 WMG·화학과와 협력해 operando 전기화학 TEM(Protochips·Chipnova 홀더) 실험을 수행하는 포닥 연구원으로, 주제는 주로 수계 이차전지이며 이차전지 전반으로 넓어질 수 있습니다. 원 공고 제목은 ‘Research Fellow’뿐이라 카드 제목에 과제 내용을 덧붙였습니다. 11월 16일 게시, 마감 12월 10일, 2029년 8월 4일까지 기간제(£36,320–£46,970, Job Ref 582)이며 2026-11-23 jobs.ac.uk에서 게시 중임을 확인했습니다.",
-      "desc_en": "A postdoctoral research fellow in the Department of Physics, working with WMG and Chemistry, running operando electrochemical TEM experiments (Protochips and Chipnova holders), principally on aqueous rechargeable batteries and potentially rechargeable batteries more broadly. The posting is titled only ‘Research Fellow’, so the topic has been added to the card title. Posted on 16 November and closing on 10 December, it is fixed-term until 4 August 2029 (£36,320–£46,970, job ref 582); confirmed listed on jobs.ac.uk on 23 November 2026."
+      "desc_en": "A postdoctoral research fellow in the Department of Physics, working with WMG and Chemistry, running operando electrochemical TEM experiments (Protochips and Chipnova holders), principally on aqueous rechargeable batteries and potentially rechargeable batteries more broadly. The posting is titled only ‘Research Fellow’, so the topic has been added to the card title. Posted on 16 November and closing on 10 December, it is fixed-term until 4 August 2029 (£36,320–£46,970, job ref 582); confirmed listed on jobs.ac.uk on 23 November 2026.",
+      "query": "Research Fellow — operando 전기화학 투과전자현미경(TEM) 전지 연구"
     },
     {
       "group": "영국",
@@ -238,8 +240,8 @@
       "deadline": "해당 없음",
       "deadline_en": "Not applicable",
       "ok": true,
-      "link": "https://www.jobs.ac.uk/search/?keywords=battery",
-      "link_type": "search",
+      "link": "https://www.jobs.ac.uk",
+      "link_type": "portal",
       "query": "battery",
       "query_en": "battery",
       "desc": "2026-11-23 확인 시에도 이 그룹 명의의 신규 포닥 공고는 확인되지 않았습니다. jobs.ac.uk ‘battery’ 검색(24건)에 옥스퍼드 배터리 연구직은 없었고, Faraday 잡보드가 연결한 옥스퍼드 공학과 공고 목록(14건)에도 배터리 포닥은 없었습니다. 링크는 결과가 나오는 jobs.ac.uk ‘battery’ 검색입니다.",

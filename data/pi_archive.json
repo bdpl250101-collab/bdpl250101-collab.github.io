@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -314,6 +314,24 @@
           "journal": "J. Electrochemical Society",
           "title": "Selective Electrochemical Recovery of Valuable Metals from Spent Lithium-Ion Batteries Using a Betaine-Based Deep Eutectic Solvent",
           "link": "https://doi.org/10.1149/1945-7111/ae96d3"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "ai-min-li|the-university-of-hong-kong",
+      "pi": "Ai-Min Li",
+      "org": "The University of Hong Kong , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsenergylett.6c02869",
+          "date": "2026-11-23",
+          "journal": "ACS Energy Letters",
+          "title": "Internal Stress Effects on Electrode Stability in Coin Cells with Different Assembly Configurations",
+          "link": "https://doi.org/10.1021/acsenergylett.6c02869"
         }
       ],
       "flag": false
@@ -926,6 +944,24 @@
           "journal": "JACS",
           "title": "In Situ Polymerized Main/Side-Chain Bifluorinated Cross-Linked Polyether Electrolytes for High-Voltage Lithium Metal Batteries",
           "link": "https://doi.org/10.1021/jacs.6c08830"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "chunzhen-yang|school-of-materials-shenzhen-campus-sun-yat-sen-university-sysu-shenzhen-china",
+      "pi": "Chunzhen Yang",
+      "org": "School of Materials Shenzhen Campus Sun Yat‐Sen University (SYSU) Shenzhen China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/anie.4834219",
+          "date": "2026-11-23",
+          "journal": "Angewandte Chemie Int. Ed.",
+          "title": "Fast‐Discharge‐Induced Non‐Equilibrium Phase Transition in Ni‐Rich Layered Oxide Cathode at High Voltage",
+          "link": "https://doi.org/10.1002/anie.4834219"
         }
       ],
       "flag": false
@@ -3865,6 +3901,24 @@
       "flag": false
     },
     {
+      "key": "renjie-chen|beijing-institute-of-technology",
+      "pi": "Renjie Chen",
+      "org": "Beijing Institute of Technology , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsenergylett.6c02416",
+          "date": "2026-11-23",
+          "journal": "ACS Energy Letters",
+          "title": "Prestripping Protocol for Reconciling Lithium Dissolution and Galvanic Corrosion in Anode-Free Batteries",
+          "link": "https://doi.org/10.1021/acsenergylett.6c02416"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "rhodri-jervis|electrochemical-innovation-lab-department-of-chemical-engineering",
       "pi": "Rhodri Jervis",
       "org": "Electrochemical Innovation Lab, Department of Chemical Engineering",
@@ -3991,6 +4045,24 @@
       "flag": false
     },
     {
+      "key": "sebastian-risse|joint-research-group-on-operando-battery-analysis-ce-goba-helmholtz-zentrum-berlin-berlin-germany",
+      "pi": "Sebastian Risse",
+      "org": "Joint Research Group on Operando Battery Analysis (CE‐GOBA) Helmholtz‐Zentrum Berlin  Berlin Germany",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/aenm.71844",
+          "date": "2026-11-22",
+          "journal": "Advanced Energy Materials",
+          "title": "Operando Pressure Monitoring, EIS, and X‐Ray Imaging of Solid‐State Sodium‐Sulfur Batteries — Insights into Chemo‐Mechanical Degradation Mechanisms",
+          "link": "https://doi.org/10.1002/aenm.71844"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "seung-ho-yu|department-of-chemical-and-biological-engineering-korea-university-seoul-republic-of-korea",
       "pi": "Seung‐Ho Yu",
       "org": "Department of Chemical and Biological Engineering Korea University  Seoul Republic of Korea",
@@ -4022,6 +4094,24 @@
           "journal": "ACS Energy Letters",
           "title": "Non-Equilibrium Reaction Pathway to Facilitate Reversible Oxygen Redox",
           "link": "https://doi.org/10.1021/acsenergylett.6c01744"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "seung-taek-myung|department-of-nano-technology-and-advanced-materials-engineering-sejong-battery-institute-hybrid-materials-research-center-sejong-university-seoul-south-korea",
+      "pi": "Seung‐Taek Myung",
+      "org": "Department of Nano Technology and Advanced Materials Engineering, Sejong Battery Institute, Hybrid Materials Research Center Sejong University  Seoul South Korea",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/aenm.71847",
+          "date": "2026-11-22",
+          "journal": "Advanced Energy Materials",
+          "title": "Synergistic Interfacial and Subsurface Stabilization of O3‐Type Na‐Ni‐Fe‐Mn‐O Cathodes through Integrated Zr Modification",
+          "link": "https://doi.org/10.1002/aenm.71847"
         }
       ],
       "flag": false
@@ -5066,6 +5156,24 @@
           "journal": "JACS",
           "title": "Multiphase Inorganic-Rich Interphases with Integrated Li-Ion Capture-Transport Ability for High-Rate Lithium Metal Batteries",
           "link": "https://doi.org/10.1021/jacs.6c11241"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "yan-jin|nanjing-university",
+      "pi": "Yan Jin",
+      "org": "Nanjing University , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/jacs.6c12939",
+          "date": "2026-11-23",
+          "journal": "JACS",
+          "title": "Data-Driven Electrolyte Design by Electrotopological State Descriptors for Na-Ion Batteries with Minimal Solid-Electrolyte Interphase Dissolution",
+          "link": "https://doi.org/10.1021/jacs.6c12939"
         }
       ],
       "flag": false
@@ -7755,6 +7863,56 @@
       "link": "https://doi.org/10.1016/j.jpowsour.2026.242006",
       "orgs": [],
       "pi_guess": "Huafeng Li",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1038/s41560-026-02172-w",
+      "date": "2026-11-23",
+      "journal": "Nature Energy",
+      "title": "Contouring mitigates voiding at the lithium/ceramic electrolyte interface on discharging solid-state batteries",
+      "link": "https://doi.org/10.1038/s41560-026-02172-w",
+      "orgs": [],
+      "pi_guess": "Peter G. Bruce",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.nanoen.2026.112650",
+      "date": "2026-11",
+      "journal": "Nano Energy",
+      "title": "Bulk Chemical Imbalance Induced by Transition Metal Migration Causes Capacity Decay in Layered Sodium-Ion Battery Cathodes",
+      "link": "https://doi.org/10.1016/j.nanoen.2026.112650",
+      "orgs": [],
+      "pi_guess": "Ze Zhang",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.ensm.2026.105682",
+      "date": "2026-11",
+      "journal": "Energy Storage Materials",
+      "title": "Targeted Redox Removal of Structural Water in High-Entropy Prussian Blue Analogue Cathodes for High-Performance Sodium-Ion Batteries",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105682",
+      "orgs": [],
+      "pi_guess": "Xin He",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.242072",
+      "date": "2027-02",
+      "journal": "Journal of Power Sources",
+      "title": "Interfacial engineering of LATP via two-dimensional In2Se3@PEO protection for solid-state lithium metal batteries",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.242072",
+      "orgs": [],
+      "pi_guess": "Hongyun Jin",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jechem.2026.11.014",
+      "date": "2026-11",
+      "journal": "Journal of Energy Chemistry",
+      "title": "Atomic mediators screened via target-wise machine learning for practical Li–S batteries",
+      "link": "https://doi.org/10.1016/j.jechem.2026.11.014",
+      "orgs": [],
+      "pi_guess": "Jingyu Sun",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]
