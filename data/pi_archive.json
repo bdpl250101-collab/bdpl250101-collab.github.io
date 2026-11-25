@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -895,6 +895,24 @@
       "flag": false
     },
     {
+      "key": "christopher-s-allen|diamond-light-source-ltd",
+      "pi": "Christopher S. Allen",
+      "org": "Diamond Light Source Ltd , , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsnano.6c11761",
+          "date": "2026-11-25",
+          "journal": "ACS Nano",
+          "title": "Four-Dimensional Scanning Transmission Electron Microscopy Nanoscale Phase Mapping of the Lithium-Metal Surface Passivation Layer",
+          "link": "https://doi.org/10.1021/acsnano.6c11761"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "chuhong-zhang|state-key-laboratory-of-advanced-polymer-materials-polymer-research-institute-sichuan-university-chengdu-china",
       "pi": "Chuhong Zhang",
       "org": "State Key Laboratory of Advanced Polymer Materials Polymer Research Institute Sichuan University  Chengdu China",
@@ -1070,6 +1088,24 @@
           "journal": "ChemRxiv (preprint)",
           "title": "Pressing Mode Determines Densification Uniformity and Dimensional Stability in Sulfide Solid-State Batteries",
           "link": "https://doi.org/10.26434/chemrxiv.15008313/v1"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "daniel-rettenwander|department-of-materials-science-and-engineering-ntnu-norwegian-university-of-science-and-technology-trondheim-norway",
+      "pi": "Daniel Rettenwander",
+      "org": "Department of Materials Science and Engineering NTNU Norwegian University of Science and Technology Trondheim Norway",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/anie.4734767",
+          "date": "2026-11-24",
+          "journal": "Angewandte Chemie Int. Ed.",
+          "title": "Stress‐Modulated Ionic Transport Limits Composite Cathode Kinetics in Solid‐State Batteries",
+          "link": "https://doi.org/10.1002/anie.4734767"
         }
       ],
       "flag": false
@@ -1394,6 +1430,24 @@
           "journal": "Advanced Materials",
           "title": "Repairability and Active Defect Utilization in Direct Regeneration of Lithium-Ion Battery Cathodes",
           "link": "https://doi.org/10.1002/adma.75073"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "gen-chen|xinjiang-key-laboratory-of-new-energy-and-energy-storage-technology-xinjiang-institute-of-technology-aksu-xinjiang-p-r-china",
+      "pi": "Gen Chen",
+      "org": "Xinjiang Key Laboratory of New Energy and Energy Storage Technology Xinjiang Institute of Technology  Aksu Xinjiang P. R. China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/anie.6848748",
+          "date": "2026-11-24",
+          "journal": "Angewandte Chemie Int. Ed.",
+          "title": "Decoding Direct Regeneration of Spent LiFePO4: From Defect Evolution to Thermodynamic–Kinetic Barrier Engineering",
+          "link": "https://doi.org/10.1002/anie.6848748"
         }
       ],
       "flag": false
@@ -1759,6 +1813,24 @@
       "flag": false
     },
     {
+      "key": "hao-sun|frontiers-science-center-for-transformative-molecules-state-key-laboratory-of-synergistic-chem-bio-synthesis-school-of-chemistry-and-chemical-engineering-zhangjiang-institute-for-advanced-study-shanghai-jiao-tong-university-shanghai-china",
+      "pi": "Hao Sun",
+      "org": "Frontiers Science Center for Transformative Molecules State Key Laboratory of Synergistic Chem‐Bio Synthesis School of Chemistry and Chemical Engineering Zhangjiang Institute for Advanced Study Shanghai Jiao Tong University  Shanghai China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/aenm.71830",
+          "date": "2026-11-25",
+          "journal": "Advanced Energy Materials",
+          "title": "In Situ Polymerized Interfaces Enable Robust and High‐Performance Dry‐Coating Electrodes",
+          "link": "https://doi.org/10.1002/aenm.71830"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "haobo-li|school-of-chemistry-chemical-engineering-and-biotechnology-nanyang-technological-university-singapore-singapore",
       "pi": "Haobo Li",
       "org": "School of Chemistry Chemical Engineering and Biotechnology Nanyang Technological University  Singapore Singapore",
@@ -2078,6 +2150,24 @@
           "journal": "Chemistry of Materials",
           "title": "Induced Structural Disorder Enables High Ionic Conductivity and Capacity in Li2Fe1−xMnxCl4 Cathodes",
           "link": "https://doi.org/10.1021/acs.chemmater.6c01808"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "ivano-e-castelli|department-of-energy-conversion-and-storage-technical-university-of-denmark-agnes-nielsens-vej-301-kgs-lyngby-denmark-2800",
+      "pi": "Ivano E. Castelli",
+      "org": "Department of Energy Conversion and Storage, Technical University of Denmark, Agnes Nielsens Vej 301, Kgs. Lyngby, Denmark, 2800",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.26434/chemrxiv.15012747/v1",
+          "date": "2026-11-25",
+          "journal": "ChemRxiv",
+          "title": "How to Publish Five-Star Battery Data",
+          "link": "https://doi.org/10.26434/chemrxiv.15012747/v1"
         }
       ],
       "flag": false
@@ -4603,6 +4693,24 @@
       "flag": false
     },
     {
+      "key": "valeria-nicolosi|school-of-chemistry-crann-amp-amber-trinity-college-dublin-college-green-dublin-dublin-ireland-d02-w9k7",
+      "pi": "Valeria Nicolosi",
+      "org": "School of Chemistry, CRANN &amp; AMBER, Trinity College Dublin, College Green, Dublin, Dublin, Ireland, D02 W9K7",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.26434/chemrxiv.15012768/v1",
+          "date": "2026-11-25",
+          "journal": "ChemRxiv",
+          "title": "Bridging the Gap Between Material Discovery and Practical Electrodes: Identifying Scaling Limits in High-Capacity Anodes",
+          "link": "https://doi.org/10.26434/chemrxiv.15012768/v1"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "venkatasubramanian-viswanathan|university-of-michigan",
       "pi": "Venkatasubramanian Viswanathan",
       "org": "University of Michigan , , , ,",
@@ -4634,6 +4742,24 @@
           "journal": "Batteries & Supercaps",
           "title": "TTE‐Based Localized High‐Concentration Electrolytes in Li Metal Cells: Effects on Li Reactivity and Solid Electrolyte Interphase Formation",
           "link": "https://doi.org/10.1002/batt.70515"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "wei-xia|eastern-institute-for-advanced-study",
+      "pi": "Wei Xia",
+      "org": "Eastern Institute for Advanced Study , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/jacs.6c10351",
+          "date": "2026-11-25",
+          "journal": "JACS",
+          "title": "Cross-Linked Halide Networks for Lithium Superionic Conduction",
+          "link": "https://doi.org/10.1021/jacs.6c10351"
         }
       ],
       "flag": false
@@ -5012,6 +5138,24 @@
           "journal": "Small",
           "title": "Expansion-Pressure-Based Early Detection and Relative Severity Assessment of Lithium Plating in Prismatic LiFePO4/Graphite Batteries",
           "link": "https://doi.org/10.1002/smll.76782"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "xiangxin-guo|qingdao-university",
+      "pi": "Xiangxin Guo",
+      "org": "Qingdao University , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/jacs.6c17386",
+          "date": "2026-11-25",
+          "journal": "JACS",
+          "title": "Dynamic Li+/Na+-Exchanging Interphase Stabilizes High-Voltage Ni-Rich Cathodes for 557 Wh kg–1 Lithium Batteries",
+          "link": "https://doi.org/10.1021/jacs.6c17386"
         }
       ],
       "flag": false
@@ -8117,6 +8261,26 @@
       "link": "https://doi.org/10.1016/j.nanoen.2026.112654",
       "orgs": [],
       "pi_guess": "Ru-Shi Liu",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.joule.2026.102747",
+      "date": "2026-11",
+      "journal": "Joule",
+      "title": "Localization of micron-scale lithium polysulfide-rich phases causes anode heterogeneity in lean-electrolyte lithium–sulfur batteries",
+      "link": "https://doi.org/10.1016/j.joule.2026.102747",
+      "orgs": [],
+      "pi_guess": "Hee-Tak Kim",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.ensm.2026.105662",
+      "date": "2026-11",
+      "journal": "Energy Storage Materials",
+      "title": "Electrochemical entropymetry of battery electrode materials: From thermodynamic foundations to operando diagnostics and beyond",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105662",
+      "orgs": [],
+      "pi_guess": "Hyun Deog Yoo",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]

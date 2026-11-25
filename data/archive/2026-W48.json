@@ -2,20 +2,120 @@
   "week": "2026-W48",
   "iso_year": 2026,
   "iso_week": 48,
-  "generated": "2026-11-25",
+  "generated": "2026-11-26",
   "note": {
     "ko": "주차별 스냅샷입니다. 페이지는 최근 7일 롤링 창이라, 이 파일은 그 주의 마지막 실행 시점 상태를 담습니다. 일별 기록은 data/archive/daily/ 에 있습니다.",
     "en": "A per-week snapshot. The page is a rolling 7-day window, so this file holds the state at the week's last run. Per-day records live in data/archive/daily/."
   },
   "counts": {
-    "research": 68,
-    "industry": 20,
+    "research": 70,
+    "industry": 18,
     "science": 13,
     "jobs": 4,
     "postdoc": 13,
     "grants": 1
   },
   "research": [
+    {
+      "cat": "셀",
+      "sub": "Li-S 전지",
+      "title": "Localization of micron-scale lithium polysulfide-rich phases causes anode heterogeneity in lean-electrolyte lithium–sulfur batteries",
+      "org": "Kim et al.",
+      "journal": "Joule",
+      "date": "2026-11",
+      "added": "2026-11-26",
+      "link": "https://doi.org/10.1016/j.joule.2026.102747"
+    },
+    {
+      "cat": "전극",
+      "sub": "건식 전극",
+      "title": "In Situ Polymerized Interfaces Enable Robust and High‐Performance Dry‐Coating Electrodes",
+      "org": "Zhang et al. (Shanghai Jiao Tong Univ.)",
+      "journal": "Advanced Energy Materials",
+      "date": "2026-11-25",
+      "added": "2026-11-26",
+      "link": "https://doi.org/10.1002/aenm.71830"
+    },
+    {
+      "cat": "전극",
+      "sub": "고용량 음극 스케일링",
+      "title": "Bridging the Gap Between Material Discovery and Practical Electrodes: Identifying Scaling Limits in High-Capacity Anodes",
+      "org": "Medina Santos et al. (Trinity College Dublin)",
+      "journal": "ChemRxiv",
+      "date": "2026-11-25",
+      "added": "2026-11-26",
+      "link": "https://doi.org/10.26434/chemrxiv.15012768/v1"
+    },
+    {
+      "cat": "소재",
+      "sub": "할라이드 고체전해질",
+      "title": "Cross-Linked Halide Networks for Lithium Superionic Conduction",
+      "org": "Liang et al. (Shanghai Jiao Tong Univ.)",
+      "journal": "JACS",
+      "date": "2026-11-25",
+      "added": "2026-11-26",
+      "link": "https://doi.org/10.1021/jacs.6c10351"
+    },
+    {
+      "cat": "소재",
+      "sub": "하이니켈 양극",
+      "title": "Dynamic Li+/Na+-Exchanging Interphase Stabilizes High-Voltage Ni-Rich Cathodes for 557 Wh kg–1 Lithium Batteries",
+      "org": "Niu et al. (Qingdao Univ.)",
+      "journal": "JACS",
+      "date": "2026-11-25",
+      "added": "2026-11-26",
+      "link": "https://doi.org/10.1021/jacs.6c17386"
+    },
+    {
+      "cat": "셀",
+      "sub": "전고체 복합양극",
+      "title": "Stress‐Modulated Ionic Transport Limits Composite Cathode Kinetics in Solid‐State Batteries",
+      "org": "Nguyen et al. (NTNU)",
+      "journal": "Angewandte Chemie Int. Ed.",
+      "date": "2026-11-24",
+      "added": "2026-11-26",
+      "link": "https://doi.org/10.1002/anie.4734767"
+    },
+    {
+      "cat": "공정",
+      "sub": "LFP 재활용",
+      "title": "Decoding Direct Regeneration of Spent LiFePO4: From Defect Evolution to Thermodynamic–Kinetic Barrier Engineering",
+      "org": "Cai et al. (Xinjiang Inst. of Technology)",
+      "journal": "Angewandte Chemie Int. Ed.",
+      "date": "2026-11-24",
+      "added": "2026-11-26",
+      "link": "https://doi.org/10.1002/anie.6848748"
+    },
+    {
+      "cat": "소재",
+      "sub": "Li금속 SEI",
+      "title": "Four-Dimensional Scanning Transmission Electron Microscopy Nanoscale Phase Mapping of the Lithium-Metal Surface Passivation Layer",
+      "org": "Xu et al. (Univ. of Oxford)",
+      "journal": "ACS Nano",
+      "date": "2026-11-25",
+      "added": "2026-11-26",
+      "link": "https://doi.org/10.1021/acsnano.6c11761"
+    },
+    {
+      "cat": "저널",
+      "sub": "엔트로피 측정",
+      "title": "Electrochemical entropymetry of battery electrode materials: From thermodynamic foundations to operando diagnostics and beyond",
+      "org": "Reddy et al.",
+      "journal": "Energy Storage Materials",
+      "date": "2026-11",
+      "added": "2026-11-26",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105662"
+    },
+    {
+      "cat": "저널",
+      "sub": "데이터 인프라",
+      "title": "How to Publish Five-Star Battery Data",
+      "org": "Clark et al. (SINTEF)",
+      "journal": "ChemRxiv",
+      "date": "2026-11-25",
+      "added": "2026-11-26",
+      "link": "https://doi.org/10.26434/chemrxiv.15012747/v1"
+    },
     {
       "cat": "공정",
       "sub": "직접 리사이클링",
@@ -615,89 +715,33 @@
       "date": "2026-11-19",
       "added": "2026-11-20",
       "link": "https://doi.org/10.1021/acsnano.6c14733"
-    },
-    {
-      "cat": "셀",
-      "sub": "무음극 나트륨전지",
-      "title": "Engineering interfacial nucleation and growth for long-life, ultrahigh-rate anode-free sodium batteries",
-      "org": "Xie et al. (Central South Univ.)",
-      "journal": "Science Advances",
-      "date": "2026-11-20",
-      "added": "2026-11-19",
-      "link": "https://doi.org/10.1126/sciadv.aeh3524"
-    },
-    {
-      "cat": "셀",
-      "sub": "전고체 Li-S 가압",
-      "title": "Stage‐Specific Pressure Programming Decouples Low‐Pressure Sulfur Reduction From High‐Pressure Interfacial Reconstruction in All‐Solid‐State Lithium–Sulfur Batteries",
-      "org": "Zhang et al. (Nankai Univ.)",
-      "journal": "Advanced Materials",
-      "date": "2026-11-18",
-      "added": "2026-11-19",
-      "link": "https://doi.org/10.1002/adma.75779"
-    },
-    {
-      "cat": "셀",
-      "sub": "무음극 전고체",
-      "title": "Coupling Mechanical Compliance and Conversion Chemistry with a Halide Perovskite Precursor for Anodeless All-Solid-State Batteries",
-      "org": "Kim et al.",
-      "journal": "Energy Storage Materials",
-      "date": "2026-11",
-      "added": "2026-11-19",
-      "link": "https://doi.org/10.1016/j.ensm.2026.105670"
-    },
-    {
-      "cat": "셀",
-      "sub": "전고체 계면 공극",
-      "title": "Interfacial void evolution in solid-state batteries",
-      "org": "Gu",
-      "journal": "Joule",
-      "date": "2026-11",
-      "added": "2026-11-19",
-      "link": "https://doi.org/10.1016/j.joule.2026.102736"
-    },
-    {
-      "cat": "소재",
-      "sub": "단결정 하이니켈 양극",
-      "title": "Probing Phonon Dynamics for Kinetic Stabilization of Single‐Crystal Nickel‐Rich Cathodes",
-      "org": "Liu et al. (Tsinghua SIGS)",
-      "journal": "Advanced Materials",
-      "date": "2026-11-18",
-      "added": "2026-11-19",
-      "link": "https://doi.org/10.1002/adma.75751"
-    },
-    {
-      "cat": "소재",
-      "sub": "Li금속 전해질 용매화",
-      "title": "Beyond Lithium Solvation: Tuning Cation‐Solvent‐Anion Interactions for Stable Lithium‐Metal Batteries",
-      "org": "Wu et al. (HUST)",
-      "journal": "Angewandte Chemie Int. Ed.",
-      "date": "2026-11-18",
-      "added": "2026-11-19",
-      "link": "https://doi.org/10.1002/anie.7753082"
-    },
-    {
-      "cat": "셀",
-      "sub": "열화 진단 EIS",
-      "title": "Rapid identification of lithium-ion battery degradation modes via 15-second-pulse-based fast EIS and physics-informed deep learning",
-      "org": "Chang et al.",
-      "journal": "Journal of Power Sources",
-      "date": "2027-02",
-      "added": "2026-11-19",
-      "link": "https://doi.org/10.1016/j.jpowsour.2026.242009"
-    },
-    {
-      "cat": "공정",
-      "sub": "흑연 음극 재활용",
-      "title": "Efficient Recycling and Regeneration of Graphite Anodes From Spent Lithium‐Ion Batteries via Dilute Acid‐Assisted Ultrasonication and Carbon Coating",
-      "org": "Feng et al. (Taiyuan Univ. of Technology)",
-      "journal": "Batteries & Supercaps",
-      "date": "2026-11",
-      "added": "2026-11-19",
-      "link": "https://doi.org/10.1002/batt.70537"
     }
   ],
   "industry": [
+    {
+      "region": "국내",
+      "type": "공장/공정",
+      "company": "LG에너지솔루션",
+      "date": "2026-11-25",
+      "added": "2026-11-26",
+      "link": "https://www.thelec.kr/news/articleView.html?idxno=65893"
+    },
+    {
+      "region": "국내",
+      "type": "소재사",
+      "company": "동화일렉트로라이트",
+      "date": "2026-11-25",
+      "added": "2026-11-26",
+      "link": "https://www.thelec.kr/news/articleView.html?idxno=65915"
+    },
+    {
+      "region": "해외",
+      "type": "공장/공정",
+      "company": "Trion Battery",
+      "date": "2026-11-25",
+      "added": "2026-11-26",
+      "link": "https://battery-news.de/en/2026/11/25/trion-battery-two-li-ion-cell-production-lines-and-more-than-370-lots-for-sale-in-ottendorf-okrilla-germany/"
+    },
     {
       "region": "국내",
       "type": "소재사",
@@ -817,49 +861,25 @@
       "date": "2026-11-19",
       "added": "2026-11-20",
       "link": "https://battery-news.de/en/2026/11/19/bmz-builds-digital-battery-passports-into-eu-series-production/"
-    },
-    {
-      "region": "국내",
-      "type": "소재사",
-      "company": "포스코그룹",
-      "date": "2026-11-18",
-      "added": "2026-11-19",
-      "link": "https://www.thelec.kr/news/articleView.html?idxno=65625"
-    },
-    {
-      "region": "국내",
-      "type": "신기술",
-      "company": "삼성SDI",
-      "date": "2026-11-18",
-      "added": "2026-11-19",
-      "link": "https://www.thelec.kr/news/articleView.html?idxno=65591"
-    },
-    {
-      "region": "해외",
-      "type": "신기술",
-      "company": "Moment Energy",
-      "date": "2026-11-18",
-      "added": "2026-11-19",
-      "link": "https://battery-news.de/en/2026/11/18/moment-energy-unveils-ul-9540-certified-storage-made-from-used-ev-batteries/"
-    },
-    {
-      "region": "해외",
-      "type": "공장/공정",
-      "company": "Cylib",
-      "date": "2026-11-18",
-      "added": "2026-11-19",
-      "link": "https://www.electrive.com/2026/11/18/cylib-opens-door-for-investment-by-german-federal-agency-for-disruptive-innovation/"
-    },
-    {
-      "region": "해외",
-      "type": "전망",
-      "company": "BAIC",
-      "date": "2026-11-18",
-      "added": "2026-11-19",
-      "link": "https://www.electrive.com/2026/11/18/baic-sells-112-battery-swap-stations-shifts-focus-to-catl/"
     }
   ],
   "science": [
+    {
+      "field": "물리",
+      "title": "Physicists trap antimatter in a breakthrough that could explain why the universe exists",
+      "source": "ScienceDaily / Northwestern Univ.",
+      "date": "2026-11-25",
+      "added": "2026-11-26",
+      "link": "https://www.sciencedaily.com/releases/2026/11/261124055849.htm"
+    },
+    {
+      "field": "우주",
+      "title": "Mira Unleashes Record-Breaking Eruption",
+      "source": "Sci.News / Chalmers Univ.",
+      "date": "2026-11-24",
+      "added": "2026-11-26",
+      "link": "https://www.sci.news/astronomy/mira-record-breaking-eruption-15218.html"
+    },
     {
       "field": "우주",
       "title": "Ancient rocks from the Moon’s far side rewrite the Solar System’s violent past",
@@ -947,22 +967,6 @@
       "date": "2026-11-18",
       "added": "2026-11-20",
       "link": "https://www.sci.news/astronomy/webb-star-merger-andromeda-galaxy-15207.html"
-    },
-    {
-      "field": "물리",
-      "title": "New discovery reveals what may be holding back room-temperature superconductors",
-      "source": "ScienceDaily / Utrecht Univ.",
-      "date": "2026-11-18",
-      "added": "2026-11-19",
-      "link": "https://www.sciencedaily.com/releases/2026/11/261116023358.htm"
-    },
-    {
-      "field": "지구",
-      "title": "More than a billion years of Earth’s history vanished. Scientists may finally know why",
-      "source": "ScienceDaily / Univ. of Wollongong",
-      "date": "2026-11-18",
-      "added": "2026-11-19",
-      "link": "https://www.sciencedaily.com/releases/2026/11/261116023403.htm"
     }
   ],
   "student": {
