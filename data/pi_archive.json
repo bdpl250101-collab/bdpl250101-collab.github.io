@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -3433,6 +3433,42 @@
       "flag": false
     },
     {
+      "key": "matthew-t-mcdowell|georgia-institute-of-technology",
+      "pi": "Matthew T. McDowell",
+      "org": "Georgia Institute of Technology , , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsenergylett.6c02793",
+          "date": "2026-11-26",
+          "journal": "ACS Energy Letters",
+          "title": "Liquid Metal Interlayers Enable Zero-Pressure Sulfide Solid Electrolyte Lithium Batteries",
+          "link": "https://doi.org/10.1021/acsenergylett.6c02793"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "mer-zg-r-apraz|department-of-chemical-biochemical-and-environmental-engineering",
+      "pi": "Ömer Özgür Çapraz",
+      "org": "Department of Chemical, Biochemical and Environmental Engineering",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.26434/chemrxiv.15012808/v1",
+          "date": "2026-11-26",
+          "journal": "ChemRxiv",
+          "title": "Asymmetric Mechanical Deformation During Sodiation and Desodiation of O3-NaNi₁/₃Fe₁/₃Mn₁/₃O₂ Composite Cathodes",
+          "link": "https://doi.org/10.26434/chemrxiv.15012808/v1"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "minah-lee|pohang-university-of-science-and-technology-postech",
       "pi": "Minah Lee",
       "org": "Pohang University of Science and Technology (POSTECH) , , ,",
@@ -4153,6 +4189,24 @@
       "flag": false
     },
     {
+      "key": "ruoqian-lin|department-of-mechanical-engineering-university-of-california-riverside-california-usa",
+      "pi": "Ruoqian Lin",
+      "org": "Department of Mechanical Engineering University of California  Riverside California USA",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/anie.7301001",
+          "date": "2026-11-26",
+          "journal": "Angewandte Chemie Int. Ed.",
+          "title": "An Expandable Library of Solid Polymer Electrolytes for Lithium‐Metal Batteries",
+          "link": "https://doi.org/10.1002/anie.7301001"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "ryoji-kanno|institute-of-science-tokyo-4259-nagatsuta-cho-midori-ku",
       "pi": "Ryoji Kanno",
       "org": "Institute of Science Tokyo , , 4259 Nagatsuta-cho , Midori-ku, , ,",
@@ -4418,6 +4472,24 @@
           "journal": "Angewandte Chemie Int. Ed.",
           "title": "π-Conjugated Polyphenols Regulate Interfacial Charge to Stabilize Lattice Oxygen in High-Voltage Ni-Rich Cathodes",
           "link": "https://doi.org/10.1002/anie.5747023"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "shimou-chen|state-key-laboratory-of-chemical-resource-engineering-beijing-key-laboratory-of-electrochemical-process-and-technology-of-materials-beijing-university-of-chemical-technology-beijing-p-r-china",
+      "pi": "Shimou Chen",
+      "org": "State Key Laboratory of Chemical Resource Engineering Beijing Key Laboratory of Electrochemical Process and Technology of Materials Beijing University of Chemical Technology  Beijing P. R. China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75884",
+          "date": "2026-11-26",
+          "journal": "Advanced Materials",
+          "title": "Covalent–Ionic Bonding Regulation Enables Chemo‐Mechanical Stabilization of High‐Voltage O3‐Type Sodium Layered Oxide Cathodes",
+          "link": "https://doi.org/10.1002/adma.75884"
         }
       ],
       "flag": false
@@ -5701,6 +5773,24 @@
       "flag": false
     },
     {
+      "key": "yingying-lv|research-centre-of-nanoscience-and-nanotechnology-shanghai-university-shanghai-people-s-republic-of-china",
+      "pi": "Yingying Lv",
+      "org": "Research Centre of Nanoscience and Nanotechnology Shanghai University  Shanghai People's Republic of China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/aenm.71856",
+          "date": "2026-11-26",
+          "journal": "Advanced Energy Materials",
+          "title": "SEI Evolution on Siloxene Anodes in Solid and Liquid Electrolytes via an Ion‐Sieving/Electron‐Conducting Interfacial Layer",
+          "link": "https://doi.org/10.1002/aenm.71856"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "yiyang-li|department-of-materials-science-and-engineering",
       "pi": "Yiyang Li",
       "org": "Department of Materials Science and Engineering",
@@ -5917,6 +6007,24 @@
       "flag": false
     },
     {
+      "key": "yonggao-xia|ningbo-institute-of-materials-technology-amp-engineering-chinese-academy-of-sciences-ningbo-zhejiang-people-s-republic-of-china",
+      "pi": "Yonggao Xia",
+      "org": "Ningbo Institute of Materials Technology &amp; Engineering Chinese Academy of Sciences  Ningbo Zhejiang People's Republic of China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/smll.76874",
+          "date": "2026-11-26",
+          "journal": "Small",
+          "title": "Enhanced Silicon Anodes via Active Interfacial Reconstruction Enabled by Additive‐Engineered Conductive Binders",
+          "link": "https://doi.org/10.1002/smll.76874"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "yongsheng-chen|nankai-university",
       "pi": "Yongsheng Chen",
       "org": "Nankai University , , ,",
@@ -6074,6 +6182,24 @@
           "journal": "Advanced Energy Materials",
           "title": "Redirecting Bond Cleavage in Sacrificial Prelithiation via Dual-Side Separator Engineering for Anode-Free Lithium Batteries",
           "link": "https://doi.org/10.1002/aenm.71761"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "yue-yang|school-of-minerals-processing-and-bioengineering-central-south-university-changsha-p-r-china",
+      "pi": "Yue Yang",
+      "org": "School of Minerals Processing and Bioengineering Central South University  Changsha P. R. China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/anie.6715913",
+          "date": "2026-11-25",
+          "journal": "Angewandte Chemie Int. Ed.",
+          "title": "Photocatalytic PVDF Degradation Coupled With Catalytic Targeted Li Replenishment Toward Low‐Energy Repair of Spent LiFePO4 Electrodes",
+          "link": "https://doi.org/10.1002/anie.6715913"
         }
       ],
       "flag": false
@@ -6434,6 +6560,24 @@
           "journal": "Advanced Materials",
           "title": "Controllable Particle Packing via Scalable Layer-by-Layer Assembly of Anode Particles for Fast-Charging Lithium-Ion Batteries",
           "link": "https://doi.org/10.1002/adma.74698"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "zheng-liang|frontiers-science-center-for-transformative-molecules-school-of-chemistry-and-chemical-engineering-shanghai-jiao-tong-university-shanghai-china",
+      "pi": "Zheng Liang",
+      "org": "Frontiers Science Center for Transformative Molecules School of Chemistry and Chemical Engineering Shanghai Jiao Tong University  Shanghai China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75860",
+          "date": "2026-11-25",
+          "journal": "Advanced Materials",
+          "title": "Novel Fluorinated Amino‐Ester Electrolyte With Host–Guest Solvation Enables High‐Voltage and Thermally Safe Lithium–Metal Batteries",
+          "link": "https://doi.org/10.1002/adma.75860"
         }
       ],
       "flag": false
@@ -8281,6 +8425,26 @@
       "link": "https://doi.org/10.1016/j.ensm.2026.105662",
       "orgs": [],
       "pi_guess": "Hyun Deog Yoo",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jechem.2026.11.019",
+      "date": "2026-11",
+      "journal": "Journal of Energy Chemistry",
+      "title": "Preserving cyclable lithium inventory by asymmetric charge-discharge protocol in silicon-based all-solid-state batteries",
+      "link": "https://doi.org/10.1016/j.jechem.2026.11.019",
+      "orgs": [],
+      "pi_guess": "Jaekyung Sung",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jechem.2026.11.030",
+      "date": "2026-11",
+      "journal": "Journal of Energy Chemistry",
+      "title": "Fast-charging silicon-graphite anodes for lithium-ion batteries: Heterogeneous lithiation, diagnostics, and plating-aware design",
+      "link": "https://doi.org/10.1016/j.jechem.2026.11.030",
+      "orgs": [],
+      "pi_guess": "Mkhulu Kenneth Mathe",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]

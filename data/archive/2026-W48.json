@@ -2,7 +2,7 @@
   "week": "2026-W48",
   "iso_year": 2026,
   "iso_week": 48,
-  "generated": "2026-11-26",
+  "generated": "2026-11-27",
   "note": {
     "ko": "주차별 스냅샷입니다. 페이지는 최근 7일 롤링 창이라, 이 파일은 그 주의 마지막 실행 시점 상태를 담습니다. 일별 기록은 data/archive/daily/ 에 있습니다.",
     "en": "A per-week snapshot. The page is a rolling 7-day window, so this file holds the state at the week's last run. Per-day records live in data/archive/daily/."
@@ -16,6 +16,106 @@
     "grants": 1
   },
   "research": [
+    {
+      "cat": "소재",
+      "sub": "Li금속 전해질 용매화",
+      "title": "Novel Fluorinated Amino‐Ester Electrolyte With Host–Guest Solvation Enables High‐Voltage and Thermally Safe Lithium–Metal Batteries",
+      "org": "Fang et al. (Shanghai Jiao Tong Univ.)",
+      "journal": "Advanced Materials",
+      "date": "2026-11-25",
+      "added": "2026-11-27",
+      "link": "https://doi.org/10.1002/adma.75860"
+    },
+    {
+      "cat": "소재",
+      "sub": "나트륨 층상 양극",
+      "title": "Covalent–Ionic Bonding Regulation Enables Chemo‐Mechanical Stabilization of High‐Voltage O3‐Type Sodium Layered Oxide Cathodes",
+      "org": "Yang et al. (Sichuan Univ. of Science and Engineering)",
+      "journal": "Advanced Materials",
+      "date": "2026-11-26",
+      "added": "2026-11-27",
+      "link": "https://doi.org/10.1002/adma.75884"
+    },
+    {
+      "cat": "소재",
+      "sub": "실리콘 음극",
+      "title": "SEI Evolution on Siloxene Anodes in Solid and Liquid Electrolytes via an Ion‐Sieving/Electron‐Conducting Interfacial Layer",
+      "org": "Hu et al. (Shanghai Univ.)",
+      "journal": "Advanced Energy Materials",
+      "date": "2026-11-26",
+      "added": "2026-11-27",
+      "link": "https://doi.org/10.1002/aenm.71856"
+    },
+    {
+      "cat": "소재",
+      "sub": "고분자 전해질",
+      "title": "An Expandable Library of Solid Polymer Electrolytes for Lithium‐Metal Batteries",
+      "org": "Wang et al. (UC Irvine)",
+      "journal": "Angewandte Chemie Int. Ed.",
+      "date": "2026-11-26",
+      "added": "2026-11-27",
+      "link": "https://doi.org/10.1002/anie.7301001"
+    },
+    {
+      "cat": "공정",
+      "sub": "LFP 재활용",
+      "title": "Photocatalytic PVDF Degradation Coupled With Catalytic Targeted Li Replenishment Toward Low‐Energy Repair of Spent LiFePO4 Electrodes",
+      "org": "Zhang et al. (Central South Univ.)",
+      "journal": "Angewandte Chemie Int. Ed.",
+      "date": "2026-11-25",
+      "added": "2026-11-27",
+      "link": "https://doi.org/10.1002/anie.6715913"
+    },
+    {
+      "cat": "셀",
+      "sub": "충방전 프로토콜",
+      "title": "Preserving cyclable lithium inventory by asymmetric charge-discharge protocol in silicon-based all-solid-state batteries",
+      "org": "Jeong et al.",
+      "journal": "Journal of Energy Chemistry",
+      "date": "2026-11",
+      "added": "2026-11-27",
+      "link": "https://doi.org/10.1016/j.jechem.2026.11.019"
+    },
+    {
+      "cat": "셀",
+      "sub": "급속충전",
+      "title": "Fast-charging silicon-graphite anodes for lithium-ion batteries: Heterogeneous lithiation, diagnostics, and plating-aware design",
+      "org": "Dolla et al.",
+      "journal": "Journal of Energy Chemistry",
+      "date": "2026-11",
+      "added": "2026-11-27",
+      "link": "https://doi.org/10.1016/j.jechem.2026.11.030"
+    },
+    {
+      "cat": "셀",
+      "sub": "저압 구동",
+      "title": "Liquid Metal Interlayers Enable Zero-Pressure Sulfide Solid Electrolyte Lithium Batteries",
+      "org": "Yoon et al. (Georgia Tech)",
+      "journal": "ACS Energy Letters",
+      "date": "2026-11-26",
+      "added": "2026-11-27",
+      "link": "https://doi.org/10.1021/acsenergylett.6c02793"
+    },
+    {
+      "cat": "전극",
+      "sub": "바인더",
+      "title": "Enhanced Silicon Anodes via Active Interfacial Reconstruction Enabled by Additive‐Engineered Conductive Binders",
+      "org": "Zhu et al. (NIMTE, CAS)",
+      "journal": "Small",
+      "date": "2026-11-26",
+      "added": "2026-11-27",
+      "link": "https://doi.org/10.1002/smll.76874"
+    },
+    {
+      "cat": "전극",
+      "sub": "양극 기계적 변형",
+      "title": "Asymmetric Mechanical Deformation During Sodiation and Desodiation of O3-NaNi₁/₃Fe₁/₃Mn₁/₃O₂ Composite Cathodes",
+      "org": "Wable et al. (UMBC)",
+      "journal": "ChemRxiv",
+      "date": "2026-11-26",
+      "added": "2026-11-27",
+      "link": "https://doi.org/10.26434/chemrxiv.15012808/v1"
+    },
     {
       "cat": "셀",
       "sub": "Li-S 전지",
@@ -615,109 +715,33 @@
       "date": "2026-11-20",
       "added": "2026-11-21",
       "link": "https://doi.org/10.26434/chemrxiv.15012516/v1"
-    },
-    {
-      "cat": "소재",
-      "sub": "전해질",
-      "title": "Preorganized electrolyte reduction chemistry enables lithium-ion batteries under extreme conditions",
-      "org": "Deng et al.",
-      "journal": "Joule",
-      "date": "2026-11",
-      "added": "2026-11-20",
-      "link": "https://doi.org/10.1016/j.joule.2026.102744"
-    },
-    {
-      "cat": "소재",
-      "sub": "실리콘 음극",
-      "title": "Metallurgical Interface Engineering Constructing In Situ Li3N‐Enriched Interphase: A Bulk‐Interface Synergy Strategy Toward Practical Silicon Anodes",
-      "org": "Lan et al. (Xi’an Technological Univ.)",
-      "journal": "Advanced Materials",
-      "date": "2026-11-18",
-      "added": "2026-11-20",
-      "link": "https://doi.org/10.1002/adma.75775"
-    },
-    {
-      "cat": "소재",
-      "sub": "고분자 전해질",
-      "title": "In Situ Polymerized Main/Side-Chain Bifluorinated Cross-Linked Polyether Electrolytes for High-Voltage Lithium Metal Batteries",
-      "org": "Li et al. (Univ. of Hong Kong)",
-      "journal": "JACS",
-      "date": "2026-11-19",
-      "added": "2026-11-20",
-      "link": "https://doi.org/10.1021/jacs.6c08830"
-    },
-    {
-      "cat": "소재",
-      "sub": "유기 전극",
-      "title": "A Three-Motif-Based One-Dimensional Covalent Organic Framework as an Efficient Cathode Material for Stable Rechargeable Sodium-Ion Batteries",
-      "org": "Yang et al. (City Univ. of Hong Kong)",
-      "journal": "JACS",
-      "date": "2026-11-19",
-      "added": "2026-11-20",
-      "link": "https://doi.org/10.1021/jacs.6c17196"
-    },
-    {
-      "cat": "셀",
-      "sub": "Li-S 전지",
-      "title": "Pressure sensitivity descriptor guided bimodal catholyte design for all-solid-state lithium-sulfur batteries",
-      "org": "Zhang et al.",
-      "journal": "Journal of Power Sources",
-      "date": "2027-02",
-      "added": "2026-11-20",
-      "link": "https://doi.org/10.1016/j.jpowsour.2026.242032"
-    },
-    {
-      "cat": "셀",
-      "sub": "Na이온 셀 해체",
-      "title": "Tear-Down Analysis and Performance of Large Commercial Hard Carbon/NFM Sodium-Ion Batteries",
-      "org": "Waldmann et al. (ZSW)",
-      "journal": "J. Electrochemical Society",
-      "date": "2026-11-19",
-      "added": "2026-11-20",
-      "link": "https://doi.org/10.1149/1945-7111/aebfca"
-    },
-    {
-      "cat": "소재",
-      "sub": "고속충전 전해질",
-      "title": "Ring structure engineering of active-hydrogen passivator in succinonitrile-based deep eutectic electrolytes for fast-charging lithium-metal batteries",
-      "org": "Tian et al.",
-      "journal": "Journal of Energy Chemistry",
-      "date": "2026-11",
-      "added": "2026-11-20",
-      "link": "https://doi.org/10.1016/j.jechem.2026.11.012"
-    },
-    {
-      "cat": "셀",
-      "sub": "합금 음극",
-      "title": "Architected Si-Based Anodes for All-Solid-State Lithium Batteries",
-      "org": "Zheng et al. (Peking Univ.)",
-      "journal": "ACS Energy Letters",
-      "date": "2026-11-18",
-      "added": "2026-11-20",
-      "link": "https://doi.org/10.1021/acsenergylett.6c02554"
-    },
-    {
-      "cat": "소재",
-      "sub": "리튬과잉 양극",
-      "title": "Competitive Coordination of Solvent in Electrolyte to Stabilize Li-Rich Mn-Based Batteries",
-      "org": "Jia et al. (Henan Normal Univ.)",
-      "journal": "ACS Energy Letters",
-      "date": "2026-11-19",
-      "added": "2026-11-20",
-      "link": "https://doi.org/10.1021/acsenergylett.6c02523"
-    },
-    {
-      "cat": "셀",
-      "sub": "프리소듐화",
-      "title": "Screening of Single-Atom Catalysts for Na2S-Mediated Pre-Sodiation and Interfacial Rejuvenation in Low N/P Ratio Sodium Batteries",
-      "org": "Li et al. (Northwestern Polytechnical Univ.)",
-      "journal": "ACS Nano",
-      "date": "2026-11-19",
-      "added": "2026-11-20",
-      "link": "https://doi.org/10.1021/acsnano.6c14733"
     }
   ],
   "industry": [
+    {
+      "region": "국내",
+      "type": "실적",
+      "company": "국내 배터리 장비업계",
+      "date": "2026-11-26",
+      "added": "2026-11-27",
+      "link": "https://www.thelec.kr/news/articleView.html?idxno=65958"
+    },
+    {
+      "region": "국내",
+      "type": "신기술",
+      "company": "KAIST",
+      "date": "2026-11-26",
+      "added": "2026-11-27",
+      "link": "https://www.electrive.com/2026/11/26/kaist-aims-to-extend-the-lifespan-of-anode-free-batteries/"
+    },
+    {
+      "region": "해외",
+      "type": "판매",
+      "company": "Sungrow",
+      "date": "2026-11-26",
+      "added": "2026-11-27",
+      "link": "https://www.energy-storage.news/actuate-energy-orders-1-5gwh-bess-sungrow-2027-2028-pipeline-spain/"
+    },
     {
       "region": "국내",
       "type": "공장/공정",
@@ -837,33 +861,25 @@
       "date": "2026-11-20",
       "added": "2026-11-21",
       "link": "https://battery-news.de/en/2026/11/20/gmg-taps-ukbic-to-manufacture-its-graphene-battery-cells-in-the-uk/"
-    },
-    {
-      "region": "해외",
-      "type": "공장/공정",
-      "company": "Envision AESC",
-      "date": "2026-11-19",
-      "added": "2026-11-20",
-      "link": "https://www.electrive.com/2026/11/19/envision-aesc-surpasses-production-volume-milestone-for-46120-battery-cells/"
-    },
-    {
-      "region": "해외",
-      "type": "소재사",
-      "company": "Sila",
-      "date": "2026-11-19",
-      "added": "2026-11-20",
-      "link": "https://www.electrive.com/2026/11/19/sila-secures-billion-dollar-offtake-agreement-with-panasonic/"
-    },
-    {
-      "region": "해외",
-      "type": "정책",
-      "company": "BMZ",
-      "date": "2026-11-19",
-      "added": "2026-11-20",
-      "link": "https://battery-news.de/en/2026/11/19/bmz-builds-digital-battery-passports-into-eu-series-production/"
     }
   ],
   "science": [
+    {
+      "field": "생명",
+      "title": "This 345-million-year-old fossil had scientists fooled for decades",
+      "source": "ScienceDaily / AMNH",
+      "date": "2026-11-26",
+      "added": "2026-11-27",
+      "link": "https://www.sciencedaily.com/releases/2026/11/261125045307.htm"
+    },
+    {
+      "field": "지구",
+      "title": "Scientists discover mysterious lakes more than a mile beneath the Red Sea",
+      "source": "ScienceDaily / Univ. of Miami",
+      "date": "2026-11-25",
+      "added": "2026-11-27",
+      "link": "https://www.sciencedaily.com/releases/2026/11/261125045259.htm"
+    },
     {
       "field": "물리",
       "title": "Physicists trap antimatter in a breakthrough that could explain why the universe exists",
@@ -951,22 +967,6 @@
       "date": "2026-11-20",
       "added": "2026-11-21",
       "link": "https://www.sciencedaily.com/releases/2026/11/261119194525.htm"
-    },
-    {
-      "field": "지구",
-      "title": "Antarctica’s ice cliffs are collapsing faster than expected, but there’s a twist",
-      "source": "ScienceDaily / MIT·WHOI",
-      "date": "2026-11-19",
-      "added": "2026-11-20",
-      "link": "https://www.sciencedaily.com/releases/2026/11/261117033925.htm"
-    },
-    {
-      "field": "우주",
-      "title": "Webb Catches Giant Star Swallowing Its Smaller Companion in Andromeda Galaxy",
-      "source": "Sci.News / Columbia Univ.",
-      "date": "2026-11-18",
-      "added": "2026-11-20",
-      "link": "https://www.sci.news/astronomy/webb-star-merger-andromeda-galaxy-15207.html"
     }
   ],
   "student": {
