@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "purpose": {
     "ko": "주간 연구 리포트에 등장한 논문의 교신저자/PI를 정규화해 누적 집계합니다. count가 threshold 이상이 되면 포닥 섹션에서 ‘반복 등장 교수’로 표시할 기반입니다.",
     "en": "Accumulates a normalised count of the corresponding authors / PIs behind the papers in each weekly research report. Once count reaches threshold, the entry can be surfaced in the postdoc section as a repeatedly appearing PI."
@@ -2029,6 +2029,24 @@
       "flag": false
     },
     {
+      "key": "hui-xia|nanjing-university-of-science-and-technology",
+      "pi": "Hui Xia",
+      "org": "Nanjing University of Science and Technology , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/jacs.6c18977",
+          "date": "2026-11-27",
+          "journal": "JACS",
+          "title": "From Localized Mn Defect to Oxygen Loss: The Interplay of Jahn–Teller and Pseudo–Jahn–Teller Distortions",
+          "link": "https://doi.org/10.1021/jacs.6c18977"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "hui-xu|school-of-materials-science-and-engineering-shanghai-institute-of-technology-shanghai-china",
       "pi": "Hui Xu",
       "org": "School of Materials Science and Engineering Shanghai Institute of Technology  Shanghai China",
@@ -2600,6 +2618,24 @@
           "journal": "Small",
           "title": "Beyond Passive Conductor: Conductive Carbon Black Dictates Interfacial Chemistry in Hard Carbon Anodes for Sodium-Ion Batteries",
           "link": "https://doi.org/10.1002/smll.75449"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "jiarui-he|confucius-energy-storage-lab-school-of-energy-and-environment-southeast-university-nanjing-china",
+      "pi": "Jiarui He",
+      "org": "Confucius Energy Storage Lab School of Energy and Environment Southeast University  Nanjing China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/aenm.71897",
+          "date": "2026-11-26",
+          "journal": "Advanced Energy Materials",
+          "title": "Dissociation‐Migration Trade‐Off in Gel Polymer Electrolytes Enables Extreme‐Condition Lithium Metal Batteries",
+          "link": "https://doi.org/10.1002/aenm.71897"
         }
       ],
       "flag": false
@@ -3253,6 +3289,24 @@
       "flag": false
     },
     {
+      "key": "linda-f-nazar|department-of-chemistry-and-waterloo-institute-for-nanotechnology-university-of-waterloo-waterloo-ontario-canada",
+      "pi": "Linda F. Nazar",
+      "org": "Department of Chemistry and Waterloo Institute for Nanotechnology University of Waterloo  Waterloo Ontario Canada",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75448",
+          "date": "2026-11-27",
+          "journal": "Advanced Materials",
+          "title": "Tackling Lithium Transport Barriers for High‐Performance All‐Solid‐State Li2S Batteries With a Dual‐Functional Cathode Additive",
+          "link": "https://doi.org/10.1002/adma.75448"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "linfeng-hu|southeast-university",
       "pi": "Linfeng Hu",
       "org": "Southeast University , , ,",
@@ -3320,6 +3374,24 @@
           "journal": "Advanced Energy Materials",
           "title": "Electrochemical and Mechanical Understanding of Extruded and Solvent-Cast Solid Polymer Electrolytes",
           "link": "https://doi.org/10.1002/aenm.71697"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "maria-r-lukatskaya|eth-zurich",
+      "pi": "Maria R. Lukatskaya",
+      "org": "ETH Zurich , , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acs.chemmater.6c01777",
+          "date": "2026-11-27",
+          "journal": "Chemistry of Materials",
+          "title": "From Halide Formation to Incorporation: The Role of Halogen Identity in the Solid−Electrolyte Interphase Formation",
+          "link": "https://doi.org/10.1021/acs.chemmater.6c01777"
         }
       ],
       "flag": false
@@ -3523,6 +3595,24 @@
       "flag": false
     },
     {
+      "key": "minkyu-kim|inha-university-100-inha-ro-michuhol-gu",
+      "pi": "Minkyu Kim",
+      "org": "Inha University , , 100 Inha-ro, Michuhol-gu , ,",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1021/acsenergylett.6c02419",
+          "date": "2026-11-27",
+          "journal": "ACS Energy Letters",
+          "title": "A Semi-single-crystal Architecture Bridging Polycrystalline and Single-Crystal NCM Cathodes",
+          "link": "https://doi.org/10.1021/acsenergylett.6c02419"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "miran-gaberscek|national-institute-of-chemistry-slovenia",
       "pi": "Miran Gaberscek",
       "org": "National Institute of Chemistry Slovenia",
@@ -3680,6 +3770,24 @@
           "journal": "Batteries & Supercaps",
           "title": "Electrochemical Strategies for Closed-Loop Regeneration and Upcycling of Spent Batteries",
           "link": "https://doi.org/10.1002/batt.70449"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "peng-tan|department-of-thermal-science-and-energy-engineering-university-of-science-and-technology-of-china-hefei-anhui-china",
+      "pi": "Peng Tan",
+      "org": "Department of Thermal Science and Energy Engineering University of Science and Technology of China  Hefei Anhui China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/smll.76937",
+          "date": "2026-11-27",
+          "journal": "Small",
+          "title": "Stress–Stoichiometry Mapping Enables Operando Tracking of Lithiation Dynamics in LiFePO4 Electrodes",
+          "link": "https://doi.org/10.1002/smll.76937"
         }
       ],
       "flag": false
@@ -4783,6 +4891,24 @@
       "flag": false
     },
     {
+      "key": "valeriu-mereacre|institute-for-applied-materials-energy-storage-systems-karlsruhe-institute-of-technology-eggenstein-leopoldshafen-germany",
+      "pi": "Valeriu Mereacre",
+      "org": "Institute for Applied Materials – Energy Storage Systems Karlsruhe Institute of Technology  Eggenstein‐Leopoldshafen Germany",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/batt.70554",
+          "date": "2026-11-27",
+          "journal": "Batteries & Supercaps",
+          "title": "Cathode Provenance and Reproducibility in Coating Studies of Layered Oxide Materials",
+          "link": "https://doi.org/10.1002/batt.70554"
+        }
+      ],
+      "flag": false
+    },
+    {
       "key": "venkatasubramanian-viswanathan|university-of-michigan",
       "pi": "Venkatasubramanian Viswanathan",
       "org": "University of Michigan , , , ,",
@@ -5246,6 +5372,24 @@
           "journal": "Advanced Materials",
           "title": "Tuning σ-Type Ni–O Orbital Hybridization for Stable Ultrahigh-Ni Cathodes",
           "link": "https://doi.org/10.1002/adma.75790"
+        }
+      ],
+      "flag": false
+    },
+    {
+      "key": "xiaona-li|eastern-institute-for-advanced-study-ningbo-key-laboratory-of-all-solid-state-battery-zhejiang-key-laboratory-of-all-solid-state-battery-eastern-institute-of-technology-ningbo-zhejiang-china",
+      "pi": "Xiaona Li",
+      "org": "Eastern Institute for Advanced Study Ningbo Key Laboratory of All‐Solid‐State Battery Zhejiang Key Laboratory of All‐Solid‐State Battery Eastern Institute of Technology  Ningbo Zhejiang China",
+      "count": 1,
+      "corresponding_confirmed": false,
+      "resolved_by": "crossref-last-author",
+      "papers": [
+        {
+          "doi": "10.1002/adma.75832",
+          "date": "2026-11-26",
+          "journal": "Advanced Materials",
+          "title": "Halide‐Based Mixed Ionic‐Electronic Conductors Deliver High‐Rate and Long‐Life All‐Solid‐State Lithium Batteries",
+          "link": "https://doi.org/10.1002/adma.75832"
         }
       ],
       "flag": false
@@ -8445,6 +8589,46 @@
       "link": "https://doi.org/10.1016/j.jechem.2026.11.030",
       "orgs": [],
       "pi_guess": "Mkhulu Kenneth Mathe",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1038/s41565-026-02339-2",
+      "date": "2026-11-27",
+      "journal": "Nature Nanotechnology",
+      "title": "Dual-cation solvation-tailored electrolyte solutions for low-temperature 48-V/30-Ah lithium-ion battery modules",
+      "link": "https://doi.org/10.1038/s41565-026-02339-2",
+      "orgs": [],
+      "pi_guess": "Yu-Guo Guo",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.jpowsour.2026.242071",
+      "date": "2027-02",
+      "journal": "Journal of Power Sources",
+      "title": "Stabilizing dual interfaces in high-voltage lithium metal batteries with a multifunctional additive",
+      "link": "https://doi.org/10.1016/j.jpowsour.2026.242071",
+      "orgs": [],
+      "pi_guess": "Hongcai Gao",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.electacta.2026.150520",
+      "date": "2026-11",
+      "journal": "Electrochimica Acta",
+      "title": "Comparative Analysis of Trace Cobalt and Copper Contamination Effects in Lithium-Ion Batteries for High-Power Applications",
+      "link": "https://doi.org/10.1016/j.electacta.2026.150520",
+      "orgs": [],
+      "pi_guess": "Uta Schlickum",
+      "reason": "no affiliation on the last author in Crossref"
+    },
+    {
+      "doi": "10.1016/j.ensm.2026.105693",
+      "date": "2026-11",
+      "journal": "Energy Storage Materials",
+      "title": "Dual‑site Mg/Ta substitution coupled with in situ surface electronic modulation boosts cycling stability of ultrahigh‑Ni cathodes",
+      "link": "https://doi.org/10.1016/j.ensm.2026.105693",
+      "orgs": [],
+      "pi_guess": "Xianyou Wang",
       "reason": "no affiliation on the last author in Crossref"
     }
   ]
